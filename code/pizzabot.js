@@ -13,7 +13,7 @@ const orderName = prompt(`Enter the name of the pizza you want to order today.`)
 console.log(orderName);
 
 
-// let orderQuantity;
+let orderQuantity;
 
 if (orderName == "Vegetarian Pizza") {
   orderQuantity = Number(prompt(`How many of ${orderName} do you want`))
@@ -27,10 +27,13 @@ if (orderName == "Vegetarian Pizza") {
 
 
 console.log(orderQuantity)
-
-
-
-
-
 const orderTotal = (orderQuantity * pizzaPrice);
-alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr`);
+
+if (orderQuantity < 3) {
+  alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The pizzas will take 10 minutes.`)
+} else if (orderQuantity > 5) {
+  alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The pizzas will take 20 minutes.`)
+} else {
+  alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The pizzas will take 15 minutes.`)
+}
+
