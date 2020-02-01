@@ -9,22 +9,6 @@ let orderQuantity
 let orderTotal
 let cookingTime
 
-alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}.`);
-
-orderName = prompt("Enter the name of the pizza you want to order today.");
-
-orderQuantity = prompt(`How many of ${orderName} do you want?`);
-
-orderTotal = pizzaPrice * parseFloat(orderQuantity);
-
-alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr.`);
-
-if (orderName === vegetarian || orderName === hawaiian || orderName === pepperoni) {
-  alert("correct");
-} else {
-  alert("Select a pizza from the menu")
-}
-
 checkOrderName = (pizza) => {
   for (var i = 0; i < pizzaMenu.length; i++) {
     if (pizzaMenu[i] === pizza) {
@@ -35,10 +19,10 @@ checkOrderName = (pizza) => {
   }
 }
 
+
 totalCost = (quantity) => {
   return pizzaPrice * parseFloat(quantity);
 }
-
 
 cookingTime = (quantity) => {
   if (parseFloat(quantity) <= 2) {
@@ -49,3 +33,15 @@ cookingTime = (quantity) => {
     return 20;
   }
 };
+
+alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}.`);
+
+orderName = prompt("Enter the name of the pizza you want to order today.");
+
+
+if (checkOrderName(orderName) === true) {
+  orderQuantity = prompt(`How many of ${orderName} do you want?`);
+  alert(`Great, I'll get started on your ${orderName} right away, it will cost ${totalCost(orderQuantity)} kr. Your pizza will take ${cookingTime(orderQuantity)} minutes to prepare.`);
+} else {
+  alert("Select a pizza from the menu")
+}
