@@ -1,13 +1,12 @@
 # Pizza Bot
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+A pizza bot made with Javascript.  
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We collaborated very well, especially with debugging. We had some problems with the functions, we commented out some code and made sure that some parts of the code was working using console.log. So stepbystep we could find out where the bug was.
+If we had more time we would make a ux-friendly website with better design and use css.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://hungry-meninsky-cd1922.netlify.com
