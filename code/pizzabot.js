@@ -1,6 +1,7 @@
 const vegetarian = "Vegetarian Pizza"
 const hawaiian = "Hawaiian Pizza"
 const pepperoni = "Pepperoni Pizza"
+const pizzaMenu = [vegetarian, hawaiian, pepperoni]
 
 const pizzaPrice = 80
 let orderName
@@ -24,10 +25,27 @@ if (orderName === vegetarian || orderName === hawaiian || orderName === pepperon
   alert("Select a pizza from the menu")
 }
 
-if (parseFloat(orderQuantity) <= 2) {
-  alert("The pizzas will take 10 minutes.")
-} else if (parseFloat(orderQuantity) < 6) {
-  alert("The pizzas will take 15 minutes.")
-} else {
-  alert("The pizzas will take 20 minutes.")
+checkOrderName = (pizza) => {
+  for (var i = 0; i < pizzaMenu.length; i++) {
+    if (pizzaMenu[i] === pizza) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
+
+totalCost = (quantity) => {
+  return pizzaPrice * parseFloat(quantity);
+}
+
+
+cookingTime = (quantity) => {
+  if (parseFloat(quantity) <= 2) {
+    return 10;
+  } else if (parseFloat(quantity) < 6) {
+    return 15;
+  } else {
+    return 20;
+  }
+};
