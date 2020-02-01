@@ -18,3 +18,12 @@ alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawa
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 // Example : `string text ${variable} string text`
+
+
+let orderName = prompt(`Enter the name of the pizza you want to order today.`);
+// Check if user input is stored in orderName
+console.log(orderName);
+
+let orderQuantity = prompt(`How many of ${orderName} do you want?`);
+// Check if user input is stored in orderQuantity
+console.log(orderQuantity);
