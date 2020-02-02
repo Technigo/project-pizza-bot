@@ -4,8 +4,6 @@ const pepperoni = "Pepperoni Pizza"
 
 const pizzaPrice = 80
 
-//Put your Javscript code here:
-
 
 alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and  ${pepperoni}.`);
 
@@ -13,14 +11,29 @@ let orderName = prompt("Enter the name of the pizza you want to order today.");
 
 let checkOrderName = (orderName) => {
   if (orderName === vegetarian || orderName === hawaiian || orderName === pepperoni) {
-    prompt(`How many of ${orderName} do you want?`)
+    return true
   } else {
-    alert("Please select a pizza from the menu.")
-    //prompt("Enter the name of the pizza you want to order today.")
+    return false
   }
 };
 
-checkOrderName(orderName)
+let totalCost = (orderQuantity) => {
+  return (orderQuantity * pizzaPrice);
+}
+
+let cookingTime = (orderQuantity) => {
+  if (orderQuantity < 3) { alert(`Great, I'll get started on your ${orderName} right away, it will cost ${totalCost(orderQuantity)} kr. The pizzas will take 10 minutes`) }
+  else if (orderQuantity < 6) { alert(`Great, I'll get started on your ${orderName} right away, it will cost ${totalCost(orderQuantity)} kr. The pizzas will take 15 minutes`) }
+  else { alert(`Great, I'll get started on your ${orderName} right away, it will cost ${totalCost(orderQuantity)} kr. The pizzas will take 20 minutes`) }
+};
+
+if (checkOrderName(orderName)) {
+  let orderQuantity = prompt(`How many of ${orderName} do you want?`);
+  cookingTime(orderQuantity)
+} else {
+  alert("Please select a pizza from the menu.")
+}
+
 
 
 /*if (
@@ -35,11 +48,6 @@ checkOrderName(orderName)
 }
 */
 
-let orderQuantity = prompt(`How many of ${orderName} do you want?`);
-
-let totalCost = (orderQuantity) => {
-  (orderQuantity * pizzaPrice);
-}
 
 //totalCost(orderQuantity)
 
@@ -55,10 +63,4 @@ let totalCost = (orderQuantity) => {
 
 
 
-let cookingTime = (orderQuantity) => {
-  if (orderQuantity < 3) { alert(`Great, I'll get started on your ${orderName} right away, it will cost ${totalCost(orderQuantity)} kr. The pizzas will take 10 minutes`) }
-  else if (orderQuantity < 6) { alert(`Great, I'll get started on your ${orderName} right away, it will cost ${totalCost(orderQuantity)} kr. The pizzas will take 15 minutes`) }
-  else { alert(`Great, I'll get started on your ${orderName} right away, it will cost ${totalCost(orderQuantity)} kr. The pizzas will take 20 minutes`) }
-};
 
-cookingTime(orderQuantity)
