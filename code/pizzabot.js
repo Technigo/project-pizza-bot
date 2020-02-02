@@ -4,11 +4,6 @@ const pepperoni = "Pepperoni Pizza";
 
 const pizzaPrice = 80;
 
-console.log(vegetarian);
-console.log(hawaiian);
-console.log(pepperoni);
-console.log(pizzaPrice);
-
 //Put your Javscript code here:
 
 const checkOrderName = orderName => {
@@ -41,19 +36,29 @@ const cookingTime = orderQuantity => {
   return cookingTime;
 };
 
+/*const clickFunction = () => {
+  let orderName = document.getElementById("order-type").value;
+  console.log(orderName);
+  console.log("kommer vi hit?");
+};*/
+
+//Fungerar toppen!
 alert(
   `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`
 );
+
 let orderName = prompt("Enter the name of the pizza you want to order today.");
+
 if (checkOrderName(orderName)) {
   let orderQuantity = prompt(`How many of ${orderName} do you want?`);
   console.log(orderQuantity);
 
-  alert(
-    `Great, I'll get started on your ${orderName} right away, it will cost ${totalCost(
-      orderQuantity
-    )} kr. The pizzas will take ${cookingTime(orderQuantity)} minutes.`
-  );
+  document.getElementById(
+    "final-message"
+  ).innerHTML = `Great, I'll get started on your ${orderName} right away, it will cost ${totalCost(
+    orderQuantity
+  )} kr. The pizzas will take ${cookingTime(orderQuantity)} minutes.`;
 } else {
-  alert("Select a pizza from the menu");
+  document.getElementById("final-message").innerHTML =
+    "Select a pizza from the menu";
 }
