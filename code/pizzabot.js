@@ -15,3 +15,7 @@ alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawa
 let orderName = prompt('Enter the name of the pizza you want to order today.');
 
 let orderQuantity = prompt(`How many of ${orderName} do you want?`);
+
+let orderTotal = (orderQuantity * pizzaPrice);
+
+alert(`Great, I'll get started on your ${orderName}s right away, it will cost ${orderTotal}kr.`);
