@@ -43,15 +43,18 @@ if (orderName === vegetarian || orderName === hawaiian || orderName=== pepperoni
 
 const checkOrderName = () => {
   if (orderName === vegetarian || orderName === hawaiian || orderName=== pepperoni){
-    return true;
+    document.getElementById('pizzaType').innerHTML = `The pizza you have ordered: ${orderName}.`
 } else {
-  return false;
+  document.getElementById('pizzaType').innerHTML = 'Please select an item from the menu.'
 }
 }
 
 const totalCost = () => {
- return orderQuantity * pizzaPrice;
+  return orderQuantity * pizzaPrice
 }
+
+document.getElementById('pizzaNumber').innerHTML = 'The number of pizzas you have ordered: ' + orderQuantity;
+
 
 const cookingTime = () => {
   if(orderQuantity <=2 ){
@@ -62,6 +65,8 @@ const cookingTime = () => {
     return 20;
   };
 }
+document.getElementById('message').innerHTML = `The time will be around ${cookingTime()} and the total cost will be ${totalCost()}kr.`
+
 console.log(checkOrderName());
 console.log(totalCost());
 console.log(cookingTime())
