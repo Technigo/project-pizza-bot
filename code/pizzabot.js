@@ -15,13 +15,29 @@ alert(
   `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`
 );
 let orderName = prompt("Enter the name of the pizza you want to order today.");
-let orderQuantity = prompt(`How many of ${orderName} do you want?`);
+if (
+  orderName === vegetarian ||
+  orderName === hawaiian ||
+  orderName === pepperoni
+) {
+  let orderQuantity = prompt(`How many of ${orderName} do you want?`);
+  console.log(orderQuantity);
 
-console.log(orderQuantity);
+  let orderTotal = pizzaPrice * parseFloat(orderQuantity);
+  console.log(orderTotal);
+  let cookingTime;
 
-let orderTotal = pizzaPrice * parseFloat(orderQuantity);
-console.log(orderTotal);
+  if (parseFloat(orderQuantity) <= 2) {
+    cookingTime = "The pizzas will take 10 minutes.";
+  } else if (parseFloat(orderQuantity) >= 6) {
+    cookingTime = "The pizzas will take 20 minutes.";
+  } else {
+    cookingTime = "The pizzas will take 15 minutes.";
+  }
 
-alert(
-  `Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr`
-);
+  alert(
+    `Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. ${cookingTime}`
+  );
+} else {
+  alert("Select a pizza from the menu");
+}
