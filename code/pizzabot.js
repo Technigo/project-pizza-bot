@@ -11,32 +11,48 @@ console.log(pizzaPrice);
 
 //Put your Javscript code here:
 
+const checkOrderName = orderName => {
+  if (
+    orderName === vegetarian ||
+    orderName === hawaiian ||
+    orderName === pepperoni
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+const totalCost = orderQuantity => {
+  let orderTotal = pizzaPrice * parseFloat(orderQuantity);
+  return orderTotal;
+};
+
+const cookingTime = orderQuantity => {
+  let cookingTime;
+
+  if (parseFloat(orderQuantity) <= 2) {
+    cookingTime = 10;
+  } else if (parseFloat(orderQuantity) >= 6) {
+    cookingTime = 20;
+  } else {
+    cookingTime = 15;
+  }
+  return cookingTime;
+};
+
 alert(
   `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`
 );
 let orderName = prompt("Enter the name of the pizza you want to order today.");
-if (
-  orderName === vegetarian ||
-  orderName === hawaiian ||
-  orderName === pepperoni
-) {
+if (checkOrderName(orderName)) {
   let orderQuantity = prompt(`How many of ${orderName} do you want?`);
   console.log(orderQuantity);
 
-  let orderTotal = pizzaPrice * parseFloat(orderQuantity);
-  console.log(orderTotal);
-  let cookingTime;
-
-  if (parseFloat(orderQuantity) <= 2) {
-    cookingTime = "The pizzas will take 10 minutes.";
-  } else if (parseFloat(orderQuantity) >= 6) {
-    cookingTime = "The pizzas will take 20 minutes.";
-  } else {
-    cookingTime = "The pizzas will take 15 minutes.";
-  }
-
   alert(
-    `Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. ${cookingTime}`
+    `Great, I'll get started on your ${orderName} right away, it will cost ${totalCost(
+      orderQuantity
+    )} kr. The pizzas will take ${cookingTime(orderQuantity)} minutes.`
   );
 } else {
   alert("Select a pizza from the menu");
