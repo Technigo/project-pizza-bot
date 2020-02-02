@@ -11,13 +11,24 @@ console.log(pizzaPrice)
 
 
 let message;
-message = `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}.`
+message = `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian}, ${pepperoni}.`
 
 alert(message);
 
+var orderName = prompt(`Enter the name of the pizza you want to order today?`)
+
+let orderQuantity = prompt(`How many of ${orderName} do you want?`)
+
+let total = (pizzaPrice * orderQuantity)
+
+var orderTotal = prompt(`Great, we will get started on your ${orderName} right away, it will cost ${total} kr`)
 
 
 
 
-//Put your Javscript code here:
-''
+
+
+
+
+
+
