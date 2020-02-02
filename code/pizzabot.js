@@ -41,4 +41,28 @@ if (orderName === vegetarian || orderName === hawaiian || orderName=== pepperoni
  alert('Select a pizza from the menu')
 };
 
+const checkOrderName = () => {
+  if (orderName === vegetarian || orderName === hawaiian || orderName=== pepperoni){
+    return true;
+} else {
+  return false;
+}
+}
+
+const totalCost = () => {
+ return orderQuantity * pizzaPrice;
+}
+
+const cookingTime = () => {
+  if(orderQuantity <=2 ){
+    return 10;
+  } else if (orderQuantity <=5 ){
+    return 15;
+  }else if (orderQuantity >=6){
+    return 20;
+  };
+}
+console.log(checkOrderName());
+console.log(totalCost());
+console.log(cookingTime())
 
