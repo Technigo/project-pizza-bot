@@ -21,7 +21,8 @@ console.log(orderName);
 let orderQuantity = prompt('How many of ' + orderName + ' do you want?');
 console.log(orderQuantity);
 
-
+let orderTotal = orderQuantity * pizzaPrice
+alert("Great, I'll get started on your " + orderName + " right away, it will cost " + orderTotal + " kr.")
 
 
 
