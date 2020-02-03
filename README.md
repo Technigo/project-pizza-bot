@@ -8,4 +8,4 @@ The main problem was to understand the logic and usuage of the functions and how
 
 ## View it live
 
-https://determined-keller-320070.netlify.com/code/
+https://determined-keller-320070.netlify.com
