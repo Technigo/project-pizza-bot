@@ -13,7 +13,6 @@ var z = pepperoni
 alert("Hey! Happy to serve you pizza! On our menu we have " + x + ", " + y + " and " + z + ".")
 
 let orderName = prompt("Enter the name of the pizza you want to order today.");
-console.log(orderName);
 
 if (orderName == "vegetarian") {
   modifiedName = x;
@@ -26,11 +25,8 @@ if (orderName == "vegetarian") {
 }
 
 let orderQuantity = prompt("How many of " + modifiedName + " do you want?");
-console.log(orderQuantity);
 
 const totalCost = orderQuantity * 80;
-
-console.log(`The customer has ordered ${orderQuantity} of ${orderName}.`);
 
 if (orderQuantity < 3) {
   cookingTime = "10";
@@ -40,22 +36,13 @@ if (orderQuantity < 3) {
   cookingTime = "20";
 } 
 
-alert("Great, I'll get started on your " + modifiedName + " right away, it will cost you " + orderTotal + "kr. The pizzas will take " + cookingTime + " minutes." );
+document.getElementById("final-order").innerHTML = ("Great, I'll get started on your " + modifiedName + " right away, it will cost you " + totalCost + "kr. The pizzas will take " + cookingTime + " minutes.");
 
+console.log(orderName);
+console.log(orderQuantity);
+console.log(`The customer has ordered ${orderQuantity} of ${orderName}.`);
 console.log("It will cost " + orderQuantity * 80 + "kr.");
 
 
 
 
-
-
-
-/*
-let orderTotal = orderQuantity * pizzaPrice
-alert("Great, I'll get started on your " + orderName + " right away, it will cost " + orderTotal + " kr.");*/
-
-
-
-
-
-//Put your Javscript code here:
