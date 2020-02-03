@@ -10,15 +10,22 @@ console.log("Vegetarian Pizza", "Hawaiian Pizza", "Pepperoni Pizza", 80)
 
 alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`)
 
+
+const checkOrderName = () => {     
 const orderName = prompt(`Enter the name of the pizza you want to order today.`)
- let orderQuantity
+ 
     if ((orderName == "Vegetarian Pizza" || orderName == "Hawaiian Pizza" || orderName == "Pepperoni Pizza")) {
         orderQuantity = Number(prompt(`How many of ${orderName} do you want?`))
     } else {
         alert(`Select a pizza from the menu`)
-    
     }
+    
+  }
+  
+  checkOrderName(orderName)
 
+
+  let orderQuantity
 const orderTotal = orderQuantity * pizzaPrice
 
 let orderTime
