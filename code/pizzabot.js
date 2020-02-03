@@ -28,7 +28,7 @@ if (orderName == "vegetarian") {
 let orderQuantity = prompt("How many of " + modifiedName + " do you want?");
 console.log(orderQuantity);
 
-const orderTotal = orderQuantity * 80;
+const totalCost = orderQuantity * 80;
 
 console.log(`The customer has ordered ${orderQuantity} of ${orderName}.`);
 
