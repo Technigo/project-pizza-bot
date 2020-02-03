@@ -8,3 +8,5 @@ We struggled with constructing the functions but we used Stack overflow and aske
 If we had more time we would add some styling in Css.
 
 ## View it live
+
+Link: https://mystifying-jang-f63f0b.netlify.com/
