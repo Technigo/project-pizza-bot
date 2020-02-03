@@ -1,41 +1,40 @@
-const vegetarian = "Vegetarian Pizza"
-const hawaiian = "Hawaiian Pizza"
-const pepperoni = "Pepperoni Pizza"
+const A = "Vegetarian Pizza"
+const B = "Hawaiian Pizza"
+const C = "Pepperoni Pizza"
+ 
+let pizzaPrice = 80
 
-const pizzaPrice = 80
-
-//Put your Javscript code here:
-alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}.`)
-
-
-let orderName = prompt('Enter the name of the pizza you want to order today.')
-
-
-
-
-if (orderName == vegetarian || orderName == hawaiian || orderName == pepperoni) {
-  
-  
-} else {
-  alert('Order a pizza from the menu')
-  orderName = prompt('Enter the name of the pizza you want to order today.')
+ 
+const greeting = () => {
+  const welcome = (`Hey, happy to serve your pizza. We have ${A}, ${B}, ${C}, which one would you like?`)
+  document.getElementById("welcomePizza").innerHTML = welcome
 }
-const orderQuantity = prompt(`How many of ${orderName} do you want?`)
-const orderTotal = orderQuantity * pizzaPrice
+greeting()
 
-let pizzaTime = "" 
+const amount = () => {
+  const orderQuantity = 'How many pizzas would you like?'
+  document.getElementById("pizzaAmount").innerHTML = orderQuantity
+}
+amount()
 
-if (orderQuantity <= 2) {
-  // pizzaTime = alert('The pizzas will take 10 minutes!')
-pizzaTime="10 min"
-} else if (orderQuantity >= 3 && orderQuantity <= 5) {
-  // pizzaTime = alert('The pizzas will take 15 minutes!') 
-  pizzaTime="15 min"
+
+const checkOrderName = () => {
+  orderInput = document.getElementById("pizza").value
+  numberPizza = document.getElementById("numberPizza").value
+  let totalprice = pizzaPrice * numberPizza
+  if (orderInput === A || orderInput === B || orderInput === C) {
+    if (numberPizza <= 2) {
+      time = '10 min'
+    } else if (numberPizza >= 3 && numberPizza <= 5) {
+      time = '15 min'
+    } else {
+      time = '20 min'
+    }
+    let final = `You have ordered ${numberPizza} ${orderInput} and it will cost ${totalprice} SEK 
+    and it will take ${time}!`
+    document.getElementById("orderComplete").innerHTML = final
   } else {
-    //pizzaTime = alert('The pizzas will take 20 minutes!')
-    pizzaTime="20 min"
-  }
-
-
-alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. It will be ready
- in ${pizzaTime}`) 
+    alert(`We don't serve that. We have ${A}, ${B}, ${C}, which one would you like?`)
+    return false
+    }
+ } 
