@@ -22,7 +22,7 @@ if (orderName == "vegetarian") {
 } else if (orderName == "pepperoni") {
   modifiedName = z;
 } else {
-  alert('try again')
+  alert('Select a pizza form the menu')
 }
 
 let orderQuantity = prompt("How many of " + modifiedName + " do you want?");
@@ -31,7 +31,16 @@ console.log(orderQuantity);
 const orderTotal = orderQuantity * 80;
 
 console.log(`The customer has ordered ${orderQuantity} of ${orderName}.`);
-alert("Great, I'll get started on your " + modifiedName + " right away, it will cost you " + orderTotal + "kr.");
+
+if (orderQuantity < 3) {
+  cookingTime = "10";
+} else if (orderQuantity < 6) {
+  cookingTime = "15";
+} else {
+  cookingTime = "20";
+} 
+
+alert("Great, I'll get started on your " + modifiedName + " right away, it will cost you " + orderTotal + "kr. The pizzas will take " + cookingTime + " minutes." );
 
 console.log("It will cost " + orderQuantity * 80 + "kr.");
 
