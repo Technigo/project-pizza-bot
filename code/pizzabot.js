@@ -1,21 +1,19 @@
 const vegetarian = "Vegetarian Pizza";
 const hawaiian = "Hawaiian Pizza";
 const pepperoni = "Pepperoni Pizza";
+const menu = [vegetarian, hawaiian, pepperoni];
 
 const pizzaPrice = 80;
 
 //Put your Javscript code here:
 
 const checkOrderName = orderName => {
-  if (
-    orderName === vegetarian ||
-    orderName === hawaiian ||
-    orderName === pepperoni
-  ) {
-    return true;
-  } else {
-    return false;
+  for (let i = 0; i < menu.length; i++) {
+    if (orderName === menu[i]) {
+      return true;
+    }
   }
+  return false;
 };
 
 const totalCost = orderQuantity => {
@@ -40,16 +38,20 @@ document.getElementById(
   "menu"
 ).innerHTML = `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`;
 
-const clickFunction = () => {
-  //Fungerar toppen!
+document.getElementById("customer-q").innerHTML =
+  "Enter the name of the pizza you want to order today.";
 
-  let orderName = prompt(
-    "Enter the name of the pizza you want to order today."
-  );
+document.getElementById(
+  "customer-q2"
+).innerHTML = `How many pizzas do you want?`;
+
+const clickFunction = () => {
+  //Kunden skriver in önskad pizza i customer-value och texten sparas i orderName
+  let orderName = document.getElementById("customer-value").value;
 
   if (checkOrderName(orderName)) {
-    let orderQuantity = prompt(`How many of ${orderName} do you want?`);
-    console.log(orderQuantity);
+    //Kunden skriver in önskat antal i customer-value2 och värdet sparas i orderQuantity
+    let orderQuantity = document.getElementById("customer-value2").value;
 
     document.getElementById(
       "final-message"
@@ -61,8 +63,3 @@ const clickFunction = () => {
       "Select a pizza from the menu";
   }
 };
-/*
- let orderName = document.getElementById("order-type").value;
-  console.log(orderName);
-  console.log("kommer vi hit?");
-*/

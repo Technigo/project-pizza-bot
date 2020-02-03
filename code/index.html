@@ -11,8 +11,29 @@
     <!--The menu shall always be displayed in h1-->
     <h1 id="menu">This is your Pizza Bot</h1>
     <!--The button shall trigger the prompts-->
-    <button type="button" onclick="clickFunction()">OK!</button>
-
+    <!-- <button type="button" onclick="clickFunction()">LET'S GET STARTED!</button> -->
+    <!--Order form-->
+    <form id="order-form" method="POST">
+      <br />
+      <br />
+      <br />
+      <!--Vilken pizza vill du ha-->
+      <!--Vi satte <input> inuti <label> och när vi gjorde det syntes inte rutorna för att mata in värden. 
+        I en video säger Damien att man ska göra så så att synskadade ska kunna läsa på sidor. VARFÖR FUNKADE DET INTE?-->
+      <label id="customer-q"></label>
+      <input id="customer-value" type="text" />
+        
+      <!-- <label id="customer-q">
+        <input id="customer-value" type="text" /> -->
+        <!--Hur många pizzor vill du ha-->
+      </label>
+      <br />
+      <br />
+      <br />
+      <label id="customer-q2"></label>
+      <input id="customer-value2" type="number" min="1" max="10" />
+      <button type="button" onclick="clickFunction()">Order pizza!</button>
+    </form>
     <section id="final-message"></section>
   </body>
   <script src="pizzabot.js"></script>
