@@ -1,12 +1,28 @@
-/*body {
-  margin: 0;
-  background-image: url("pizza.jpeg");
-}*/
+body {
+  background-image: url("https://images.unsplash.com/photo-1542587222-f9172e5eba29?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 h1 {
-
+  font-family: 'Cabin', sans-serif;
+  font-size: 36px;
+  color: white;
+  text-align: center;
+  margin-top:50px;
 }
 
 button {
-  
+  background-color: #0aea9c;
+  color: black;
+  border: solid 1px;
+  border-radius: 5%;
 }
+
+#orderReply {
+  font-family: 'Cabin', sans-serif;
+  font-size: 20px;
+  color: #0aea9c;
+  text-align: center;
+}
+
