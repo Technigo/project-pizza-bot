@@ -4,35 +4,37 @@ const pepperoni = "Pepperoni Pizza"
 
 const pizzaPrice = 80
 
-
-alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and  ${pepperoni}.`);
-
-let orderName = prompt("Enter the name of the pizza you want to order today.");
-
 let checkOrderName = (orderName) => {
   if (orderName === vegetarian || orderName === hawaiian || orderName === pepperoni) {
     return true
   } else {
     return false
   }
-};
+}
 
 let totalCost = (orderQuantity) => {
-  return (orderQuantity * pizzaPrice);
+  return (orderQuantity * pizzaPrice)
 }
 
 let cookingTime = (orderQuantity) => {
-  if (orderQuantity < 3) { alert(`Great, I'll get started on your ${orderName} right away, it will cost ${totalCost(orderQuantity)} kr. The pizzas will take 10 minutes`) }
-  else if (orderQuantity < 6) { alert(`Great, I'll get started on your ${orderName} right away, it will cost ${totalCost(orderQuantity)} kr. The pizzas will take 15 minutes`) }
-  else { alert(`Great, I'll get started on your ${orderName} right away, it will cost ${totalCost(orderQuantity)} kr. The pizzas will take 20 minutes`) }
-};
+  if (orderQuantity < 3) {
+    document.getElementById("orderReply").innerHTML = `Great, I'll get started on your ${orderName} right away, it will cost ${totalCost(orderQuantity)} kr. The pizzas will take 10 minutes.`
+  } else if (orderQuantity < 6) {
+    document.getElementById("orderReply").innerHTML = `Great, I'll get started on your ${orderName} right away, it will cost ${totalCost(orderQuantity)} kr. The pizzas will take 15 minutes.`
+  } else { document.getElementById("orderReply").innerHTML = `Great, I'll get started on your ${orderName} right away, it will cost ${totalCost(orderQuantity)} kr. The pizzas will take 20 minutes.` }
+}
+
+alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and  ${pepperoni}.`)
+
+let orderName = prompt("Enter the name of the pizza you want to order today.")
 
 if (checkOrderName(orderName)) {
-  let orderQuantity = prompt(`How many of ${orderName} do you want?`);
+  let orderQuantity = prompt(`How many of ${orderName} do you want?`)
   cookingTime(orderQuantity)
 } else {
   alert("Please select a pizza from the menu.")
 }
+
 
 
 
