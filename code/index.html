@@ -8,15 +8,12 @@
     <title>Project 4: Pizzabot</title>
   </head>
   <body>
-    <h1>This is your Pizza Bot</h1>
-    <h2 id="h2"></h2>
-    <form>
-      <label>
-        <input id="order-type" type="text" />
-      </label>
-      <button type="button" onclick="clickFunction()">OK!</button>
-    </form>
-    <h3 id="final-message"></h3>
+    <!--The menu shall always be displayed in h1-->
+    <h1 id="menu">This is your Pizza Bot</h1>
+    <!--The button shall trigger the prompts-->
+    <button type="button" onclick="clickFunction()">OK!</button>
+
+    <section id="final-message"></section>
   </body>
   <script src="pizzabot.js"></script>
 </html>
