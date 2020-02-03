@@ -18,7 +18,16 @@ alert(message);
 
 
 
+
 var orderName = prompt(`Enter the name of the pizza you want to order today?`)
+
+const checkOrderName = (orderName) => {
+  if (orderName === vegetarian || orderName === hawaiian || orderName === pepperoni) {
+    return true
+  } else {
+    return false
+  }
+}
 
 let orderQuantity = prompt(`How many of ${orderName} do you want?`)
 
@@ -28,9 +37,9 @@ if (orderName === vegetarian) {
   orderQuantity = Number(prompt(`How many of ${orderName} do you want?`))
 } else if (orderName === pepperoni) {
   orderQuantity = Number(prompt(`How many of ${orderName} do you want?`))
-} else {
-  alert(`Your choice is not on our menu, please choose again.`)
 }
+
+
 
 
 let total = (pizzaPrice * orderQuantity)
@@ -46,3 +55,4 @@ if (orderQuantity >= 1 && orderQuantity <= 2) {
 } else if (orderQuantity >= 6) {
   orderQuantity = prompt(`The pizzas will take 20 minutes`)
 }
+
