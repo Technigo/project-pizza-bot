@@ -16,34 +16,33 @@ message = `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${
 
 alert(message);
 
+
+
 var orderName = prompt(`Enter the name of the pizza you want to order today?`)
 
 let orderQuantity = prompt(`How many of ${orderName} do you want?`)
 
 if (orderName === vegetarian) {
-  prompt(`How many of ${orderName} do you want?`)
+  orderQuantity = Number(prompt(`How many of ${orderName} do you want?`))
 } else if (orderName === hawaiian) {
-  prompt(`How many of ${orderName} do you want?`)
+  orderQuantity = Number(prompt(`How many of ${orderName} do you want?`))
 } else if (orderName === pepperoni) {
-  prompt(`How many of ${orderName} do you want?`)
+  orderQuantity = Number(prompt(`How many of ${orderName} do you want?`))
 } else {
-  alert(`Please select something from our menu`)
+  alert(`Your choice is not on our menu, please choose again.`)
 }
 
 
-
-
-
 let total = (pizzaPrice * orderQuantity)
-var orderTotal = prompt(`Great, we will get started on your ${orderName} right away, it will cost ${total} kr, the pizzas will take ${orderQuantity}`)
 
-
-
-
-
+var orderTotal = prompt(`Great, we will get started on your ${orderName} right away, it will cost ${total} kr.`)
 
 
 
 if (orderQuantity >= 1 && orderQuantity <= 2) {
   orderQuantity = prompt(`The pizzas will take 10 minutes`)
+} else if (orderQuantity >= 3 && orderQuantity <= 5) {
+  orderQuantity = prompt(`The pizzas will take 15 minutes`)
+} else if (orderQuantity >= 6) {
+  orderQuantity = prompt(`The pizzas will take 20 minutes`)
 }
