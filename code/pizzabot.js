@@ -139,7 +139,7 @@ const pizzaPrice = 80;
 
 
 // function for check if order exist on menu
-const checkOrderName = () => {
+const checkOrderName = (orderName) => {
   if (orderName == X || orderName == Y || orderName == Z) {
     console.log(true);
     return true;
@@ -176,21 +176,18 @@ const orderDetails = (onMenu, orderName) => {
     const orderQuantity = prompt(`"How many of ${orderName} do you want?`);
     const orderCost = totalCost(orderQuantity);
     const orderTime = cookingTime(orderQuantity);
-    alert(`The pizza will take ${orderTime} minutes. Great, I'll get started on your ${orderName} right away. It will cost ${orderCost} SEK!`);
+    document.getElementById("orderSummary").innerHTML = (`The pizza will take ${orderTime} minutes. Great, I'll get started on your ${orderName} right away. It will cost ${orderCost} SEK!`);
   } else {
-    alert(`Select a pizza from the menu`)
+    document.getElementById("orderSummary").innerHTML = (`Select a pizza from the menu`)
   }
 };
 
-
-
-
 // invoke/call functions
 
-alert(`Hey! Happy to serve your pizza. On our menu we have ${X}, ${Y} and ${Z}`);
+const clicked = () => {
+  alert(`Hey! Happy to serve your pizza. On our menu we have ${X}, ${Y} and ${Z}`);
+  const orderName = prompt(`Enter the name of the pizza you want to order today`);
+  const onMenu = checkOrderName(orderName);
+  orderDetails(onMenu, orderName);
+}
 
-const orderName = prompt(`Enter the name of the pizza you want to order today`);
-
-const onMenu = checkOrderName();
-
-orderDetails(onMenu, orderName);
