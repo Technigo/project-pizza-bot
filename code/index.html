@@ -9,7 +9,58 @@
 </head>
 
 <body>
-  <h1>This is your Pizza Bot</h1>
+  <div class="container">
+    <div class="pizzabot">
+      <!--WELCOME MESSAGE-->
+      <div class="card-one">
+        <h1 id="welcomeMessage"></h1>
+        <ul>
+          <li>Vegetarian Pizza</li>
+          <li>Hawaiian Pizza</li>
+          <li>Pepperoni Pizza</li>
+        </ul>
+        <button type="button">Click Me!</button>
+      </div>
+      <!--CHOSE A PIZZA: pictures of the 3 different pizzas + legend name /price + button to choose?-->
+      <div class="card-two">
+        <h1>Choose your favorite pizza</h1>
+        <form action="https://httpbin.org/anything" method="POST">
+          <fieldset>
+            <legend>What pizza would you like to order?</legend>
+            <div class="labels">
+              <label for="vegetarian">
+                <input name="user-preference" id="pizzaChoice" value="" type="radio" class="" unchecked />Vegetarian
+                Pizza 80 SEK</label>
+            </div>
+            <div class="labels">
+              <label for="hawaiian">
+                <input name="user-preference" id="pizzaChoice" value="" type="radio" class="" unchecked />Hawaiian
+                Pizza 80 SEK</label>
+            </div>
+            <div class="labels">
+              <label for="pepperoni">
+                <input name="user-preference" id="pizzaChoice" value="" type="radio" class="" unchecked />Pepperoni
+                Pizza 80 SEK</label>
+            </div>
+      </div>
+
+      <!--NUMBER OF PIZZAS: add a scrolling selector?-->
+      <div class="card-three">
+        <h1>How many pizza do you want?</h1>
+        <form action="">
+          <input type="text" id="orderQuantity" number="" required minlenght="1" maxlength="10">
+
+      </div>
+
+
+      <!--ORDER CONFIRMATION: price and cooking time -->
+      <div class="card-four">
+        <h4></h4>
+      </div>
+    </div>
+  </div>
+
+  <footer></footer>
   <script src="pizzabot.js"></script>
 </body>
 

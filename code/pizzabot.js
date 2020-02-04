@@ -8,24 +8,28 @@ const pizzaPrice = 80;
 console.log(vegetarian, hawaiian, pepperoni, pizzaPrice);
 
 //ITERATION 2
-alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}.`);
+let welcomeMessage = document.getElementById("welcomeMessage");
+document.getElementById("welcomeMessage").innerHTML = document.write(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}.`);
 
 //ITERATION 3
-let orderName = prompt("Enter the name of the pizza you want to order today.");
+let orderName = document.write("Enter the name of the pizza you want to order today.");
 console.log(orderName);
 
+document.write
+
+//ITERATIONS 4, 5 & 6
 //checkOrderName() which should take the orderName variable as an argument and return true or false if the pizza is on the menu or not.
 let orderQuantity;
 
 const checkOrderName = () => {
   if (orderName === 'vegetarian' || orderName === 'hawaiian' || orderName === 'pepperoni') {
-    orderQuantity = prompt(`How many of ${orderName} pizza do you want?`);
+    //orderQuantity = prompt(`How many of ${orderName} pizza do you want?`);
     console.log(orderQuantity);
     return true;
   } else {
-    alert("This pizza is not on the menu. Please try again.");
-    orderName = prompt("Enter the name of the pizza you want to order today.");
-    checkOrderName();
+    //alert("This pizza is not on the menu. Please try again.");
+    // orderName = prompt("Enter the name of the pizza you want to order today.");
+    checkOrderName()
   };
 };
 checkOrderName();
@@ -53,7 +57,7 @@ const getCookingTime = () => {
 };
 getCookingTime();
 
-alert(`Great! I'll get started on your ${orderName} pizza right away, it will cost ${orderTotal} kr. The pizzas will take ${cookingTime} minutes!`);
+//alert(`Great! I'll get started on your ${orderName} pizza right away, it will cost ${orderTotal} kr. The pizzas will take ${cookingTime} minutes!`);
 
 
 
