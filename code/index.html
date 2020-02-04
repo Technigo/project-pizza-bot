@@ -3,28 +3,31 @@
  <head>
    <meta charset="UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-   <title>Project 4: Pizzabot</title>
+   <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="style.css">
+   <title>Project 4: Pizzabot</title>
+   <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Playfair+Display&display=swap" rel="stylesheet">
+   
  </head>
- <body>
-  <h1>This is your Pizza Bot</h1>
-
+ <body id="orderComplete">
+   <header>
+      <h1>This is your Pizza Bot</h1>
+   </header>
+<div>
   <h2 id="welcomePizza"></h2>
-
   <input type="text" id="pizza">
-
-<!-- <h2 id="pizzaOrder"></h2> -->
-
+</div>
+ <div>
   <h2 id="pizzaAmount"></h2>
-
-  <input type="number" id="numberPizza"> 
-
-  <p id="y"></p>
+  <input type="number" id="numberPizza" min="1" max="100"> 
+</div>
+<div>
+  <p>Thank you for chosing to order your pizza!</p>
   <button onclick="checkOrderName()"> Order </button>
- 
-   <p id="orderComplete">
-  </p>
+</div> 
   
  
  </body>
