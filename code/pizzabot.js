@@ -4,67 +4,65 @@ const pepperoni = "Pepperoni Pizza";
 
 const pizzaPrice = 80;
 
+//ITERATION 1
+console.log(vegetarian, hawaiian, pepperoni, pizzaPrice);
 
-// Iteration 2: Greet the customer with alert()
+//ITERATION 2
 alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}.`);
 
-// Iteration 3 - Ask the customer
+//ITERATION 3
+let orderName = prompt("Enter the name of the pizza you want to order today.");
+console.log(orderName);
 
-/*const orderName = prompt("Enter the name of the pizza you want to order today.");
+//checkOrderName() which should take the orderName variable as an argument and return true or false if the pizza is on the menu or not.
+let orderQuantity;
 
-if (orderName == 'vegetarian' || orderName == 'pepperoni' || orderName == 'hawaiian') {
-  const orderQuantity = prompt(`How many of ${orderName}  do you want?`);
-} else {
-  prompt("Enter a valid pizza from the menu")
-};
-
-//const orderQuantity = prompt(`How many of ${orderName}  do you want?`);
-
-// Iteration 4 - Finalize the order
-
-const orderTotal = (orderQuantity * pizzaPrice);
-
-alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal}  kr`)*/
-
-// Iteration 5 - Add conditionals
-
-let orderName = () => {
-  prompt("Enter the name of the pizza you want to order today.");
-  if (orderName == 'vegetarian' || orderName == 'pepperoni' || orderName == 'hawaiian') {
-    let orderQuantity = prompt(`How many of ${orderName}  do you want?`);
-    let orderTotal = (orderQuantity * pizzaPrice);
-    if (orderQuantity <= 2) {
-      alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal}  kr.The pizzas will take 10 minutes.`);
-    } else if (orderQuantity >= 3 && orderTotal <= 5) {
-      alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal}  kr.The pizzas will take 15 minutes.`);
-    } else {
-      alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal}  kr.The pizzas will take 20 minutes.`);
-    };
+const checkOrderName = () => {
+  if (orderName === 'vegetarian' || orderName === 'hawaiian' || orderName === 'pepperoni') {
+    orderQuantity = prompt(`How many of ${orderName} pizza do you want?`);
+    console.log(orderQuantity);
+    return true;
   } else {
-    alert("Select a pizza from the menu");
+    alert("This pizza is not on the menu. Please try again.");
+    orderName = prompt("Enter the name of the pizza you want to order today.");
+    checkOrderName();
   };
 };
+checkOrderName();
 
-/*For loop
-let pizza = ['vegetarian', 'hawaiian', 'pepperoni'];
+// totalCost() which takes orderQuantity as an argument and returns the total cost for the order.
+let orderTotal;
 
-for (let i = [0]; i < [2]; i++) {
-  let orderName = () => {
-    prompt("Enter the name of the pizza you want to order today.");
-    if (orderName == 'vegetarian' || orderName == 'pepperoni' || orderName == 'hawaiian') {
-      let orderQuantity = prompt(`How many of ${orderName}  do you want?`);
-      let orderTotal = (orderQuantity * pizzaPrice);
-      if (orderQuantity <= 2) {
-        alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal}  kr.The pizzas will take 10 minutes.`);
-      } else if (orderQuantity >= 3 && orderTotal <= 5) {
-        alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal}  kr.The pizzas will take 15 minutes.`);
-      } else {
-        alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal}  kr.The pizzas will take 20 minutes.`);
-      };
-    } else {
-      alert("Select a pizza from the menu");
-    };
-  }*/
+const totalCost = () => {
+  orderTotal = orderQuantity * pizzaPrice;
+};
+console.log(orderTotal);
+totalCost();
+
+//cookingTime()` which takes `orderQuantity` and returns the number of minutes it will take to finish the order.
+let cookingTime;
+
+const getCookingTime = () => {
+  if (orderQuantity < 3) {
+    cookingTime = '10';
+  } else if (orderQuantity >= 3 && orderTotal <= 5) {
+    cookingTime = '15';
+  } else {
+    cookingTime = '20';
+  }
+};
+getCookingTime();
+
+alert(`Great! I'll get started on your ${orderName} pizza right away, it will cost ${orderTotal} kr. The pizzas will take ${cookingTime} minutes!`);
+
+
+
+
+
+
+
+
+
 
 
 
