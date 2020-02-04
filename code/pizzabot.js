@@ -81,19 +81,21 @@ const checkOrderName = () => {
 checkOrderName(orderName);
 
 const totalCost = (orderQuantity) => {
-  alert(`That will be a total of ${orderQuantity * pizzaPrice} kr.`);
+  var element = document.getElementById("money-feedback");
+  element.innerHTML = `That will be a total of ${orderQuantity * pizzaPrice} kr.`;
   return orderQuantity * pizzaPrice;
 }
 
 const cookingTime = (orderQuantity) => {
   if (orderQuantity >0 && orderQuantity <=2) {
-    alert("Your order will be ready in 10 minutes.")
+    var element = document.getElementById("time-feedback");
+    element.innerHTML = "Your order will be ready in 10 minutes.";
   } else if ( orderQuantity >2 && orderQuantity <6) {
-    alert("Your order will be ready in 15 minutes.")
-  } else if ( orderQuantity >=6) {
-    alert("Your order will be ready in 20 minutes.")
-  } else {
-    alert(`Sorry you can't order ${orderQuantity} pizzas.`)
+    var element = document.getElementById("time-feedback");
+    element.innerHTML = "Your order will be ready in 15 minutes.";
+  } else if ( orderQuantity >=6 && orderQuantity <100) {
+    var element = document.getElementById("time-feedback");
+    element.innerHTML = "Your order will be ready in 20 minutes.";
   }
 }
 

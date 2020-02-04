@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-image: url(2586.jpg);
+    background-size: 100%;
+}
+
+
+#feedback {
+    margin: 40px;
+    background-color: rgba(255, 255, 255, 0.945);
+    size: 80%;
+}
+
+h1 {
+    color: red;
+    margin: 50px;
+    font-style: italic;
+    font-size: 200%;
+}
+
+p {
+    color: red;
+    margin: 50px;
+    font-style: italic;
+    font-size: 160%;
+}
