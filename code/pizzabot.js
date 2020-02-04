@@ -18,23 +18,6 @@ const orderName = prompt(`Enter the name of the pizza you want to order today.`)
 let orderQuantity;
 
 
-// *******   TRYING TO MAKE BETTER FUNCTIONS ****************
-
-// const checkOrderName = () => {
-//   if (orderName === vegetarian || ordeName === hawaiian || orderName === pepperoni) {
-//     return true;
-//   } else {
-//     return false;
-//   };
-// }
-
-// if (checkOrderName === true ) { 
-//   orderQuantity = Number(prompt(`How many of ${ordeName} would you like?` ));
-// } else {
-//   checkOrderName();
-// }
-
-
 
 const checkOrderName = () => {
   if (orderName === vegetarian || orderName === hawaiian || orderName === pepperoni) {
@@ -91,6 +74,7 @@ console.log(ovenTime);
 console.log(orderQuantity);
 
 
+document.getElementById("pizza").innerHTML = (`Great, I'll get started on ${orderName} right away. It will cost ${orderTotal} kr and the pizzas will take ${ovenTime} minutes.`);
 
 
 // 
