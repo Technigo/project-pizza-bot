@@ -182,7 +182,7 @@ const orderDetails = (onMenu, orderName) => {
   }
 };
 
-// invoke/call functions
+// invoke/call functions (iteration 7)
 
 const clicked = () => {
   alert(`Hey! Happy to serve your pizza. On our menu we have ${X}, ${Y} and ${Z}`);
