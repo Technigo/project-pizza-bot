@@ -36,9 +36,7 @@ let orderName = prompt(`Enter the name of the pizza you want to order today.`)
 
 if (checkOrderName(orderName) === true) {
   orderQuantity = prompt(`How many of ${orderName} do you want?`)
-  alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal(orderQuantity)} kr. The pizzas will take ${pizzaTime(orderQuantity)} minutes.`)
+  document.getElementById("pizza-order").innerHTML = `Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal(orderQuantity)} kr. The pizzas will take ${pizzaTime(orderQuantity)} minutes.`
 } else {
   alert(`Choose a pizza from the menu`)
 }
-
-
