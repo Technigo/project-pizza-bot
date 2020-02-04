@@ -64,7 +64,7 @@ console.log(pizzaPrice);
 
 // Iteration 6
 // Inform user about the menu
-alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`)
+alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}.`)
 
 // Store users input in orderName
 orderName = prompt(`Enter the name of the pizza you want to order today.`);
@@ -81,28 +81,36 @@ const checkOrderName = () => {
 checkOrderName(orderName);
 
 const totalCost = (orderQuantity) => {
-  alert(`That will be a total of ${orderQuantity * pizzaPrice}kr`);
+  alert(`That will be a total of ${orderQuantity * pizzaPrice} kr.`);
   return orderQuantity * pizzaPrice;
 }
 
 const cookingTime = (orderQuantity) => {
   if (orderQuantity >0 && orderQuantity <=2) {
-    alert("This order will take 10 minutes")
+    alert("Your order will be ready in 10 minutes.")
   } else if ( orderQuantity >2 && orderQuantity <6) {
-    alert("This order will take 15 minutes")
+    alert("Your order will be ready in 15 minutes.")
   } else if ( orderQuantity >=6) {
-    alert("This order will take 20 minutes")
+    alert("Your order will be ready in 20 minutes.")
   } else {
-    alert(`Sorry you can´t order ${orderQuantity} pizzas!`)
+    alert(`Sorry you can't order ${orderQuantity} pizzas.`)
   }
 }
+
 
 const orderUp = () => {
   if ( checkOrderName() ) {
-    orderQuantity = prompt(`How many of ${orderName} do you want?`)
-    totalCost(orderQuantity);
-    cookingTime(orderQuantity);
+    orderQuantity = prompt(`How many of ${orderName} would you like?`)
+    // Check if orderQuantity is true and more then 0 units ordered
+    if ( orderQuantity >=1 ) {
+      totalCost(orderQuantity);
+      cookingTime(orderQuantity);
+    } else {
+      alert("0 pizzas is not a valid option. Please try again.")
+      orderUp(orderName);
+    }
   }
 }
-
 orderUp();
+
+
