@@ -1,12 +1,10 @@
 # Pizza Bot
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This is our first JavaScript project at Technigo's bootcamp! It's pairprogrammed with @elinaarenstrup. 
+The assignment was to create a Pizza Bot that calculates the price and tells the waiting time for the pizza. 
 
 ## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The program has three functions. One checks if the pizza is on the menu, the other how much the pizzas cost and the last one how long the wait is. The input is by prompts and the messages are alerts except the last one that writes the information in the HTML by using DOM.
 
 ## View it live
 
