@@ -9,4 +9,5 @@ If you type the wrong pizza name it will just say that you have to choose one fr
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Take a look! 
+https://pensive-khorana-971d25.netlify.com/
