@@ -1,13 +1,20 @@
 # Pizza Bot
 
-Replace this readme with your own information about your project. 
+This was a project done in the Technigo Bootcamp - Spring 2020
+It is a pair programming project where we constructed a Pizza Bot.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Programmers:
+Tuliany Grande
+Ragna Þorbjörg Úlfarsdóttir
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The assignment was to make a pizza bot that would take orders and reply with messages. 
+This was a difficult assignment but we managed to get through it, although it could be done in a more refined way. 
+
+If we had more time we would make it so that if the user makes a mistake the code would loop neatly into questioning again.
+
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Check our pizzabot out here: https://wonderful-hopper-f7ab96.netlify.com 🍕
