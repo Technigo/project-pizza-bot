@@ -1,5 +1,6 @@
 body {
   background-image: url("pizza.jpeg");
+  background-color: black;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -12,7 +13,6 @@ h1 {
   font-family: 'Cabin', sans-serif;
   font-size: 36px;
   color: #0aea9c;
-  text-align: center;
   margin-top:50px;
 }
 
@@ -20,6 +20,7 @@ button {
   background-color: #0aea9c;
   color: black;
   border: solid 1px black;
+  padding: 15px;
   margin-bottom: 50px;
 }
 
@@ -27,6 +28,5 @@ button {
   font-family: 'Cabin', sans-serif;
   font-size: 20px;
   color: #0aea9c;
-  text-align: center;
 }
 
