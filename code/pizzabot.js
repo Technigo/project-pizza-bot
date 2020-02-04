@@ -132,57 +132,65 @@ The functions should all reflect the tasks we've completed so far. So, the funct
 */
 
 
-const X = "Vegetarian Pizza"
-const Y = "Hawaiian Pizza"
-const Z = "Pepperoni Pizza"
-const pizzaPrice = 80
+const X = 'Vegetarian Pizza';
+const Y = 'Hawaiian Pizza';
+const Z = 'Pepperoni Pizza';
+const pizzaPrice = 80;
 
-alert(`Hey! Happy to serve your pizza. On our menu we have ${X}, ${Y} and ${Z}`)
-let orderName = prompt(`Enter the name of the pizza you want to order today`)
 
-// function check order name
-const checkOrderName = (orderName) => {
+// function for check if order exist on menu
+const checkOrderName = () => {
   if (orderName == X || orderName == Y || orderName == Z) {
-    console.log(true)
-    return true
+    console.log(true);
+    return true;
   } else {
-    console.log(false)
-    return false
+    console.log(false);
+    return false;
   }
-}
+};
 
-const onMenu = checkOrderName()
+// function for total cost of order
+const totalCost = orderQuantity => {
+  const orderTotal = (pizzaPrice * orderQuantity);
+  console.log(orderTotal);
+  return orderTotal;
+};
 
-// function for total cost
-const totalCost = (orderQuantity) => {
-  const orderTotal = (pizzaPrice * orderQuantity)
-  return orderTotal
-}
-
-//function for cooking time
-const cookingTime = (orderQuantity) => {
+//function cooking time
+const cookingTime = orderQuantity => {
   if (orderQuantity < 3) {
-    return 10
+    console.log(10);
+    return 10;
   } else if (orderQuantity >= 3 && orderQuantity <= 5) {
-    return 15
+    console.log(15);
+    return 15;
   } else {
-    return 20
+    console.log(20);
+    return 20;
   }
-}
+};
 
-
-
-// invoke/call function for checking order name
-
-const finalOrder = (orderName) => {
+//function for order summary
+const orderDetails = (onMenu, orderName) => {
   if (onMenu == true) {
-    orderQuantity = prompt(`"How many of ${orderName} do you want?`)
-    orderCost = totalCost(orderQuantity)
-    orderTime = cookingTime(orderQuantity)
-    alert(`The pizza will take ${orderTime} minutes. Great, I'll get started on your ${orderName} right away. It will cost ${orderCost} kronor!`)
+    const orderQuantity = prompt(`"How many of ${orderName} do you want?`);
+    const orderCost = totalCost(orderQuantity);
+    const orderTime = cookingTime(orderQuantity);
+    alert(`The pizza will take ${orderTime} minutes. Great, I'll get started on your ${orderName} right away. It will cost ${orderCost} SEK!`);
   } else {
     alert(`Select a pizza from the menu`)
   }
-}
+};
 
-finalOrder(orderName)
+
+
+
+// invoke/call functions
+
+alert(`Hey! Happy to serve your pizza. On our menu we have ${X}, ${Y} and ${Z}`);
+
+const orderName = prompt(`Enter the name of the pizza you want to order today`);
+
+const onMenu = checkOrderName();
+
+orderDetails(onMenu, orderName);
