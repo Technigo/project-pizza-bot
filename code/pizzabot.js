@@ -45,11 +45,11 @@ const orderQuantity = (userInput) => {
 
 const cookingTime = (numberOfPizzas) => {
   if (numberOfPizzas >= 1 && numberOfPizzas <= 2) {
-    return `The pizzas will take 10 minutes`
+    return `The pizzas will take 10 minutes!`
   } else if (numberOfPizzas >= 3 && numberOfPizzas <= 5) {
-    return `The pizzas will take 15 minutes`
+    return `The pizzas will take 15 minutes!`
   } else if (numberOfPizzas >= 6) {
-    return `The pizzas will take 20 minutes`
+    return `The pizzas will take 20 minutes!`
   }
 }
 
