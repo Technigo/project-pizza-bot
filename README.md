@@ -1,13 +1,10 @@
 # Pizza Bot
 
-Replace this readme with your own information about your project. 
+This week's project was about practicing JS, so we had to build a pizza bot in pairs (with @Nesiht)
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+First, we built one huge function, that included everything and it was trickier than we thought to take it apart but we managed in the end. 
 
-## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We are quite proud that our bot includes error messages, in case you order 0 or negative amount of pizzas or if you order a pizza that's not on the menu.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
