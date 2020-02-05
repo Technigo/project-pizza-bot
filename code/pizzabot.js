@@ -10,49 +10,47 @@ console.log(pepperoni)
 console.log(pizzaPrice)
 
 
+function orderButton() {
+  alert(`Hey! I'm happy to serve you pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}.`);
 
-let message;
-message = `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian}, ${pepperoni}.`
+  let orderName = checkOrderName();
+  let quantity = orderQuantity(orderName);
+  let total = (pizzaPrice * quantity)
 
-alert(message);
+  let textGoesHere = document.getElementById('printMessage')
+  textGoesHere.innerHTML = `<p>Great, we will get started on your ${orderName} right away, it will cost ${total} kr.</p>`;
+  textGoesHere.innerHTML += `<p>${cookingTime(quantity)}</p>`;
+}
 
 
-
-
-var orderName = prompt(`Enter the name of the pizza you want to order today?`)
-
-const checkOrderName = (orderName) => {
-  if (orderName === vegetarian || orderName === hawaiian || orderName === pepperoni) {
-    return true
+const checkOrderName = () => {
+  let input = prompt(`Enter the name of the pizza you want to order today?`)
+  if (input === vegetarian || input === hawaiian || input === pepperoni) {
+    return input;
   } else {
-    return false
+    alert('Please select someting from our menu');
+    return checkOrderName();
+  }
+};
+
+const orderQuantity = (userInput) => {
+  if (userInput === vegetarian) {
+    return Number(prompt(`How many of ${userInput} do you want?`));
+  } else if (userInput === hawaiian) {
+    return Number(prompt(`How many of ${userInput} do you want?`));
+  } else if (userInput === pepperoni) {
+    return Number(prompt(`How many of ${userInput} do you want?`));
   }
 }
 
-let orderQuantity = prompt(`How many of ${orderName} do you want?`)
-
-if (orderName === vegetarian) {
-  orderQuantity = Number(prompt(`How many of ${orderName} do you want?`))
-} else if (orderName === hawaiian) {
-  orderQuantity = Number(prompt(`How many of ${orderName} do you want?`))
-} else if (orderName === pepperoni) {
-  orderQuantity = Number(prompt(`How many of ${orderName} do you want?`))
+const cookingTime = (numberOfPizzas) => {
+  if (numberOfPizzas >= 1 && numberOfPizzas <= 2) {
+    return `The pizzas will take 10 minutes`
+  } else if (numberOfPizzas >= 3 && numberOfPizzas <= 5) {
+    return `The pizzas will take 15 minutes`
+  } else if (numberOfPizzas >= 6) {
+    return `The pizzas will take 20 minutes`
+  }
 }
 
-
-
-
-let total = (pizzaPrice * orderQuantity)
-
-var orderTotal = prompt(`Great, we will get started on your ${orderName} right away, it will cost ${total} kr.`)
-
-
-
-if (orderQuantity >= 1 && orderQuantity <= 2) {
-  orderQuantity = prompt(`The pizzas will take 10 minutes`)
-} else if (orderQuantity >= 3 && orderQuantity <= 5) {
-  orderQuantity = prompt(`The pizzas will take 15 minutes`)
-} else if (orderQuantity >= 6) {
-  orderQuantity = prompt(`The pizzas will take 20 minutes`)
-}
 
