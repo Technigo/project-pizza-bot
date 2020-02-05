@@ -46,13 +46,14 @@ document.getElementById(
 ).innerHTML = `How many pizzas do you want?`;
 
 const clickFunction = () => {
-  //Kunden skriver in önskad pizza i customer-value och texten sparas i orderName
+  //The customer types the type of pizza in customer-value (input box 1) and the value is stored in orderName
   let orderName = document.getElementById("customer-value").value;
 
   if (checkOrderName(orderName)) {
-    //Kunden skriver in önskat antal i customer-value2 och värdet sparas i orderQuantity
+    //The customer types the no of pizzas in customer-value2 (input box 2) and the value is stored in orderQuantity
     let orderQuantity = document.getElementById("customer-value2").value;
 
+    //Depending on the return type from the checkOrderName function (true/false), the "final-message" will change
     document.getElementById(
       "final-message"
     ).innerHTML = `Great, I'll get started on your ${orderName} right away, it will cost ${totalCost(

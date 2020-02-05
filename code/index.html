@@ -12,29 +12,66 @@
     />
     <title>Project 4: Pizzabot</title>
   </head>
+
   <body>
-    <!--Header om vi har tid och ork över-->
+    <section class="content">
+      <header>
+        <h1>
+          TH<span class="bold">E</span> P<span class="bold">I</span>ZZ<span
+            class="bold"
+            >A</span
+          >
+          B<span class="bold">O</span>T
+        </h1>
+      </header>
 
-    <!--The menu shall always be displayed in h1-->
-    <h1 id="menu">This is your Pizza Bot</h1>
-    <!--Order form-->
-    <div>
-      <form id="order-form" method="POST">
-        <!--What kind of pizza do you want?-->
-        <!--Vi satte <input> inuti <label> och när vi gjorde det syntes inte rutorna för att mata in värden. 
-        I en video säger Damien att man ska göra så så att synskadade ska kunna läsa på sidor. VARFÖR FUNKADE DET INTE?-->
-        <label id="customer-q"></label>
-        <input id="customer-value" type="text" />
+      <section class="welcome"></section>
 
-        <!--How many pizzas do you want?-->
-        <label id="customer-q2"></label>
-        <input id="customer-value2" type="number" min="1" max="10" />
-        <button type="button" onclick="clickFunction()">Order pizza!</button>
+      <section class="main-container">
+        <h2>
+          LET'S ORDER SOME PIZZA
+        </h2>
+        <section class="main-content">
+          <div class="left-column">
+            <!--The menu shall always be displayed in h1-->
+            <p id="menu">This is your Pizza Bot</p>
+            <section id="final-message"></section>
+          </div>
 
-        <section id="final-message"></section>
-      </form>
-    </div>
-    <!--Footer om vi har tid och ork över-->
+          <!--Order form-->
+          <div class="right-column">
+            <form id="order-form" method="POST">
+              <!--What kind of pizza do you want?-->
+              <label id="customer-q"></label>
+              <!--We tried to put the <input> inside of the <label> but when we did so the input boxes didn't show in the browser. Damien said in a video that we should do it like so for the vision impaired. Why didn't it work?-->
+              <input
+                id="customer-value"
+                type="text"
+                placeholder="Vegetarian Pizza / Hawaiian Pizza / Pepperoni Pizza"
+              />
+
+              <!--How many pizzas do you want?-->
+              <label id="customer-q2"></label>
+              <input
+                id="customer-value2"
+                type="number"
+                min="1"
+                max="10"
+                placeholder="1 - 10"
+              />
+
+              <button type="button" onclick="clickFunction()">
+                Order pizza!
+              </button>
+            </form>
+          </div>
+        </section>
+      </section>
+    </section>
+
+    <footer>
+      <p>PROJECT 4</p>
+    </footer>
   </body>
   <script src="pizzabot.js"></script>
 </html>
