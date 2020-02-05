@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    background-image: url(https://images.unsplash.com/photo-1504740026538-8f4a7e4806ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=803&q=80);
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center 20%;
+    background-size: cover;
+    position: relative;
+}
+
+.background {
+    width: 100%;
+}
+
+h1 {
+    color: white;
+    font-size: 50px;
+}
+
+button {
+    margin: 20px;
+    background-color: white;
+    color: aqua;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+h2 {
+    color: white;
+    font-size: 30px;
+}
