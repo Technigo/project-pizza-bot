@@ -62,23 +62,29 @@ console.log(pizzaPrice);
 // }
 // orderWhole()
 
-// Iteration 6
-// Inform user about the menu
-alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}.`)
 
-// Store users input in orderName
+const buttonClicked = () => {
+alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}.`);
 orderName = prompt(`Enter the name of the pizza you want to order today.`);
+checkOrderName(orderName);
+totalCost();
+cookingTime();
+orderUp();
+}
+
 
 const checkOrderName = () => {
   if (orderName == vegetarian || orderName == hawaiian || orderName == pepperoni) {
     return true;
   } else {
+    alert("Sorry, we don't have that on the menu. Please try again.");
+    buttonClicked();
     return false;
   }
 }
 
 // Invoke function with users input as parameter
-checkOrderName(orderName);
+//checkOrderName(orderName);
 
 const totalCost = (orderQuantity) => {
   var element = document.getElementById("money-feedback");
@@ -113,6 +119,6 @@ const orderUp = () => {
     }
   }
 }
-orderUp();
+//orderUp();
 
 
