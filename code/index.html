@@ -5,62 +5,34 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="style.css">
   <title>Project 4: Pizzabot</title>
 </head>
 
 <body>
-  <div class="container">
-    <div class="pizzabot">
-      <!--WELCOME MESSAGE-->
-      <div class="card-one">
-        <h1 id="welcomeMessage"></h1>
-        <ul>
-          <li>Vegetarian Pizza</li>
-          <li>Hawaiian Pizza</li>
-          <li>Pepperoni Pizza</li>
-        </ul>
-        <button type="button">Click Me!</button>
+  <div class="main">
+    <!--WELCOME MESSAGE-->
+    <section>
+      <h1>Welcome to our Pizzeria!</h1>
+      <div class="container">
+        <figure>
+          <img src="images/vegetarian_pizza.jpg" alt="vegetarian pizza">
+          <figcaption>Vegetarian Pizza - 80 SEK</figcaption>
+        </figure>
+        <figure>
+          <img src="images/hawaiian-pizza2.jpg" alt="hawaiian pizza">
+          <figcaption>Hawaiian Pizza - 80 SEK</figcaption>
+        </figure>
+        <figure>
+          <img src="images/pepperoni_pizza.jpg" alt="pepperoni pizza">
+          <figcaption>Pepperoni Pizza - 80 SEK</figcaption>
+        </figure>
       </div>
-      <!--CHOSE A PIZZA: pictures of the 3 different pizzas + legend name /price + button to choose?-->
-      <div class="card-two">
-        <h1>Choose your favorite pizza</h1>
-        <form action="https://httpbin.org/anything" method="POST">
-          <fieldset>
-            <legend>What pizza would you like to order?</legend>
-            <div class="labels">
-              <label for="vegetarian">
-                <input name="user-preference" id="pizzaChoice" value="" type="radio" class="" unchecked />Vegetarian
-                Pizza 80 SEK</label>
-            </div>
-            <div class="labels">
-              <label for="hawaiian">
-                <input name="user-preference" id="pizzaChoice" value="" type="radio" class="" unchecked />Hawaiian
-                Pizza 80 SEK</label>
-            </div>
-            <div class="labels">
-              <label for="pepperoni">
-                <input name="user-preference" id="pizzaChoice" value="" type="radio" class="" unchecked />Pepperoni
-                Pizza 80 SEK</label>
-            </div>
-      </div>
-
-      <!--NUMBER OF PIZZAS: add a scrolling selector?-->
-      <div class="card-three">
-        <h1>How many pizza do you want?</h1>
-        <form action="">
-          <input type="text" id="orderQuantity" number="" required minlenght="1" maxlength="10">
-
-      </div>
-
-
-      <!--ORDER CONFIRMATION: price and cooking time -->
-      <div class="card-four">
-        <h4></h4>
-      </div>
-    </div>
+    </section>
+    <p id="order-confirmation"></p>
   </div>
-
   <footer></footer>
+
   <script src="pizzabot.js"></script>
 </body>
 

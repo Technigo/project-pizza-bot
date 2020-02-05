@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: unset;
+  margin: auto;
+  width: 80%;
+}
+
+body {
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
+  border: 2px solid grey;
+  border-radius: 8px;
+  padding: 5px;
+  text-align : center;
+}
+
+figure {
+  width: 25%;
+}
+
+figcaption {
+  text-align: center;
+  padding-top: 5px;
+}
+
+img {
+  width: 100%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
