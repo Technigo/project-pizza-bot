@@ -1,0 +1,65 @@
+body {
+  font-family: 'Lobster', cursive;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+  margin-bottom: 50px;
+  font-size: 72px;
+}
+
+h2 {
+  font-size: 42px;
+  padding-left: 20px;
+  margin-bottom: 2px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 32px;
+  margin: 0;
+  text-align: left;
+}
+
+.content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 660px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.myButton {
+  margin-top: 75px;
+  margin-bottom: 75px;
+  box-shadow: inset 0px 1px 0px 0px #fbafe3;
+  background: linear-gradient(to bottom, #ff5bb0 5%, #ef027d 100%);
+  background-color: #ff5bb0;
+  border-radius: 6px;
+  border: 1px solid #ee1eb5;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #c70067;
+}
+
+.myButton:hover {
+  background: linear-gradient(to bottom, #ef027d 5%, #ff5bb0 100%);
+  background-color: #ee1eb5;
+}
+
+.myButton:active {
+  position: relative;
+  top: 1px;
+}
+
+#pink {
+  color: #ee1eb5;
+}

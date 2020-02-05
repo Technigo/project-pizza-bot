@@ -5,19 +5,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="./pizza.css" />
+  <link href="https://fonts.googleapis.com/css?family=Lobster|Lobster+Two&display=swap" rel="stylesheet">
   <title>Project 4: Pizza bot</title>
 </head>
 
 <body>
-  <h1>This is your Pizza Bot</h1>
-  <button onclick="clicked()">Click me</button>
-  <h2>
-    <div id="pizzapris"></div>
-  </h2>
-  <h2>
-    <div id="pizzaleverans"></div>
-  </h2>
-  <script src="pizzabot.js"></script>
+  <div class="content">
+    <h1>This is your Pizza Bot</h1>
+    <h2>
+      <div id="welcome"></div>
+    </h2>
+    <button class="myButton" onclick="clicked()">Start Your Order</button>
+    <h3>
+      <div id="pizzaCost"></div>
+    </h3>
+    <h3>
+      <div id="pizzaDelivery"></div>
+    </h3>
+    <script src="pizzabot.js"></script>
+  </div>
 </body>
 
 </html>
