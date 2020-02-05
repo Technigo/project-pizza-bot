@@ -16,4 +16,4 @@ https://suspicious-poitras-14bb4e.netlify.com/
 ---
 
 
-This Pizza bot was created by Kajsa Bootin & Kajsa Holmström.
+*This Pizza bot was created by Kajsa Bootin & Kajsa Holmström.*
