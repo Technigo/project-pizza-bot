@@ -10,7 +10,7 @@ console.log(pizzaPrice)
 
 alert(`Hey! Happy to serve your pizza. On our meny we have ${vegetarian}, ${hawaiian}, ${pepperoni}!`)
   
-  var orderName = prompt("Enter the name of the pizza you want to order today.", "");
+  const orderName = prompt("Enter the name of the pizza you want to order today.", "");
   if (orderName === vegetarian || orderName === hawaiian || orderName === pepperoni)
 	{
     var orderQuantity =  prompt(
@@ -20,38 +20,23 @@ alert(`Hey! Happy to serve your pizza. On our meny we have ${vegetarian}, ${hawa
   alert ("Select a pizza from the menu") 
 }
 
-if(orderQuantity<2) var cookingTime = 10
-  if(orderQuantity>=2 && orderQuantity<=5) var cookingTime = 15
-  else var cookingTime = 20 
-;
+const cookingTime = () => {
+  if(orderQuantity<2) return 10
+  if(orderQuantity>=2 && orderQuantity<=5) return 15
+else return 20
+};
 
+const orderTotal = orderQuantity*pizzaPrice;
 
-var orderTotal = orderQuantity*pizzaPrice;
+// const checkOrderName = () => { 
+//  if (orderName === vegetarian || orderName === hawaiian || orderName === pepperoni){ 
+// return true}
 
-alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The pizzas will take ${cookingTime}.`)
+// else {return false}
+//  } //Iteration 6 
 
-const checkOrderName = () => { 
- if (orderName === vegetarian || orderName === hawaiian || orderName === pepperoni){ 
-return true}
+//  const totalCost = () => {
+//  return orderQuantity*pizzaPrice;
+//  } //Iteration 6 
 
-else {return false}
- }
-
- alert (checkOrderName())
-
- const totalCost = () => {
- return orderQuantity*pizzaPrice;
- }
-
- alert (totalCost())
-
- let cookingTime2 = () => {
-     if(orderQuantity<2) return 10
-     if(orderQuantity>=2 && orderQuantity<=5) return 15
-  else return 20
- };
- alert (cookingTime2())
-
- document.getElementById("welcome-text").innerHTML = "What Pizza would you like?"
-
- HTMLElementObject.innerHTML = Text
+ document.getElementById("order-text").innerHTML = `Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The pizzas will take ${cookingTime()} minutes.`
