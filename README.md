@@ -1,12 +1,11 @@
 # Pizza Bot
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Our first pair programming, and trying javascript for the first time.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We have had a problem with our varialbles, and which one to use where. If we have had more time we would have liked to use a loop to get from the error question, pushed back to first question. 
+We would also had liked to use inner.html and forms to have all the text show on the screen instead of the alert boxes.
 
 ## View it live
 
