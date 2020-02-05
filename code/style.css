@@ -58,6 +58,10 @@ input {
   height: 20px;
   width: 150px;
 }
+input:focus {
+  outline: white;
+  border: 2px solid grey;
+}
 
 #numberPizza {
   width: 40px;
