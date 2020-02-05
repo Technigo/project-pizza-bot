@@ -4,19 +4,21 @@ const pepperoni = "Pepperoni Pizza"
 
 const pizzaPrice = 80
 
-let orderQuantity = 0
+let orderQuantity = document.getElementById('pizzaNumber').defaultvalue;
 
 let orderTotal = 0
 
 let time = 0;
 
+let orderName = ""
+
 //Put your Javscript code here:
 
 console.log(vegetarian, hawaiian, pepperoni, pizzaPrice);
 
-alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian}, and ${pepperoni}.`)
+/*alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian}, and ${pepperoni}.`)*/
 
-let orderName = prompt('Enter the name of the pizza you want to order today.');
+/*let orderName = prompt('Enter the name of the pizza you want to order today.');
 
 if (orderName === vegetarian || orderName === hawaiian || orderName=== pepperoni){
    orderQuantity = prompt(`How many of ${orderName} do you want?`);
@@ -39,35 +41,90 @@ if (orderName === vegetarian || orderName === hawaiian || orderName=== pepperoni
 
   } else{
  alert('Select a pizza from the menu')
-};
+};*/
 
 const checkOrderName = () => {
-  if (orderName === vegetarian || orderName === hawaiian || orderName=== pepperoni){
-    document.getElementById('pizzaType').innerHTML = `The pizza you have ordered: ${orderName}.`
-} else {
-  document.getElementById('pizzaType').innerHTML = 'Please select an item from the menu.'
-}
-}
+  orderName = document.getElementById('pizzaChoice').value.toLowerCase();
+  if (orderName === vegetarian.toLowerCase() || orderName === hawaiian.toLowerCase() || orderName === pepperoni.toLowerCase()) {
+    return orderName;
+  } else {
+    return null
 
-const totalCost = () => {
-  return orderQuantity * pizzaPrice
+  }
 }
 
-document.getElementById('pizzaNumber').innerHTML = 'The number of pizzas you have ordered: ' + orderQuantity;
+const confirmOrderName = () => {
+  checkOrderName()
+  if (checkOrderName() === null) {
+    document.getElementById('pizzaType').innerHTML = '';
+    alert('Please order an item from our menu')
+  } else {
+    document.getElementById('pizzaType').innerHTML = checkOrderName();
+  }
+}
 
+document.getElementById('orderConfirm').onclick = confirmOrderName;
+
+const pizzaNumber = () => {
+  orderQuantity = document.getElementById('pizzaNumber').value;
+  if (checkOrderName() !== null) {
+    document.getElementById('pizzaAmount').innerHTML = orderQuantity
+
+    document.getElementById('pizzaCost').innerHTML = cost(orderQuantity);
+  } else {
+    alert('Please select a pizza first.')
+    document.getElementById('pizzaNumber').value = 1;
+  }
+}
+document.getElementById('pizzaNumber').onchange = pizzaNumber;
+
+
+
+const cost = (orderQuantity) => {
+  return `${orderQuantity * pizzaPrice} kr`
+}
+
+
+
+const totalCost = (orderQuantity) => {
+  if (document.getElementById('delivery').checked) {
+    return `${orderQuantity * pizzaPrice + 100} kr`;
+  } else {
+    return `${orderQuantity * pizzaPrice} kr`
+  }
+}
 
 const cookingTime = () => {
-  if(orderQuantity <=2 ){
+  if (orderQuantity <= 2) {
+    return 5;
+  } else if (orderQuantity <= 5) {
     return 10;
-  } else if (orderQuantity <=5 ){
+  } else if (orderQuantity >= 6) {
     return 15;
-  }else if (orderQuantity >=6){
-    return 20;
-  };
+  }
 }
-document.getElementById('message').innerHTML = `The time will be around ${cookingTime()} and the total cost will be ${totalCost()}kr.`
 
-console.log(checkOrderName());
-console.log(totalCost());
-console.log(cookingTime())
 
+
+const finalMessage = () => {
+  if (checkOrderName() === null) {
+    document.getElementById('pizzaWait').innerHTML = '';
+  } else if (document.getElementById('pickUp').checked === false && document.getElementById('delivery').checked === false) {
+    alert('Please select a collection option.')
+  } else {
+    document.getElementById('pizzaWait').innerHTML = `Thank you for ordering. Your ${checkOrderName()}s will be ready in ${cookingTime()} minutes. The total cost is ${totalCost(orderQuantity)}.`
+  }
+}
+
+document.getElementById('pizzaConfirm').onclick = finalMessage
+
+const menu = () => {
+  if (document.getElementById('btn').innerHTML === '➕') {
+    document.getElementById('btn').innerHTML = '➖';
+    document.getElementById('menuHeader').classList.toggle('clicked')
+  } else {
+    document.getElementById('btn').innerHTML = '➕'
+    document.getElementById('menuHeader').classList.toggle('clicked')
+  }
+}
+document.getElementById('btn').onclick = menu
