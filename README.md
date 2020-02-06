@@ -1,13 +1,11 @@
 # Pizza Bot
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+A pair programming project to practice some basic JavaScript and create a little text-based bot which you can use to order pizza on your computer.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We worked as a team and took turns vering the driver and navigator. We mainly focused on creating and executing the javascript and functions, after which we focused on making the website interactive. To make the website more visual we used innerHTML and the .onclick function, and lastly added som CSS. If we had more time, we would focus more on the visual to make the website more interactive for the customer. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://kind-spence-b7bdfd.netlify.com
