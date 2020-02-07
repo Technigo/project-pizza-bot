@@ -1,0 +1,17 @@
+body {
+  background-image: url("https://images.unsplash.com/photo-1474600056930-615c3d706456?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=1352&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+
+main {
+  text-shadow: 5px 5px 5px black;
+  margin: 100px auto;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  max-width: 550px;
+  font-size: 1.8em;
+}
