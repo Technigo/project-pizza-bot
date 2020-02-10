@@ -1,13 +1,14 @@
 # Pizza Bot
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+We made a bot who you can order pizza from. 
 
 ## The problem
+The plan was already made, but we tested the functionality of each function and then formulated the functions. Then we replaced the alerts with innerHtml. The last thing was replacing prompt with input. 
+We used if/else a lot.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The next thing would be not to have text-boxes but bullets to choose which pizza and a numberbox or maybe limit to 10 pizzas. that would remove the need for confirming which indata you get. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+This is the website:
+https://cranky-johnson-02ec4a.netlify.com/
