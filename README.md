@@ -2,12 +2,13 @@
 
 Replace this readme with your own information about your project. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The task this week was to use JavaScript to make a pizza ordering site which would take information supplied by the user and store it in variables
+which could then be displayed back to the user using functions and conditional statements.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+After we had completed the original iterations, we used .innerHTML and template literals to display messages on the webpage as opposed to in the console or with alert windows. We used a few different type of inputs: text, radio buttons, and a range slider, and used .value to store them into variables. We also created a new function which contained a conditional statement that would add an extra hundred kronor to the overall cost if a certain radio button was clicked.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://jolly-swirles-a68592.netlify.com/
