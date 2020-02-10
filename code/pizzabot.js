@@ -12,36 +12,7 @@ let time = 0;
 
 let orderName = ""
 
-//Put your Javscript code here:
-
 console.log(vegetarian, hawaiian, pepperoni, pizzaPrice);
-
-/*alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian}, and ${pepperoni}.`)*/
-
-/*let orderName = prompt('Enter the name of the pizza you want to order today.');
-
-if (orderName === vegetarian || orderName === hawaiian || orderName=== pepperoni){
-   orderQuantity = prompt(`How many of ${orderName} do you want?`);
-
-  orderTotal = (orderQuantity * pizzaPrice);
-  
-  if(orderQuantity <=2 ){
-    time = 10;
-  }else if (orderQuantity <=5 ){
-    time = 15;
-  }else if (orderQuantity >=6){
-    time = 20;
-  };
-
-   alert(`Great, I'll get started on your ${orderName}s right away, it will cost ${orderTotal}kr. The pizzas will take ${time} minutes.`);
-
-
-
-
-
-  } else{
- alert('Select a pizza from the menu')
-};*/
 
 const checkOrderName = () => {
   orderName = document.getElementById('pizzaChoice').value.toLowerCase();
@@ -84,8 +55,6 @@ const cost = (orderQuantity) => {
   return `${orderQuantity * pizzaPrice} kr`
 }
 
-
-
 const totalCost = (orderQuantity) => {
   if (document.getElementById('delivery').checked) {
     return `${orderQuantity * pizzaPrice + 100} kr`;
@@ -103,8 +72,6 @@ const cookingTime = () => {
     return 15;
   }
 }
-
-
 
 const finalMessage = () => {
   if (checkOrderName() === null) {
