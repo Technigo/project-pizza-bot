@@ -34,7 +34,7 @@ alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawa
 
 const orderName = prompt(`Enter the name of the pizza you want to order today.`)
 
-if (checkOrderName(orderName) === true) {
+if (checkOrderName(orderName)) {
   orderQuantity = prompt(`How many of ${orderName} do you want?`)
   document.getElementById("pizza-order").innerHTML = `Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal(orderQuantity)} kr. The pizzas will take ${pizzaTime(orderQuantity)} minutes.`
 } else {
