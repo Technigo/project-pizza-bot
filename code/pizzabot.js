@@ -20,7 +20,7 @@ let orderTotal = (orderQuantity) => {
   return +orderQuantity * pizzaPrice
 }
 
-let pizzaTime = (orderQuantity) => {
+const pizzaTime = (orderQuantity) => {
   if (+orderQuantity <= 2) {
     return 10
   } else if (+orderQuantity <= 5) {
