@@ -6,5 +6,5 @@ We started programming the prompts and alert messages. When they worked we chang
 If we had more time on this project we would make it more visual for the customer and make the bot into a form instead of using the prompt and alert messages.
 
 ## View it live
-Link to the pizzabot: https://nifty-davinci-f0d686.netlify.com
+Link to the pizzabot: https://anna-and-hanna-pizzabot.netlify.com/
 (Sorry, you won't get a real pizza.)
