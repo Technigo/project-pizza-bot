@@ -1,13 +1,10 @@
 # Pizza Bot
-
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This was a pair-programming project in week 4 of Technigo Bootcamp. The project was to create a Pizza ordering bot using basic Javascript such as functions, and if/else statment. We were supposed to use the prompt for input from the customer and then alert messages and inner.HTML to respond to the customer.
 
 ## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We started programming the prompts and alert messages. When they worked we changed the code so that some of the messages instead showed up in the DOM. After that we created a CSS-file and added some basic styling.
+If we had more time on this project we would make it more visual for the customer and make the bot into a form instead of using the prompt and alert messages.
 
 ## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Link to the pizzabot: https://anna-and-hanna-pizzabot.netlify.com/
+(Sorry, you won't get a real pizza.)
