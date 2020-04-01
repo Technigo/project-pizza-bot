@@ -3,10 +3,16 @@ body {
   background-color: black;
   background-size: cover;
   background-repeat: no-repeat;
+  width: 100%;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 h1 {
