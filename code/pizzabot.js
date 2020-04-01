@@ -42,7 +42,7 @@ const cookingTime = (orderQuantity, orderName) => {
   }
 };
 
-const buttonClicked = () => {
+const startOrder = () => {
   alert(
     `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and  ${pepperoni}.`
   );
