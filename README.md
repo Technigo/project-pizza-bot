@@ -1,6 +1,6 @@
 # Pizza Bot
 
-A Pizza bot that will calculate the price and time for each order and give you an error if you've typed your order wrong.
+A Pizza bot that will calculate the price and time for each order and give you an error if you've typed your order wrong 🍕🍽❌👯‍♀️
 
 ## Code
 I've used:
