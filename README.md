@@ -1,6 +1,16 @@
 # Pizza Bot
 
-This project was to make a Pizza bot, where the user could order pizza, and decide how many. At the end of the project the user gets information about the pizza she or he ordered, how long time it will take and how much it will cost, using JavaScript functions. 
+A Pizza bot that will calculate the price and time for each order and give you an error if you've typed your order wrong.
+
+## Code
+I've used:
+  * **Pair-programming**
+  * **JavaScript**
+  * **CSS**
+  * **HTML**
+  * **Team work**
+  * **Flexbox**
+
 
 
 ## The problem
