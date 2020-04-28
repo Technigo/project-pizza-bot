@@ -4,6 +4,8 @@ body {
   margin: 0;
   background: #f7f7f7;
   font-family: "Raleway", sans-serif;
+
+  min-height: 100vh;
 }
 
 .content {

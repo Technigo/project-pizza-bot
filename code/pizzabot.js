@@ -33,7 +33,7 @@ const cookingTime = orderQuantity => {
   }
   return cookingTime;
 };
-
+// document.getElementById("all-stuff").style.display = "none";
 document.getElementById(
   "menu"
 ).innerHTML = `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`;
