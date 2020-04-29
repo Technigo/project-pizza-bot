@@ -8,4 +8,4 @@ For the project we worked as a team and took turns being the driver and navigato
 
 ## View it live
 
-https://kind-spence-b7bdfd.netlify.com
+https://er-project-pizza-bot.netlify.app/
