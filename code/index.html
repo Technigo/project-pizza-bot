@@ -1,12 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Project 4: Pizzabot</title>
-  </head>
-  <body>
-    <h1>This is your Pizza Bot</h1>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Project 4: Pizzabot</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Cabin+Sketch|Overlock&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1>Pizza Bot</h1>
+  </header>
+  <nav>
+    <div class="menu-header" id="menuHeader">
+      <h2>View Menu <span id="btn">➕</span></h2>
+    </div>
+    <div class="menu">
+      <p>Vegetarian</p>
+      <p>Pepperoni</p>
+      <p>Hawaiian</p>
+    </div>
+
+  </nav>
+
+
+  <main>
+    <form action="">
+      Place your order here
+      <div class="pizzaPicker">
+        <label for="pizzaChoice">Pick a Pizza:</label>
+        <input id="pizzaChoice" name="pizza" placeholder="Choose a pizza">
+        <button id="orderConfirm" type="button" value="send">Add</button>
+      </div>
+      <div class="numberOf">
+        <label for="pizzaNumber">Number of pizzas:</label>
+
+        <input id="pizzaNumber" type="range" name="pizzaNumber" value="1" min="1" max="20">
+      </div>
+      <div class='radio-buttons'>
+        <input type="radio" id="delivery" name="delivery-method" value="delivery">Delivery
+
+        <input type="radio" id="pickUp" name="delivery-method" value="pickUp">Pick Up
+      </div>
+      <button id="pizzaConfirm" type="button">Confirm Your order</button>
+    </form>
+
+    <section class="receipt">
+      <h1>Your Order</h1>
+      <p>Type of pizza: <span id="pizzaType"></span></p>
+      <p>Number of pizzas: <span id="pizzaAmount"></span></p>
+      <p>Cost:<span id="pizzaCost"></span></p>
+      <p id="pizzaWait"></p>
+    </section>
+  </main>
+  <script src="pizzabot.js"></script>
+</body>
+
 </html>
