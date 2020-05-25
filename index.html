@@ -14,16 +14,17 @@
     <h1>This is your Pizza Bot</h1>
     <img src="media/pizza.png" class="picture">
     <p>You can choose Hawaiian Pizza, Pepperoni Pizza or Vegetarian Pizza and you can have as many as you want</p>
-    <form action="" method="get" class="form">
+    <form class="form" id="form">
       <label> Write the Pizza you want
-        <input type="text" id="pType" name="pizzaKind" class="input" placeholder="Pepperoni Pizza">
+        <input type="text" id="pizzaKind" name="pizzaKind" class="input" placeholder="Pepperoni Pizza">
       </label>
       <label> Write the number of pizzas
-        <input type="text" id="pNum" name="pizzaNum" class="input" placeholder="3">
+        <input type="text" id="pizzaNum" name="pizzaNum" class="input" placeholder="3">
       </label>
+        <button type="button" id="button1">Submit</button>
     </form>
-    <p class="word" id=word1>You have yet order are you new?</p>
-    <button class="button" id="button1">Order here</button>
+    <p class="word" id="word1">You have yet order are you new?</p>
+  
   </section>
   <script src="script.js"></script>
 </body>

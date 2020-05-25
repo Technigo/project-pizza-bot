@@ -1,83 +1,59 @@
-function runPizza() {
+  console.log("first step")
   const vegetarian = "Vegetarian Pizza"
   const hawaiian = "Hawaiian Pizza"
   const pepperoni = "Pepperoni Pizza"
 
-  const pizzaPrice = 80
-
-  //Put your Javscript code here:
-  // functions
-  function checkOrder (name){
-    const type = name 
-    let status = true
+  const pizzaPrice = 80  
+  
+  const checkOrder = (name) => {
+    
     if (name === pepperoni || name === hawaiian || name === vegetarian){
-      alert("good choice")
       status = true
     } 
     else{
-      alert("sorry try again")
       status = false
     } 
     return status
     }
-  function cost (num, pricr){
-    const quant = num
-    const price = pricr
-    const tot = quant*price
-    return tot
+
+  const cost = (num) => {
+    return num*pizzaPrice
     }
-  function cookingTime(num){
+
+    const cookingTime = (num) => {
       const quant = num
       let time = 0
-      if (orderQuantity>5) {
+      if (num>5) {
         time = 20
         //  block of code to be executed if condition1 is true
-      } else if (orderQuantity>2) {
+      } else if (num>2) {
         time = 15
         //  block of code to be executed if the condition1 is false and condition2 is true
-      } else if (orderQuantity>0) {
+      } else if (num>0) {
         time = 10
         //  block of code to be executed if the condition1 is false and condition2 is true
       }
-    
-      else {
-        //  block of code to be executed if the condition1 is false and condition2 is false
-        alert("opps something wnet wrong");}
-        return time
-    }
+  return time
+    }  
 
+const handleForm = () => {
+  console.log("handleform")
+  let orderName = document.getElementById('pizzaKind').value
+  let orderQuantity = document.getElementById('pizzaNum').value
+  let words = ""
+  const checking = checkOrder(orderName)
+  if (checking && orderQuantity>0){
+  const total = cost(orderQuantity)
+  const time = cookingTime(orderQuantity)
 
-  console.log(vegetarian);
-  console.log(hawaiian);
-  console.log(pepperoni);
-  // Greeting
-  //alert("hey happy to serve your pizza on our menu we have "+ vegetarian+" "+ hawaiian+" " +pepperoni +".")
-  //Order:
-  const orderName = document.getElementById('pType').value
-  const orderQuantity = document.getElementById('pNum').value
-
-
-  // What kind
-  //let orderName = prompt("Enter the name of the pizza you want to order today.");
-  const bol = checkOrder(orderName);
-if (bol === false){
-  return
-} 
-
-
-  // how many
-  //let orderQuantity = prompt("How many of "+orderName+" do you want?");
-  let orderTotal = cost(orderQuantity,pizzaPrice);
-  console.log(orderTotal);
-  //Cost:
-  let cookTime = cookingTime(orderQuantity);
-  console.log(cookTime);
-  const sent = "You ordered "+orderQuantity+" "+orderName+ " it will take "+cookTime+ " minuts and set you back "+orderTotal+" kr.";
-  document.getElementById('word1').innerHTML = sent
-}
-
-
-document.getElementById('button1').onclick = runPizza;
-//document.getElementById("demo").innerHTML = y;
-
+  words = `You ordered ${orderQuantity} ${orderName}, it will take ${time} minuts and set you back ${total} kr.`
+  }
+  else {
+    words = "There was an issue with the order, try again"
+  }
+  orderName = document.getElementById('pizzaKind').value = ""
+  orderQuantity = document.getElementById('pizzaNum').value =""
+  document.getElementById('word1').innerHTML = words
  
+}
+document.getElementById('button1').onclick = handleForm;
