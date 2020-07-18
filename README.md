@@ -10,5 +10,5 @@ When we realised that we should keep the functions and the conditional statement
 ## View it live
 
 Pizza Project:
-https://musing-swanson-3769c1.netlify.com/
+https://pizza-project-technigo.netlify.app/
 
