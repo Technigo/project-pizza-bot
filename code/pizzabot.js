@@ -10,19 +10,47 @@ console.log(hawaiian)
 console.log(pepperoni)
 
 //Greet the customer (Iteration 2)
-alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}.`)
 
-//Ask the customer (Iteration 3)
-const orderName = prompt("Enter the name of the pizza you want to order today: ")
-console.log(orderName)
-const orderQuantity = prompt(`How many of ${orderName} do you want?`)
-console.log(orderQuantity)
-//Finalize the order (Iteration 4)
+const orderPizza = () => {
+        alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}.`)
 
-//Add conditonals (Iteration 5)
+        //Ask the customer (Iteration 3)
+        const orderName = prompt("Enter the name of the pizza you want to order today: ")
+        console.log(orderName)
 
-//Add functions (Iteration 6)
+        if ((orderName == `${vegetarian}`) || (orderName == `${hawaiian}`) || (orderName == `${pepperoni}`)) {
 
-//Make it visual (Iteration 7)
+            const orderQuantity = prompt(`How many of ${orderName} do you want?`)
+            console.log(orderQuantity)
+            //Finalize the order (Iteration 4)
+            const orderTotal = orderQuantity * pizzaPrice
+            console.log(orderTotal)
 
+            let orderTime = 0;
+            if (orderQuantity <= 2) {
+                orderTime = 10
+                console.log("1-2")
+            } else if (orderQuantity >= 3 && orderQuantity <= 5) {
+                console.log("3-5") 
+                orderTime = 15
+           
+            } else if (orderQuantity >= 6) {
+                console.log("6 och fler") 
+                orderTime = 20
+            }
+        
+            alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The pizza(s) will take ${orderTime} minutes.`)
+            
+        }
+        else{
+            alert("Select a pizza from the menu")
+            orderPizza()
+            }
+}
+        orderPizza()
 
+        //Add conditonals (Iteration 5)
+
+        //Add functions (Iteration 6)
+
+        //Make it visual (Iteration 7)
