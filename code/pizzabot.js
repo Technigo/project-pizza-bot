@@ -2,6 +2,8 @@ const vegetarian = "Vegetarian Pizza"
 const hawaiian = "Hawaiian Pizza"
 const pepperoni = "Pepperoni Pizza"
 
+//Make variable easier - if we want 
+
 const pizzaPrice = 80
 
 //Put your Javscript code here:
@@ -20,8 +22,11 @@ if (orderName === vegetarian || orderName === hawaiian || orderName === pepperon
 }
 
 
-// let orderQuantity = prompt(`How many of ${orderName} do you want?`);
     
+let cookingTime = prompt(`How many of ${orderName} do you want?`);
+if (orderQuantity <= 2) {
+    alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The Pizza will take 10 minutes`);
+}
 
 
 // ITERATION 4
