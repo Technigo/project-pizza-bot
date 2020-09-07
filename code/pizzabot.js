@@ -4,4 +4,10 @@ const pepperoni = "Pepperoni Pizza"
 
 const pizzaPrice = 80
 
+// Console logs
+console.log(vegetarian);
+console.log(hawaiian);
+console.log(pepperoni);
+console.log(pizzaPrice);
+
 //Put your Javscript code here:
