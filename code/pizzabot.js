@@ -11,3 +11,4 @@ console.log(pepperoni);
 //Put your Javscript code here:
 
 
+alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`);
