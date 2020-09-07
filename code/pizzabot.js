@@ -1,12 +1,10 @@
 const vegetarian = "Vegetarian Pizza"
 const hawaiian = "Hawaiian Pizza"
 const pepperoni = "Pepperoni Pizza"
-
 const pizzaPrice = 80
 
 //Put your Javscript code here:
-console.log(vegetarian, hawaiian, pepperoni, pizzaPrice)
-/*Funktioner*/
+/*Functions*/
 
 /*Check pizza name*/ 
 const validateOrderName = (orderName) =>{
@@ -39,20 +37,20 @@ const calculateCookingTime = (orderQuantity) =>{
     return cookingTime;
 }
 
-
-
+/* Start of program */
 alert(`Hello! Happy to serve you pizza. On our menu we have ${vegetarian}, ${pepperoni}, ${hawaiian}`);
 
 const orderName = prompt("Enter the name of the pizza you want to order");
 
 if (validateOrderName(orderName)===true) {
 
-    const orderQuantity = prompt(`How many of ${orderName} do you want?`);
-    const orderTotal = calculateTotalCost(orderQuantity);
+    const orderQuantity = parseInt(prompt(`How many of ${orderName} do you want?`), 10);
+    
+    const orderTotal = calculateTotalCost(orderQuantity, pizzaPrice);
 
     let cookingTime = calculateCookingTime(orderQuantity);
-   
-    alert(`Great, I'll get started on your ${orderName} right away. It will cost ${orderTotal} kr. The pizza(s) will take ${cookingTime} minutes.`);
+    const messageText = (`Great, I'll get started on your ${orderName} right away. It will cost ${orderTotal} kr. The pizza(s) will take ${cookingTime} minutes.`)
+    document.getElementById("message").innerHTML = messageText;
 }
  else {
     alert("Select a pizza from the menu");
