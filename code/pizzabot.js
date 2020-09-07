@@ -37,6 +37,18 @@ let orderTotal = orderQuantity * pizzaPrice;
 //take away later
 console.log(orderTotal);
 
+//Show cooking time
+
+let cookingTime;
+
+if (orderQuantity <= 2) {
+  cookingTime = "The pizzas will take 10 minutes";
+} else if (orderQuantity > 2 && orderQuantity < 6) {
+  cookingTime = "The pizzas will take 15 minutes";
+} else {
+  cookingTime = "The pizzas will take 20 minutes";
+}
+
 orderTotal = alert(
-  `Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr`
+  `Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The Pizza(s) will take ${cookingTime}`
 );
