@@ -11,3 +11,8 @@ alert(`Hello! Happy to serve you pizza. On our menu we have ${vegetarian}, ${pep
 
 const orderName = prompt("Enter the name of the pizza you want to order");
 const orderQuantity = prompt(`How many of ${orderName} do you want?`);
+
+const orderTotal = orderQuantity * pizzaPrice;
+
+alert(`Great, I'll get started on your ${orderName} right away. It will cost ${orderTotal} kr`);
+
