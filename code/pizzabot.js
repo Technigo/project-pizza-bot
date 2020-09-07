@@ -5,12 +5,12 @@ const pepperoni = "Pepperoni Pizza"
 const pizzaPrice = 80
 
 //Put your Javscript code here:
-console.log(vegetarian)
+/*console.log(vegetarian)
 console.log(hawaiian)
-console.log(pepperoni)
+console.log(pepperoni) */
 
 
-const validateOrderName = (orderName) => {
+/*const validateOrderName = (orderName) => {
    
     console.log(orderName)
     if ((orderName == `${vegetarian}`) || (orderName == `${hawaiian}`) || (orderName == `${pepperoni}`)) {
@@ -18,23 +18,27 @@ const validateOrderName = (orderName) => {
 
     } else {
         alert("Select a pizza from the menu")
-        orderName = prompt("Enter the name of the pizza you want to order today: ")
         return false;
     }
-}
+}*/
 
 
 //Finalize the order (Iteration 4)
-const calculateTotalCost = (orderQuantity, pizzaPrice) => {
-   
-    const orderTotal = orderQuantity * pizzaPrice
+const calculateTotalCost = () => {
+    let nr = document.getElementById("nrOfPizzas").value;
+    console.log(nr);
+    //let pizzaName = document.getElementById("pizzaSort").value;
+    //document.getElementById("submitInfo").innerHTML = pizzaName;
+    document.getElementById("submitInfo").innerHTML=nr;
+    //document.getElementById("submitInfo").innerHTML = nr;
+    /*const orderTotal = orderQuantity * pizzaPrice
     console.log(orderTotal)
-    return orderTotal;
+    return orderTotal;*/
 }
 
 
 //Add conditonals (Iteration 5)
-const calculateCookingTime = (orderQuantity) => {
+/*const calculateCookingTime = (orderQuantity) => {
     let orderTime = 0;
     if (orderQuantity <= 2) {
         orderTime = 10
@@ -63,12 +67,14 @@ if (validation === true) {
     orderTotal= calculateTotalCost(orderQuantity, pizzaPrice)
     orderTime=calculateCookingTime(orderQuantity)
 } else {
+    orderName = prompt("Enter the name of the pizza you want to order today: ")
+    console.log(orderName)
     validateOrderName(orderName)
 }
 
 alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The pizza(s) will take ${orderTime} minutes.`)
 
-
+*/
 
 
 //Add functions (Iteration 6)

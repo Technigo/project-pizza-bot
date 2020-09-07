@@ -8,6 +8,24 @@
   </head>
   <body>
     <h1>This is your Pizza Bot</h1>
+    <form>
+      <h2>Order Pizza</h2>
+      <label for="name">Name</label>
+        <br>
+          <input name="name" id="name" type="text" placeholder="name" required>
+      <label for="pizzaSort">What pizza do you want?</label><br>
+      <select name="pizzaMenu" id="pizzaSort" required>
+        <option value="vegetarian">Vegetarian Pizza</option>
+        <option value="pepperoni">Pepperoni Pizza</option>
+        <option value="hawaiian">Hawaiian Pizza</option>
+      </select>
+      <label for="nrOfPizzas">How many pizzas do you want to order?</label><br>
+          <input name="numberOfPizzas" id="nrOfPizzas" type="text" required>
+          <button id="calc" type="submit" onclick="calculateTotalCost()">Submit order</button>
+    </form>
+    <p id="submitInfo"></p>
+
+    </div>
     <!--linking the javascript file-->
   <script src="pizzabot.js"></script>
   </body>
