@@ -23,4 +23,8 @@ console.log(pizzaPrice);
 const orderName = prompt("Enter the name of the pizza you want to order today"); 
 const orderQuantity = prompt(`How many of ${orderName} do you want?`); 
 
+// 
+const orderTotal = pizzaPrice * orderQuantity;
+console.log(orderTotal); 
 
+alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr.`);
