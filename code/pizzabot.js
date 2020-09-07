@@ -1,8 +1,8 @@
-const vegetarian = "Vegetarian Pizza"
+/*const vegetarian = "Vegetarian Pizza"
 const hawaiian = "Hawaiian Pizza"
 const pepperoni = "Pepperoni Pizza"
 
-const pizzaPrice = 80
+const pizzaPrice = 80*/
 
 //Put your Javscript code here:
 /*console.log(vegetarian)
@@ -23,17 +23,19 @@ console.log(pepperoni) */
 }*/
 
 
-//Finalize the order (Iteration 4)
 const calculateTotalCost = () => {
-    let nr = document.getElementById("nrOfPizzas").value;
-    console.log(nr);
-    //let pizzaName = document.getElementById("pizzaSort").value;
-    //document.getElementById("submitInfo").innerHTML = pizzaName;
-    document.getElementById("submitInfo").innerHTML=nr;
-    //document.getElementById("submitInfo").innerHTML = nr;
-    /*const orderTotal = orderQuantity * pizzaPrice
-    console.log(orderTotal)
-    return orderTotal;*/
+    //get nr of pizzas
+    let orderQuantity = document.getElementById("nrOfPizzas").value;
+    //get pizza sort
+    let pizzaName = document.getElementById("pizzaSort").value;
+    const pizzaPrice = 80
+    // calculate totalcost for pizza
+    const orderTotal = orderQuantity * pizzaPrice
+    //Print out message to customer
+    let info = `Great, I'll get started on your ${pizzaName} right away, it will cost ${orderTotal} kr.`;
+    console.log(info)
+    document.getElementById("submitInfo").innerHTML = info;
+   
 }
 
 
