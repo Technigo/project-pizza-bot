@@ -19,3 +19,14 @@ console.log(orderName)
 const orderQuantity= prompt(`How many of ${orderName} do you want?`)
 console.log(orderQuantity)
 
+// -----------------------------------------------------------------------------------------------
+
+// Är det här en funktion? Eller bara en variabel med andra variabler?
+const orderTotal = pizzaPrice * orderQuantity
+console.log(orderTotal)
+
+alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} Swedish Kronor.`)
+// Literal template orderName, Total Price
+
+
+// console.log(pizzaCalculation)
