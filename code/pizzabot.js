@@ -17,27 +17,28 @@ alert(
 );
 
 //Ask your customer
-const orderName = prompt(
-  "Enter the name of the pizza you want to order today!"
-);
+let orderName = prompt("Enter the name of the pizza you want to order today!");
 
-//Add conditionals - **** ADD INCLUDES METHOD TO OUR IF STATEMENT
-let orderQuantity;
+//Add conditionals - **** ADD STRING INCLUDES METHOD TO OUR IF STATEMENT
 
 const validateOrderName = (orderName) => {
-  if (orderName === vegetarian || hawaiian || pepperoni) {
-    validateOrderName = true;
+  if (
+    orderName === vegetarian ||
+    orderName === hawaiian ||
+    orderName === pepperoni
+  ) {
+    return true;
   } else {
-    validateOrderName = false;
+    return false;
   }
 };
 
-validateOrderName(orderName);
+let orderQuantity;
 
-if (orderName === vegetarian || hawaiian || pepperoni) {
+if (validateOrderName(orderName)) {
   orderQuantity = prompt(`How many of ${orderName} do you want?`);
 } else {
-  alert("Select a pizza from the menu");
+  alert("Please, select a pizza from the our menu");
 }
 
 //Finalize the order - *** CHECK IF WE WANT TO USE LET***
