@@ -1,3 +1,5 @@
+//Put your Javscript code here:
+
 const vegetarian = "Vegetarian Pizza";
 console.log(vegetarian);
 
@@ -10,5 +12,8 @@ console.log(pepperoni);
 const pizzaPrice = 80
 console.log(pizzaPrice);
 
+//const welcomeMessage = () => {
+    alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}.`);
+//};
 
-//Put your Javscript code here:
+//welcomeMessage();
