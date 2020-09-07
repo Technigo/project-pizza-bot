@@ -14,4 +14,19 @@ console.log(orderName);
 const orderQuantity = prompt(`How many of ${orderName} do you want?`);
 const orderTotal = orderQuantity * pizzaPrice;
 console.log(orderTotal);
-alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr`);
+let cookingTime = 0;
+const deliveryTime = (orderQuantity) => {
+    if (orderQuantity <= 2 ) {
+       cookingTime = 10;
+    } else if (orderQuantity >= 3 && orderQuantity <= 5) {
+        cookingTime = 15;
+    } else {
+        cookingTime = 20;
+    }
+}
+deliveryTime(orderQuantity);
+if (orderName === vegetarian || orderName === hawaiian || orderName === pepperoni) {
+    alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr and the pizzas will take ${cookingTime} minutes`);
+} else {
+    alert(`Sorry, we don't have that pizza. Choose a pizza from the menu`);
+};
