@@ -24,6 +24,16 @@ const orderName = prompt(
 //Add conditionals - **** ADD INCLUDES METHOD TO OUR IF STATEMENT
 let orderQuantity;
 
+const validateOrderName = (orderName) => {
+  if (orderName === vegetarian || hawaiian || pepperoni) {
+    validateOrderName = true;
+  } else {
+    validateOrderName = false;
+  }
+};
+
+validateOrderName(orderName);
+
 if (orderName === vegetarian || hawaiian || pepperoni) {
   orderQuantity = prompt(`How many of ${orderName} do you want?`);
 } else {
