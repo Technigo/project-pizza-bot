@@ -22,3 +22,14 @@ const orderName = prompt(
 );
 
 const orderQuantity = prompt(`How many of ${orderName} do you want?`);
+
+//Finalize the order - *** CHECK IF WE WANT TO USE LET***
+
+let orderTotal = orderQuantity * pizzaPrice;
+
+//take away later
+console.log(orderTotal);
+
+orderTotal = alert(
+  `Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr`
+);
