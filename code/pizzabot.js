@@ -21,7 +21,14 @@ const orderName = prompt(
   "Enter the name of the pizza you want to order today!"
 );
 
-const orderQuantity = prompt(`How many of ${orderName} do you want?`);
+//Add conditionals - **** ADD INCLUDES METHOD TO OUR IF STATEMENT
+let orderQuantity;
+
+if (orderName === vegetarian || hawaiian || pepperoni) {
+  orderQuantity = prompt(`How many of ${orderName} do you want?`);
+} else {
+  alert("Select a pizza from the menu");
+}
 
 //Finalize the order - *** CHECK IF WE WANT TO USE LET***
 
