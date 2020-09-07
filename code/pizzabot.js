@@ -8,3 +8,6 @@ const pizzaPrice = 80
 console.log(vegetarian, hawaiian, pepperoni, pizzaPrice)
 
 alert(`Hello! Happy to serve you pizza. On our menu we have ${vegetarian}, ${pepperoni}, ${hawaiian}`);
+
+const orderName = prompt("Enter the name of the pizza you want to order");
+const orderQuantity = prompt(`How many of ${orderName} do you want?`);
