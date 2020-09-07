@@ -9,3 +9,6 @@ console.log(vegetarian)
 console.log(hawaiian)
 console.log(pepperoni)
 console.log(pizzaPrice)
+
+// Use alert() to print the message "Hey! Happy to serve your pizza. On our menu we have X, Y and Z".
+alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`)
