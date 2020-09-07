@@ -2,4 +2,18 @@
 
 html, body {
     font-size: 14px;
+    background: #e95353;
+    color: aliceblue;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 48px;
+    text-align: center;
+}
+
+.pizza-bot {
+    background: antiquewhite;
+    color: rgb(36, 37, 38);
 }

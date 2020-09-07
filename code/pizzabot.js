@@ -1,10 +1,4 @@
-const vegetarian = "Vegetarian Pizza"
-const hawaiian = "Hawaiian Pizza"
-const pepperoni = "Pepperoni Pizza"
-
-const pizzaPrice = 80;
-
-//First alert/welcome message. 
+/*First alert/welcome message. 
 alert(`Hey, happy to serve you pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`);
 
 // Let customer decide which pizza they want. 
@@ -20,9 +14,10 @@ const validateOrderName = (orderName) => {
 }
 validateOrderName(orderName); // Calling the validation function
 
-//Asking customer how many pizzas they want. 
+// Asking customer how many pizzas they want. 
 let orderQuantity = prompt(`How many of ${orderName} do you want?`);
 let orderTotal = orderQuantity * pizzaPrice;
+
 
 const calculateTotalCost = (orderQuantity, pizzaPrice) => { //Function for calculating order total/total cost.
     return orderTotal;
@@ -46,5 +41,28 @@ calculateCookingTime(orderQuantity); //Calling function.
 
 // End message.
 document.getElementById("message").innerHTML=`Great. I'll get started on your ${orderName} right away, it will cost ${orderTotal}kr. ${message}`;
+
+*/
+
+const vegetarian = "Vegetarian Pizza"
+const hawaiian = "Hawaiian Pizza"
+const pepperoni = "Pepperoni Pizza"
+
+const pizzaPrice = 80;
+
+let select1 = document.getElementById("hawaii")
+let select2 = document.getElementById("pepperoni")
+let select3 = document.getElementById("vegetarian")
+
+let value1 = select1.options[select1.selectedIndex].value;
+let value2 = select2.options[select2.selectedIndex].value;
+let value3 = select3.options[select3.selectedIndex].value;
+
+
+const calculateOrder = () => {
+const orderTotal = value1 * pizzaPrice + value2 * pizzaPrice + value3 * pizzaPrice;
+document.getElementById("message").innerHTML = orderTotal;
+}
+document.getElementById("button").onclick=calculateOrder;
 
 
