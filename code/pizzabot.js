@@ -1,21 +1,26 @@
+// Pizza names and price
+
 const vegetarian = "Vegetarian Pizza";
 const hawaiian = "Hawaiian Pizza";
 const pepperoni = "Pepperoni Pizza";
 
 const pizzaPrice = 80;
 
-// //Put your Javscript code here:
 
-// /* Iteration 2 */
+
+// Welcome 
+
 alert(
   `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`
 );
 
-/* Iteration 3 */
+// Get initial pizza choice input
 
 let orderName = prompt("Enter the name of the pizza you want to order today.");
 
 console.log(orderName);
+
+// Validate if input match pizzas on menu
 
 const validateOrderName = (orderName) => {
   if (
@@ -25,11 +30,18 @@ const validateOrderName = (orderName) => {
   ) {
     return true;
   } else {
-    alert("Select a pizza from the menu");
+    document.getElementById("error").innerHTML = "Select a pizza from the menu";
     return false;
   }
 };
 validateOrderName(orderName);
+
+
+// check if validation returns true
+
+if (validateOrderName(orderName)){
+
+// Get input on how many pizzas customer want
 
 let orderQuantity = prompt(`How many of ${orderName} do you want?`);
 
@@ -40,9 +52,13 @@ const calculateTotalCost = (orderQuantity, pizzaPrice) => {
 };
 calculateTotalCost(orderQuantity, pizzaPrice);
 
+// Convert input string into integer
+
 const num = Number(orderQuantity);
 
 console.log(typeof num);
+
+// Calculate cooking time depending on how many pizzas customer want
 
 const calculateCookingTime = (num) => {
   if (num === 1 || num === 2) {
@@ -58,10 +74,13 @@ calculateCookingTime(num);
 
 console.log(calculateCookingTime(num));
 
-alert(`Great, I'll get started on your ${orderName} right away, it will cost ${calculateTotalCost(
-  orderQuantity,
-  pizzaPrice
-)} kr
-The pizza(s) will take ${calculateCookingTime(num)} minutes.`);
+// alert(`Great, I'll get started on your ${orderName} right away, it will cost ${calculateTotalCost(
+//   orderQuantity,
+//   pizzaPrice
+// )} kr
+// The pizza(s) will take ${calculateCookingTime(num)} minutes.`);
 
-document.getElementById("chat")
+// Provide confirmation of pizza, cost and time
+
+document.getElementById("chat").innerHTML = `Great, I'll get started on your order of ${orderName} right away, it will cost ${calculateTotalCost(orderQuantity,pizzaPrice)}kr. The pizza(s) will take ${calculateCookingTime(num)} minutes.`;
+}
