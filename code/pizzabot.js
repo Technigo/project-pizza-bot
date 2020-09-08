@@ -7,14 +7,17 @@ const pizzaPrice = 80
 //Put your Javscript code here:
 alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`);
 
-let orderName = prompt('Enter the name of the pizza you want to order today.'); //Turn into an HTML form
+let customerName = document.getElementById('userName').value;
+
+
+let orderName = document.getElementById('pizza-type').value; //gets user input on type of pizza
 
 //Put this all into a submitOrder function when Submit button is pressed
 
 if (confirmName(orderName)) {
-    let orderQuantity = prompt(`How many ${orderName} do you want?`);  //Turn into an HTML form
+    let orderQuantity = document.getElementById('pizza-number').value;  //gets user input on amount of pizzas
 
-    let orderTotal = pizzaPrice * orderQuantity;
+    let orderTotal = totalCost(orderQuantity); //Calls totalCost function to calculate total order cost
 
     const prepTime = (amount) => {
         if(amount <= 2) {
@@ -28,7 +31,7 @@ if (confirmName(orderName)) {
 
     let orderTime = prepTime(orderQuantity);
 
-    alert(`Great, I'll get started on your ${orderName} Pizza(s) right away, it will cost ${orderTotal} kr. The pizza(s) will take ${orderTime} minutes.`);
+    alert(`Great ${customerName}, I'll get started on your ${orderName} Pizza(s) right away, it will cost ${orderTotal} kr. The pizza(s) will take ${orderTime} minutes.`);
 
 } else {
     alert('Please select a Pizza from the menu.');
