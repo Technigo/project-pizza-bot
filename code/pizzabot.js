@@ -13,6 +13,8 @@ alert(`Hey! Happy to serve your pizza. On our menu we have ${hawaiian}, ${vegeta
 
 
 // NAME OF PIZZA + IF NOT TRUE THEN ALERT TO USER ASKING THEM TO ORDER SOMETHING OFF THE MENU
+
+
 let orderName = prompt('Enter the name of the pizza you want to order today.');
 
 const validateOrderName = (orderName) => {
@@ -42,7 +44,7 @@ calculateTotalCost (orderQuantity, pizzaPrice);
 
 
 // FINALISE ORDER; SHOW PIZZA TYPE, ORDER TOTAL AND COOKING TIME
-const calculateCookingTime = () => {
+const calculateCookingTime = (orderQuantity, orderTotal) => {
     if (orderQuantity <= 2) {
         alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The Pizza will take 10 min.`);
     } else if (orderQuantity >= 3 && orderQuantity <= 5) {
