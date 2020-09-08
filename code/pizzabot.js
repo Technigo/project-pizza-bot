@@ -7,3 +7,5 @@ const pizzaPrice = 80
 //Put your Javscript code here:
 
 console.log(vegetarian, hawaiian, pepperoni, pizzaPrice)
+
+alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian}, ${pepperoni}.`)
