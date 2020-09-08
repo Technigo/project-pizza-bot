@@ -1,13 +1,19 @@
-# Pizza Bot
+# Pizza Bot - Overview
+Project done as a part of Technigo bootcamp. Learning objectives:
+1. Be comfortable using variables
+2. Know some string methods to modify strings
+3. Understand control flow and the use of conditionals statements
+4. Be able to write basic functions which take arguments and return values
+5. Connect the JavaScript to show visual feedback in the HTML
 
-Replace this readme with your own information about your project. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+# Brief
+This week’s project is to practice some parts of JavaScript you've learned so far to create a little text-based bot which you can use to order pizza on your computer.
 
-## The problem
+You'll do this project as a pair programming project.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
 
-## View it live
+## Approach
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+## See it live
