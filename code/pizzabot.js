@@ -4,13 +4,14 @@ const pepperoni = "Pepperoni Pizza"
 
 const pizzaPrice = 80
 
-const submitButton = document.getElementById('submit-button');
+const submitForm = document.getElementById('form-action');
 
 alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`);
 
-submitButton.onclick = submitOrder;
+submitForm.onsubmit = submitOrder;
 
-function submitOrder() {
+function submitOrder(event) {
+event.preventDefault();  //Prevents the page from being refreshes when the form is submitted
 let customerName = document.getElementById('userName').value; //gets user's name
 let orderName = document.getElementById('pizza-type').value; //gets user input on type of pizza
 
@@ -24,7 +25,6 @@ if (confirmName(orderName)) { //Calls confirmName function to check if pizza typ
     let confirmText = document.getElementById('confirm');
     let pizzaPhoto = document.getElementById('pizza-photo');
     confirmText.style.display = "block";
-    pizzaPhoto.style.display = "block";
 
     confirmText.innerHTML = `Great ${customerName}, I'll get started on your ${orderName} Pizza(s) right away, it will cost ${orderTotal} kr. The pizza(s) will take ${orderTime} minutes.`;
     pizzaPhoto.src = pizzaImage(orderName); // Calls pizzaImage function to show the ordered Pizza's image by replacing src property
