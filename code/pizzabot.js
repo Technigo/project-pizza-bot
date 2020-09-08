@@ -22,7 +22,7 @@ welcomeMessage();
 
 let orderName = prompt("Enter the name of the pizza you want to order today"); 
 let orderQuantity;
-const verifyOrder = () => { //have to be "Vegetarian Pizza", not variable name.
+const validateOrderName = () => { //have to be "Vegetarian Pizza", not variable name.
    if (orderName === vegetarian || orderName === pepperoni || orderName === hawaiian) {
       orderQuantity = prompt(`How many of ${orderName} do you want?`); 
    } else {
@@ -32,10 +32,19 @@ const verifyOrder = () => { //have to be "Vegetarian Pizza", not variable name.
    }
 };
 
-verifyOrder();
+validateOrderName();
+
+
+let orderTotal;
+//Understand function, parameters, argumens, paretheses. Try removing parameters.
+const calculateTotalCost = (pizzaPrice, orderQuantity) => {
+   orderTotal = pizzaPrice * orderQuantity
+}
+
+calculateTotalCost(pizzaPrice, orderQuantity);
 
 let orderTime;
-const cookingTime = () => {
+const calculateCookingTime = () => {
    if (orderQuantity <= 2) {
       orderTime = 10;
       alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The pizza(s) will take ${orderTime} minutes.`);
@@ -48,10 +57,4 @@ const cookingTime = () => {
    }
 };
 
-// 
-const orderTotal = pizzaPrice * orderQuantity;
-console.log(orderTotal); 
-
-
-
-cookingTime();
+calculateCookingTime();
