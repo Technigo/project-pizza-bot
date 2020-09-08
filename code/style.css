@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+html {
+    font-family: 'Roboto Mono', monospace;
+    background: #000;
+    color: #fff;
+}
+
+body {
+    margin: 0;
+    width: 70vw;
+    margin: auto;
+    text-shadow: 1px 1px #004D16;
+    position: relative;
+}
+
+header {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header img {
+    width: 5vw;
+    text-align: center;
+}
+
+main {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.chat-pizzeria {
+    color: #fff;
+    background: #01DC3E;
+    width: 30vw;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.chat-user {
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    border: 1px solid #01DC3E;
+    align-self: flex-end;
+}
+
+.chat-form {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+}
+
+input {
+    font-family: 'Roboto Mono', monospace;
+    color: #fff;
+    background: #01DC3E;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 1px 1px #004D16;
+    text-shadow: 1px 1px #004D16;
+}
+
+/* .box {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #01DC3E;
+    transform: rotate(45deg);
+} */
+
+footer {
+    position: absolute;
+    text-align: center;
+    bottom: 15px;
+    padding: 5px;
+    left: 0;
+    right: 0;
+}

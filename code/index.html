@@ -4,10 +4,72 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="style.css"/>
     <title>Project 4: Pizzabot</title>
   </head>
   <body>
-    <h1>This is your Pizza Bot</h1>
+  
+    <header>
+    <img src="./images/pizza-slice2.png">
+    <h1>PIZZERIA SLICE & SNACK!</h1>
+    </header>
+
+    <main>
+      <p class="chat-pizzeria">Welcome to Pizzeria Slice & Snack! Happy to serve your pizza.</p>
+      <p id="welcome" class="chat-pizzeria"></p>
+
+
+      <div class="chat-user">
+        Select one of the pizza's below:
+        <div class="chat-form">
+          <form>
+            <input 
+              id="pepperoni"
+              type="button"
+              value="Pepperoni"
+              />  
+              <input 
+              id="vegetarian"
+              type="button"
+              value="Vegetarian Pizza"
+              />
+              <input 
+              id="kebab"
+              type="button"
+              value="Kebab Pizza"
+              />
+              <input 
+              id="hawaiian"
+              type="button"
+              value="Hawaii Pizza"
+              />
+            </form>
+        </div>
+      </div>
+
+
+      <p id="quantity" class="chat-pizzeria">OK</p>
+      <div class="chat-user">
+       Select number of pizza(s):
+        <div class="chat-form">
+        <form>
+          <input 
+          type="number" 
+          id="quantityUser" 
+          name="quantity" 
+          value="1"
+          min="1" 
+          max="10">
+          <button>Order!</button>
+        </form>
+        </div>
+      </div>
+      <p id="confirmation" class="chat-pizzeria"><div class="box"></div></p>
+
+    </main>    
+
+
+    <footer>This site it made my Karin Nordkvist & Gabriella Bolin as Project 4 @ Technigo Bootcamp 2020.</footer>
 
     <script src="./pizzabot.js"></script>
   </body>
