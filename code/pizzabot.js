@@ -22,36 +22,27 @@ console.log(pizzaPrice);
 alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}.`);
 
 // Iteration 3 
-
-const orderName = prompt('Enter the name of the pizza you want to order today.');
-
-if (orderName.toLowerCase() === vegetarian.toLowerCase()) {
-    const orderQuantity = prompt(`How many of ${orderName} Pizzas do you want?`);
+const orderDetails = (pizzaName) => {
+    const orderQuantity = prompt(`How many of ${pizzaName} Pizzas do you want?`);
     const orderTotal = orderQuantity * pizzaPrice;
-
-alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr.`);
-
-}else if (orderName === hawaiian) {
-    const orderQuantity = prompt(`How many of ${orderName} Pizzas do you want?`);
-    const orderTotal = orderQuantity * pizzaPrice;
-    alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr.`);
-    
-}else if (orderName === pepperoni) {
-    const orderQuantity = prompt(`How many of ${orderName} Pizzas do you want?`);
-    const orderTotal = orderQuantity * pizzaPrice;
-
-    alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr.`);
-    
-} else {
-    alert('Select a pizza from the menu!');
-
+    alert(`Great, I'll get started on your ${pizzaName} right away, it will cost ${orderTotal} kr.`);
 }
+const orderName = prompt('Enter the name of the pizza you want to order today.');
+   
+    if (orderName.toLowerCase() === vegetarian.toLowerCase()) {
+        orderDetails(orderName);
 
-//const orderTotal = orderQuantity * pizzaPrice;
+    } else if (orderName.toLowerCase() === hawaiian.toLowerCase()) {
+        orderDetails(orderName);
+    
+    } else if (orderName.toLowerCase() === pepperoni.toLowerCase()) {
+        orderDetails(orderName);
+    
+    } else {
+        alert('Select a pizza from the menu!');
+    }
 
-//alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr.`);
 
-// Iteration 5
 
 
 
