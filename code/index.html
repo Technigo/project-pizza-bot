@@ -4,11 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./style.css">
     <title>Project 4: Pizzabot</title>
   </head>
   <body>
     <h1>This is your Pizza Bot</h1>
+    <div >
+      <img src="" alt="" class="image" id="pizza-image">
+    </div>
+    </div>
     <p id="message">Here goes the message</p>
+
+    <section class="">
+        <form action="" id="order-form" class="flex-container">
+          <label for="name">Name:
+            <input type="text" name="name" id="name">
+          </label>
+          <label for="pizza">
+            <select name="pizza" id="pizza">
+              <option value="">Choose a pizza</option>
+              <option value="vegetarian">Vegetarian Pizza</option>
+              <option value="hawaiian">Hawaiian Pizza</option>
+              <option value="pepperoni">Pepperoni Pizza</option>
+              <option value="capricciosa">Capricciosa Pizza</option>
+              <option value="margherita">Margherita Pizza</option>
+            </select>
+          </label>
+          <label for="pizza-slider">
+            <output for="pizza-slider" id="number-output" name="number-output">0</output>
+            <input type="range" name="pizza-slider" min="0" max="25" value="0" id="pizza-slider" onchange="changeRangeOutput()">
+            
+          </label>
+
+          <button type="button" onclick="placeOrder()">Place order</button>
+        </form>
+  </section>
   </body>
   <script src="./pizzabot.js"></script>
 </html>

@@ -1,7 +1,10 @@
-const vegetarian = "Vegetarian Pizza"
-const hawaiian = "Hawaiian Pizza"
-const pepperoni = "Pepperoni Pizza"
-const pizzaPrice = 80
+const vegetarian = "vegetarian";
+const hawaiian = "hawaiian";
+const pepperoni = "pepperoni";
+const capricciosa = "capricciosa";
+const margherita = "margherita";
+const pizzaPrice = 80;
+
 
 //Put your Javscript code here:
 /*Functions*/
@@ -37,11 +40,12 @@ const calculateCookingTime = (orderQuantity) =>{
     return cookingTime;
 }
 
-/* Start of program */
-alert(`Hello! Happy to serve you pizza. On our menu we have ${vegetarian}, ${pepperoni}, ${hawaiian}`);
+/* Start of program before turning into form*/
+//alert(`Hello! Happy to serve you pizza. On our menu we have ${vegetarian}, ${pepperoni}, ${hawaiian}`);
 
-const orderName = prompt("Enter the name of the pizza you want to order");
+//const orderName = prompt("Enter the name of the pizza you want to order");
 
+/*
 if (validateOrderName(orderName)===true) {
 
     const orderQuantity = parseInt(prompt(`How many of ${orderName} do you want?`), 10);
@@ -55,6 +59,76 @@ if (validateOrderName(orderName)===true) {
  else {
     alert("Select a pizza from the menu");
 }
+*/
 
+/*New functions for form-input*/
+const placeOrder = () =>{
+    console.log("placeOrder function");
+
+    if (validateInput()) {
+
+    const name = document.getElementById("name").value; 
+    const orderName = document.getElementById("pizza").value; 
+    const orderQuantity = document.getElementById("pizza-slider").value; 
+    console.log(name,orderName,orderQuantity);
+
+    const orderTotal = calculateTotalCost(orderQuantity, pizzaPrice);
+    let cookingTime = calculateCookingTime(orderQuantity);
+    const messageText = (`Great ${name}, I'll get started on your ${orderName} right away. It will cost ${orderTotal} kr. The pizza(s) will take ${cookingTime} minutes.`)
+    document.getElementById("message").innerHTML = messageText;
+    togglePizzaImage(orderName);
+    return false;
+    } else alert("Please fill in the form")
+} 
+
+/*Validate input*/
+const validateInput = () =>{
+    console.log("validateInput");
+    const inputValues = document.getElementById("order-form").elements; 
+
+    let numberOfValidInput =0;
+    for(i=0;i<inputValues.length;i++)
+    {
+        if(inputValues[i].value != "" && inputValues[i].value != "0" && inputValues[i].type != "output")
+        {
+            numberOfValidInput++;
+            console.log("value of element:" + inputValues[i].value);
+            console.log(inputValues[i].type + " type of element");
+            console.log("numberOfValidInput= "+numberOfValidInput);
+        }
+        else console.log("no value in array");
+    }
+    console.log("Number of valid input after loop:" +numberOfValidInput);
+    //returera true om valid = 3 annars false
+    return(numberOfValidInput > 2 ? true : false);
+}
+  
+
+
+
+/*changeRangeOutput*/
+const changeRangeOutput = () =>{
+    let rangeValue = document.getElementById("pizza-slider").value;
+    document.getElementById("number-output").innerHTML = rangeValue;
+}
+
+/*toggle pizza image */
+const togglePizzaImage = (orderName) => {
+    console.log(orderName);
+    console.log(vegetarian +" constant");
+    switch(orderName) {
+       
+        case vegetarian: document.getElementById("pizza-image").classList.toggle(vegetarian);
+        break;
+        case hawaiian: document.getElementById("pizza-image").classList.toggle(hawaiian);
+        break;
+        case pepperoni: document.getElementById("pizza-image").classList.toggle(pepperoni);
+        break;
+        case capricciosa: document.getElementById("pizza-image").classList.toggle(capricciosa);
+        break;
+        case margherita: document.getElementById("pizza-image").classList.toggle(margherita);
+        break;
+    }
+}
 
 

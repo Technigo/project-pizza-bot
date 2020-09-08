@@ -1,0 +1,29 @@
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    max-width: 100px;
+}
+
+.image {
+    max-width: 15%;
+}
+
+.hawaiian {
+    content: url("./hawaii.jpg");
+}
+
+.vegetarian {
+    content: url("./vegetarian.jpg");
+}
+
+.pepperoni {
+    content: url("./pepperoni.jpg");
+}
+
+.capricciosa {
+    content: url("./capricciosa.jpg");
+}
+
+.margherita {
+    content: url("./margherita.jpg");
+}
