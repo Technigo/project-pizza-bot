@@ -19,9 +19,10 @@ alert(
 //Ask your customer
 let orderName = prompt("Enter the name of the pizza you want to order today!");
 
-//Add conditionals - **** ADD STRING INCLUDES METHOD TO OUR IF STATEMENT
+//Add function to validate pizza order
 
 const validateOrderName = (orderName) => {
+  //**** ADD STRING INCLUDES METHOD TO OUR IF STATEMENT
   if (
     orderName === vegetarian ||
     orderName === hawaiian ||
@@ -41,25 +42,30 @@ if (validateOrderName(orderName)) {
   alert("Please, select a pizza from the our menu");
 }
 
-//Finalize the order - *** CHECK IF WE WANT TO USE LET***
+//Function to calculate price- *** CHECK IF WE WANT TO USE LET***
 
-let orderTotal = orderQuantity * pizzaPrice;
+const calculateTotalCost = (orderQuantity, pizzaPrice) => {
+  return orderQuantity * pizzaPrice;
+};
 
-//take away later
-console.log(orderTotal);
+const orderTotal = calculateTotalCost(orderQuantity, pizzaPrice);
+//console.log(calculateTotalCost(orderQuantity, pizzaPrice));
 
-//Show cooking time
+// Calculate cooking time
+const calculateCookingTime = (orderQuantity) => {
+  if (orderQuantity <= 2) {
+    return 10;
+  } else if (orderQuantity > 2 && orderQuantity < 6) {
+    return 15;
+  } else {
+    return 20;
+  }
+};
 
-let cookingTime;
+const cookingTime = calculateCookingTime(orderQuantity);
 
-if (orderQuantity <= 2) {
-  cookingTime = "The pizzas will take 10 minutes";
-} else if (orderQuantity > 2 && orderQuantity < 6) {
-  cookingTime = "The pizzas will take 15 minutes";
-} else {
-  cookingTime = "The pizzas will take 20 minutes";
-}
+console.log(calculateCookingTime(orderQuantity));
 
-orderTotal = alert(
-  `Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The Pizza(s) will take ${cookingTime}`
+const finalMessage = alert(
+  `Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The Pizza(s) will take ${cookingTime} minutes!`
 );
