@@ -11,10 +11,10 @@ alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawa
 submitButton.onclick = submitOrder;
 
 function submitOrder() {
-let customerName = document.getElementById('userName').value;
+let customerName = document.getElementById('userName').value; //gets user's name
 let orderName = document.getElementById('pizza-type').value; //gets user input on type of pizza
 
-if (confirmName(orderName)) {
+if (confirmName(orderName)) { //Calls confirmName function to check if pizza type entered by user is correct
     let orderQuantity = document.getElementById('pizza-number').value;  //gets user input on amount of pizzas
 
     let orderTotal = totalCost(orderQuantity); //Calls totalCost function to calculate total order cost
@@ -25,8 +25,9 @@ if (confirmName(orderName)) {
     let pizzaPhoto = document.getElementById('pizza-photo');
     confirmText.style.display = "block";
     pizzaPhoto.style.display = "block";
+
     confirmText.innerHTML = `Great ${customerName}, I'll get started on your ${orderName} Pizza(s) right away, it will cost ${orderTotal} kr. The pizza(s) will take ${orderTime} minutes.`;
-    pizzaPhoto.src = pizzaImage(orderName); // Calls pizzaImage function to show the ordered Pizza's image
+    pizzaPhoto.src = pizzaImage(orderName); // Calls pizzaImage function to show the ordered Pizza's image by replacing src property
 
 } else {
     alert('Please select a Pizza from the menu.');
