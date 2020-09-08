@@ -25,15 +25,23 @@ alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawa
 
 const orderName = prompt('Enter the name of the pizza you want to order today.');
 
-if (orderName === vegetarian) {
+if (orderName.toLowerCase() === vegetarian.toLowerCase()) {
     const orderQuantity = prompt(`How many of ${orderName} Pizzas do you want?`);
+    const orderTotal = orderQuantity * pizzaPrice;
+
+alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr.`);
 
 }else if (orderName === hawaiian) {
     const orderQuantity = prompt(`How many of ${orderName} Pizzas do you want?`);
-
+    const orderTotal = orderQuantity * pizzaPrice;
+    alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr.`);
+    
 }else if (orderName === pepperoni) {
     const orderQuantity = prompt(`How many of ${orderName} Pizzas do you want?`);
+    const orderTotal = orderQuantity * pizzaPrice;
 
+    alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr.`);
+    
 } else {
     alert('Select a pizza from the menu!');
 }
@@ -49,9 +57,9 @@ if (orderName === vegetarian) {
 
 // Iteration 4
 
-const orderTotal = orderQuantity * pizzaPrice;
+//const orderTotal = orderQuantity * pizzaPrice;
 
-alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr.`);
+//alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr.`);
 
 // Iteration 5
 
