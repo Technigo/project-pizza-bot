@@ -1,3 +1,5 @@
+//1) Defenition of variables 
+
 const vegetarian = "Vegetarian Pizza"
 const hawaiian = "Hawaiian Pizza"
 const pepperoni = "Pepperoni Pizza"
@@ -7,6 +9,9 @@ const pizzaPrice = 80
 //Put your Javscript code here:
 
 // Iteration 1
+
+//Console log
+
 console.log(vegetarian);
 console.log(hawaiian);
 console.log(pepperoni);
