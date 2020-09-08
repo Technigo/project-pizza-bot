@@ -23,7 +23,8 @@ console.log(pepperoni) */
 }*/
 
 
-const calculateTotalCost = () => {
+const calculateTotalCost = (event) => {
+    event.preventDefault();
     //get nr of pizzas
     let orderQuantity = document.getElementById("nrOfPizzas").value;
     //get pizza sort
@@ -36,7 +37,10 @@ const calculateTotalCost = () => {
     console.log(info)
     document.getElementById("submitInfo").innerHTML = info;
    
-}
+};
+const form = document.getElementById("form");
+form.onsubmit = calculateTotalCost;
+
 
 
 //Add conditonals (Iteration 5)

@@ -8,7 +8,7 @@
   </head>
   <body>
     <h1>This is your Pizza Bot</h1>
-    <form>
+    <form id ="form">
       <h2>Order Pizza</h2>
       <label for="name">Name</label>
         <br>
@@ -21,11 +21,11 @@
       </select>
       <label for="nrOfPizzas">How many pizzas do you want to order?</label><br>
           <input name="numberOfPizzas" id="nrOfPizzas" type="text" required>
-          <button id="calc" type="submit" onclick="calculateTotalCost()">Submit order</button>
+          <button id="calc" type="submit">Submit order</button>
     </form>
     <p id="submitInfo"><P>
 
-    </div>
+    
     <!--linking the javascript file-->
   <script src="pizzabot.js"></script>
   </body>
