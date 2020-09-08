@@ -19,21 +19,34 @@ const orderName = prompt ("Enter the name of the pizza you want to order today."
 //5
 
 if (orderName === vegetarian || orderName === hawaiian || orderName === pepperoni) {
-    const orderQuantity = prompt (`How many of ${orderName} do you want?`);
+    const orderQuantity = +prompt (`How many of ${orderName} do you want?`);
+///
+const orderTotal = (pizzaPrice * orderQuantity);
+if (orderQuantity <= 2) {
+    alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The pizza(s) will take 10 minutes.`);
+} else if (orderQuantity  >= 3 && orderQuantity <=5) {
+    alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The pizza(s) will take 15 minutes.`);
+} else {
+    alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The pizza(s) will take 20 minutes.`);
+}
+
+///
+
+
 } else {
     alert('Select a pizza from the menu');
 }
 
-console.log(orderName);
+//console.log(orderName);
 
-console.log(orderQuantity);
+//console.log(orderQuantity);
 
 //4
 
-const orderTotal = (pizzaPrice * orderQuantity);
+//const orderTotal = (pizzaPrice * orderQuantity);
 
-console.log(orderTotal)
+//console.log(orderTotal)
 
-alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr`)
+//alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr`)
 
 
