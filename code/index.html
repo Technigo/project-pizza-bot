@@ -4,50 +4,111 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="/.style.css">
+    <link rel="stylesheet" href="./style.css" />
     <title>Project 4: Pizzabot</title>
   </head>
   <body>
+    <!-- HEADER -->
     <header>
-      <div class="nav-bar">
+      <div class="nav-container">
+        <a class="nav-container__item" href="#">Home</a>
+        <a class="nav-container__item" href="#">About</a>
+        <a class="nav-container__item" href="#">Contact</a>
+      </div>
+
+      <div class="hero">
+        <h1 class="hero__topic">SAN-MAX PIZZA</h1>
+
+        <div class="hero__picture">
+          <img
+            src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&w=1000&q=80"
+            alt="pizza image"
+          />
         </div>
-        <h1>This is your Pizza Bot</h1>
-        <div class="img">
-        </div>
+      </div>
     </header>
-    <section class="order-form">
-      <form action="">
 
-        <label for="user_name">
-          <input type="text">
-        </label>
+    <!-- MAIN CONTENT -->
+    <section class="main-content">
+      <form
+        class="signup-form"
+        action="http://httpbin.org/anything"
+        method="POST"
+      >
+        <div class="input-container">
+          <label for="name">Name:</label><br />
+          <input
+            class="input-container__input input-container__input--full-width"
+            type="text"
+            placeholder="Your Name"
+            id="name"
+            name="name"
+            required
+          />
+        </div>
 
-        <label for="vegetarian-pizza">
-          <input type="radio" value="Vegetarian Pizza">
+        <div class="input-container input-container--checkbox">
+          <h3><b>What do you want to order:</b></h3>
 
-        <label for="hawaiian-pizza">
-          <input type="radio" value="Hawaiian Pizza">
+          <label for="vegetarian-pizza">
+            <input
+              type="checkbox"
+              id="vegetarian-pizza"
+              name="pizza"
+              value="vegetarian"
+            />Vegetarian Pizza</label
+          ><br />
 
-        <label for="pepperoni-pizza">
-          <input type="radio" value="Pepperoni Pizza">
-        </label>
+
+          <label for="hawaiian-pizza">
+            <input
+              type="checkbox"
+              id="hawaiian-pizza"
+              name="pizza"
+              value="hawaiian-pizza"
+            />Hawaiian Pizza</label
+          ><br />
+
         
-        <label for="pizza-quantity">How many Pizzas do you want to order?:
-          <input type="range" id="points" name="points" min="0" max="10">
-        </label>
 
-        <input type="submit" name="" id="">
+          <label for="pepperoni-pizza"
+            ><input
+              type="checkbox"
+              id="pepperoni-pizza"
+              name="pizza"
+              value="pepperoni-pizza"
+            />Pepperoni Pizza</label
+          >
+
+        </div>
+
+        <label for="amountPizzaInputId"
+            ><b>How many pizzas would you like?:</b></label
+          ><output name="pizza" id="pepperoniPizzaOutputId"></output>
+          <br />
+          <input
+            type="range"
+            name="amountPizza"
+            id="amountPizzaInputId"
+            value="1"
+            min="1"
+            max="10"
+            oninput="amountPizzaOutputId.value = amountPizzaInputId.value"
+          />
+
+        <div class="btn-submit">
+          <input class="submit" type="submit" value="submit" />
+        </div>
       </form>
-
     </section>
-    
 
-    
-
-    
-<p id="chat"></p>
-<p id="error"> </p>
+    <p id="chat"></p>
+    <p id="error"></p>
 
     <script src="./pizzabot.js"></script>
+
+    <!-- FOOTER -->
+
+    <footer>Made by: Sandra and Max</footer>
   </body>
 </html>
