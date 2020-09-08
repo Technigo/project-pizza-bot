@@ -1,8 +1,8 @@
 //1) Defenition of variables 
 
-const vegetarian = "Vegetarian Pizza"
-const hawaiian = "Hawaiian Pizza"
-const pepperoni = "Pepperoni Pizza"
+const vegetarian = "Vegetarian"
+const hawaiian = "Hawaiian"
+const pepperoni = "Pepperoni"
 
 const pizzaPrice = 80
 
@@ -44,18 +44,8 @@ alert(`Great, I'll get started on your ${orderName} right away, it will cost ${o
     
 } else {
     alert('Select a pizza from the menu!');
+
 }
-
-
-
-
-//console.log(orderName());
-
-// const orderName = prompt('Enter the name of the pizza you want to order today.');
-
-//const orderQuantity = prompt(`How many of ${orderName} Pizzas do you want?`);
-
-// Iteration 4
 
 //const orderTotal = orderQuantity * pizzaPrice;
 
