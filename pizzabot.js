@@ -2,6 +2,8 @@
 const vegetarian = "vegetarian"
 const hawaiian = "hawaiian"
 const pepperoni = "pepperoni"
+const calzone = "calzone"
+const kebab = "kebab"
 
 // Iteration 4 - Finalize the order
 const calculateTotalCost = (event) => {
@@ -10,39 +12,51 @@ const calculateTotalCost = (event) => {
     let orderQuantity = document.getElementById("nrOfPizzas").value;
     //get pizza sort
     let orderName = document.getElementById("pizzaSort").value;
-    let pizzaPrice = pricePerPizza(orderName); 
+    let pizzaPrice = pricePerPizza(orderName);
     console.log(orderName);
     // calculate totalcost for pizza
     const orderTotal = orderQuantity * pizzaPrice
     //Print out message to customer
     let orderTime = calculateCookingTime(orderQuantity)
-    let pizzaImg=pizzaImages(orderName)
+    let pizzaImg = pizzaImages(orderName)
     document.getElementById("pizzaImg").src = pizzaImg;
     let info = `Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The pizza(s) will take ${orderTime} minutes.`;
     console.log(info)
     document.getElementById("submitInfo").innerHTML = info;
-   
+
 };
 const form = document.getElementById("form");
 form.onsubmit = calculateTotalCost;
 
-const pizzaImages = (orderName) =>{
+const pizzaImages = (orderName) => {
     let img;
-    if(orderName == `${vegetarian}`){
-        img="./Vegetariana.jpg"
+    if (orderName == `${vegetarian}`) {
+        img = "./Vegetariana.jpg"
+        return img;
+    } else if (orderName == `${hawaiian}`) {
+        img = "./Hawaiian.jpg"
+        return img;
+    } else if (orderName == `${pepperoni}`) {
+        img = "./Pepperoni.jpg"
+        return img;
+    } else if (orderName == `${calzone}`) {
+        img = "./Calzone.jpg"
+        return img;
+    } else if (orderName == `${kebab}`) {
+        img = "./Kebab.jpg"
         return img;
     }
 
 }
 
 const pricePerPizza = (orderName) => {
-   let pizzaPrices=0; 
+    let pizzaPrices = 0;
     if ((orderName == `${vegetarian}`) || (orderName == `${hawaiian}`) || (orderName == `${pepperoni}`)) {
-        pizzaPrices=80
+        pizzaPrices = 80
         return pizzaPrices;
 
     } else {
-        pizzaPrices=100
+        pizzaPrices = 100
         return pizzaPrices;
     }
 
@@ -63,8 +77,8 @@ const calculateCookingTime = (orderQuantity) => {
     }
     return orderTime;
 }
-    
-    
+
+
 
 
 /*
