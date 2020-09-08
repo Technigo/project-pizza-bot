@@ -21,7 +21,8 @@ if (confirmName(orderName)) {
 
     let orderTime = prepTime(orderQuantity); //Calls prepTime function to calculate total preparation time
 
-    alert(`Great ${customerName}, I'll get started on your ${orderName} Pizza(s) right away, it will cost ${orderTotal} kr. The pizza(s) will take ${orderTime} minutes.`);
+    let confirmText = document.getElementById('confirm');
+    confirmText.innerHTML = `Great ${customerName}, I'll get started on your ${orderName} Pizza(s) right away, it will cost ${orderTotal} kr. The pizza(s) will take ${orderTime} minutes.`;
 
 } else {
     alert('Please select a Pizza from the menu.');
