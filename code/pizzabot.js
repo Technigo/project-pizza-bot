@@ -9,3 +9,12 @@ const pizzaPrice = 80
 console.log(vegetarian);
 console.log(hawaiian);
 console.log(pepperoni);
+
+//Greeting:
+
+const x = "vegeterian";
+const y = "hawaiian";
+const z = "pepperoni";
+
+alert(`Hey! Happy to serve your pizza. On our menu we have ${x}, ${y} and ${z}.`);
+
