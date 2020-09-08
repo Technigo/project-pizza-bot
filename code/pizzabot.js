@@ -22,7 +22,9 @@ if (confirmName(orderName)) {
     let orderTime = prepTime(orderQuantity); //Calls prepTime function to calculate total preparation time
 
     let confirmText = document.getElementById('confirm');
+    let pizzaPhoto = document.getElementById('pizza-photo');
     confirmText.innerHTML = `Great ${customerName}, I'll get started on your ${orderName} Pizza(s) right away, it will cost ${orderTotal} kr. The pizza(s) will take ${orderTime} minutes.`;
+    pizzaPhoto.src = pizzaImage(orderName); // Calls pizzaImage function to show the ordered Pizza's image
 
 } else {
     alert('Please select a Pizza from the menu.');
@@ -52,4 +54,15 @@ let prepTime = (amount) => {
 //Function to calculate Total Cost
 let totalCost = (quantity) => {
     return quantity * pizzaPrice
+};
+
+//Function to choose which Pizza imagee
+const pizzaImage = (pizza) => {
+    if(pizza.toLowerCase() === 'vegetarian') {
+        return "./vegetarian.jpg"
+    } else if (pizza.toLowerCase() === 'hawaiian') {
+        return "./hawaiian.jpg"
+    } else {
+        return "./pepperoni.jpg"
+    }
 };
