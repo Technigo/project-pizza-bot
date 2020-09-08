@@ -74,8 +74,10 @@ const placeOrder = () =>{
 
     const orderTotal = calculateTotalCost(orderQuantity, pizzaPrice);
     let cookingTime = calculateCookingTime(orderQuantity);
-    const messageText = (`Great ${name}, I'll get started on your ${orderName} right away. It will cost ${orderTotal} kr. The pizza(s) will take ${cookingTime} minutes.`)
+    const messageText = (`Great ${name},<br> I'll get started on your ${orderName} right away.<br> It will cost ${orderTotal} kr. <br>The pizza(s) will take ${cookingTime} minutes.`)
     document.getElementById("message").innerHTML = messageText;
+
+    toggleDisableForm();
     togglePizzaImage(orderName);
     return false;
     } else alert("Please fill in the form")
@@ -89,6 +91,8 @@ const validateInput = () =>{
     let numberOfValidInput =0;
     for(i=0;i<inputValues.length;i++)
     {
+        //Vi vill inte kolla på värdet i output-taggen, därför exkluderar vi den. if-satsen körs ej för den
+        //och därmed kommer räknaren inte att räknas upp.
         if(inputValues[i].value != "" && inputValues[i].value != "0" && inputValues[i].type != "output")
         {
             numberOfValidInput++;
@@ -129,6 +133,10 @@ const togglePizzaImage = (orderName) => {
         case margherita: document.getElementById("pizza-image").classList.toggle(margherita);
         break;
     }
+}
+
+const toggleDisableForm = () =>{
+    document.getElementById("order-form").classList.toggle("order-form-inactive");
 }
 
 

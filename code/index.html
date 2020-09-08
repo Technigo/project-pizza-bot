@@ -6,21 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./style.css">
     <title>Project 4: Pizzabot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Staatliches&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>This is your Pizza Bot</h1>
-    <div >
-      <img src="" alt="" class="image" id="pizza-image">
-    </div>
-    </div>
-    <p id="message">Here goes the message</p>
+    
 
-    <section class="">
+    <section class="flex-wrapper">
+      <h1>This is your Pizza Bot</h1>
+      
         <form action="" id="order-form" class="flex-container">
-          <label for="name">Name:
+          <div class="input-wrapper">
+            <label for="name">Name:</label>
             <input type="text" name="name" id="name">
-          </label>
-          <label for="pizza">
+          </div>
+          <div class="input-wrapper">
             <select name="pizza" id="pizza">
               <option value="">Choose a pizza</option>
               <option value="vegetarian">Vegetarian Pizza</option>
@@ -29,15 +28,26 @@
               <option value="capricciosa">Capricciosa Pizza</option>
               <option value="margherita">Margherita Pizza</option>
             </select>
-          </label>
-          <label for="pizza-slider">
+          </div>
+          <div class="input-wrapper">
+            <div class="input-row-wrapper">
+          <label for="pizza-slider">Number of pizzas:</label>
             <output for="pizza-slider" id="number-output" name="number-output">0</output>
-            <input type="range" name="pizza-slider" min="0" max="25" value="0" id="pizza-slider" onchange="changeRangeOutput()">
-            
-          </label>
+            </div>
+          <input type="range" name="pizza-slider" min="0" max="25" value="0" id="pizza-slider" onchange="changeRangeOutput()">
+          </div>
+          
 
-          <button type="button" onclick="placeOrder()">Place order</button>
+          <button type="button" class="button" onclick="placeOrder()">Place order</button>
         </form>
+        <section class="order-confirmation">
+          
+          <img src="" alt="" class="image" id="pizza-image">
+          <div class="message-container">
+            <p id="message"></p>
+          </div>
+        </section>
+       
   </section>
   </body>
   <script src="./pizzabot.js"></script>
