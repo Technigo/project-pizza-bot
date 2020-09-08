@@ -9,7 +9,8 @@ alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawa
 
 let orderName = prompt('Enter the name of the pizza you want to order today.'); //Turn into an HTML form
 
-//Function to check if the entered name is a valid pizza on the menu - toLowerCase in case the user has entered with caps
+//Put this all into a submitOrder function when Submit button is pressed
+
 if (confirmName(orderName)) {
     let orderQuantity = prompt(`How many ${orderName} do you want?`);  //Turn into an HTML form
 
@@ -36,7 +37,7 @@ if (confirmName(orderName)) {
 
 
 
-//Function to check if user's input pizza choice is correct
+//Function to check if user's input pizza choice is correct - toLowerCase in case the user has entered with caps
 let confirmName = (pizzaName) => {
     if (pizzaName.toLowerCase() === "hawaiian" || pizzaName.toLowerCase() ==="pepperoni" || pizzaName.toLowerCase() === "vegetarian") {
         return true;
