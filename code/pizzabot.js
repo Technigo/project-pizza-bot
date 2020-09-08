@@ -1,4 +1,4 @@
-//Put your Javscript code here:
+//Put your Javascript code here:
 
 const vegetarian = "Vegetarian Pizza";
 console.log(vegetarian);
@@ -9,22 +9,49 @@ console.log(hawaiian);
 const pepperoni = "Pepperoni Pizza";
 console.log(pepperoni);
 
-const pizzaPrice = 80
+const pizzaPrice = 80;
 console.log(pizzaPrice);
 
-//const welcomeMessage = () => {
-   //alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}.`);//
-//};
+const welcomeMessage = () => {
+   alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}.`);
+};
 
-//welcomeMessage();
+welcomeMessage();
 
 //Variables for inserting choice and quantity of pizza using the prompt method.//
 
-const orderName = prompt("Enter the name of the pizza you want to order today"); 
-const orderQuantity = prompt(`How many of ${orderName} do you want?`); 
+let orderName = prompt("Enter the name of the pizza you want to order today"); 
+let orderQuantity;
+const verifyOrder = () => { //have to be "Vegetarian Pizza", not variable name.
+   if (orderName === vegetarian || orderName === pepperoni || orderName === hawaiian) {
+      orderQuantity = prompt(`How many of ${orderName} do you want?`); 
+   } else {
+      alert("Select a pizza from the menu, please!");
+      orderName = prompt("Enter the name of the pizza you want to order today");
+      //verifyOrder();  //have to insert loop back to begining of function. otherwise error NaN.
+   }
+};
+
+verifyOrder();
+
+let orderTime;
+const cookingTime = () => {
+   if (orderQuantity <= 2) {
+      orderTime = 10;
+      alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The pizza(s) will take ${orderTime} minutes.`);
+   } else if (orderQuantity > 2 && orderQuantity <= 5) {
+      orderTime = 15;
+      alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The pizza(s) will take ${orderTime} minutes.`);
+   } else {
+      orderTime = 20;
+      alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The pizza(s) will take ${orderTime} minutes.`);
+   }
+};
 
 // 
 const orderTotal = pizzaPrice * orderQuantity;
 console.log(orderTotal); 
 
-alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr.`);
+
+
+cookingTime();
