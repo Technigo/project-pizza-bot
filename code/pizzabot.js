@@ -6,6 +6,8 @@ const pepperoni = "Pepperoni"
 
 const pizzaPrice = 80
 
+//2) Functions
+
 const validateOrderName = (orderName) => {
     if (orderName.toLowerCase() === vegetarian.toLowerCase()) {
         return true;
@@ -43,15 +45,7 @@ const calculateCookingTime = () => {
     }
 }
 
-//
-//Console log
-
-console.log(vegetarian);
-console.log(hawaiian);
-console.log(pepperoni);
-console.log(pizzaPrice);
-
-// Iteration 2
+//  3) The bot
 
 alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}.`);
 
