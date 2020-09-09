@@ -3,6 +3,17 @@
 // const pepperoni = "Pepperoni Pizza";
 // const pizzaPrice = 80;
 
+
+function nameFunction() {
+  document.getElementById("").innerHTML = "";
+}
+
+const startOrder = `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian}, and ${pepperoni}.`;
+
+
+
+
+
 // alert(
 //   `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian}, and ${pepperoni}.`
 // );
