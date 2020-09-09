@@ -24,6 +24,7 @@ h2 {
 p {
     text-align: left;
 }
+
 .choosenPizza {
     display: inline;
 }
@@ -48,11 +49,11 @@ p {
 
 /* Style for pizza-bot div */
 .pizza-bot {
+    margin: auto;  
+    width: 70%;
     text-align: center;
     background: antiquewhite;
     color: rgb(36, 37, 38);  
-    margin: auto;  
-    width: 60%;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 2px 8px 15px #242424;

@@ -12,26 +12,25 @@
     <header>
       <h1>&#127829; Pizza Bot &#127829;</h1>
     </header>
-
+    
     <div class="pizza-bot">
-
-      <div class="inputName" id="inputName">
-        <h2>Hey &#128075; what's your name?</h2>
-        <form>
-        <input type="text" id="name" placeholder="Enter your name here...">
-        </form>
-
-        <button onclick="showName()" id="showName">Say my name, say my name</button>
-      </div>
-
-      <div class="inputPizza" id="inputPizza">
+      <div class="inputName" id="inputName"> <!-- Message 1, div inputName-->
+        <h2> &#129302; Hey! What's your name?</h2>
         
-        <div class="center-text">
-          <p id="messageName"></p>
-        </div>
+        <form>
+          <input type="text" id="name" placeholder="Enter your name here...">
+        </form>
+        
+        <button onclick="showName()" id="showName">Say my name, say my name</button>
+      </div> <!-- End of div inputName-->
       
+      <div class="inputPizza" id="inputPizza"> <!--Message 2, div inputPizza-->
+        <div class="center-text">
+          <p id="messageName"> </p>
+        </div>
+        
         <h2>Which pizza do you want? &#127829;</h2>
-
+        
         <form>
           <div class="form-group">
             <select id="pizzaType" name="pizzaType">
@@ -44,70 +43,67 @@
             </select> 
           </div>
         </form>
-
-        <button onclick="choosePizza()" id="choosePizza">Choose pizza</button>
-
-      </div>
         
+        <button onclick="choosePizza()" id="choosePizza">Choose pizza</button>
+      </div> <!--End of div inputPizza-->
       
       <div class="selectNumber" id="selectNumber">
-
-          <p id="messagePizza"></p>
-
-        <h2>How many <p class="choosenPizza" id="choosenPizza"></p> pizzas do you want?</h2>
+        <p id="messagePizza"></p>
+        
+        <h2>How many <p class="choosenPizza" id="choosenPizza"></p> pizzas do you want to order?</h2>
         
         <form>
           <div class="form-group-hawaii" id="form-group-hawaii">
             <label for="hawaii">Hawaii Pizza</label>
-          <select id="hawaii" name="hawaii">
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-          </select> 
-        </div>
-
-        <div class="form-group-pepperoni" id="form-group-pepperoni">
-          <label for="pepperoni">Pepperoni Pizza</label>
-          <select id="pepperoni" name="pepperoni">
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-          </select> 
-        </div>
-
-        <div class="form-group-vegetarian" id="form-group-vegetarian">
-          <label for="vegetarian">Vegetarian Pizza</label>
-          <select id="vegetarian" name="vegetarian">
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-          </select> 
-        </div>
-
-        <div class="form-group-kebab" id="form-group-kebab">
-          <label for="kebab">Kebabpizza</label>
-          <select id="kebab" name="kebab">
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-          </select> 
-        </div>
+            <select id="hawaii" name="hawaii">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </div>
+          
+          <div class="form-group-pepperoni" id="form-group-pepperoni">
+            <label for="pepperoni">Pepperoni Pizza</label>
+            <select id="pepperoni" name="pepperoni">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </div>
+          
+          <div class="form-group-vegetarian" id="form-group-vegetarian">
+            <label for="vegetarian">Vegetarian Pizza</label>
+            <select id="vegetarian" name="vegetarian">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select> 
+          </div>
+          
+          <div class="form-group-kebab" id="form-group-kebab">
+            <label for="kebab">Kebabpizza</label>
+            <select id="kebab" name="kebab">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </div>
 
         <div class="form-group-mozzarella" id="form-group-mozzarella">
           <label for="mozzarella">Mozzarella Pizza</label>
