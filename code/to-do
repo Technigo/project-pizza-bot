@@ -16,10 +16,14 @@ BACKLOG:
 
 / Gör pratbubblor av boxarna
 
-# Skapa skriv-effekt av texten i chatten
+# Skapa confirmation-box längst ner under chatten (Karin)
 
-# Skapa count-down timer
+# Skapa skriv-effekt av texten i chatten (Gabriella)
 
-# Fixa footern. 
+# Skapa en progress-bar baserat på hur många frågor som besvarats (Karin)
+
+# Skapa count-down timer (Gabriella)
+
+# Kontrollera footern. 
    
-# Skapa en dyrare pizza
+# Skapa en dyrare pizza - använda Array of Objects

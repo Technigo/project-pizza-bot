@@ -31,6 +31,8 @@ let orderPizza = (name) => {
 }
 
 // Counting-function to select amount of pizzas
+
+
 let quantityFunction = (event) => {
     event.preventDefault()
 
@@ -61,10 +63,22 @@ let quantityFunction = (event) => {
     calculateTotalCost()
     calculateCookingTime()
 
+
     // Confirmation message
     document.getElementById("confirmation").innerHTML = `Great, I'll get started on your ${orderName}(s) right away, it will cost ${orderTotal} kr. The pizza(s) will take ${cookingTime} minutes.`
 
     confirmationBox.classList.remove("invisible")
     confirmationBox.classList.add("visible")
+
+    document.getElementById("count").innerHTML = `${orderQuantity}`
+    document.getElementById("pizza").innerHTML = `${orderName}`
+    document.getElementById("price").innerHTML = `${pizzaPrice} kr`
+    document.getElementById("total").innerHTML = `Total: ${orderTotal} kr`
+
+    const orderSummaryBox = document.getElementById("orderSummaryBox")
+    orderSummaryBox.classList.remove("invisible")
+    orderSummaryBox.classList.add("visible")
+
+ 
 }
 

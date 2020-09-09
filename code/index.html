@@ -17,13 +17,13 @@
     <main>
       <div class="chat-box pizzeria">
         <div class="chat-portrait"></div>
-        <p>Welcome to Pizzeria Slice & Snack! Happy to serve your pizza.</p>
+        <p class="line-1 anim-typewriter">Welcome to Pizzeria Slice & Snack! Happy to serve your pizza.</p>
       </div>
       
       <div class="chat-box pizzeria">
         <div class="chat-portrait"></div>
-        <p id="welcome"></p>
-      </div>
+        <p id="welcome" class="line-1 anim-typewriter"></p>
+      </div>  
 
       <div class="chat-box user">
         <div class="user-inner">
@@ -92,11 +92,37 @@
         <div class="chat-portrait"></div>
         <p id="confirmation"></p>
       </div>
+      <div class="Timer">Pizza(s) ready in <span id="time"></span>minutes!</div>
+
+
+      <section id="orderSummaryBox" class="orderSummaryBox invisible">
+        <h2>Order summary</h2>
+        <div class="order-summary">
+          <p class="count">Amount </p>
+          <p class="pizza">Pizza</p>
+          <p class="price">Price </p>
+        </div>
+
+        <div class="order-summary-content">
+          <p id="count" class="count">x</p>
+          <p id="pizza" class="pizza">x</p>
+          <p id="price" class="price">x</p>
+        </div>
+
+        <div class="order-total">
+          <p id="total">x</p>
+        </div>
+
+        <div class="receipt">
+          <button>Email me a receipt</button>
+        </div>
+        
+      </section>
 
     </main>    
 
 
-    <footer>This site it made my Karin Nordkvist & Gabriella Bolin as Project 4 @ Technigo Bootcamp 2020.</footer>
+    <!-- <footer>This site is made my Karin Nordkvist & Gabriella Bolin as Project 4 @ Technigo Bootcamp 2020.</footer> -->
 
     <script src="./pizzabot.js"></script>
   </body>
