@@ -12,3 +12,11 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 3em;
 }
+
+.quantity-of-pizza-wrapper {
+  display: none;
+}
+
+.quantity-of-pizza-wrapper-active {
+  display: block;
+}
