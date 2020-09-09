@@ -1,3 +1,55 @@
-#confirm {
-    display: none;
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9fff1;
+}
+
+h1 {
+    font-family: 'Caveat Brush', cursive;
+    text-align: center;
+    color: #87bf2a;
+    font-size: 60px;
+}
+
+.main {
+    border: 4px solid #87bf2a;
+    border-radius: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 40px;
+    width: 1080px;
+    margin: 0 auto;
+    background-image: url(./marble.jpg);
+}
+
+.user-form {
+    width: 500px;
+}
+
+.menu {
+    font-family: 'Caveat Brush', cursive;
+    font-size: 30px;
+    color: #87bf2a;
+}
+
+.one {
+    margin-bottom: 0;
+}
+
+.two {
+    margin-top: 5px;
+}
+
+.place-order {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    font-size: 20px;
 }
