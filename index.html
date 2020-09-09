@@ -9,14 +9,19 @@
   </head>
   <body>
     <h1>&#127829; InstaPizza &#127829;</h1>
-    <div class="button" id="button">
-      <!-- onclick="startOrder()" -->
+    <div class="button" id="button" onclick="buttonClicked()">
       <p>Order pizza in just 3 steps.</p>
       <p class="call-to-action">Click me to get started!</p>
     </div>
-    <div class="chat-container">
-      <div class="speech-bot bot-triangle">I'm speech bubble</div>
-      <div class="speech-user user-triangle">I'm also speech bubble</div>
+    <div class="chat-container" id="chatContainer">
+      <div class="speech-bot bot-triangle" id="botBubble"></div>
+      
+      <div class="speech-user user-triangle" id="userBubble" onclick="startOrder()"></div>
+
+      <div class="speech-bot bot-triangle" id="startOrder"></div>
+      
+      <div class="speech-user user-triangle" id="userBubble"></div>
+
     </div>
     <script src="pizzabot.js"></script>
   </body>
