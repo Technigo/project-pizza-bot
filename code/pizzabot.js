@@ -47,8 +47,6 @@ const orderName = prompt('Enter the name of the pizza you want to order today.')
 
 // Iteration 6 - Add functions
 
-
-
 // validateOrderName() which should take the orderName variable as an argument and return true or false if the pizza is on the menu or not.
 const validateOrderName = (orderName) => {
   if ((orderName === hawaiian) || (orderName === vegetarian) || (orderName === pepperoni)) {
@@ -58,15 +56,11 @@ const validateOrderName = (orderName) => {
   }
 }
 
-// let nameCheck = validateOrderName(orderName);
-
 // calculateTotalCost() which takes orderQuantity and pizzaPrice as arguments and returns the total cost for the order.
 
 const calculationTotalCost = (orderQuantity, pizzaPrice) => {
   return orderQuantity * pizzaPrice;
 }
-
-// let orderTotal = calculationTotalCost(orderQuantity, pizzaPrice);
 
 // calculateCookingTime() which takes orderQuantity and returns the number of minutes it will take to finish the order.
 
@@ -79,8 +73,6 @@ const calculateCookingTime = (orderQuantity) => {
     return 20;
   }
 }
-
-// let cookingTime = calculateCookingTime(orderQuantity);
 
 if (validateOrderName(orderName) === true) {
   const orderQuantity = prompt(`How many ${orderName}(s) do you want?`);
