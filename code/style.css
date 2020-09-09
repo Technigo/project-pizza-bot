@@ -17,6 +17,21 @@ body {
   display: none;
 }
 
+.img-pepperoni {
+  content: url("./images/pepperoni.jpg");
+  width: 200px;
+}
+
+.img-veg {
+  content: url("./images/vegetarian.jpg");
+  width: 200px;
+}
+
+.img-hawaii {
+  content: url("./images/hawaii.jpg");
+  width: 200px;
+}
+
 /* .quantity-of-pizza-wrapper {
   display: none;
 }

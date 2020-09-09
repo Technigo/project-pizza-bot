@@ -39,6 +39,7 @@ let addOrder = (event) => {
     // Final message
     document.getElementById("final-message").innerHTML = finalMessage;
     toggleDisableForm();
+    togglePizzaImage(orderName);
   } else {
     const errorMessage = "Please, select a pizza from the our menu";
     document.getElementById("errorMessage").innerHTML = errorMessage;
@@ -84,4 +85,15 @@ const toggleDisableForm = () => {
   document
     .getElementById("hide-form")
     .classList.toggle("greeting-message-container-inactive");
+};
+
+//Function to toogle Pizza image
+const togglePizzaImage = (orderName) => {
+  if (orderName === pepperoni) {
+    document.getElementById("pizza-image").classList.toggle("img-pepperoni");
+  } else if (orderName === hawaiian) {
+    document.getElementById("pizza-image").classList.toggle("img-hawaii");
+  } else {
+    document.getElementById("pizza-image").classList.toggle("img-veg");
+  }
 };
