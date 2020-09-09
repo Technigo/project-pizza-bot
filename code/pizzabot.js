@@ -49,8 +49,9 @@ document.getElementById("message").innerHTML=`Great. I'll get started on your ${
 const showName = () => {
     const name = document.getElementById("name").value;
     document.getElementById("messageName").innerHTML=`Hey ${name}, happy to serve you pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}. Choose your pizza below`;
+    document.getElementById("inputPizza").style.display = "inline";
+    document.getElementById("inputName").style.display = "none";
 }
-document.getElementById("showName").onclick = showName;
 
 
 /* Function to choose pizza and view pizza message */
@@ -60,27 +61,29 @@ const choosePizza = () => {
 
     if (pizza === 'Hawaii') {
         messagePizza = 'Aloha, great choice! Who does not love pineapple on pizza? &#x1f34d;';
-        document.getElementById("selectNumber").style.display="inline";
         document.getElementById("form-group-hawaii").style.display="inline";
+        document.getElementById("choosenPizza").innerHTML = 'Hawaii';
 
     } else if (pizza === 'Pepperoni') {
         messagePizza = 'Buongiorno! &#127829; Pepperoni is my favorite too.';
-        document.getElementById("selectNumber").style.display="inline";
         document.getElementById("form-group-pepperoni").style.display="inline";
+        document.getElementById("choosenPizza").innerHTML = 'Pepperoni';
 
     } else if (pizza === 'Vegetarian') {
         messagePizza = 'Excellent choice, vegetarian is good for your soul. &#129365;';
-        document.getElementById("selectNumber").style.display="inline";
         document.getElementById("form-group-vegetarian").style.display="inline";
+        document.getElementById("choosenPizza").innerHTML = 'Vegetarian';
 
     } else {
         messagePizza = 'I have never heard of that one!';
     }
 
     document.getElementById("messagePizza").innerHTML = messagePizza;
+
+    document.getElementById("selectNumber").style.display = "inline";
+    document.getElementById("inputPizza").style.display = "none";
 }
 
-document.getElementById("choosePizza").onclick = choosePizza;
 
 
 

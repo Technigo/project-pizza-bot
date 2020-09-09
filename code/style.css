@@ -13,12 +13,21 @@ h1 {
     text-align: center;
 }
 
+.choosenPizza {
+    display: inline;
+}
+
 .pizza-bot {
     background: antiquewhite;
     color: rgb(36, 37, 38);
 }
 
-.selectNumber {
+
+.inputName, .inputPizza, .selectNumber {
+    font-size: 14px;
+}
+
+.inputPizza, .selectNumber {
     display: none;
 }
 

@@ -14,34 +14,41 @@
     </header>
 
     <div class="pizza-bot">
-      <h2>Hey &#128075; what's your name?</h2>
-      <form>
+
+      <div class="inputName" id="inputName">
+        <h2>Hey &#128075; what's your name?</h2>
+        <form>
         <input type="text" id="name" placeholder="Enter your name here">
-      </form>
+        </form>
 
-      <button id="showName">Say my name, say my name</button>
+        <button onclick="showName()" id="showName">Say my name, say my name</button>
+      </div>
 
-      <p id="messageName"></p>
-
+      <div class="inputPizza" id="inputPizza">
+        <p id="messageName"></p>
       
-      <h2>Which pizza do you want? &#127829;</h2>
+        <h2>Which pizza do you want? &#127829;</h2>
 
-      <form>
-        <div class="form-group">
-          <select id="pizzaType" name="pizzaType">
-            <option value="Choice">Choose pizza</option>
-            <option value="Hawaii">Hawaii</option>
-            <option value="Pepperoni">Pepperoni</option>
-            <option value="Vegetarian">Vegetarian</option>
-          </select> 
-        </div>
-      </form>
+        <form>
+          <div class="form-group">
+            <select id="pizzaType" name="pizzaType">
+              <option value="Choice">Choose pizza</option>
+              <option value="Hawaii">Hawaii</option>
+              <option value="Pepperoni">Pepperoni</option>
+              <option value="Vegetarian">Vegetarian</option>
+            </select> 
+          </div>
+        </form>
 
-      <button id="choosePizza">Choose pizza</button>
-      <p id="messagePizza"></p>
+        <button onclick="choosePizza()" id="choosePizza">Choose pizza</button>
+
+      </div>
+        
       
       <div class="selectNumber" id="selectNumber">
-        <h2>How many <p style="display:inline">pizzas</p> do yo want?</h2>
+
+        <p id="messagePizza"></p>
+        <h2>How many <p class="choosenPizza" id="choosenPizza"></p> pizzas do you want?</h2>
         
         <form>
           <div class="form-group-hawaii" id="form-group-hawaii">
