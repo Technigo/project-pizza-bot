@@ -9,26 +9,42 @@ const pizzaPrice = 80;
 //Put your Javscript code here:
 let orderQuantity;
 let orderTotal;
-alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`); //iteration2
+let orderName;
+let cookingTime;
 
-    const orderName = prompt('Enter the name of the pizza you want to order today');//iteration3
-      if (orderName === "vegetarian" || orderName === "hawaiian" || orderName === "pepperoni") { //iteration5
-         orderQuantity = prompt(`How many of ${orderName} would you like?`); //iteration3
-        orderTotal = (orderQuantity * pizzaPrice); //iteration4
-           } else { alert(`Select a pizza from the menu`);
-             }
+alert(`Welcome to Andrea & Jamie's Pizza Corner! On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`); //iteration2
 
-   let cookingTime;
-const calculateCookingTime(orderQuantity) => {
-  
-}
-if (orderQuantity <= 2) {
-  cookingTime = 10;
-} else if (orderQuantity > 2 && orderQuantity <6 ) {
-  cookingTime = 15;
-} else {
-  cookingTime = 20;
+orderName = prompt("Enter the name of the pizza you want to order today");//iteration3
+
+
+const validateOrderName = (order) => {
+  if (order === "vegetarian" || order === "pepperoni" || order ==="hawaiian") {
+    orderQuantity = prompt(`How many of ${orderName} would you like?`);
+    validateOrderCount(order);
+  } else {
+    alert("Please choose a pizza from our menu");
+  }
 }
 
-alert(`Great I'll get started on your ${orderName} right away. It will cost ${orderTotal}kr. The pizzas will take ${cookingTime} minutes`);
+validateOrderName(orderName);
+
+const validateOrderCount = (order) => {
+  orderQuantity = prompt(`How many of ${order} would you like today?`);
+  orderTotal = orderQuantity * pizzaPrice;
+  calculateCookingTime(orderQuantity);
+}
+
+const calculateCookingTime = (order) => {
+  if (order <= 2) {
+    cookingTime = 10;
+  } else if (order > 2 && order < 6) {
+    cookingTime = 15;
+  } else {
+    cookingTime = 20;
+  }
+  alert(`Great I'll get started on your ${orderName} right away. It will cost ${orderTotal}kr. The pizzas will take ${cookingTime} minutes`);
+}
+
+validateOrderCount();
+
      
