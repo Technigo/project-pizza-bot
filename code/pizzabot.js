@@ -1,6 +1,11 @@
-const vegetarian = "Vegetarian Pizza"
-const hawaiian = "Hawaiian Pizza"
-const pepperoni = "Pepperoni Pizza"
+/* const vegetarian = document.getElementById('vegetarianPizza')
+const hawaiian = document.getElementById('hawaiianPizza')
+const pepperoni = document.getElementById('pepperoniPizza') */
+
+
+const vegetarian = "vegetarian pizza"
+const hawaiian = "hawaiian pizza"
+const pepperoni = "pepperoni pizza"
 
 const pizzaPrice = 80
 
@@ -9,168 +14,46 @@ console.log(vegetarian, hawaiian, pepperoni)
 
 alert(`Hey, happy to serve your pizza! In our menu we have: ${vegetarian}, ${hawaiian} and ${pepperoni}`);
 
+  let isCorrect = false
+  let orderName = ""
 
-
-let orderName = prompt("Enter the name of the pizza you want to order today", "Enter Pizza")
-
-/* if (orderName == null) {
-txt = "You have not enter any pizza name yet";
+const validateOrderName = (orderName) => {
+  
+  while (isCorrect==false){
+  
+    orderName = prompt("Enter the name of the pizza you want to order today", 
+    "Enter Pizza")
+    orderName = orderName.toLowerCase();
+   
+    isCorrect = 
+      orderName === vegetarian || 
+      orderName === hawaiian || 
+      orderName === pepperoni 
+   
+      isCorrect 
+      ? alert(`You have ordered ${orderName}`)
+      : alert(`Select a pizza from the menu please`)
+  }
 }
-else {
-txt = "You have ordered " + orderName + "!";
-} */
-//Doesn't show "No Pizza", why? Something with the boolean, the == null is never true.
-orderName == null ? txt = `You have not entered any pizza name yet`: txt= `You have ordered ${orderName}` //New way of writing if-statement (Ternary)
-
-alert(txt);
+//Returns an empty string on line 53
+validateOrderName()
 
 let orderQuantity = prompt(`How many of ${orderName} do you want?`, `Number of pizza`)
 
+
+const calculateCookingTime = (orderQuantity) => {
+if (orderQuantity > 0 && orderQuantity <=2) {
+  return 10 
+  } else if (orderQuantity >= 3 && orderQuantity <=5) {
+  return 15 
+  } else {
+  return 20 
+  }
+}
 console.log (orderQuantity) 
 
 let orderTotal = orderQuantity*pizzaPrice
-alert(`Great! I'll get started on your ${orderName}, It will cost you ${orderTotal} kr`) 
-
-
-
-/* 
-  console.log(`Hey, happy to serve your pizza! In our menu we have: ${vegetarian}, ${hawaiian} and ${pepperoni}`)
-
-
- */
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
+alert(`Great! I'll get started on your ${orderName}, It will cost you ${orderTotal} kr. The pizza(s) will take ${calculateCookingTime()} minutes.`) 
 
 
 
