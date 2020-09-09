@@ -1,3 +1,4 @@
+// Declaring variables for the pizzas on the menu & the price
 const vegetarian = "Vegetarian Pizza"
 const hawaiian = "Hawaiian Pizza"
 const pepperoni = "Pepperoni Pizza"
@@ -5,72 +6,65 @@ const kebab = "Kebab Pizza"
 
 const pizzaPrice = 80
 
-console.log(vegetarian, hawaiian, pepperoni, kebab)
-
-// Welcome message
-// alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian}, ${pepperoni} and ${kebab}.`)
+// Welcome message - Pizza-chat box 2
 document.getElementById("welcome").innerHTML = `On our menu we have ${vegetarian}, ${hawaiian}, ${pepperoni} and ${kebab}.`
 
-// Order-function - choose pizza + amount, if error occurs it will restart function
-let orderName = ""
-let orderQuantity = 1
+// Declaring variables
+let orderName = "" 
 
-// orderName = prompt(`Enter the name of the pizza you want to order today. Choose among ${vegetarian}, ${hawaiian}, ${pepperoni} or ${kebab}.`)
-document.getElementById("quantity").innerHTML = `Ok! How many of ${orderName} do you want?`
+// Makes Pizza-chat box 3 + User-chat box 2 visible. Function is called in next function.
+let displayOrderQuantityBox = () => {
+    const orderQuantityBox = document.getElementById("orderQuantityBox")
+    const selectQuantityBox = document.getElementById("selectQuantityBox")
 
-let validateOrderName = () => {
+    orderQuantityBox.classList.remove("invisible")
+    orderQuantityBox.classList.add("visible")
+    selectQuantityBox.classList.remove("invisible")
+    selectQuantityBox.classList.add("visible")
+    }
+
+// Main order-function to select pizza sort + invokes function above
+let orderPizza = (name) => {
+    orderName = name
+    document.getElementById("howMany").innerHTML = `OK, how many ${orderName}(s) do you want?`
+    displayOrderQuantityBox()
+}
+
+// Counting-function to select amount of pizzas
+let quantityFunction = (event) => {
+    event.preventDefault()
+
+    // Get quantity from user input-counter 
+    let orderQuantity = document.getElementById("quantityUser").value
+
+    // The box which confirms Pizza-sort + price + cooking-time
+    const confirmationBox = document.getElementById("confirmationBox")
     
-    let orderQuantityFunction = () => {
-        orderQuantity = prompt(`How many of ${orderName} do you want?`)
+    // Total cost-function
+    let orderTotal = 1
+    let calculateTotalCost = () => {
+        orderTotal = orderQuantity * pizzaPrice
     }
     
-    if (orderName.match(/vegetarian/g)) {
-        orderQuantityFunction()
-    } else if (orderName.match(/hawaiian/g)) {
-        orderQuantityFunction()
-    } else if (orderName.match(/pepperoni/g)) {
-        orderQuantityFunction()
-    } else if (orderName.match(/kebab/g)) {
-        orderQuantityFunction()
+    // Total cooking-time-function
+    let cookingTime = 1
+
+    let calculateCookingTime = () => {
+        if (orderQuantity < 3) {
+            cookingTime = 10
+        } else if (orderQuantity < 6) {
+            cookingTime = 15
+        } else {
+            cookingTime = 20
+        }
     }
-    else {
-        console.log("wrong name")
-        orderName = prompt(`Please choose a pizza from our menu. Choose among ${vegetarian}, ${hawaiian}, ${pepperoni} or ${kebab}.`)
-        validateOrderName()
-    }
+    calculateTotalCost()
+    calculateCookingTime()
+
+    // Confirmation message
+    document.getElementById("confirmation").innerHTML = `Great, I'll get started on your ${orderName}(s) right away, it will cost ${orderTotal} kr. The pizza(s) will take ${cookingTime} minutes.`
+
+    confirmationBox.classList.remove("invisible")
+    confirmationBox.classList.add("visible")
 }
 
-// validateOrderName()
-console.log(orderName)
-console.log(orderQuantity)
-
-
-// Total cost-function
-let orderTotal = 1
-
-let calculateTotalCost = () => {
-    orderTotal = orderQuantity * pizzaPrice
-}
-
-calculateTotalCost()
-console.log(orderTotal)
-
-
-// Total cooking-time-function
-let cookingTime = 1
-
-let calculateCookingTime = () => {
-    if (orderQuantity < 3) {
-        cookingTime = 10
-    } else if (orderQuantity < 6) {
-        cookingTime = 15
-    } else {
-        cookingTime = 20
-    }
-}
-
-calculateCookingTime()
-console.log(cookingTime)
-
-// Confirmation message
-document.getElementById("confirmation").innerHTML = `Great, I'll get started on your ${orderName}(s) right away, it will cost ${orderTotal} kr. The pizza(s) will take ${cookingTime} minutes.`

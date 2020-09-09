@@ -15,56 +15,83 @@
     </header>
 
     <main>
-      <p class="chat-pizzeria">Welcome to Pizzeria Slice & Snack! Happy to serve your pizza.</p>
-      <p id="welcome" class="chat-pizzeria"></p>
+      <div class="chat-box pizzeria">
+        <div class="chat-portrait"></div>
+        <p>Welcome to Pizzeria Slice & Snack! Happy to serve your pizza.</p>
+      </div>
+      
+      <div class="chat-box pizzeria">
+        <div class="chat-portrait"></div>
+        <p id="welcome"></p>
+      </div>
 
+      <div class="chat-box user">
+        <div class="user-inner">
+          <p>Select one of the pizza's below:</p>
+          <div class="chat-form">
+            <form>
+              <input 
+                id="pepperoni"
+                type="button"
+                value="Pepperoni Pizza"
+                onclick="orderPizza('Pepperoni Pizza')"
+                />  
+                <input 
+                id="vegetarian"
+                type="button"
+                value="Vegetarian Pizza"
+                onclick="orderPizza('Vegetarian Pizza')"
+                />
+                <input 
+                id="kebab"
+                type="button"
+                value="Kebab Pizza"
+                onclick="orderPizza('Kebab Pizza')"
+                />
+                <input 
+                id="hawaiian"
+                type="button"
+                value="Hawaii Pizza"
+                onclick="orderPizza('Hawaiian Pizza')"
+                />
+              </form>
+          </div>
+        </div>
+        <div class="chat-portrait-user">You</div>
+      </div>
 
-      <div class="chat-user">
-        Select one of the pizza's below:
-        <div class="chat-form">
-          <form>
-            <input 
-              id="pepperoni"
-              type="button"
-              value="Pepperoni"
-              />  
+      <!--Our box asking the customer about amount-->
+      <div id="orderQuantityBox" class="chat-box pizzeria invisible">
+        <div class="chat-portrait"></div>
+        <p id="howMany">OK, how many do you want?</p>
+      </div>
+      
+      <!--Box where the customer choose amount of pizzas-->
+      <div id="selectQuantityBox" class="chat-box user invisible">
+        <div class="user-inner">
+          <p>Select number of pizza(s):</p>
+          <div class="chat-form">
+            <form>
               <input 
-              id="vegetarian"
-              type="button"
-              value="Vegetarian Pizza"
-              />
-              <input 
-              id="kebab"
-              type="button"
-              value="Kebab Pizza"
-              />
-              <input 
-              id="hawaiian"
-              type="button"
-              value="Hawaii Pizza"
-              />
+              type="number" 
+              id="quantityUser" 
+              name="quantity" 
+              value="1"
+              min="1" 
+              max="10">
+             <button 
+              onclick="quantityFunction(event)"
+              >Order!</button>
             </form>
+            </div>
         </div>
+        <div class="chat-portrait-user">You</div>
       </div>
-
-
-      <p id="quantity" class="chat-pizzeria">OK</p>
-      <div class="chat-user">
-       Select number of pizza(s):
-        <div class="chat-form">
-        <form>
-          <input 
-          type="number" 
-          id="quantityUser" 
-          name="quantity" 
-          value="1"
-          min="1" 
-          max="10">
-          <button>Order!</button>
-        </form>
-        </div>
+      
+      <div id="confirmationBox" class="chat-box pizzeria invisible">
+        <div class="chat-portrait"></div>
+        <p id="confirmation"></p>
       </div>
-      <p id="confirmation" class="chat-pizzeria"><div class="box"></div></p>
 
     </main>    
 

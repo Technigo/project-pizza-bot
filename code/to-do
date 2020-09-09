@@ -1,27 +1,25 @@
 BACKLOG:
 
-# Styla upp startsidan med font, bgcolor, centrerad div osv. - CHECK
+/ Styla upp startsidan med font, bgcolor, centrerad div osv. 
 
-# Skapa välkomstmeddelandet i en box - CHECK
+/ Skapa välkomstmeddelandet i en box 
 
-# Skapa en form med 3 knappar: "Vegetarian", "Hawaiian" och "Pepperoni"
+/ Skapa en form med 3 knappar: "Vegetarian", "Hawaiian" och "Pepperoni" 
 
-# Skapa svarsruta från Pizzerian
+/ Skapa svarsruta från Pizzerian 
 
-# Skapa fråga: "How many of ___ do you want" + Count-ruta
+/ Skapa fråga: "How many of ___ do you want" + Count-ruta
 
-# Skapa svarsruta från Pizzerian
+/ Skapa svarsruta från Pizzerian
 
-# Skapa confirmation-ruta med pris, cookingtime
+/ Skapa confirmation-ruta med pris, cookingtime
 
-
-
-# Gör pratbubblor av boxarna
+/ Gör pratbubblor av boxarna
 
 # Skapa skriv-effekt av texten i chatten
 
 # Skapa count-down timer
 
+# Fixa footern. 
+   
 # Skapa en dyrare pizza
-
-# Capitalize första bokstaven i prompten (https://flaviocopes.com/how-to-uppercase-first-letter-javascript/)

@@ -16,6 +16,7 @@ html {
 
 body {
     margin: 0;
+    padding: 0;
     width: 70vw;
     margin: auto;
     text-shadow: 1px 1px #004D16;
@@ -23,7 +24,7 @@ body {
 }
 
 header {
-    margin: 20px;
+    margin: 60px 20px 30px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,22 +41,66 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 50px;
+    height: 2000px;
 }
 
-.chat-pizzeria {
+.chat-box {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.invisible {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.chat-portrait {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #01DC3E;
+    border-radius: 50%;
+    background-image: url(./images/pizza-slice2.png);
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.chat-portrait-user {
+    width: 80px;
+    height: 80px;
+    background: #999;
+    border-radius: 50%;
+    text-align:center;
+    padding-top: 29px;
+}
+
+.pizzeria p {
     color: #fff;
     background: #01DC3E;
     width: 30vw;
     padding: 20px;
     border-radius: 10px;
+    margin-left: 20px;
 }
 
-.chat-user {
-    padding: 20px;
+.user {
+    align-self: flex-end;
+}
+
+.user-inner {
+    padding: 20px 20px 30px 20px;
     border-radius: 10px;
     color: #fff;
-    border: 1px solid #01DC3E;
-    align-self: flex-end;
+    border: 2px solid #999;
+    margin-right: 20px;
 }
 
 .chat-form {
@@ -75,6 +120,20 @@ input {
     text-shadow: 1px 1px #004D16;
 }
 
+button {
+    font-family: 'Roboto Mono', monospace;
+    color: #fff;
+    background: #01DC3E;
+    cursor: pointer;
+    border: 2px solid white; /* Funderar gärna ihop hur vi ska styla knapp-j*veln. */
+    box-shadow: 2px 2px #004D16;
+    text-shadow: 1px 1px #004D16;
+    width: 5vw;
+    padding: 5px;
+    margin: 5px;
+}
+
+
 /* .box {
     position: absolute;
     width: 20px;
@@ -90,4 +149,12 @@ footer {
     padding: 5px;
     left: 0;
     right: 0;
+}
+
+
+
+
+p {
+    margin: 0;
+    padding: 0;
 }
