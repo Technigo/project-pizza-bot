@@ -14,19 +14,22 @@
     </section>
 
     <section class="greeting-wrapper">
-      <div class="greeting-message-container">
+      <div class="greeting-message-container" id="hide-form">
         <p id="greeting-message"></p>
         <form>
           <div>
             <p id="name-of-pizza"></p>
             <input type="text" id="form-text" />
-            <button id="button-1">Confirm</button>
             <p id="errorMessage"></p>
           </div>
-          <div class="quantity-of-pizza-wrapper" id="test">
+          <div class="quantity-of-pizza-wrapper">
             <p id="quantity-of-pizza"></p>
             <input type="number" id="form-number" />
-            <button id="button-2">Confirm</button>
+          </div>
+          <div>
+            <p>Who is taken up the order</p>
+            <input type="text" id="form-name" />
+            <button id="button">Confirm</button>
           </div>
         </form>
       </div>
