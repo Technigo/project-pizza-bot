@@ -1,6 +1,13 @@
 /* const vegetarian = document.getElementById('vegetarianPizza')
 const hawaiian = document.getElementById('hawaiianPizza')
-const pepperoni = document.getElementById('pepperoniPizza') */
+const pepperoni = document.getElementById('pepperoniPizza') 
+
+-----CODE TO CAPTURE ALL OF OUR CODE AND CONNECT IT TO HTML-----
+
+const handleSubmit = (event) => {
+  event.preventDefault();
+  ALL THE CODE 
+}*/
 
 const vegetarian = "vegetarian pizza";
 const hawaiian = "hawaiian pizza";
@@ -39,7 +46,7 @@ const validateOrderName = () => {
 
 const validOrderName = validateOrderName();
 
-let orderQuantity = prompt(
+const orderQuantity = prompt(
   `How many of ${validOrderName} do you want?`,
   `Number of pizza`
 );
@@ -55,7 +62,7 @@ const calculateCookingTime = (orderQuantity) => {
 };
 console.log(orderQuantity);
 
-let orderTotal = orderQuantity * pizzaPrice;
+const orderTotal = orderQuantity * pizzaPrice;
 alert(
   `Great! I'll get started on your ${validOrderName}, It will cost you ${orderTotal} kr. The pizza(s) will take ${calculateCookingTime()} minutes.`
 );
