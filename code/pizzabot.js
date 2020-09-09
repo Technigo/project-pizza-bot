@@ -27,11 +27,7 @@ const calculateTotalCost = (pizzaName) => {
     return orderTotal;
 }
 
-const calculateCookingTime = (orderQuantity) => {
-    let orderTime = 0; 
-    if (orderQuantity <= 2) {
-        orderTime = 10;
-        return orderTime;
+
 
     } else if (orderQuantity < 6 || orderQuantity > 2) {
         orderTime = 15;
@@ -65,7 +61,7 @@ const orderQuantity = prompt(`How many of ${orderName} Pizzas do you want?`);
 if (isValidOrder === true) {
     const isTotalCost = calculateTotalCost(orderQuantity, pizzaPrice);
     console.log(isTotalCost);
-    const orderTime = calculateCookingTime(orderQuantity, orderTime);
-    console.log(orderTime);
-    alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The pizzas will take ${orderTime}`);
+    const orderTime = calculateCookingTime(orderQuantity);
+    console.log(isorderTime);
+    alert(`Great, I'll get started on your ${orderName} right away, it will cost ${isTotalCost} kr. The pizzas will take ${orderTime}`);
 }
