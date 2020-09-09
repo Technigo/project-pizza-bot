@@ -16,13 +16,20 @@
       <div class="welcome">
       <p id="welcomeMessage"></p>
       <form onsubmit="handleSubmit(event)">
-        <label for="question">Question:</label>
+
+      </div><div>
+
+      
+        <label for="question" id="question">
+          Question:</label>
+          
         <input 
           type="text" 
-          id="question" 
+          id="answer" 
           name="question" 
+          placeholder="Type your answer here"
           />
-       
+         
           <input 
           type="submit"
           id="submit" 
@@ -30,8 +37,8 @@
           value="Submit" 
           />
       </form>
-    </div>
 
+      </label>
 
     <!--   <h1>Javascript Functions & Forms</h1>
     <form onsubmit="handleSubmit(event)">
