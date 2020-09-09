@@ -53,3 +53,34 @@ form {
 input {
     font-size: 20px;
 }
+
+#pizza-type {
+    width: 300px;
+}
+
+#submit-button {
+    width: 100px;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #87bf2a;
+    color: white;
+    font-family: 'Caveat Brush', cursive;
+    font-size: 22px;
+    border: none;
+    border-radius: 15%;
+}
+
+img {
+    width: 500px;
+    border-radius: 50%;
+}
+
+#confirm {
+    display: none;
+    width: 500px;
+    background-color: #87bf2a;
+    padding: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
