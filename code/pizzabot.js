@@ -36,45 +36,53 @@ if ((orderName === vegetarian) || (orderName === hawaiian) || (orderName === pep
 /* Function for validateOrderName */
 const orderName = prompt("Enter the name of the pizza you want to order today.");
 const validateOrderName = (orderName) => {
-    if ((orderName === vegetarian) || (orderName === hawaiian) || (orderName === pepperoni)) {
-    const orderQuantity = prompt(`How many ${orderName}(s) do you want?`);
+    if (orderName === vegetarian || orderName === hawaiian || orderName === pepperoni){ 
+    return true; 
     } else {
     alert('Select a pizza from the menu');
+    return false;
     }
     };
 
     /*invoke function*/
     validateOrderName(orderName);
-
+    if (validateOrderName(orderName)) { 
+    
 /* Function for calculateTotalCost */
-
-const orderTotal = ("orderQuantity" * "pizzaPrice");
+const orderQuantity = prompt(`How many ${orderName}(s) do you want?`);
+const orderTotal = (orderQuantity * pizzaPrice);
 const calculateTotalCost = (orderTotal) => {
     if (orderQuantity <= 2) {
-        alert(`Great, I'll get started on your ${orderName} pizza(s) right away, it will cost ${orderTotal} kr.`);
+        alert(`Great, I'll get started on your ${orderName} pizza(s) right away, it will cost ${orderTotal} kr.The pizza(s) will take ${calculateCookingTime(orderQuantity)} minutes.`);
       } else if (orderQuantity > 2 && orderQuantity <= 5) {
-        alert(`Great, I'll get started on your ${orderName} pizza(s) right away, it will cost ${orderTotal} kr.`);
+        alert(`Great, I'll get started on your ${orderName} pizza(s) right away, it will cost ${orderTotal} kr.The pizza(s) will take ${calculateCookingTime(orderQuantity)} minutes.`);
       } else {
-        alert(`Great, I'll get started on your ${orderName} pizza(s) right away, it will cost ${orderTotal} kr.`);
+        alert(`Great, I'll get started on your ${orderName} pizza(s) right away, it will cost ${orderTotal} kr.The pizza(s) will take ${calculateCookingTime(orderQuantity)} minutes.`);
       } 
-  };
+    
+  
 
    /*invoke function*/
    calculateTotalCost(orderTotal);
-  
-/* Function for calculateCookingTime */
-const calculateCookingTime = (orderQuantity) => {
-    if (orderQuantity <= 2) {
-     alert(`The pizza(s) will take 10 minutes.`);
-      } else if (orderQuantity > 2 && orderQuantity <= 5) {
-     alert(`The pizza(s) will take 15 minutes.`);
-      } else {
-     alert(`The pizza(s) will take 20 minutes.`);
-      } 
-  };
 
-/*invoke function*/
-calculateCookingTime(orderQuantity);
+
+   const calculateCookingTime = (orderQuantity) => {
+    if (orderQuantity <= 2) {
+      return 10;
+    } else if (orderQuantity > 2 && orderQuantity <= 5) {
+      return 15;
+    } else {
+      return 20;
+    }
+
+  }
+  /*invoke function*/
+  calculateCookingTime(orderQuantity);
+
+    }
+  }; 
+
+
 
 
 
