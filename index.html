@@ -4,14 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>InstaPizza</title>
   </head>
   <body>
     <h1>&#127829; InstaPizza &#127829;</h1>
-    <div class="button">
+    <div class="button" id="button">
+      <!-- onclick="startOrder()" -->
       <p>Order pizza in just 3 steps.</p>
       <p class="call-to-action">Click me to get started!</p>
+    </div>
+    <div class="chat-container">
+      <div class="speech-bot bot-triangle">I'm speech bubble</div>
+      <div class="speech-user user-triangle">I'm also speech bubble</div>
     </div>
     <script src="pizzabot.js"></script>
   </body>
