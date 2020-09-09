@@ -5,12 +5,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Project 4: Pizzabot</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Pizzabot</title>
 </head>
 
 <body>
-    <h1>This is your Pizza Bot</h1>
-    <script src="pizzabot.js"></script>
+    <main>
+        <h1>This is your Pizza Bot</h1>
+        <div id="welcomeBox">
+            Hey! Happy to serve your pizza. On our menu we have Vegetarian Pizza, Hawaiian Pizza" and Pepperoni Pizza.
+        </div>
+        <form onsubmit="recieveData(event)">
+            <h3>Which pizza would you like to order?</h3>
+
+            <label>
+                    Vegetarian Pizza
+                    <input type="radio" name="pizza" id="vegetarianPizza" value="Vegetarian Pizza" checked="checked">
+
+                </label>
+            <label>
+                    Hawaiian Pizza
+                    <input type="radio" name="pizza" id="hawaiianPizza" value="Hawaiian Pizza">
+                </label>
+            <label>
+                    Pepperoni Pizza
+                    <input type="radio" name="pizza" id="pepperoniPizza" value="Pepperoni Pizza">
+                </label>
+
+
+
+            <label>
+                    <h3>How many pizzas would you like?</h3>
+                    <input type="number" id="quantity" name="quantity" min="1" max="10" />
+                </label>
+            <!-- <button onclick="calculateTotalCost()">Choose quantity</button> -->
+            <button onclick="recieveData()">Order</button>
+
+        </form>
+
+        <div class="message-container">
+            <p id="message" class="message"> </p>
+
+            <img id="hawaiianImg" src="./img/hawaiian.jpg" alt="hawaiian pizza">
+            <img id="pepperoniImg" src="./img/pepperoni.png" alt="pepperoni pizza">
+            <img id="vegetarianImg" src="./img/vegetarisk.jfif" alt="vegetarian pizza">
+        </div>
+        <script src="pizzabot.js"></script>
+    </main>
 </body>
 
 </html>
