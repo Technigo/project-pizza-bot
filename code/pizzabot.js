@@ -20,7 +20,7 @@ const validateOrderName = (chosenPizza) => {
     }
 };
 
-//Calling the function and in the paramater we define what is in the orderName variable to then tell chosenPizza what pizza has been chosen so then it can check this against what is defined in the if and else statements. The outcome, true or false will e stored on the pizzaIsOnMenu variable.
+//Calling the function and in the paramater we define what is in the orderName variable to then tell chosenPizza what pizza has been chosen so then it can check this against what is defined in the if and else statements. The outcome, true or false will be stored on the pizzaIsOnMenu variable.
 let pizzaIsOnMenu = validateOrderName(orderName);
 
 //Function calculating the cost of the pizza based on the pizzaAmount and returning the amount.
