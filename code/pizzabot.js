@@ -1,16 +1,17 @@
 console.log('Is this working?');
 
-const vegetarian = "Vegetarian Pizza"
-console.log(vegetarian);
+const x = "Vegetarian Pizza"
+console.log(x);
 
-const hawaiian = "Hawaiian Pizza"
-console.log(hawaiian);
+const y = "Hawaiian Pizza"
+console.log(y);
 
-const pepperoni = "Pepperoni Pizza"
-console.log(pepperoni);
+const z = "Pepperoni Pizza"
+console.log(z);
 
-const pizzaPrice = 80
+const pizzaPrice = 80;
 console.log(pizzaPrice);
 
 //Put your Javscript code here:
 
+alert(`Hey! Happy to serve your pizza. On our menu we have ${x}, ${y} and ${z}.`)
