@@ -3,6 +3,7 @@ const hawaiian = "Hawaiian Pizza";
 const pepperoni = "Pepperoni Pizza";
 
 const pizzaPrice = 80;
+let time = 0;
 
 //console.log(`${vegetarian} + ${hawaiian} + ${pepperoni} + ${pizzaPrice}`);
 
@@ -18,17 +19,18 @@ alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawa
            } else { alert(`Select a pizza from the menu`);
              }
 
-   let cookingTime;
-const calculateCookingTime(orderQuantity) => {
-  
-}
-if (orderQuantity <= 2) {
-  cookingTime = 10;
-} else if (orderQuantity > 2 && orderQuantity <6 ) {
-  cookingTime = 15;
-} else {
-  cookingTime = 20;
-}
-
-alert(`Great I'll get started on your ${orderName} right away. It will cost ${orderTotal}kr. The pizzas will take ${cookingTime} minutes`);
+   
+        
+        alert(`Great I'll get started on your ${orderName} right away. It will cost ${orderTotal}kr. The pizzas will take ${time} minutes`);
      
+/*
+alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`);
+let placeOrder = () => {
+    let orderName = prompt('Enter the name of the pizza you want to order today');
+    let orderQuantity = prompt(`How many of ${orderName} would you like?`); 
+
+    let orderTotal = (orderQuantity * pizzaPrice);
+    alert(`Great I'll get started on your ${orderName} Pizza(s) right away. It will cost ${orderTotal}kr`);
+
+}
+placeOrder();
