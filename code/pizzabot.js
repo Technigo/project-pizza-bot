@@ -12,18 +12,64 @@ console.log(pepperoni);
 console.log(pizzaPrice);
 
 //Greet your customer
-//const greeting = `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`;
-//console.log(greeting);
-alert(
-  `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`
-);
+const greeting = `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`;
+document.getElementById("greeting-message").innerHTML = greeting;
 
-//Ask your customer
-//let orderName = ("Enter the name of the pizza you want to order today!");
-let orderName = prompt("Enter the name of the pizza you want to order today!");
+//Ask your customer which pizza
+const decidePizza = "Enter the name of the pizza you want to order today!";
+document.getElementById("name-of-pizza").innerHTML = decidePizza;
+
+//How many Pizza's
+const orderQuantityMsg = `How many do you want?`;
+document.getElementById("quantity-of-pizza").innerHTML = orderQuantityMsg;
+
+// Function for pizza choice/order
+let addOrder = (event) => {
+  console.log(event);
+  event.preventDefault();
+  console.log("Hejjehjj");
+  const orderName = document.getElementById("form-text").value;
+  document.getElementById("form-text").value = "";
+  let orderQuantity = document.getElementById("form-number").value;
+  document.getElementById("form-number").value = "";
+
+  if (validateOrderName(orderName)) {
+    // orderQuantityMsg = `How many of ${orderName} do you want?`;
+    // document.getElementById("quantity-of-pizza").innerHTML = orderQuantityMsg;
+    const orderTotal = calculateTotalCost(orderQuantity, pizzaPrice);
+    console.log(orderTotal);
+
+    const cookingTime = calculateCookingTime(orderQuantity);
+    console.log(cookingTime);
+
+    const finalMessage = `Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The Pizza(s) will take ${cookingTime} minutes!`;
+    console.log(finalMessage);
+
+    // Final message
+    document.getElementById("final-message").innerHTML = finalMessage;
+  } else {
+    const errorMessage = "Please, select a pizza from the our menu";
+    document.getElementById("errorMessage").innerHTML = errorMessage;
+    return;
+  }
+
+  // const orderTotal = calculateTotalCost(orderQuantity, pizzaPrice);
+  // console.log(orderTotal);
+
+  // const cookingTime = calculateCookingTime(orderQuantity);
+  // console.log(cookingTime);
+
+  // const finalMessage = `Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The Pizza(s) will take ${cookingTime} minutes!`;
+  // console.log(finalMessage);
+
+  // // Final message
+  // document.getElementById("WelcomeP").innerHTML = finalMessage;
+};
+
+// Button for pizza choice
+document.getElementById("button").addEventListener("click", addOrder);
 
 //Add function to validate pizza order
-
 const validateOrderName = (orderName) => {
   //**** ADD STRING INCLUDES METHOD TO OUR IF STATEMENT
   if (
@@ -37,46 +83,37 @@ const validateOrderName = (orderName) => {
   }
 };
 
-let orderQuantity;
-
-if (validateOrderName(orderName)) {
-  orderQuantity = prompt(`How many of ${orderName} do you want?`);
-} else {
-  alert("Please, select a pizza from the our menu");
-}
-
 //Function to calculate price- *** CHECK IF WE WANT TO USE LET***
-
 const calculateTotalCost = (orderQuantity, pizzaPrice) => {
   return orderQuantity * pizzaPrice;
 };
 
-const orderTotal = calculateTotalCost(orderQuantity, pizzaPrice);
-
-// Calculate cooking time
+// Function to calculate cooking time
 const calculateCookingTime = (orderQuantity) => {
   if (orderQuantity <= 2) {
     return 10;
-  } else if (orderQuantity > 2 && orderQuantity < 6) {
+  } else if (orderQuantity < 6) {
     return 15;
   } else {
     return 20;
   }
 };
 
-const cookingTime = calculateCookingTime(orderQuantity);
+// if (validateOrderName(pizzaName)) {
+//   orderQuantity = prompt(`How many of ${pizzaName} do you want?`);
+// } else {
+//   alert("Please, select a pizza from the our menu");
+// }
 
-const finalMessage = `Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The Pizza(s) will take ${cookingTime} minutes!`;
+//const orderTotal = calculateTotalCost(orderQuantity, pizzaPrice);
 
-console.log(finalMessage);
+//const cookingTime = calculateCookingTime(orderQuantity);
+
+// const finalMessage = `Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The Pizza(s) will take ${cookingTime} minutes!`;
+
+// console.log(finalMessage);
 
 // innerHTML
 
-// Greeting message
-//document.getElementById("greeting-message").innerHTML = greeting;
-
-// Name of Pizza
-//document.getElementById("name-of-pizza").innerHTML = orderName;
-
 // Final message
-document.getElementById("WelcomeP").innerHTML = finalMessage;
+//document.getElementById("WelcomeP").innerHTML = finalMessage;

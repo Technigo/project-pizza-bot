@@ -5,22 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Project 4: Pizzabot</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
+
   <body>
-    <h1>This is your Pizza Bot</h1>
+    <section>
+      <h1 class="h1-greeting">This is your Pizza Bot</h1>
+    </section>
 
     <section class="greeting-wrapper">
       <div class="greeting-message-container">
         <p id="greeting-message"></p>
         <form>
-          <p id="name-of-pizza"></p>
+          <div>
+            <p id="name-of-pizza"></p>
+            <input type="text" id="form-text" />
+            <!-- <button id="button">text</button> -->
+            <p id="errorMessage"></p>
+          </div>
+          <div>
+            <p id="quantity-of-pizza"></p>
+            <input type="number" id="form-number" />
+            <button id="button">text</button>
+          </div>
         </form>
       </div>
     </section>
+    <div></div>
 
     <section></section>
 
-    <p id="WelcomeP">Detta är en paragraf</p>
+    <p id="final-message"></p>
 
     <!-- Link to the javascript -->
     <script src="./pizzabot.js"></script>

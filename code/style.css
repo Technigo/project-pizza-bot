@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+
+body {
+  background: url("./images/window-background.jpg") center top fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: rgb(250, 9, 158);
+  text-shadow: black 5px;
+}
+
+.h1-greeting {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3em;
+}
