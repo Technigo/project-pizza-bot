@@ -1,0 +1,65 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: rgb(248, 213, 148);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+section {
+    max-width: 500px;
+}
+
+.items {
+    border: 5px solid white;
+    padding: 10px;
+    border-radius: 5px;
+    color: black;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.items input {
+    padding: 10px;
+    border: none;
+    margin-bottom: 10px;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.form-information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-information label, select {
+    margin: 10px;
+}
+
+.submit-button {
+    background: rgb(243, 98, 78);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    margin: 10px;
+}
+
+.submit-button:hover {
+    background: rgb(66, 66, 240);
+}
+
+

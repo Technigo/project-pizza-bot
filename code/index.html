@@ -4,11 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
     <title>Project 4: Pizzabot</title>
   </head>
   <body>
-    <h1>This is your Pizza Bot</h1>
+    <main>
+      <section>
+        <div class="items">
+          <h1>Pizza Bot  &#127829;</h1>
+        </div>
+
+        <div class="items">
+          <h3 id="greeting"></h3>
+        </div>
+
+        <div class="items">
+          <h3 id=choosePizza></h3>
+
+          <form action="" class="form-information">
+            <label>Choose pizza</label>
+            <select name="pizza" id="selectPizza">
+              <option value="vegetarian">Vegetarian Pizza</option>
+              <option value="pepperoni">Pepperoni Pizza</option>
+              <option value="hawaiian">Hawaiian Pizza</option>              
+            </select>
+            <input type="submit" class=submit-button>
+          </form>
+        </div >
+
+        <div class="items">
+          <h3 id="howmany"></h3>
+        </div>
+
+        <div>
+          <h3 id="finalize" class="items"></h3>
+        </div>
+
+        <div>
+          <h3 id="error" class="items"></h3>
+        </div>
+      </section>    
+    </main>  
 
     <script src="./pizzabot.js"></script>
+
   </body>
 </html>
