@@ -23,7 +23,14 @@ alert(`Hey! Happy to serve your pizza. On our menu we have ${x}, ${y} and ${z}.`
 
 const orderName = prompt("Enter the name of the pizza you want to order today."); 
 
-const orderQuantity = prompt (`How many of ${orderName} do you want?`)
+const orderQuantity = prompt (`How many of ${orderName} do you want?`);
 
 console.log(orderName, orderQuantity);
 
+//Finalize the order:
+
+const orderTotal = orderQuantity * pizzaPrice
+
+alert (`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr`);
+
+console.log(orderTotal);
