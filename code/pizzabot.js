@@ -39,50 +39,52 @@ const validateOrderName = (orderName) => {
     if (orderName === vegetarian || orderName === hawaiian || orderName === pepperoni){ 
     return true; 
     } else {
-    alert('Select a pizza from the menu');
     return false;
     }
-    };
+  }
 
-    /*invoke function*/
-    validateOrderName(orderName);
-    if (validateOrderName(orderName)) { 
     
 /* Function for calculateTotalCost */
-const orderQuantity = prompt(`How many ${orderName}(s) do you want?`);
-const orderTotal = (orderQuantity * pizzaPrice);
-const calculateTotalCost = (orderTotal) => {
-    if (orderQuantity <= 2) {
-        alert(`Great, I'll get started on your ${orderName} pizza(s) right away, it will cost ${orderTotal} kr.The pizza(s) will take ${calculateCookingTime(orderQuantity)} minutes.`);
-      } else if (orderQuantity > 2 && orderQuantity <= 5) {
-        alert(`Great, I'll get started on your ${orderName} pizza(s) right away, it will cost ${orderTotal} kr.The pizza(s) will take ${calculateCookingTime(orderQuantity)} minutes.`);
-      } else {
-        alert(`Great, I'll get started on your ${orderName} pizza(s) right away, it will cost ${orderTotal} kr.The pizza(s) will take ${calculateCookingTime(orderQuantity)} minutes.`);
-      } 
-    
-  
+const calculateTotalCost = (orderQuantity, pizzaPrice) => {
+return orderQuantity * pizzaPrice;
 
-   /*invoke function*/
-   calculateTotalCost(orderTotal);
+}
 
-
-   const calculateCookingTime = (orderQuantity) => {
-    if (orderQuantity <= 2) {
-      return 10;
-    } else if (orderQuantity > 2 && orderQuantity <= 5) {
-      return 15;
-    } else {
-      return 20;
-    }
-
+/* Function for calculateCookingTime */
+const calculateCookingTime = (orderQuantity) => {
+  if (orderQuantity <= 2) {
+    return 10;
+  } else if (orderQuantity > 2 && orderQuantity <= 5) {
+    return 15;
+  } else {
+    return 20;
   }
-  /*invoke function*/
-  calculateCookingTime(orderQuantity);
 
-    }
-  }; 
+}
+
+if (validateOrderName(orderName) === true) {
+  const orderQuantity = prompt(`How many ${orderName}(s) do you want?`);
+  alert(`Great, I'll get started on your ${orderName} pizza(s) right away, it will cost ${calculationTotalCost(orderQuantity, pizzaPrice)} kr. The pizza(s) will take ${calculateCookingTime(orderQuantity)} minutes.`);
+  } else {
+  alert('Select a pizza from the menu');
+  } 
+    
 
 
 
+//Iteration 7 
+/*
+const orderPizza = () => {
+  event.preventDefault();
+  alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`);
+
+}
+*/
+
+const orderPizza = (event) => {
+  event.preventDefault();
+  alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`);
+}
 
 
+document.getElementById("endMessage").textContent = "Thank you for ordering from our restaurant.Welcome back soon!"
