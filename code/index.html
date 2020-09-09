@@ -4,10 +4,59 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link src="./style.css">
     <title>Project 4: Pizzabot</title>
   </head>
   <body>
-    <h1>This is your Pizza Bot</h1>
+
+    <body>
+
+<!-- Our code -->
+      <h1>Welcome to order pizza!</h1>
+      <div class="welcome">
+      <p id="welcomeMessage"></p>
+      <form onsubmit="handleSubmit(event)">
+        <label for="question">Question:</label>
+        <input 
+          type="text" 
+          id="question" 
+          name="question" 
+          />
+       
+          <input 
+          type="submit"
+          id="submit" 
+          name="submit" 
+          value="Submit" 
+          />
+      </form>
+    </div>
+
+
+    <!--   <h1>Javascript Functions & Forms</h1>
+    <form onsubmit="handleSubmit(event)">
+      <label for="age">Age:</label>
+      <input id="age" name="age" type="number" />
+      <input id="submit" name="submit" type="submit" value="Submit" />
+    </form>
+  
+  
+    // Get the age value from the form input
+  const age = document.getElementById('age').value;
+
+// Input : accepts an age number value
+// Output: returns true/false
+const isAgeOdd = (age) => {
+  if (age % 2 === 0) {
+    // Even
+    return false;
+  } else {
+    // Odd
+    return true;
+  }
+};-->
+
     <script src="pizzabot.js"></script>
+
   </body>
 </html>
