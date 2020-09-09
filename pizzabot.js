@@ -1,24 +1,40 @@
-// const vegetarian = "Vegetarian Pizza";
-// const hawaiian = "Hawaiian Pizza";
-// const pepperoni = "Pepperoni Pizza";
-// const pizzaPrice = 80;
+const vegetarian = "Vegetarian Pizza";
+const hawaiian = "Hawaiian Pizza";
+const pepperoni = "Pepperoni Pizza";
+const pizzaPrice = 80;
+
+document.getElementById('botBubble').innerHTML = `Hey! Happy to get your pizza order started. On our menu we have ${vegetarian}, ${hawaiian}, and ${pepperoni}.`;
+
+document.getElementById('userBubble').innerHTML =
+'Ok!';
+
+function buttonClicked() {
+ const buttonInvisible = document.getElementById('button');
+ buttonInvisible.style.display = 'none';
+
+ const chatBegin = document.getElementById('chatContainer');
+ chatContainer.style.display = 'flex';
+
+ const startConvo = document.getElementById('botBubble');
+ botBubble.style.display = 'block';
+
+ const userStart = document.getElementById('userBubble');
+ userStart.style.display = 'block';
+};
+
+function startOrder() {
+ const orderName = document.getElementById('startOrder');
+  orderName.style.display = 'block';
+ document.getElementById('startOrder').innerHTML = `What kind of pizza would you like to order today? 
+ <p><button class="button-chat" value="vegetarian">${vegetarian}</button></p>
+ <p><button class="button-chat" value="hawaiian">${hawaiian}</button></p>
+ <p><button class="button-chat" value="pepperoni">${pepperoni}</button></p>
+`;
+console.log ()
+};
 
 
-function nameFunction() {
-  document.getElementById("").innerHTML = "";
-}
-
-const startOrder = `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian}, and ${pepperoni}.`;
-
-
-
-
-
-// alert(
-//   `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian}, and ${pepperoni}.`
-// );
-
-// let orderName = prompt("Enter the name of the pizza you want to order today.");
+// ("Enter the name of the pizza you want to order today.");
 
 // const validateOrderName = (orderName) => {
 //   if (
