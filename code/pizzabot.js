@@ -53,6 +53,37 @@ const showName = () => {
 document.getElementById("showName").onclick = showName;
 
 
+/* Function to choose pizza and view pizza message */
+const choosePizza = () => {
+    const pizza = document.getElementById("pizzaType").value;
+    let messagePizza;
+
+    if (pizza === 'Hawaii') {
+        messagePizza = 'Aloha, great choice! Who does not love pineapple on pizza? &#x1f34d;';
+        document.getElementById("selectNumber").style.display="inline";
+        document.getElementById("form-group-hawaii").style.display="inline";
+
+    } else if (pizza === 'Pepperoni') {
+        messagePizza = 'Buongiorno! &#127829; Pepperoni is my favorite too.';
+        document.getElementById("selectNumber").style.display="inline";
+        document.getElementById("form-group-pepperoni").style.display="inline";
+
+    } else if (pizza === 'Vegetarian') {
+        messagePizza = 'Excellent choice, vegetarian is good for your soul. &#129365;';
+        document.getElementById("selectNumber").style.display="inline";
+        document.getElementById("form-group-vegetarian").style.display="inline";
+
+    } else {
+        messagePizza = 'I have never heard of that one!';
+    }
+
+    document.getElementById("messagePizza").innerHTML = messagePizza;
+}
+
+document.getElementById("choosePizza").onclick = choosePizza;
+
+
+
 const vegetarian = "Vegetarian Pizza"
 const hawaiian = "Hawaiian Pizza"
 const pepperoni = "Pepperoni Pizza"

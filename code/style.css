@@ -17,3 +17,11 @@ h1 {
     background: antiquewhite;
     color: rgb(36, 37, 38);
 }
+
+.selectNumber {
+    display: none;
+}
+
+.form-group-hawaii, .form-group-pepperoni, .form-group-vegetarian {
+    display: none;
+}

@@ -29,6 +29,7 @@
       <form>
         <div class="form-group">
           <select id="pizzaType" name="pizzaType">
+            <option value="Choice">Choose pizza</option>
             <option value="Hawaii">Hawaii</option>
             <option value="Pepperoni">Pepperoni</option>
             <option value="Vegetarian">Vegetarian</option>
@@ -38,14 +39,13 @@
 
       <button id="choosePizza">Choose pizza</button>
       <p id="messagePizza"></p>
-
-
-      <h2>3. How many <p style="display:inline">pizzas</p> do yo want?</h2>
       
-      
-      <form>
-        <div class="form-group">
-          <label for="hawaii">Hawaii</label>
+      <div class="selectNumber" id="selectNumber">
+        <h2>How many <p style="display:inline">pizzas</p> do yo want?</h2>
+        
+        <form>
+          <div class="form-group-hawaii" id="form-group-hawaii">
+            <label for="hawaii">Hawaii</label>
           <select id="hawaii" name="hawaii">
             <option value="1">1</option>
             <option value="2">2</option>
@@ -56,7 +56,7 @@
           </select> 
         </div>
 
-        <div class="form-group">
+        <div class="form-group-pepperoni" id="form-group-pepperoni">
           <label for="pepperoni">Pepperoni</label>
           <select id="pepperoni" name="pepperoni">
             <option value="1">1</option>
@@ -68,7 +68,7 @@
           </select> 
         </div>
 
-        <div class="form-group">
+        <div class="form-group-vegetarian" id="form-group-vegetarian">
           <label for="vegetarian">Vegetarian</label>
           <select id="vegetarian" name="vegetarian">
             <option value="1">1</option>
@@ -80,17 +80,13 @@
           </select> 
         </div>
 
-        <input type="submit" class="button" id="button">
+        <input type="submit" class="orderButton" id="orderButton">
       </form>
+    </div> <!--- End of  selectNumber-->
 
-    
-      
-
-      <p id="message">
-        Message goes here. 
-      </p>
-
-    </div>
+      <p id="endMessage"> </p>
+   
+    </div> <!-- End of pizza bot-->
 
     <script src="./pizzabot.js"></script>
 
