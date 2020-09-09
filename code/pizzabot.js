@@ -31,6 +31,8 @@ const calculateCookingTime = (time) => {
   }
 }
 
+
+
 alert(
     `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`
   );
@@ -44,16 +46,12 @@ if (validateOrderName(orderName) === true) {
   ///
   const orderTotal = calculateTotalCost(orderQuantity, pizzaPrice);
   const cookingTime = calculateCookingTime(orderQuantity);
-  alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The pizza(s) will take ${cookingTime} minutes.`);
+
+  document.getElementById("orderSummery").innerHTML = `Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The pizza(s) will take ${cookingTime} minutes.`;
   ///
 } else {
   alert('Select a pizza from the menu');
 }
-
-
-
-
-
 
 
 
