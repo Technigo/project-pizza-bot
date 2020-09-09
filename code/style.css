@@ -1,11 +1,14 @@
 /* Style for project 4, pizza- bot */
 
 html, body {
+    margin: 0;
     font-size: 14px;
     background: #e95353;
     color: aliceblue;
     font-family: 'Open Sans', sans-serif;
 }
+
+/* Typography style */
 
 h1 {
     font-family: 'Amatic SC', cursive;
@@ -13,16 +16,49 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: left;
+}
 .choosenPizza {
     display: inline;
 }
 
-.pizza-bot {
-    background: antiquewhite;
-    color: rgb(36, 37, 38);
+.center-text {
+    margin:auto;
+    width: 80%;
 }
 
 
+#messagePizza {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#endMessage {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Style for pizza-bot div */
+.pizza-bot {
+    text-align: center;
+    background: antiquewhite;
+    color: rgb(36, 37, 38);  
+    margin: auto;  
+    width: 60%;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 8px 15px #242424;
+}
+
+/* Style for form */
 .inputName, .inputPizza, .selectNumber {
     font-size: 14px;
 }
@@ -31,6 +67,36 @@ h1 {
     display: none;
 }
 
-.form-group-hawaii, .form-group-pepperoni, .form-group-vegetarian {
+.form-group-hawaii, .form-group-pepperoni, .form-group-vegetarian, .form-group-kebab, .form-group-mozzarella {
     display: none;
+}
+
+input {
+    margin: 10px;
+    padding: 10px;
+}
+
+/*Style for buttons */
+button {
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 12px;
+    background: #fe7777;
+    color: aliceblue;
+    box-shadow: 2px 3px 4px #595858;
+}
+
+button:hover{
+    transform: translateY(5px);
+    box-shadow: none;
+}
+
+img {
+    width: 300px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px 2px #595858;
 }
