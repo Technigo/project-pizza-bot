@@ -44,6 +44,15 @@ document.getElementById("message").innerHTML=`Great. I'll get started on your ${
 
 */
 
+
+/* Function to show username and welcome message  */
+const showName = () => {
+    const name = document.getElementById("name").value;
+    document.getElementById("messageName").innerHTML=`Hey ${name}, happy to serve you pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}. Choose your pizza below`;
+}
+document.getElementById("showName").onclick = showName;
+
+
 const vegetarian = "Vegetarian Pizza"
 const hawaiian = "Hawaiian Pizza"
 const pepperoni = "Pepperoni Pizza"
