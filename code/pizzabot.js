@@ -35,7 +35,7 @@ const validateOrderName = (orderName) => {
       : alert(`Select a pizza from the menu please`)
   }
 }
-//Returns an empty string on line 53
+//Returns an empty string on line 56
 validateOrderName()
 
 let orderQuantity = prompt(`How many of ${orderName} do you want?`, `Number of pizza`)
