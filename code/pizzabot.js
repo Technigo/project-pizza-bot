@@ -54,7 +54,12 @@ if (validateOrderName(orderName) === true) {
   const totalCost = calculateTotalCost(orderQuantity, pizzaPrice);
   const totalTime = calculateCookingTime(orderQuantity);
 
-  alert(`Great, I'll get started on your ${orderName} right away, it will cost ${totalCost} Swedish Krona. It will take ${totalTime}.`);
+  // document.getElementById("confirmation-box")
+  // ^ Den där letar igenom document (document = hemsidan efter ett element med ID't "confirmation-box". 
+
+  // innerHTML är det som faktiskt fyller elementet med innehåll.
+
+  document.getElementById("confirmation-box").innerHTML = `Great, I'll get started on your ${orderName} right away, it will cost ${totalCost} Swedish Krona. It will take ${totalTime}.`;
 
 } else {
   prompt(`Sorry, we don't have ${orderName}. We only have ${vegetarian}, ${pepperoni}, and ${hawaiian}.`)
