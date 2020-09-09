@@ -11,23 +11,22 @@ alert(
 let orderName = prompt(`Enter the name of the pizza you want to order today`);
 let orderQuantity;
 
-const validateOrderName = (orderName) => {
+const validateOrderName = (validOrder) => {
   if (
-    orderName === vegetarian ||
-    orderName === hawaiian ||
-    orderName === pepperoni
+    validOrder === vegetarian ||
+    validOrder === hawaiian ||
+    validOrder === pepperoni
   ) {
-    orderQuantity = prompt(`How many ${orderName} do you want?`);
-    return true;
+    orderQuantity = prompt(`How many ${validOrder} do you want?`);
   } else {
-    orderName = prompt(`Enter the name of a pizza on the menu`);
-    console.log(orderName);
-    validateOrderName(orderName);
-    return false;
+    validOrder = prompt(`Enter the name of a pizza on the menu`);
+    //console.log(orderName);
+    validateOrderName(validOrder);
   }
+  return validOrder;
 };
 
-validateOrderName(orderName);
+orderName = (validateOrderName(orderName));
 
 console.log(orderName);
 
@@ -67,9 +66,15 @@ const calculateTotalCost = (orderQuantity, pizzaPrice) => {
   return orderQuantity * pizzaPrice;
 };
 
-alert(
+/*alert(
   `Great, I´ll get started on your ${orderName} right away, it will cost ${calculateTotalCost(
     orderQuantity,
     pizzaPrice
   )} kr. The pizza(s) will take ${calculateCookingTime(orderQuantity)} minutes.`
-);
+);*/
+
+document.getElementById('orderSummary').innerHTML =
+  `Great, I´ll get started on your ${orderName} right away, it will cost ${calculateTotalCost(
+    orderQuantity,
+    pizzaPrice
+  )} kr. The pizza(s) will take ${calculateCookingTime(orderQuantity)} minutes.`
