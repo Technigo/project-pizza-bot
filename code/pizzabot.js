@@ -22,14 +22,18 @@ const validateOrderName = (orderName) => {
     }
 };
 
-const calculateTotalCost = (pizzaName) => {
+const calculateTotalCost = (orderQuantity, pizzaPrice) => {
     let orderTotal = orderQuantity * pizzaPrice;
     return orderTotal;
 }
 
+const calculateCookingTime = () => {
+    let orderTime = 0; 
+    if (orderQuantity <= 2) {
+        orderTime = 10;
+        return orderTime;
 
-
-    } else if (orderQuantity < 6 || orderQuantity > 2) {
+    } else if (orderQuantity < 6) {
         orderTime = 15;
         return orderTime;
 
@@ -39,10 +43,7 @@ const calculateTotalCost = (pizzaName) => {
     }
 }
 
-//Put your Javscript code here:
-
-// Iteration 1
-
+//
 //Console log
 
 console.log(vegetarian);
@@ -61,7 +62,7 @@ const orderQuantity = prompt(`How many of ${orderName} Pizzas do you want?`);
 if (isValidOrder === true) {
     const isTotalCost = calculateTotalCost(orderQuantity, pizzaPrice);
     console.log(isTotalCost);
-    const orderTime = calculateCookingTime(orderQuantity);
-    console.log(isorderTime);
-    alert(`Great, I'll get started on your ${orderName} right away, it will cost ${isTotalCost} kr. The pizzas will take ${orderTime}`);
+    const isOrderTime = calculateCookingTime(orderQuantity);
+    console.log(isOrderTime);
+    alert(`Great, I'll get started on your ${orderName} right away, it will cost ${isTotalCost} kr. The pizzas will take ${isOrderTime} minutes.`);
 }
