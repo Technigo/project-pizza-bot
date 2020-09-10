@@ -3,6 +3,7 @@ body {
   background-color: #fff;
   color: #3333cc;
   text-align: center;
+  margin: 0;
 }
 
 .button {
@@ -27,9 +28,9 @@ body {
 }
 
 .chat-container {
-  width: 80%;
-  height: 100%;
-  margin: 0 10% 0 10%;
+  width: 50%;
+  /* height: 100%; */
+  margin: 0 25% 0 25%;
   padding: 0;
   background: rgba(129,196,234,0.4121861832865169);
   background-attachment: fixed;
@@ -49,6 +50,7 @@ body {
   font-weight: 500;
   position: relative;
   display: none;
+  box-shadow: 10px 10px 26px 0px rgba(97, 96, 96, 0.75);
 }
 
 .bot-triangle:before {
@@ -77,6 +79,7 @@ body {
   font-weight: 500;
   position: relative;
   display: none;
+  box-shadow: 10px 10px 26px 0px  rgba(97, 96, 96, 0.75);
 }
 
 .user-triangle:before {
@@ -92,18 +95,40 @@ body {
   top: 0px;
 }
 
-.button-chat {
-  width: 150px;
-  height: 50px;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 3px solid #3333cc;
-  border-radius: 70px;
-  display: inline-block;
-  font-size: 16px;
+.chatfield {
+ height: 40px;
+ margin: 10px 0;
 }
 
-.button-chat:hover .button-chat:active {
+
+.button-chat {
+  width: 70px;
+  height: 29px;
+  margin-bottom: 20px;
+  margin-left: 3px;
+  border: 2px solid #3333cc;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+  transform: translate( 0, -36%);
+}
+
+/* .button-chat:focus {
   background: #ff8000;
   color: #fff;
+} */
+
+.button-chat:focus {
+  background: #0d0df2;
+  color: #fff;
+}
+
+ 
+
+textarea {
+  width: 75%;
+  border-radius: 3px;
+  margin-bottom: 0;
+  padding: 5px;
+  border: 2px solid #cccccc;
 }
