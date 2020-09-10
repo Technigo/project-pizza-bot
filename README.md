@@ -13,4 +13,4 @@ If we had more time we would have added a form.
 
 ## View it live
 
-Check out our page: 
+Check out our page: https://technigopizza.netlify.app/
