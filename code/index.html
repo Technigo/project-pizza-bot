@@ -8,144 +8,56 @@
     <title>Project 4: Pizzabot</title>
   </head>
   <body>
-
-   <!--<video autoplay loop muted>
-      <source src="./video/Litenpizza.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  -->
-
-    <!--HEADER-->
-
-    <!--<header>
-      <div class="site-name">PizzaPizzaPizza</div>
-      <nav>
-          <a href="#">Home</a>
-          <a href="#">Pizzas</a>
-          <a href="#">Contact</a>
-      </nav>
-  </header> -->
-
-  <!--INTROTEXT-->
-<!---
-  <section class="intro-text">
-      <h2>PIZZA PIZZA PIZZA </h2>
-      <p></p>
-  </section> -->
-
-  <div>
-    <p id="welcomeMessage"></p>
-  </div>
-
-
-  <!--ORDER FORM-->
-
-    <h1>This is your Pizza Bot</h1>
-
-    
-
-    <section class="form-container">
-<!--should we use httpbin or other action?is this the correct method?-->
-      <form id="form-action">
-      
-        <fieldset>
-          <legend>Order here</legend>
-          
-            
-          <div id="choosePizza"> 
-            <p id="choosePizzaText"></p>
-          </div>
-          
-          <label for="pizzaSort"></label>
-            <input 
-            type="text"
-            name="pizzaSort"
-            id="pizzaSort"
-            
-            />
-
-            <div id="choosePizzaAmount"> 
-              <p id="amountsOfPizza"></p>
+    <section class="main-container">
+        <img src="./img/pizza1.jpg" alt="image of pizza">
+    <!--container for the form-->
+    <div class="form-container">
+      <div class="content-container">
+        <div class="content-text">
+          <h1>Pizza Time!</h1>
+          <p id="welcomeMessage"></p> 
+        </div>
+        <!--form that gets user input, id:s connects with javascript and assigns value to variables.-->
+        <form id="form-action">      
+          <fieldset>
+            <legend>Order here</legend>
+            <div class="form-action-group">
+            <div class="choosePizza"> 
+              <p id="choosePizzaText"></p>
             </div>
-  
-            <label for="pizzaAmount"></label>
-            <input 
-            type="text"
-            name="pizzaAmount"
-            id="pizzaAmount"
             
-            />
+            <label for="pizzaSort"></label>
+              <input 
+              type="text"
+              name="pizzaSort"
+              id="pizzaSort"
+              />
 
+            <div class="choosePizzaAmount"> 
+              <p>How many pizzas do you want?</p>
+            </div>
 
-            <button id="submit-order" class="submit-button" type="submit">Submit</button>
-
+            <label for="pizzaAmount"></label>
+              <input 
+              type="number"
+              name="pizzaAmount"
+              id="pizzaAmount"
+              required
+              />
+              <br>
+            <!--button to submit the form, connects with the onsubmit attribute in javascript-->
+            <button id="submit-order" class="submit-button" type="submit">Submit</button> 
+          </div>
+          </fieldset>
+        </form>
+      </div>
+    
+        <p class="order-summary" id="orderSummary"></p>
         
-          <!--
-          <label class="radiobutton-container">
-          Vegetarian Pizza
-          <input 
-            type="radio" 
-            value="vegetarian"
-            name="pizza-sort" 
-            checked
-          />
-          <span class="custom-radio"></span>
-          </label>
-        </div>
-
-        <div class="form-group">
-          <label class="radiobutton-container">
-          Pepperoni Pizza
-          <input 
-            type="radio" 
-            value="pepperoni"
-            name="pizza-sort" 
-          />
-          <span class="custom-radio"></span>
-          <!--<img src="./img/pizza1.jpg" width="100px" alt="bla"> -->
-          <!--</label>
-        </div>
-
-        <div class="form-group">
-          <label class="radiobutton-container">
-          Hawaiian Pizza
-          <input 
-            type="radio" 
-            value="hawaiian"
-            name="pizza-sort" 
-          />
-          <span class="custom-radio"></span>
-          </label>
-        </div>
-      -->
-      <!--
-        <div id="numberOfPizzas"> 
-          <p id="n"> </p>
-        </div>
-        <label class="option-list">
-        How many Pizzas?
-        <input list="quantity" name="quantity-of-pizza">
-        <datalist id="quantity">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
-          <option value="6">
-          <option value="7">
-          <option value="8">
-          <option value="9">
-          <option value="10">
-        </datalist>
-        </label>
-      -->
-
-
-        </fieldset>
-      </form>
+    </div>
     </section>
     <footer>
-      <p>&copyEllen och Anna 2020</p>
+      <p>&copy Ellen & Anna 2020</p>
     </footer>
     <script src="pizzabot.js"></script>
   </body>
