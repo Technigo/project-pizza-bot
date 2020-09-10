@@ -9,6 +9,15 @@ h1 {
   font-size: 25px;
 }
 
+button {
+  width: 200px;
+  height: 40px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  background: #62929e;
+}
+
 .bot {
   display: flex;
   flex-direction: column;
@@ -32,6 +41,39 @@ h1 {
   border-radius: 0 10px 10px 10px;
   background: #c6c5b9;
   padding: 20px;
+  margin-bottom: 10px;
+}
+
+.bubble-answer-container {
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  width: 90%;
+}
+
+.user-img {
+  width: 25px;
+  margin-left: 10px;
+}
+
+.bubble-answer {
+  max-width: 250px;
+  border-radius: 0 10px 10px 10px;
+  background: #62929e;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+#nameForm {
+  display: none;
+}
+
+#pizzaForm {
+  display: none;
+}
+
+#quantityForm {
+  display: none;
 }
 
 /* MEDIA QUERIES */
