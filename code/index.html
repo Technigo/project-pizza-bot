@@ -8,7 +8,14 @@
   </head>
   <body>
     <h1>This is your Pizza Bot</h1>
-    <p id="welcome">Welcome to Pizzabot!</p>
+    <div><p id="welcome">Welcome to Pizzabot!</p></div>
+    <!--<form onsubmit="handleSubmit(event)">
+      <label for="pizzaName">Enter the name of the pizza you want to order today.</label>
+      <input id="pizzaName" name="pizzaName" type="text">
+      <input id="submitPizza" name="submitPizza" type="submit">
+    </form>!-->
+    <button onclick="handleSubmit(event)">Order Now</button>
+    <div><p id="orderConfirmation"></p></div>
     <script src="pizzabot.js"></script>
   </body>
 </html>
