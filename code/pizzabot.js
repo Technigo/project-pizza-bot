@@ -12,8 +12,6 @@ const submitForm = document.getElementById("form-action");
 //A welcome message in an that loads when page loads. Adds text to html-element.
 document.getElementById("welcomeMessage").innerHTML=(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}.`);
 
-//A variable holding the value from the form. When user submits input, the javascript in the submitOrder function is excuted. 
-submitForm.onsubmit=submitOrder;
 
 /*A function that checks if userinput-choice is on menu. Returns true or false. The argument 
 is the input from the form in html and is passed as a value to the parameter "chosenPizza" in the js function. 
@@ -51,8 +49,7 @@ document.getElementById("choosePizzaText").innerHTML=("What pizza do you want to
 //document.getElementById("amountsOfPizza").innerHTML=(`How many of ${orderName} do you want?`);
 
 //Function that runs code when user clicks submit. Connects the values from the html to javascript and outputs in browser.
-function submitOrder(event) {
-
+const submitOrder= (event) => {
    //Prevents the page from being refreshed when the form is submitted.
    event.preventDefault(); 
    
@@ -84,3 +81,7 @@ function submitOrder(event) {
    document.getElementById("orderSummary").innerHTML = ("Sorry, you have to order someting off the menu.");
 }
 };
+
+
+//A variable holding the value from the form. When user submits input, the javascript in the submitOrder function is excuted. 
+submitForm.onsubmit=submitOrder;
