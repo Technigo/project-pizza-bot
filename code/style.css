@@ -97,6 +97,8 @@ form {
 input {
   font-size: 16px;
 }
+
+
 button {
   border: none;
   padding: 15px;
@@ -132,7 +134,7 @@ img {
   margin: 20px 20px 30px 20px;
   border-radius: 50%;
   /* border: 2px solid rgb(225, 165, 225); */
-  box-shadow: 0 0 5px #fff, 0 0 15px #fff, 0 0 25px #fff, 0 0 23px #FF1177, 0 0 25px #FF1177, 0 0 27px #FF1177, 0 0 30px #FF1177, 0 0 35px #FF1177;
+  box-shadow: 0 0 5px #fff, 0 0 15px 6px #fff, 0 0 25px 3px #fff, 0 0 23px 0px #FF1177, 0 0 25px #FF1177, 0 0 27px 0px #FF1177, 0 0 30px #FF1177, 0 0 35px #FF1177;
   /* box-shadow: 0 0 0.1em #fff, 0 0 0.2em #fff, 0 0 0.3em #fff, 0 0 0.4em #f7f, 0 0 0.6em #f0f, 0 0 0.8em #f0f, 0 0 1em #f0f, 0 0 1.2em #f0f; */
 }
 .orderConfirmation p {
@@ -140,4 +142,18 @@ img {
   margin: 30px 20px 0 20px;
 }
 
+@media(max-width:680px) {
+  .input-element-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .form,
+  .orderConfirmation {
+    width: 100%;
+  }
+
+  .orderConfirmation p {
+    margin-bottom: 30px;
+  }
+}
