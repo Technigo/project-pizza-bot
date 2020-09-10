@@ -1,0 +1,94 @@
+body {
+  background: image()
+}
+
+header {
+  max-width: 100%;
+  height: fit-content;
+  background-color: black;
+}
+
+.header-img {
+  width: 100%;
+
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 20px;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 20px;
+  padding-bottom: 40px;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+}
+
+.pizza-order-form {
+  margin: 15px;
+  padding: 15px;
+  background: black;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  width: 300px;
+  height: auto;
+  text-align: center;
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.form-submit-button {
+  background-color: black;
+  border: 2px solid white;
+  border-radius: 10px;
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding: 5px;
+  cursor: pointer;
+}
+
+h3 {
+  color: white;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.submit-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: black;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.pizza-img {
+  width: 300px;
+  height: auto;
+  border-radius: 10%;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: center;
+  padding: 50px;
+}

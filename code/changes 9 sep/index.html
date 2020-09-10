@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+ <link rel="stylesheet" href="./style.css">
+  <title>Project 4: Pizzabot &#127829</title>
+</head>
+
+<body>
+
+   <!--HEADER HERO & NAVBAR -->
+   <header>
+    <h1>WELCOME TO PIZZABOT &#127829</h1>
+    <img class="header-img" src="pizza-header.jpg" alt="">
+    <h2>ENJOY PIZZA WHEREVER YOU ARE WHENEVER YOU WAN'T</h2>
+  
+  </header>
+
+  <section class="form">
+  <form class="pizza-order-form" id="form">
+    <h3>ORDER PIZZA HERE:</h3>
+    <br>
+    <br>
+    <label for="name">Write Your name</label>
+    <br>
+    <br>
+    <input name="name" id="name" type="text" placeholder="name" required>
+    <br>
+    <br>
+    <label for="pizzaSort">Choose pizzasort</label>
+    <br>
+    <br>
+    <select name="pizzaMenu" id="pizzaSort" required>
+      <option value="vegetarian">Vegetarian Pizza 80 kr</option>
+      <option value="pepperoni">Pepperoni Pizza 80 kr</option>
+      <option value="hawaiian">Hawaiian Pizza 80 kr</option>
+      <option value="calzone">Luxury Calzone Pizza 100 kr</option>
+      <option value="kebab">Luxury Kebab Pizza 100 kr</option>
+    </select>
+    <br>
+    <br>
+    <br>
+    <label for="nrOfPizzas">Choose how many</label>
+    <br>
+    <br>
+    <input name="numberOfPizzas" id="nrOfPizzas" type="text" required>
+    <br>
+    <br>
+    <br>
+    <button class="form-submit-button" id="calc" type="submit">Submit order</button>
+    <br>
+    <br>
+  </form>
+</section>
+
+<div class="submit-info">
+  <p id="submitInfo"></p>
+  <img class="pizza-img" id="pizzaImg"src="" alt="Pizza">
+</div>
+
+
+<footer class="footer">
+  <h4>© 2020 Elisa Blomberg & Marjaana Tienaho</h4>
+  <p> Project Week 4 (Pizza Bot) during the Technigo Frontend Bootcamp Autumn 2020.</p>
+
+</footer>
+      <!--linking the javascript file-->
+      <script src="pizzabot.js"></script>
+</body>
+</html>
