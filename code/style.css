@@ -4,6 +4,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: justify;
 }
 
 main {
@@ -15,10 +16,10 @@ main {
 }
 
 section {
-    max-width: 500px;
+    max-width: 550px;
 }
 
-.items {
+.cards {
     border: 5px solid white;
     padding: 10px;
     border-radius: 5px;
@@ -28,33 +29,52 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 20px;
 }
 
-.items input {
-    padding: 10px;
-    border: none;
-    margin-bottom: 10px;
-    font-size: 18px;
-    margin-right: 10px;
+.cards h1 {
+    padding: 20px;
+    text-align: center;
 }
 
-.form-information {
+form h3 {
+    margin: 20px 0px 10px 0;
+}
+
+.form-1 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.form-information label, select {
-    margin: 10px;
+.form-1 input {
+    text-align: center;
+    padding: 15px;
+    border: none;
+    font-size: 18px;
+}
+
+.form-2 {
+    display: none;
+}
+
+.form-2 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-2 input {
+    text-align: center;
+    padding: 15px;
+    border: none;
+    font-size: 18px;
 }
 
 .submit-button {
     background: rgb(243, 98, 78);
     color: white;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 18px;
     margin: 10px;
 }
 
@@ -62,4 +82,40 @@ section {
     background: rgb(66, 66, 240);
 }
 
+.finalize-order {
+    display: none;
+}
 
+.finalize-order {
+    border: 5px solid white;
+    padding: 10px;
+    border-radius: 5px;
+    color: black;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: center;
+}
+
+.image-of-pizza {
+    display: none;
+}
+
+.wrong-pizza {
+    display: none;
+}
+
+.wrong-pizza {
+    background: rgb(243, 98, 78);
+    padding: 10px;
+    border-radius: 5px;
+    color: black;
+    margin: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
