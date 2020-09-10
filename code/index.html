@@ -4,32 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Project 4: Pizzabot</title>
+    <title>Pizzabot</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
     <section>
-      <h1 class="h1-greeting">This is your Pizza Bot</h1>
+      <h1 class="h1-greeting">Hello, I am your Pizza Bot</h1>
     </section>
 
-    <section class="greeting-wrapper">
-      <div class="greeting-message-container" id="hide-form">
+    <section class="greeting-wrapper" id="hide-form">
+      <div class="greeting-message-container">
         <p id="greeting-message"></p>
         <form>
-          <div>
-            <p id="name-of-pizza"></p>
-            <input type="text" id="form-text" />
+          <div" id="hide-pizza-choice">
+            <label for="form-text" id="name-of-pizza"></label>
+            <input type="text" id="form-text" name="pizza-name" />
             <p id="errorMessage"></p>
+            <button id="button">Confirm</button>
           </div>
-          <div class="quantity-of-pizza-wrapper">
+          <div class="quantity-of-pizza-wrapper" id="active-form">
             <p id="quantity-of-pizza"></p>
             <input type="number" id="form-number" />
-          </div>
-          <div>
-            <p>Who is taken up the order</p>
+            <p>Who is picking up the order?</p>
             <input type="text" id="form-name" />
-            <button id="button">Confirm</button>
+            <button id="button-1">Confirm</button>
           </div>
         </form>
       </div>

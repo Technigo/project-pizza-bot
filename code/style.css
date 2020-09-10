@@ -13,7 +13,19 @@ body {
   font-size: 3em;
 }
 
-.greeting-message-container-inactive {
+.quantity-of-pizza-wrapper {
+  display: none;
+}
+
+.quantity-of-pizza-wrapper-active {
+  display: block;
+}
+
+.pizza-choice-wrapper {
+  display: none;
+}
+
+.greeting-wrapper-inactive {
   display: none;
 }
 
@@ -31,11 +43,3 @@ body {
   content: url("./images/hawaii.jpg");
   width: 200px;
 }
-
-/* .quantity-of-pizza-wrapper {
-  display: none;
-}
-
-.quantity-of-pizza-wrapper-active {
-  display: block;
-} */
