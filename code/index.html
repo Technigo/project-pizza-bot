@@ -20,7 +20,7 @@
 
             <label>
                     Vegetarian Pizza
-                    <input type="radio" name="pizza" id="vegetarianPizza" value="Vegetarian Pizza" checked="checked">
+                    <input type="radio" name="pizza" id="vegetarianPizza" value="Vegetarian Pizza" >
 
                 </label>
             <label>
@@ -31,14 +31,17 @@
                     Pepperoni Pizza
                     <input type="radio" name="pizza" id="pepperoniPizza" value="Pepperoni Pizza">
                 </label>
-
+            <label>
+                    Chicken pizza
+                    <input type="radio" name="pizza" id="chickenPizza" value="Chicken Pizza">
+                </label>
 
 
             <label>
                     <h3>How many pizzas would you like?</h3>
                     <input type="number" id="quantity" name="quantity" min="1" max="10" />
                 </label>
-            <!-- <button onclick="calculateTotalCost()">Choose quantity</button> -->
+
             <button onclick="recieveData()">Order</button>
 
         </form>
@@ -49,9 +52,11 @@
             <img id="hawaiianImg" src="./img/hawaiian.jpg" alt="hawaiian pizza">
             <img id="pepperoniImg" src="./img/pepperoni.png" alt="pepperoni pizza">
             <img id="vegetarianImg" src="./img/vegetarisk.jfif" alt="vegetarian pizza">
+            <img id="chickenImg" src="./img/chicken.jpg" alt="chicken pizza">
         </div>
-        <script src="pizzabot.js"></script>
+
     </main>
+    <script src="pizzabot.js"></script>
 </body>
 
 </html>
