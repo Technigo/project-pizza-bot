@@ -9,18 +9,19 @@
   </head>
   <body>
     <h1>&#127829; InstaPizza &#127829;</h1>
-    
-    <div class="button" id="button" onclick="order()">
-      <p>Order pizza in just 3 steps.</p>
-      <p class="call-to-action">Click me to get started!</p>
-    </div>
 
-    <div id="robotchef"> 
-      <img src ="./robotchef.png" alt = robotchefimage>
-      <p id="final-order"></p>
-      <p id="menu"></p>
-    </div>
-    
+    <p id="menu"></p>
+    <section class="main-container">
+      <div id="robotchef">
+        <img src="./robotchef.png" alt="robotchefimage" />
+        <p id="final-order"></p>
+      </div>
+      <div class="button" id="button" onclick="order()">
+        <p>Order pizza in just 3 steps.</p>
+        <p class="call-to-action">Click me to get started!</p>
+      </div>
+    </section>
+
     <script src="pizzabot.js"></script>
   </body>
 </html>

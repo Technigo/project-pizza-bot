@@ -4,11 +4,17 @@ body {
     color: #3333cc;
     text-align: center;
   }
+  
+  
+  .main-container { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   #robotchef img {
-    display: block;
-    padding: 30px; 
-    width:25%;
+    padding: 26px; 
+    width:50%;
   }
   
   .button {
@@ -17,7 +23,6 @@ body {
     padding: 16px;
     margin-bottom: 16px;
     position: relative;
-    transform: translate(0%,180%);
     border: 3px solid #3333cc;
     border-radius: 70px;
     display: inline-block;
