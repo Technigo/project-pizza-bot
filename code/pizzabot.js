@@ -6,6 +6,7 @@ const pizzaPrice = 80;
 const pizzaBotText = document.getElementById('pizzaBotText');
 
 const startOrdering = () => {
+
   pizzaBotText.innerHTML = `On our menu we have:`;
 
   document.getElementById("startBtn").style.display = "none";
@@ -44,8 +45,9 @@ const calculateTotalCost = () => {
 
 
 const orderSummary = () => {
+event.preventDefault();
 
-    pizzaBotText.innerHTML = `Great, I'll get started on your ${orderName} right away, it will cost ${calculateTotalCost()}kr. The pizza(s) will take ${calculateCookingTime()} minutes.`;
+    pizzaBotText.innerHTML = `Great, I'll get started on your ${orderName} right away. <h2>It will cost ${calculateTotalCost()}kr. The pizza(s) will take ${calculateCookingTime()} minutes.</h2>`;
     document.getElementById("quantityContainer").style.display = "none";
 };
 

@@ -36,10 +36,10 @@
     </div>
     
     <div class="quantity-container" id="quantityContainer">
-      
-      <input type="number" id="quantity" name="quantity" class="quantity" min="1" max="20" placeholder="Enter amount" required>
-      <input type="submit" name="order-btn" id="orderBtn" class="start-btn" value="ORDER" onclick="orderSummary()">
-
+      <form onsubmit="orderSummary()">
+        <input type="number" id="quantity" name="quantity" class="quantity" min="1" max="20" placeholder="Enter amount" required>
+        <input type="submit" name="order-btn" id="orderBtn" class="start-btn" value="ORDER">
+     </form>
     </div>
   </div>
 
