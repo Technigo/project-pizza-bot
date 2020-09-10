@@ -4,29 +4,76 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo|Lato" rel="stylesheet">
     <title>Project 4: Pizzabot</title>
   </head>
   <body>
-    <h1>This is your Pizza Bot</h1>
 
 
-    <!-- Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni -->
+    <header>
+
+      <video class="computer" autoplay muted loop playsinline>
+        <source src="./pizza-header.mp4" type="video/mp4">
+        <p class="video-message">This browser does not support video...</p>
+      </video>
+
+      <h1 class="header-title">Welcome to your Pizza Bot</h1>
+
+  </header>
+
+  <main>
     
-   <p id="welcomeMessage" class="message"></p>   
 
-    <!--  "Enter the name of the pizza you want to order today." -->
-   
-    <p id="pizzaName" class="message"></p>  
+    <form name="pizzaForm">
+      <div class="order">
+        <input id="userName" type="text" placeholder="Your name">
+        </label>
+      </div>
+    
+    <div class="order">
+      <label>Choose pizza type:
+        <input class="custom-radio" id="vegetarianPizza" type="radio" name="pizza" value="Vegetarian Pizza">Vegetarian Pizza
+      </label>
+      <label>
+        <input class="custom-radio" id="hawaiianPizza" type="radio" name="pizza" value="Hawaiian Pizza"> Hawaiian Pizza
+      </label>
+      <label>
+        <input class="custom-radio" id="pepperoniPizza" type="radio" name="pizza" value="Pepperoni Pizza"> Pepperoni Pizza
+      </label>
+    </div>
 
-    <!--  Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The pizza(s) will take ${cookingTime} minutes.`); -->
-  
+    <p id="demo"></p>
+
+    <div class="order">
+      <label>
+        <input id="numberOfPizzas" type="number" placeholder="Number of pizza(s)">
+      </label>
+    </div>
+
+
+
+    <div class="order">
+      <input class="btn" type="button" value="Check Order" onclick="handleSubmit(event)">
+    </div>
+
     <p id="orderSummery" class="message"></p>  
 
-    <!--  Select a pizza from the menu -->
-    
-    <p id="errorMessage" class="message"></p>  
-    
+    </form>
+
+
+    <div class="image-pizza">
+      <img src="vegetarian.jpg" alt="vegetarian-pizza">
+      <img src="hawaiian.jpg" alt="hawaiian-pizza">
+      <img src="pepperoni.jpg" alt="pepperoni-pizza">
+    </div>
+
+
+     
+  </main>
+ 
     </body>
+
 
 
   <script src="./pizzabot.js"></script>

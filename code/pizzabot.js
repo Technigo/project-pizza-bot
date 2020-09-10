@@ -3,10 +3,9 @@
 const vegetarian = "Vegetarian Pizza"
 const hawaiian = "Hawaiian Pizza"
 const pepperoni = "Pepperoni Pizza"
-
 const pizzaPrice = 80;
 
-// *** Function 1 - Order Name 
+/*** Function 1 - Order Name 
     const validateOrderName = (order) => {
         if (order === vegetarian || order === hawaiian || order === pepperoni) {
           return true;
@@ -14,6 +13,7 @@ const pizzaPrice = 80;
           return false;
         }
       };
+***/
 
 // *** Function 2 - Total Cost
 const calculateTotalCost = (quantity, price) => {
@@ -32,7 +32,35 @@ const calculateCookingTime = (time) => {
 }
 
 
+// *** Function - Submit form
 
+const handleSubmit = (event) => {
+  event.preventDefault();
+  let userName = document.forms.pizzaForm.userName.value;
+  // makes first letter to uppercase and the rest of the mane to lowercase
+  userName = userName.charAt(0).toUpperCase() + userName.slice(1).toLowerCase();
+
+  const pizzaType = document.forms.pizzaForm.elements.pizza.value;
+  const orderQuantity = document.forms.pizzaForm.numberOfPizzas.value;
+
+  
+    const orderTotal = calculateTotalCost(orderQuantity, pizzaPrice);
+    const cookingTime = calculateCookingTime(orderQuantity);
+
+    // 'ternary operator' (puts the 's for plural number of pizzas)
+    const plural = orderQuantity > 1 ? "'s" : "";
+
+    document.getElementById(
+      "orderSummery"
+    ).innerHTML = `Hello ${userName}! I'll get started on your ${orderQuantity} ${
+      pizzaType + plural
+    } right away. It will cost ${orderTotal} kr and will take ${cookingTime} minutes.`;
+  
+};
+
+
+
+/*
 alert(
     `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`
   );
@@ -40,6 +68,7 @@ alert(
 const orderName = prompt(
     "Enter the name of the pizza you want to order today."
   );
+*/
 
 if (validateOrderName(orderName) === true) {
   const orderQuantity = +prompt(`How many of ${orderName} do you want?`);
@@ -49,11 +78,9 @@ if (validateOrderName(orderName) === true) {
 
   document.getElementById("orderSummery").innerHTML = `Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The pizza(s) will take ${cookingTime} minutes.`;
   ///
-} else {
-  alert('Select a pizza from the menu');
+//} else {
+//  alert('Select a pizza from the menu');
 }
-
-
 
 
 /// How to create a progress bar: https://www.w3schools.com/howto/howto_js_progressbar.asp
