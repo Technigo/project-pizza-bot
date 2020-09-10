@@ -13,7 +13,6 @@ const calculateTotalCost = (event) => {
     //get pizza sort
     let orderName = document.getElementById("pizzaSort").value;
     let pizzaPrice = pricePerPizza(orderName);
-    console.log(orderName);
     // calculate totalcost for pizza
     const orderTotal = orderQuantity * pizzaPrice
     //Print out message to customer
@@ -21,13 +20,18 @@ const calculateTotalCost = (event) => {
     let pizzaImg = pizzaImages(orderName)
     document.getElementById("pizzaImg").src = pizzaImg;
     let info = `Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The pizza(s) will take ${orderTime} minutes.`;
-    console.log(info)
+
+    //Set pizza picture to display block
+    var x = document.getElementById("pizzaImg");
+    x.style.display = "block";
+
     document.getElementById("submitInfo").innerHTML = info;
 
 };
 const form = document.getElementById("form");
 form.onsubmit = calculateTotalCost;
 
+//Sets the pizza image 
 const pizzaImages = (orderName) => {
     let img;
     if (orderName == `${vegetarian}`) {
@@ -48,7 +52,7 @@ const pizzaImages = (orderName) => {
     }
 
 }
-
+//Sets the pizza price
 const pricePerPizza = (orderName) => {
     let pizzaPrices = 0;
     if ((orderName == `${vegetarian}`) || (orderName == `${hawaiian}`) || (orderName == `${pepperoni}`)) {
@@ -66,13 +70,10 @@ const calculateCookingTime = (orderQuantity) => {
     let orderTime = 0;
     if (orderQuantity <= 2) {
         orderTime = 10
-        console.log("1-2")
     } else if (orderQuantity >= 3 && orderQuantity <= 5) {
-        console.log("3-5")
         orderTime = 15
 
     } else if (orderQuantity >= 6) {
-        console.log("6 och fler")
         orderTime = 20
     }
     return orderTime;
@@ -80,7 +81,7 @@ const calculateCookingTime = (orderQuantity) => {
 
 
 
-
+//Below code is from the itterations in blue level
 /*
 const pizzaPrice = 80
 
