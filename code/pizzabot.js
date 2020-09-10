@@ -6,7 +6,7 @@ const pepperoni = "Pepperoni"
 
 const pizzaPrice = 80
 
-//2) Functions
+//Functions
 
 const validateOrderName = (orderName) => {
     if (orderName.toLowerCase() === vegetarian.toLowerCase()) {
@@ -45,15 +45,6 @@ const calculateCookingTime = () => {
     }
 }
 
-//  3) The bot
-
-//const handleSubmit = (event) => {
-    // This prevent page reload
-//    event.preventDefault();
-  
-      // Get the age value from the form input
-
-
 //Welcome message 
 const firstMessage = document.querySelector('.welcome'); 
 const welcomeMessage = `Hey! Happy to serve your pizza!`;
@@ -76,13 +67,13 @@ const askNumber = () => {
   askNumber()
 
 //Place order
-
-const handleSubmit = (event) => {
+    const handleSubmit = (event) => {
     // This prevent page reload
     event.preventDefault();
   
     // Get the pizza name from the form input
     const orderName = document.getElementById('pizzaNameInput').value;
+    const orderQuantity = document.getElementById('pizzaQuantityInput').value;
 
 //const askPizzas = document.querySelector('.pizzaName'); 
 //const orderName = `On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}. Choose which pizza you want.`;
