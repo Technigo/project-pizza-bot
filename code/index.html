@@ -19,20 +19,13 @@
     </div>
     
     <!-- CHATBOT FORM -->
+  
     <section class="chatbot-form">
       <div id="chatbot">
         <div class="chat">
           <h2>Hey, happy to serve your pizza!</h2>
           <p>On our menu we have: a Vegetarian Pizza, Hawaiian Pizza and Pepperoni Pizza.<p>
-
-          <!-- ERROR MESSAGE -->
-          <div class="error-container">
-          <div id="wrongOrder" class="error"></div>
-        </div>
-          <form id="form"
-          class="form"
-          method="POST"
-      >
+            
           <div class="form-group">
               <label for="orderName">Which of these pizzas would you like today?</label>
               <input
@@ -48,18 +41,24 @@
               <label for="orderQuantity">How many of that pizza would you like?</label>
               <input
                   id="orderQuantity"
-                  type="text"
+                  type="number"
                   name="orderQuantity"
                   min="1"
                   max="100"
+                  required
               />
           </div>
           <div class="form-group">
               <h4>Thank you for placing an order with us!</h4>
-              <button onclick="validateOrderName">Place order</button>
+              <div class="chatbot-btn">
+              <button onclick="validateOrderName(document.getElementById('orderName').value, document.getElementById('orderQuantity').value)">Place order</button>
+              </div>
+              <div class="form-group">
+              <p id="final"><p>
+              </div>
           </div>
     </section>
     
   </body>
-  <!-- <script src="./pizzabot.js"></script> -->
+  <script src="./pizzabot.js"></script>
 </html>
