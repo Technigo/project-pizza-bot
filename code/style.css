@@ -1,3 +1,37 @@
 body {
-    background-color: blue;
+    background-color:#e9cec3;
+    font-family: Helvetica,Arial,Lucida,sans-serif;
+}
+
+.content {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+p {
+    color: black;
+    background: white;
+    padding: 20px;
+    width: 25%;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 10px 5px 5px #93786F;
+}
+
+.input-form {
+    color: black;
+    background:#ddd;
+    padding: 20px;
+    width: 25%;
+    border-radius: 25px;
+    text-align: center; 
+    box-shadow: 10px 5px 5px #93786F;
+}
+
+
+.hidden-summary {
+    display: none;
 }

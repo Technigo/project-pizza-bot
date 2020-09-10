@@ -8,10 +8,21 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <div class="content">
     <h1>This is your Pizza Order Summary</h1>
 
+    <p id="welcome"></p>
+
+    <form class="input-form" onsubmit="handleSubmit(event)">
+      <label for="orderName">Which Pizza would you like?</label><br>
+      <input id="orderName" name="orderName" type="text"/><br>
+      <label for="orderQuantity">How many would you like?</label><br>
+      <input id="orderQuantity" name="orderQuantity" type="number"/><br>
+      <input id="submit" name="submit" type="submit" value="Submit"/> 
+    </form>
+
     <p id="orderSummary"></p>
-    
+  </div>
 
 
     <script src="pizzabot.js"></script>
