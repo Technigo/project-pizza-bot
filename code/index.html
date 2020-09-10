@@ -9,8 +9,9 @@
   </head>
 
   <body>
-    <section>
-      <h1 class="h1-greeting">Hello, I am your Pizza Bot</h1>
+    <section class="bot-wrapper">
+      <h1 class="h1-bot">Hello, I am your Pizza Bot!</h1>
+      <img class="pizza-bot-image" src="./images/pizzabot.png" alt="Pizzabot"/>
     </section>
 
     <section class="greeting-wrapper" id="hide-form">
@@ -18,7 +19,7 @@
         <p id="greeting-message"></p>
         <form>
           <div" id="hide-pizza-choice">
-            <label for="form-text" id="name-of-pizza"></label>
+            <p for="form-text" id="name-of-pizza"></p>
             <input type="text" id="form-text" name="pizza-name" />
             <p id="errorMessage"></p>
             <button id="button">Confirm</button>
@@ -39,6 +40,12 @@
       <p id="final-message"></p>
       <img id="pizza-image" />
     </section>
+
+    <footer>
+      <p>This page was made as part of the Technigo front-end developer boot camp Fall 2020.</p>
+      <p>&copy; YLVA NILSSON & JOHANNA BLOM</p>
+    </footer>
+
 
     <!-- Link to the javascript -->
     <script src="./pizzabot.js"></script>
