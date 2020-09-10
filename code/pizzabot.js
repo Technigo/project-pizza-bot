@@ -67,11 +67,18 @@ askNumber();
 
 console.log(askPizzas);
 
+const getOrderName = () => {
+    return document.getElementById('pizzaNameInput').value;
+};
+
+const getOrderQuantity = () => {
+    return document.getElementById('pizzaQuantityInput').value;
+};
 
 const handleOrder = (event) => {
   event.preventDefault();
-  const orderName = document.getElementById('pizzaNameInput').value;
-  const orderQuantity = document.getElementById('pizzaQuantityInput').value;
+  const orderName = getOrderName();
+  const orderQuantity = getOrderQuantity();
   const isValidOrder = validateOrderName(orderName);
   if (isValidOrder === true) {
     const isTotalCost = calculateTotalCost(orderQuantity, pizzaPrice);
@@ -81,4 +88,5 @@ const handleOrder = (event) => {
   } else {
     return false;
   }
-}
+};
+
