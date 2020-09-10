@@ -13,11 +13,11 @@ const pizzaPrice = 80
 
 // Iteration 2 - Greetings
 
-alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`)
+// alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`)
 
 // Iteration 3 - Ask the customer
 
-const orderName = prompt('Enter the name of the pizza you want to order today.');
+// const orderName = prompt('Enter the name of the pizza you want to order today.');
 // console.log(orderName);
 
 // const orderQuantity = prompt(`How many of ${orderName}(s) do you want?`)
@@ -74,9 +74,38 @@ const calculateCookingTime = (orderQuantity) => {
   }
 }
 
-if (validateOrderName(orderName) === true) {
-  const orderQuantity = prompt(`How many ${orderName}(s) do you want?`);
-  alert(`Great, I'll get started on your ${orderName}(s) right away, it will cost ${calculationTotalCost(orderQuantity, pizzaPrice)} kr. The pizza(s) will take ${calculateCookingTime(orderQuantity)} minutes.`);
-} else {
-  alert('Select a pizza from the menu');
+// if (validateOrderName(orderName) === true) {
+//   const orderQuantity = prompt(`How many ${orderName}(s) do you want?`);
+//   alert(`Great, I'll get started on your ${orderName}(s) right away, it will cost ${calculationTotalCost(orderQuantity, pizzaPrice)} kr. The pizza(s) will take ${calculateCookingTime(orderQuantity)} minutes.`);
+// } else {
+//   alert('Select a pizza from the menu');
+// }
+
+// Iteration 7 - Make it visual
+
+// The whole order as a function
+
+const botOrder = () => {
+  alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`);
+  const orderName = prompt('Enter the name of the pizza you want to order today.');
+  if (validateOrderName(orderName) === true) {
+    const orderQuantity = prompt(`How many ${orderName}(s) do you want?`);
+    const confirmation = (`Great, I'll get started on your ${orderName}(s) right away, it will cost ${calculationTotalCost(orderQuantity, pizzaPrice)} kr. The pizza(s) will take ${calculateCookingTime(orderQuantity)} minutes.`);
+    document.getElementById("confirmation-container").style.display = "flex";
+    document.getElementById('confirmation').innerHTML = confirmation;
+  } else {
+    alert('Select a pizza from the menu');
+    botOrder();
+  }
 }
+
+botOrder();
+
+// if (validateOrderName(orderName) === true) {
+//   const orderQuantity = prompt(`How many ${orderName}(s) do you want?`);
+//   const confirmation = (`Great, I'll get started on your ${orderName}(s) right away, it will cost ${calculationTotalCost(orderQuantity, pizzaPrice)} kr. The pizza(s) will take ${calculateCookingTime(orderQuantity)} minutes.`);
+//   document.getElementById("confirmation-container").style.display = "flex";
+//   document.getElementById('confirmation').innerHTML = confirmation;
+// } else {
+//   alert('Select a pizza from the menu');
+// }
