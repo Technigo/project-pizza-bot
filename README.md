@@ -1,13 +1,16 @@
 # Pizza Bot
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This project was made during the Technigo Bootcamp.
+The purpose was to practice Javascript functions while using pair-programming. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We started with the iterations and at iteration number 6 we had some issues. We couldn't get the functions to work together. We got help from our team members to be able to continue the project.  
+
+If we had more time we would have added a form. 
+
+
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Check out our page: 

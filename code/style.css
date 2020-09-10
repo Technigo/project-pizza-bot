@@ -1,0 +1,42 @@
+
+
+body {
+    background-image: url(./Pizza1.jpg);
+    background-size: cover;
+}
+
+h1 {
+    font-size: 100px;
+    color: beige;
+    margin-left: 60px;
+}
+
+#chat {
+font-size: 57px;
+color: beige;
+margin-left: 30px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin-top:150px;   
+}
+
+button:hover {
+    transform: scale(0.9, 0.9);
+}
+
+button {
+     width: 200px;
+     height: 100px;
+     background-color:black;
+     color:beige;
+     font-size: 25px;
+     border-radius: 5px;
+     border-color: beige;   
+}
+
+
+
+

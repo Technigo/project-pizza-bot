@@ -1,30 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Project 4: Pizzabot</title>
-  </head>
-  <body>
-    <h1>This is your Pizza Bot</h1>
-    
-    <button onclick = "orderPizza (event)">Order Pizza</button>  
-    
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="./style.css">
+  <title>Technigo Pizza</title>
+</head>
 
-    <form onsubmit="orderPizza (event)">
-      
-   
-    
-    </form>
+<body>
+  <h1>Welcome to Technigo Pizza</h1>
 
-    <p id="chat"></p>
-  
+  <div class="button">
+    <button onclick="orderPizza (event)">Order Pizza</button>
+  </div>
 
+  <p id="chat"></p>
 
+  <script src="./pizzabot.js"></script>
+</body>
 
-    <script src="./pizzabot.js"></script>
-  </body>
 </html>
-

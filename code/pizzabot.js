@@ -1,3 +1,6 @@
+
+// Pizza sorts:
+
 const vegetarian = "Vegetarian Pizza"
 const hawaiian = "Hawaiian Pizza"
 const pepperoni = "Pepperoni Pizza"
@@ -6,14 +9,12 @@ const pizzaPrice = 80
 
 console.log("Vegetarian Pizza", "Hawaiian Pizza","Pepperoni Pizza");
 
-//Put your Javscript code here:
 
-/*iteration 2*/ 
+
+//iteration 2// 
 //alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`);
 
-
-
-/*iteration 3 and 5*/ 
+//iteration 3 ,4 and 5// 
 /* const orderName = prompt("Enter the name of the pizza you want to order today.");
 if ((orderName === vegetarian) || (orderName === hawaiian) || (orderName === pepperoni)) {
   const orderQuantity = prompt(`How many ${orderName}(s) do you want?`);
@@ -28,13 +29,9 @@ if ((orderName === vegetarian) || (orderName === hawaiian) || (orderName === pep
 } else {
   alert('Select a pizza from the menu');
 }
- */
+*/
 
-
-
-
-//Iteration 2 
-// alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`)
+// prevent the alert to pop up. Must click "order pizza"
 
 const orderPizza = (event) => {
     event.preventDefault();
@@ -79,18 +76,11 @@ if (validateOrderName(orderName) === true) {
 
 }
 
-
-
 //Iteration 7 
-/*
-const orderPizza = () => {
-  event.preventDefault();
-  alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`);
 
-}
-*/
+const calc = onsubmit
+document.getElementById("calc").innerHTML= (`Great I'll get started with your ${orderName}(s) right away, it will cost ${calculationTotalCost(orderQuantity, pizzaPrice)} kr. The pizza(s) will take ${calculateCookingTime(orderQuantity)} minutes."`);
 
 
 
 
-//document.getElementById("endMessage").textContent = "Thank you for ordering from our restaurant.Welcome back soon!"
