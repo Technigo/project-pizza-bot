@@ -1,0 +1,218 @@
+.topnav {
+  overflow: hidden;
+}
+
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: rgb(219, 9, 125);
+}
+
+
+.topnav a.active {
+  background-color: #;
+  color: white;
+}
+
+
+body {
+    background-image: url(marble-2398946_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    height: 100%;
+    margin: 0px;
+    width: 100%;
+    min-width: 300px;
+  }
+  
+
+  p {
+    text-align: center;
+  }
+  
+  footer {
+    padding: 20px;
+    display: block;
+    background-color: #dfb93e;
+    height: 10vh;
+  }
+  
+  /* */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+  }
+  
+  .pizzabot {
+    padding: 20px;
+    height: 370px;
+    width: 90%;
+    max-width: 700px;
+    background-image: url(wood-1700562_1280.jpg);
+    color:white;
+    border-radius: 20px;
+    position: relative;
+    
+    box-shadow: 10px 10px 5px 5px #000000;
+  }
+  
+  #first,
+  #second,
+  #third,
+  #fourth,
+  .controls {
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    height: 80%;
+  }
+  
+  #first {
+    line-height: 35px;
+  }
+  
+  /* Controls */
+  .controls {
+    height: 20%;
+  }
+  
+  .controls button {
+    background-color: #dfb93e;
+    margin: 0px 10px;
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    border: 1px #000000 solid;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+  
+  .controls #next_btn:hover {
+    border: 2px darkgreen solid;
+   
+    cursor: pointer;
+  }
+  
+  .controls #back_btn:hover {
+    border: 2px green solid;
+    cursor: pointer;
+  }
+  
+  /* second div */
+  
+  figure {
+    margin: 10px;
+    display: inline-block;
+  }
+  
+  #second .three_pizzas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  figure img {
+    height: 150px;
+    width: 150px;
+  }
+  
+  .pizzas_number {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  input {
+    display: none;
+  }
+  
+  label {
+    cursor: pointer;
+  }
+  
+  /* If checked */
+  [type="radio"]:checked+figure img {
+    border-bottom: 5px  solid red;
+    border-radius: 5px;
+  }
+
+  :checked+figure img:hover {
+    -ms-transform: scale(1.5); 
+    -webkit-transform: scale(1.5); 
+    transform: scale(1.5); 
+  }
+  :checked+figure img:active {
+    text-decoration: underline;
+  }
+  
+  /* If checked */
+  [type="radio"]:checked+.numBtn {
+    background-color: darkgreen;
+    color: white;
+  }
+  
+  /* fourth div */
+  .numBtn {
+    display: inline-block;
+    background-color: #dfb93e;
+    border: 1px black solid;
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    font-size: 24px;
+    border-radius: 10px;
+    line-height: 50px;
+  }
+  
+  .numBtn:hover {
+    background-color: #df993e;
+  }
+  
+  @media (max-width: 600px) {
+  
+    body {
+      font-size: 18px;
+    }
+  
+    .pizzabot {
+      height: 330px;
+    }
+  
+    h1 {
+      font-size: 23px;
+    }
+  
+    h3 {
+      font-size: 20px;
+    }
+  
+    figure img {
+      height: 90px;
+      width: 90px;
+    }
+  
+    #fourth img {
+      height: 120px;
+    }
+  
+    footer {
+      font-size: 14px;
+    }
+  
+  }
