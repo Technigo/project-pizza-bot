@@ -12,26 +12,30 @@ let orderTotal;
 let orderName;
 let cookingTime;
 
-alert(`Welcome to Andrea & Jamie's Pizza Corner! On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`); //iteration2
-
-orderName = prompt("Enter the name of the pizza you want to order today");//iteration3
-
+alert(`Welcome to Pizza Corner! On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`); //iteration2
 
 const validateOrderName = (order) => {
-  if (order === "vegetarian" || order === "pepperoni" || order ==="hawaiian") {
-    orderQuantity = prompt(`How many of ${orderName} would you like?`);
-    validateOrderCount(order);
+  if (order === "vegetarian pizza" || order === "pepperoni pizza" || order ==="hawaiian pizza") {
+    orderQuantity = prompt(`How many ${orderName}'s would you like?`);
+    orderQuantity = parseInt(orderQuantity, 10);
   } else {
     alert("Please choose a pizza from our menu");
+    askForPizza();
   }
 }
 
-validateOrderName(orderName);
+const askForPizza = () => {
+  //alert(`Welcome to Pizza Corner! On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`); //iteration2
+  orderName = prompt("Enter the name of the pizza you want to order today");//iteration3
+  orderName = orderName.toLowerCase();
+  validateOrderName(orderName);
+}
 
-const validateOrderCount = (order) => {
-  orderQuantity = prompt(`How many of ${order} would you like today?`);
-  orderTotal = orderQuantity * pizzaPrice;
-  calculateCookingTime(orderQuantity);
+askForPizza();
+
+const calculateTotalCost = (quantity, price) => {
+  orderTotal = quantity * price;
+  alert(`The total cost is ${orderTotal}`);
 }
 
 const calculateCookingTime = (order) => {
@@ -43,8 +47,10 @@ const calculateCookingTime = (order) => {
     cookingTime = 20;
   }
   alert(`Great I'll get started on your ${orderName} right away. It will cost ${orderTotal}kr. The pizzas will take ${cookingTime} minutes`);
+  document.getElementById('printOrder').innerHTML = `You have ordered: ${orderName} x${orderQuantity} and the total price is: ${orderTotal}kr`;
 }
 
-validateOrderCount();
+calculateTotalCost(orderQuantity, pizzaPrice);
+calculateCookingTime(orderQuantity);
 
      
