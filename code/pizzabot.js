@@ -39,17 +39,17 @@ const orderPizza = () => {
     const calculateCookingTime = () => {
       //checks cooking time after the amount of pizzas
       if (orderQuantity <= 2) {
-        alert("The pizzas will take 10 minutes.");
+        document.getElementById("pizzaCookingTime").innerHTML = "The pizzas will take 10 minutes.";
       } else if (orderQuantity < 6) {
-        alert("The pizzas will take 15 minutes.");
+        document.getElementById("pizzaCookingTime").innerHTML = "The pizzas will take 15 minutes.";
       } else {
-        alert("The pizzas will take 20 minutes.");
+        document.getElementById("pizzaCookingTime").innerHTML = "The pizzas will take 20 minutes.";
       }
     };
 
-    alert(
+    document.getElementById("pizzaConfirmation").innerHTML =
       `Great I'll get started on your ${orderName}s right away, it will cost ${orderTotal} kr.`
-    );
+    ;
     calculateCookingTime();
     //invokes calculateCookingTime function, shows cooking time
     //confirms pizzaorder and the cost
