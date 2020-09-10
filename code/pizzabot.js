@@ -65,7 +65,7 @@ if (validateOrderName(orderName)===true) {
 const placeOrder = () =>{
     console.log("placeOrder function");
 
-    if (validateInput()) {
+   // if (validateInput()) {
 
     const name = document.getElementById("name").value; 
     const orderName = document.getElementById("pizza").value; 
@@ -80,10 +80,10 @@ const placeOrder = () =>{
     toggleDisableForm();
     togglePizzaImage(orderName);
     return false;
-    } else alert("Please fill in the form")
+   // } else alert("Please fill in the form")
 } 
 
-/*Validate input*/
+/*Validate input kan användas som printOrderSummary, hämta värdena och skriv ut dem i ett p-element.
 const validateInput = () =>{
     console.log("validateInput");
     const inputValues = document.getElementById("order-form").elements; 
@@ -106,7 +106,7 @@ const validateInput = () =>{
     //returera true om valid = 3 annars false
     return(numberOfValidInput > 2 ? true : false);
 }
-  
+  */
 
 
 
@@ -118,8 +118,8 @@ const changeRangeOutput = () =>{
 
 /*toggle pizza image */
 const togglePizzaImage = (orderName) => {
-    console.log(orderName);
-    console.log(vegetarian +" constant");
+    //console.log(orderName);
+    //console.log(vegetarian +" constant");
     switch(orderName) {
        
         case vegetarian: document.getElementById("pizza-image").classList.toggle(vegetarian);
@@ -139,4 +139,93 @@ const toggleDisableForm = () =>{
     document.getElementById("order-form").classList.toggle("order-form-inactive");
 }
 
+const clickNextButton = (windowId) =>{
+    //här ska vi anropa validate input. om false ska vi ej gömma rutan
+    if (validateInput(windowId)) {
+        console.log(windowId + " the window id");
+        let windowElement = document.getElementById(windowId);
+        let nextWindow = windowElement.nextElementSibling.id;
+        console.log(nextWindow + " next window id");
+        toggleWindow(windowId, nextWindow);
+    } else {
+        alert("Please fill in a value")
+    }
 
+}
+
+const toggleWindow = (windowId, nextWindow) => {
+    document.getElementById(windowId).classList.toggle("visible");
+    document.getElementById(windowId).classList.toggle("invisible");
+    document.getElementById(nextWindow).classList.toggle("visible");
+    document.getElementById(nextWindow).classList.toggle("invisible");
+}
+
+const validateInput =(windowId) =>{
+    console.log("validateInput");
+    let isValid;
+    console.log(isValid);
+   // let inputElements = document.querySelectorAll(".input");
+    //let inputArray = Array.from(inputElements);
+
+    /*for(i=0;i<inputArray.length;i++)
+    {
+        console.log(inputArray[i]);
+    }*/    console.log(windowId);
+
+    if(windowId =="chatWindow1")
+    {
+        let inputToCheck = document.getElementById("name").value;//inputArray.find(x => x.type === "text");
+        console.log(inputToCheck + "inputToCheckvalue");
+        if (inputToCheck === "") {
+            isValid = false;
+            console.log(isValid);
+        } else {
+            /*Här har vi värdet på namnet och säger till clickNextButton-funktionen att vi kan gå vidare till nästa ruta.
+            Innan vi visar nästa ruta vill vi skicka med namnet på något sätt. 
+            Förslag: Gör en funktion t.ex. setGreetingName som tar emot parametern name härifrån. 
+            Den funktionen sätter innerHTML i en p-div i rätt window. Och sedan samma sak för de andra meddelandena, 
+            varje meddelande får en egen funktion. 
+            */
+            setProgressBarValue();
+            isValid = true;
+        }
+    }
+        
+    else if (windowId ==="chatWindow2") {
+        let inputToCheck = document.getElementById("pizza").value;
+        console.log(inputToCheck + "inputToCheckvalue");
+        if (inputToCheck === "") {
+            isValid = false;
+            console.log(isValid);
+        }else {
+            setProgressBarValue();
+            isValid = true;
+        }
+    } 
+    else if (windowId ==="chatWindow3") {
+        let inputToCheck = document.getElementById("pizza-slider").value;
+        console.log(inputToCheck + "inputToCheckvalue");
+        if (inputToCheck === "0") {
+            isValid = false;
+            console.log(isValid);
+            
+        } else {
+            //anropa set orderSummary P hämta alla värden i formuläret och skriv ut dem
+            setProgressBarValue();
+            isValid = true;
+        }
+    }
+    else {
+            isValid = false;
+        }
+       
+        return isValid;
+}
+
+const setProgressBarValue = () => {
+    document.getElementById("progress-bar").value += 1;
+}
+
+/*funktion printOrderSummary
+använd från validateInput
+const inputValues = document.getElementById("order-form").elements;*/

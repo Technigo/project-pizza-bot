@@ -15,12 +15,15 @@
       <h1>This is your Pizza Bot</h1>
       
         <form action="" id="order-form" class="flex-container">
-          <div class="input-wrapper">
+
+          <div class="input-wrapper visible" id="chatWindow1">
             <label for="name">Name:</label>
-            <input type="text" name="name" id="name">
+            <input type="text" class="input" name="name" id="name">
+            <button onclick="clickNextButton(this.parentNode.id)" type="button">>>></button>
           </div>
-          <div class="input-wrapper">
-            <select name="pizza" id="pizza">
+
+          <div class="input-wrapper invisible" id="chatWindow2">
+            <select name="pizza" class="input" id="pizza">
               <option value="">Choose a pizza</option>
               <option value="vegetarian">Vegetarian Pizza</option>
               <option value="hawaiian">Hawaiian Pizza</option>
@@ -28,17 +31,32 @@
               <option value="capricciosa">Capricciosa Pizza</option>
               <option value="margherita">Margherita Pizza</option>
             </select>
+            <button onclick="clickNextButton(this.parentNode.id)" type="button">>>></button>
           </div>
-          <div class="input-wrapper">
-            <div class="input-row-wrapper">
-          <label for="pizza-slider">Number of pizzas:</label>
-            <output for="pizza-slider" id="number-output" name="number-output">0</output>
-            </div>
-          <input type="range" name="pizza-slider" min="0" max="25" value="0" id="pizza-slider" onchange="changeRangeOutput()">
-          </div>
-          
 
-          <button type="button" class="button" onclick="placeOrder()">Place order</button>
+          <div class="input-wrapper invisible" id="chatWindow3">
+           
+            <label for="pizza-slider">Number of pizzas:</label>
+            <output for="pizza-slider" id="number-output" name="number-output">0</output>
+            <input type="range" class="input" name="pizza-slider" min="0" max="25" value="0" id="pizza-slider" onchange="changeRangeOutput()">
+            <button onclick="clickNextButton(this.parentNode.id)" type="button">>>></button>
+          
+          </div>
+          <div class="input-wrapper order-summary invisible" id="chatWindow4">
+            <div class="input-row-wrapper"></div>
+              <p id="summary"></p>
+              <button type="button" class="button" onclick="placeOrder()">Place order</button>
+            </div>
+          </div>
+
+        
+          <label for="progress-bar">Order progress:</label>
+          <progress id="progress-bar" name="progress-bar" value="0" max="3"></progress>
+
+          
+        
+
+
         </form>
         <section class="order-confirmation">
           
