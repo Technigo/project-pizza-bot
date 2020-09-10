@@ -35,3 +35,7 @@ p {
 .hidden-summary {
     display: none;
 }
+
+.active-summary {
+    display: block;
+}
