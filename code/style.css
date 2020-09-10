@@ -34,6 +34,7 @@ h1 {
 }
 
 .order-confirmation{
+    position: relative;
     display: flex;
     flex-direction: row;
     width: 40vw;
@@ -82,15 +83,17 @@ select:focus {
 }
 
 .image {
-    max-width: 99%;
-    position: relative;
+    max-width: 100%;
 }
 
 .message-container {
-    backdrop-filter: blur(5px);
+    top: 0;
+    left: 0;
+    right: 0;
     position: absolute;
     z-index: 1;
-    max-width: 99%;
+    max-width: 100%;
+    padding: 35px;
 }
 
 #message{
@@ -98,7 +101,7 @@ select:focus {
     font-size: 1.5em;
     font-weight: bold;
     color: #fff;
-    
+    background: rgba(0,0,0, 0.7);
 }
 
 .hawaiian {
