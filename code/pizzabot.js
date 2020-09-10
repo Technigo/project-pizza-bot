@@ -43,11 +43,11 @@ const calculateCookingTime = (orderQuantity) =>{
 const pizzaImageFunction = (orderName) => {
     //let pizzaImage;
     if(orderName === vegetarian) {
-        return "./vegetarian.jpg";
+        return "./vegetarian.png";
     } else if (orderName === hawaiian) {
-        return "./hawaiian.jpg";
+        return "./hawaiian.png";
     } else {
-        return "./pepperoni.jpg";
+        return "./pepperoni.png";
     }
 };
 /*

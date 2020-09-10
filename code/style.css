@@ -18,31 +18,71 @@ body {
   color: rgb(240, 224, 224);
 }
 h1 {
+  font-family: Lato;
+  font-weight: 100;
+  font-size: 48px;
+  /* text-shadow: 0 0 0.1em #fff, 0 0 0.2em #fff, 0 0 0.3em #fff, 0 0 0.4em #f7f, 0 0 0.6em #f0f, 0 0 0.8em #f0f, 0 0 1em #f0f, 0 0 1.2em #f0f; */
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  animation: neon1 1.5s ease-in-out infinite alternate;
+  color: #fff;
   margin: 30px 20px;
-  font-size: 32px;
+  font-size: 46px;
 }
 h2 {
+  font-family: Lato;
+  font-weight: 100;
+  color: #fff;
   margin: 30px 20px;
-  font-size: 22px;
+  font-size: 24px;
+  /* text-shadow: 0 0 0.1em #fff, 0 0 0.2em #fff, 0 0 0.3em #fff, 0 0 0.4em #f7f, 0 0 0.6em #f0f, 0 0 0.8em #f0f, 0 0 1em #f0f, 0 0 1.2em #f0f; */
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+  
 }
+/*Glow effect for Webkit Browsers*/
+
+@-webkit-keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+  }
+}
+/*Glow effect for for mozilla*/
+
+@-moz-keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+  }
+} 
+/*Glow Effect*/
+
+@keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+  }
+}
+
+
 p {
   /*margin: 0 3vw 3vh;*/
   font-size: 18px;
 }
-img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  object-position: top center;
-  border-radius: 50%;
-}
+
 .input-element-wrapper {
-  margin-top: 10vh;
+  margin-top: 5vh;
   display: flex;
   justify-content: center;
   width: 90vw;
-  background-color: grey;
-  opacity: .7;
+  background-color: rgba(68, 67, 67, 0.7)
+  /* background-color: rgba(225,204,222,0.7) */
 }
 form {
   display: flex;
@@ -58,28 +98,46 @@ input {
   font-size: 16px;
 }
 button {
-  border: 2px transparent;
+  border: none;
   padding: 15px;
   border-radius: 5px;
   text-transform: uppercase;
   color: grey;    
   cursor: pointer;
-  transition: ease-in-out .2s;
+  transition: 0.3s ease-in-out;
+  /* transition: scale 0.3s ease-in; */
 }
 button:hover {
   transform: scale(1.1);
 }
 .orderConfirmation {
-  /*background-color: grey;
-  opacity: .7;
-  display: flex;
-  justify-content: center;
-  padding: 3vh 3vw;
-  transition: ease-in .9s; /*fungerar denna?*/
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* position: relative; */
+  /* transition: all 0.9s ease-in; fungerar denna? */
   width: 50%;
   padding: 10px;
+}
+
+img {
+  width: 250px;
+  height: 250px;
+  /* position: absolute; */
+  /* top: 33%; */
+  /* left: 0; */
+  object-fit: cover;
+  object-position: top center;
+  margin: 20px 20px 30px 20px;
+  border-radius: 50%;
+  /* border: 2px solid rgb(225, 165, 225); */
+  box-shadow: 0 0 5px #fff, 0 0 15px #fff, 0 0 25px #fff, 0 0 23px #FF1177, 0 0 25px #FF1177, 0 0 27px #FF1177, 0 0 30px #FF1177, 0 0 35px #FF1177;
+  /* box-shadow: 0 0 0.1em #fff, 0 0 0.2em #fff, 0 0 0.3em #fff, 0 0 0.4em #f7f, 0 0 0.6em #f0f, 0 0 0.8em #f0f, 0 0 1em #f0f, 0 0 1.2em #f0f; */
+}
+.orderConfirmation p {
+  height: 20%;
+  margin: 30px 20px 0 20px;
 }
 
 
