@@ -8,45 +8,78 @@
 
 body {
   font-family: 'Nanum Gothic', sans-serif;
-  background-color: slategray;
+  background: url(./pizza-dough.jpg) no-repeat center center fixed;
+  background-size: cover;
+  object-fit: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: rgb(240, 224, 224);
 }
-
 h1 {
-  margin: 5vh 3vw;
+  margin: 30px 20px;
   font-size: 32px;
 }
-
+h2 {
+  margin: 30px 20px;
+  font-size: 22px;
+}
 p {
-  margin: 0 3vw 3vh;
+  /*margin: 0 3vw 3vh;*/
   font-size: 18px;
 }
-
-
+img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 50%;
+}
 .input-element-wrapper {
-  width: 800px;
   margin-top: 10vh;
- 
+  display: flex;
+  justify-content: center;
+  width: 90vw;
+  background-color: grey;
+  opacity: .7;
 }
-
-.form {
-  width: 100%;
-  border: 2px dotted salmon;
-  border-radius: 5px;
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 10px;
 }
-
 .input-element {
   margin-left: 3vw;
   padding: 15px 2px;
 }
-
 input {
   font-size: 16px;
 }
-
+button {
+  border: 2px transparent;
+  padding: 15px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: grey;    
+  cursor: pointer;
+  transition: ease-in-out .2s;
+}
+button:hover {
+  transform: scale(1.1);
+}
+.orderConfirmation {
+  /*background-color: grey;
+  opacity: .7;
+  display: flex;
+  justify-content: center;
+  padding: 3vh 3vw;
+  transition: ease-in .9s; /*fungerar denna?*/
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 10px;
+}
 
 

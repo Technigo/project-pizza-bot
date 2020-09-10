@@ -1,52 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Project 4: Pizzabot</title>
-  </head>
-  <body>
-    
-    <section class="input-element-wrapper"></div>
-      <form id="order-form" class="form" action="http://httpbin.org/anything" method="POST" target="blank">
-      <h1>Hey, welcome to your Pizza Bot!</h1>
-      <p id="message">Order your pizza here.</p>
-     
-
-          <!----Your name---->
-          <div class="input-element">
-              <label for="firstName">First name</label>
-              <input
-                  type="text"
-                  id="firstName"
-                  name="lastName"
-              />
-          </div>
-          
-          <!----Pizza selection---->
-          <div class="input-element">
-              <label for="pizzaSelection">Select pizza:</label>
-              <select id="pizzaSelection" name="pizzaSelection">
-                  <option value="Vegetarian Pizza">Vegetarian Pizza</option>
-                  <option value="Hawaiian Pizza">Hawaiian Pizza</option>
-                  <option value="Pepperoni Pizza">Pepperoni Pizza</option>
-              </select>
-          </div>
-
-          <!----Number of Pizzas---->
-          <div class="input-element">
-              <label for="pizza-range">How many pizzas would you like?</label>
-              <input type="range" id="numberOf" name="numberOf" min="0" max="8">
-          </div>
-
-          <!----Place order---->
-          <div class="input-element">
-              <button type="button">Place your order</button>
-          </div>
-      </form>
-  </section>
-  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <section class="input-element-wrapper">
+        <form id="order-form" class="form">
+            <!---action="http://httpbin.org/anything" method="POST" target="blank">-->
+            <h1>Hey, welcome to your Pizza Bot!</h1>
+            <h2>Order your pizza here.</h2>
+            <!----Your name---->
+            <div class="input-element">
+                <label for="firstName">First name:</label>
+                <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                />
+            </div>
+            <!---- Pizza selection---->
+            <div class="input-element">
+                <label for="pizzaSelection">Select pizza:</label>
+                <select id="pizzaSelection" name="pizzaSelection">
+                    <option value="Vegetarian Pizza">Vegetarian Pizza</option>
+                    <option value="Hawaiian Pizza">Hawaiian Pizza</option>
+                    <option value="Pepperoni Pizza">Pepperoni Pizza</option>
+                </select>
+            </div>
+            <!---- Number of Pizzas ----->
+            <div class="input-element">
+                <label for="pizza-range">How many pizzas would you like?</label>
+                <input type="range" id="pizzaRangeSlider" name="pizzaRangeSlider" min="0" max="8" value="1"
+                onchange="changeRangeValue()">
+                <span id= "output-pizzaRange" name="output-pizzaRange" for="pizzaRangeSlider">1</span>
+            </div>
+            <!----Place order WILL ATT ORDER VISAS ONCLICK BUTTON---->
+            <div class="input-element">
+                <button type="button" onclick="return createPizzaOrder()">Place your order</button>
+            </div>
+        </form>
+         <!----Confirmation ---->
+         <div class="orderConfirmation">
+            <p id="orderConfirmationText"></p>
+             <!----PizzaSelection default image  ----->
+            <img id="pizzaPhoto" src="" alt ="picture of selected pizza">
+         </div>
+    </section>
     <script src="./pizzabot.js"></script>
-  </body>
+</body>
 </html>
