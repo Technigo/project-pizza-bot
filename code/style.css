@@ -1,4 +1,4 @@
-/* ---------------------- GENERAL STYLING ----------------------*/ 
+/* ---------------------- GENERAL STYLING ---------------------- */ 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
 
 * {
@@ -16,12 +16,10 @@ html {
 }
 
 body {
-    margin: 0;
     padding: 0;
     width: 70vw;
     margin: auto;
     text-shadow: 1px 1px #004D16;
-    position: relative;
 }
 
 p {
@@ -36,10 +34,12 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: margin 0.5s linear;
 }
 
 header h1 {
     text-shadow: 2px 2px #01DC3E;
+    font-size: 40px;
 }
 
 header img {
@@ -53,8 +53,46 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 30px;
-    height: 850px;
+    margin-bottom: 100px;
+}
+
+/*  PROGRESS-BAR  */ 
+.progress-bar-container-outer {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 95px;
+    background: #000;
+    border-bottom: 2px solid #01DC3E;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.progress-bar-container-inner {
+    width: 70vw;
+    margin: auto;
+    padding: 20px;
+    font-size: 12px;
+}
+
+.progress-bar-container-inner p {
+    margin: 5px 0;
+}
+
+.progress-bar-container-inner-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.progress-bar {
+    width: 100%;
+    display: flex;
+}
+
+.progress-bar div {
+    height: 1vh;
+    width: 50%;
+    background: #333;
 }
 
 /*  CHAT-BOXES  */ 
@@ -62,7 +100,7 @@ main {
     display: flex;
     align-items: center;
     margin: 10px 0;
-    transition: visibility 0s, opacity 0.5s linear;
+    transition: opacity 0.5s linear;
 }
 
 .pizzeria p {
@@ -79,7 +117,7 @@ main {
 }
 
 .user-inner {
-    padding: 20px 20px 30px 20px;
+    padding: 15px 20px 15px 20px;
     border-radius: 10px;
     color: #fff;
     border: 2px solid #999;
@@ -101,10 +139,12 @@ main {
 .chat-portrait-user {
     width: 80px;
     height: 80px;
-    background: #999;
+    border: 2px solid #999;
     border-radius: 50%;
-    text-align: center;
-    padding-top: 29px;
+    background-image: url(./images/user.png);
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .chat-form {
@@ -139,7 +179,6 @@ button { /* Button to confirm quantity */
     border: none;
     box-shadow: 1px 1px #004D16;
     text-shadow: 1px 1px #004D16;
-    width: 5vw;
     padding: 10px;
     margin: 5px;
 }
@@ -148,8 +187,27 @@ button:hover, input:hover {
     background: #00C337;
 }
 
+/* COUNTDOWN TIMER */
+.timerBox {
+    width: auto;
+    border: 1px solid #fff;
+    margin-top: 40px;
+    padding: 10px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+#time {
+    font-size: 50px;
+    align-self: center;
+}
 
+.timecounter {
+    letter-spacing: 2px;
+    font-size: 13px;
+}
 
 /*  ORDER SUMMARY  */ 
 .orderSummaryBox {
@@ -158,8 +216,10 @@ button:hover, input:hover {
     border: 2px solid #01DC3E;
     border-radius: 10px;
     padding: 50px;
-    margin: 50px 0 50px 0;
+    margin: 50px 0 0 0;
     transition: visibility 0s, opacity 0.5s linear;
+    display: flex;
+    flex-direction: column;
 }
 
 h2 {
@@ -189,14 +249,18 @@ h2 {
     width: 50%;
 }
 
+.receipt {
+    align-self: center;
+    justify-self: center;
+}
+
 .receipt button {
     width: auto;
 }
 
-
 /*  CONDITIONALS  */ 
 .invisible {
-    visibility: hidden;
+    display:none; 
     opacity: 0;
 }
 
@@ -207,35 +271,47 @@ h2 {
 
 /* ---------------------- FOOTER ----------------------*/ 
 footer {
-    position: absolute;
     text-align: center;
-    bottom: 15px;
     padding: 5px;
-    left: 0;
-    right: 0;
+    margin-bottom: 30px;
 }
 
+/* ---------------------- MEDIA QUERIES ----------------------*/ 
+@media (max-width: 980px) {
 
+    body {
+        width: 90vw;
+    }
 
-/*
-.line-1{
-    white-space: normal;
-   overflow: hidden;
-   transform: translateY(0%);
-   height: 100px;
-   width: 80px;    
-}
+    header img {
+        width: 20vw;
+        margin-top: 20px;
+    }
 
-/* Animation *//*
-.anim-typewriter{
- animation: typewriter 4s steps(100) 1s 1 normal both,
-            blinkTextCursor 500ms steps(100) infinite normal;
+    header {
+        text-align: center;
+    }
+
+    .progress-bar-container-inner {
+        width: 90vw;
+    }
+
+    .pizzeria p {
+        width: 55vw;
+    }
+
+    .user-inner {
+        width: 55vw;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 5px;
+    }
+
+    form input {
+        margin: 5px 0;
+    }
 }
-@keyframes typewriter{
- from{width: 20em;}
- to{width: 24em;}
-}
-@keyframes blinkTextCursor{
- from{border-right-color: rgba(255,255,255,.75);}
- to{border-right-color: transparent;}
-}*/

@@ -16,14 +16,35 @@ BACKLOG:
 
 / Gör pratbubblor av boxarna
 
-# Skapa confirmation-box längst ner under chatten (Karin)
+/ Skapa confirmation-box längst ner under chatten (Karin)
 
-# Skapa skriv-effekt av texten i chatten (Gabriella)
+/ Skapa en progress-bar baserat på hur många frågor som besvarats (Karin)
 
-# Skapa en progress-bar baserat på hur många frågor som besvarats (Karin)
-
-# Skapa count-down timer (Gabriella)
+/ Skapa count-down timer (Gabriella)
 
 # Kontrollera footern. 
    
 # Skapa en dyrare pizza - använda Array of Objects
+
+const pizzas = [
+    {
+        type: "pepperoni",
+        pizzaPrice = 80
+    },
+    {
+        type: "Vegetarian",
+        pizzaPrice = 80
+    },
+    {
+        type: "hawaiian",
+        pizzaPrice = 80
+    },
+    {
+        type: "kebab",
+        pizzaPrice = 80
+    },
+    {
+        type: "kebab plus size",
+        pizzaPrice = 100
+    }
+]
