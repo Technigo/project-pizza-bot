@@ -38,4 +38,5 @@ After googling we found a solution to our problem, giving the pizzaImg the attri
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+ Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+ Deployed project link: https://enjoypizza.netlify.app/
