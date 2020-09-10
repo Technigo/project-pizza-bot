@@ -1,13 +1,13 @@
 console.log('Is this working?');
 
-const x = "Vegetarian Pizza"
-console.log(x);
+const vegetarian = "Vegetarian"
+console.log(vegetarian);
 
-const y = "Hawaiian Pizza"
-console.log(y);
+const hawaiian = "Hawaiian"
+console.log(hawaiian);
 
-const z = "Pepperoni Pizza"
-console.log(z);
+const pepperoni = "Pepperoni"
+console.log(pepperoni);
 
 const pizzaPrice = 80;
 console.log(pizzaPrice);
@@ -16,45 +16,33 @@ console.log(pizzaPrice);
 
 
 // second iteration
-alert(`Hey! Happy to serve your pizza. On our menu we have ${x}, ${y} and ${z}.`)
+alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}.`)
 
-
-// third iteration
-
-const orderName = prompt ('Enter the name of the pizza you want to order today.');
-const orderQuantity = prompt ("How many " + orderName + " pizzas do you want?");  
-
-// fourth iteration
-
-const orderTotal = orderQuantity * pizzaPrice;
-alert("Great, I'll get started on your " + orderName + " pizza(s) right away, it will cost " + orderTotal +" kr.");
 
 // fifth iteration
 
-/* When the user enters the `orderName` prompt,
-add an if-statement to check if the input text matches
-any of the pizza name variables (`vegetarian`, `hawaiian`, 
-pepperoni`). If yes - show the next prompt,
-if no - show an alert that says `Select a pizza from the menu` 
-or something similar.
+const orderName = prompt('Enter the name of the pizza you want to order today.');
+    if (orderName === vegetarian || orderName === hawaiian || orderName === pepperoni) { 
+        var orderQuantity = prompt("How many " + orderName + " pizzas do you want?");  
+    } else {
+        alert("Select a pizza from the menu")
+    }
 
-### **Show cooking times**
+    //alert("Great, I'll get started on your " + orderName + " pizza(s) right away, it will cost " + orderTotal +" kr.");
 
-Before you print the final `Great, I'll get started on your X right away, it will cost Y kr` message to the user, calculate the cooking time based on these rules and add it to the message:
+    const orderTotal = orderQuantity * pizzaPrice;
 
-- 1-2 pizzas: `The pizzas will take 10 minutes.`
-- 3-5 pizzas: `The pizzas will take 15 minutes.`
-- 6+ pizzas: `The pizzas will take 20 minutes.`
+    const cookingTime = () => {
+        if (orderQuantity === 1 || orderQuantity === 2) return "10 minutes"
+        else if (orderQuantity === 3 || orderQuantity === 4 || orderQuantity === 5 ) return "15 minutes"
+        else return "20 minutes"
+    }
 
-*/
+// fourth iteration
+
+alert("Great, I'll get started on your " + orderName + " pizza(s) right away, it will cost " + orderTotal +" kr. The pizzas will take " + cookingTime() + "")
 
 
-const checkOrderName = () => {
 
-}
 
-if (orderName.toLowerCase() === vegetarian || orderName.toLowerCase() === hawaiian || orderName.toLowerCase() === pepperoni) {
-    return true;
-} else {
-   
-}
+
