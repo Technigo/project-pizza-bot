@@ -1,60 +1,74 @@
 //Put your Javascript code here:
 
+//Anna: variables with a value a user can choose?????
 const vegetarian = "Vegetarian Pizza";
-console.log(vegetarian);
-
 const hawaiian = "Hawaiian Pizza";
-console.log(hawaiian);
-
 const pepperoni = "Pepperoni Pizza";
-console.log(pepperoni);
 
+//Anna: variable that allows us to calculate total price.
 const pizzaPrice = 80;
-console.log(pizzaPrice);
 
-const welcomeMessage = () => {
-   alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}.`);
-};
+//En variabel som hämtar user input från html-formuläret
+const submitForm = document.getElementById("form-action");
 
-welcomeMessage();
+//Anna: A welcome message in an alert box.
+document.getElementById("welcomeMessage").innerHTML=(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}.`);
 
-//Variables for inserting choice and quantity of pizza using the prompt method.//
+//A variable holding the value from the form. When user submits input, the javascript in the submitOrder function is excuted. 
+submitForm.onsubmit=submitOrder;
 
-let orderName = prompt("Enter the name of the pizza you want to order today"); 
-let orderQuantity;
-const validateOrderName = () => { //have to be "Vegetarian Pizza", not variable name.
-   if (orderName === vegetarian || orderName === pepperoni || orderName === hawaiian) {
-      orderQuantity = prompt(`How many of ${orderName} do you want?`); 
+
+/*Anna: A function that checks if userinput-choice is on menu. Returns true or false. The argument 
+is the prompt-input and is passed as a value to the parameter "chosenPizza" in the function. 
+Also uses the toLowerCase method to allow for users using capitals and lower case. Stores the true
+value in ????*/
+const validateOrderName = (chosenPizza) => {
+   if (chosenPizza.toLowerCase() === vegetarian.toLowerCase() || chosenPizza.toLowerCase() === pepperoni.toLowerCase() || chosenPizza.toLowerCase() === "hawaiian".toLowerCase()) {
+      return true;
    } else {
-      alert("Select a pizza from the menu, please!");
-      orderName = prompt("Enter the name of the pizza you want to order today");
-      //verifyOrder();  //have to insert loop back to begining of function. otherwise error NaN.
+      return false;
    }
 };
 
-validateOrderName();
+
+/*Anna: stores the true value in a variable called pizzaIsOnMenu. The value will now be possible to access outside 
+the function validateOrderName when running the if statement below. orderName is given the value of pizzaIsOnMenu???*/
+//let pizzaIsOnMenu = validateOrderName(orderName);
 
 
-let orderTotal;
-//Understand function, parameters, argumens, paretheses. Try removing parameters.
 const calculateTotalCost = (pizzaPrice, orderQuantity) => {
-   orderTotal = pizzaPrice * orderQuantity
+   orderTotal = (pizzaPrice * orderQuantity);
+   return orderTotal;
 }
 
-calculateTotalCost(pizzaPrice, orderQuantity);
 
-let orderTime;
-const calculateCookingTime = () => {
-   if (orderQuantity <= 2) {
-      orderTime = 10;
-      alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The pizza(s) will take ${orderTime} minutes.`);
-   } else if (orderQuantity > 2 && orderQuantity <= 5) {
-      orderTime = 15;
-      alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The pizza(s) will take ${orderTime} minutes.`);
+const calculateCookingTime = (quantity) => {
+   if (quantity <= 2) {
+      return 10; 
+   } else if (quantity > 2 && quantity <= 5) {
+      return 15;
    } else {
-      orderTime = 20;
-      alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The pizza(s) will take ${orderTime} minutes.`);
+      return 20;
    }
 };
 
-calculateCookingTime();
+function submitOrder(event) {
+   event.preventDefault(); //Prevents the page from being refreshed when the form is submitted.
+   let orderName = document.getElementById("pizzaSort").value;
+   let pizzaIsOnMenu = validateOrderName(orderName);
+//Anna: Variable asking for user input using the prompt method. 
+document.getElementById("choosePizzaText").innerHTML=("Enter the name of the pizza you want to order today.");
+//let orderName = document.getElementById("pizzaSort").value;
+
+document.getElementById("amountsOfPizza").innerHTML=(`How many of ${orderName} do you want?`);
+
+   
+   if (pizzaIsOnMenu === true) {
+   let orderQuantity = document.getElementById("pizzaAmount").value;
+   let totalPrice = calculateTotalCost(orderQuantity, pizzaPrice);
+   let cookingTime = calculateCookingTime(orderQuantity);
+   alert(`Great, I'll get started on your ${orderName} right away, it will cost ${totalPrice} kr. The pizza will take ${cookingTime} minutes.`); 
+} else {
+   alert("Sorry, you have to order someting off the menu.");
+}
+};
