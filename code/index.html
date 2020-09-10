@@ -12,29 +12,53 @@
     <body>
 
 <!-- Our code -->
+
       <h1>Welcome to order pizza!</h1>
       <div class="welcome">
       <p id="welcomeMessage"></p>
-      <form onsubmit="handleSubmit(event)">
-        <div class="form-group">
-          <label for="pizza" id="pizza">
-            Question:</label>
-            
-          <input 
-            type="text" 
-            id="answer" 
-            name="answer" 
-            placeholder="Type your answer here"
+    </div>
+      <form onsubmit="handleOrder(event)">
+        <div>
+          <p
+          id="pizzaName"
+          ></p>
+
+<!-- Ask what pizzas-->       
+        <input 
+          type="text" 
+          id="pizzaNameInput" 
+          name="pizza" 
+          placeholder="Type the pizza name here"
           />
-        </div>
-    
-          <input 
-          type="submit"
-          id="submit" 
-          name="submit" 
-          value="Submit" 
-          />
-      </form>
+      </div>
+
+<!-- Ask how many pizzas-->
+      <div>
+        <p
+        id="pizzaQuantity"
+        ></p>
+
+        <input 
+        type="number" 
+        id="pizzaQuantityInput" 
+        name="pizzanumber" 
+        min="1" 
+        max="100"
+        />
+    </div>
+
+    <input 
+        type="submit"
+        id="submit" 
+        name="submit" 
+        value="Submit" 
+        />
+  </form>
+</div>        
+
+<div class="order">
+  <p id="finalOrderMessage"></p>
+</div>
 
     <script src="pizzabot.js"></script>
 

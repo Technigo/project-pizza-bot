@@ -3,10 +3,10 @@
 const vegetarian = "Vegetarian"
 const hawaiian = "Hawaiian"
 const pepperoni = "Pepperoni"
-
 const pizzaPrice = 80
 
-//2) Functions
+
+//Functions
 
 const validateOrderName = (orderName) => {
     if (orderName.toLowerCase() === vegetarian.toLowerCase()) {
@@ -19,7 +19,7 @@ const validateOrderName = (orderName) => {
         return true;
     
     } else {
-       alert('Select a pizza from the menu!');
+        alert('Select a pizza from the menu!');
         return false;
     }
 };
@@ -29,7 +29,7 @@ const calculateTotalCost = (orderQuantity, pizzaPrice) => {
     return orderTotal;
 }
 
-const calculateCookingTime = () => {
+const calculateCookingTime = (orderQuantity) => {
     let orderTime = 0; 
     if (orderQuantity <= 2) {
         orderTime = 10;
@@ -45,36 +45,40 @@ const calculateCookingTime = () => {
     }
 }
 
-//  3) The bot
-
-// const handleSubmit = (event) => {
-    // This prevent page reload
-//    event.preventDefault();
-  
-      // Get the age value from the form input
-
+//Welcome message 
 const firstMessage = document.querySelector('.welcome'); 
-const welcomeMessage = `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}.`;
+const welcomeMessage = `Hey! Happy to serve your pizza!`;
 firstMessage.innerHTML = `<div>${welcomeMessage}</div>`
 console.log(welcomeMessage);
 
+//Ask what pizza they would like to order 
+const askPizzas = () => {
+    const orderName = `On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}. Choose which pizza you want.`
+    document.getElementById("pizzaName").innerHTML = orderName;
+  }
+  askPizzas()
+
+//Ask how many pizzas they would like to order 
+const askNumber = () => {
+    const orderQuantity = `How many Pizzas do you want?`;
+    document.getElementById("pizzaQuantity").innerHTML = orderQuantity;
+  }
+askNumber();
+
+console.log(askPizzas);
 
 
-const firstQuestion = document.querySelector('#question'); 
-const orderName = `Enter the name of the pizza you want to order today.`;
-// firstQuestion.innerHTML = `${orderName}`
-
-console.log(firstQuestion);
-
-//const orderName = prompt('Enter the name of the pizza you want to order today.');
-// const isValidOrder = validateOrderName(orderName);
-//const orderQuantity = prompt(`How many of ${orderName} Pizzas do you want?`);
-
-/*if (isValidOrder === true) {
+const handleOrder = (event) => {
+  event.preventDefault();
+  const orderName = document.getElementById('pizzaNameInput').value;
+  const orderQuantity = document.getElementById('pizzaQuantityInput').value;
+  const isValidOrder = validateOrderName(orderName);
+  if (isValidOrder === true) {
     const isTotalCost = calculateTotalCost(orderQuantity, pizzaPrice);
-    console.log(isTotalCost);
     const isOrderTime = calculateCookingTime(orderQuantity);
-    console.log(isOrderTime);
-    alert(`Great, I'll get started on your ${orderName} right away, it will cost ${isTotalCost} kr. The pizzas will take ${isOrderTime} minutes.`);
+    const finalOrderMessage = `Great, I'll get started on your ${orderName} right away, it will cost ${isTotalCost} kr. The pizzas will take ${isOrderTime} minutes.`;
+    document.getElementById("finalOrderMessage").innerHTML = finalOrderMessage;
+  } else {
+    return false;
+  }
 }
-*/
