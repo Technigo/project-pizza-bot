@@ -8,27 +8,44 @@ const pizzaPrice = 80
 
 console.log(vegetarian, hawaiian, pepperoni, pizzaPrice)
 
-alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian}, ${pepperoni}.`)
+document.getElementById("menu").innerHTML = `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian}, and ${pepperoni}.`
+
+//alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian}, ${pepperoni}.`)
+
+const submitButton = document.getElementById(submit)
 
 let orderName
-
-const promptOrderName = () => {
-  orderName = prompt("Enter the name of the pizza you want to order today.")
-  validateOrderName()
-}
-
-const validateOrderName = () => {
-  if (orderName !== vegetarian && orderName !== hawaiian && orderName !== pepperoni) {
-    alert("Select a pizza from the menu")
-    promptOrderName()
-  }
-}
-
-promptOrderName()
+let orderQuantity
 
 
-const orderQuantity = prompt(`How many of ${orderName} do you want?`)
-let orderTotal
+submitButton.addEventListener("click", function (orderName, orderQuantity) {
+  orderName = document.getElementById("pizzas").value
+
+  console.log(orderName)
+
+  orderQuantity = document.getElementById("numberOfPizzas").value
+})
+
+
+
+// const promptOrderName = () => {
+//   orderName = prompt("Enter the name of the pizza you want to order today.")
+//   validateOrderName()
+// }
+
+// const validateOrderName = () => {
+//   if (orderName !== vegetarian && orderName !== hawaiian && orderName !== pepperoni) {
+//     alert("Select a pizza from the menu")
+//     promptOrderName()
+//   }
+// }
+
+// promptOrderName()
+
+
+// const orderQuantity = prompt(`How many of ${orderName} do you want?`)
+// let orderTotal
+
 
 calculateTotalCost = () => {
   orderTotal = orderQuantity * pizzaPrice
@@ -56,3 +73,6 @@ calculateCookingTime()
 //alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The Pizza will take ${cookingTime}.`)
 
 document.getElementById("message").innerHTML = `Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The Pizza will take ${cookingTime}.`
+
+
+document.getElementById("pizza").innerHTML

@@ -10,6 +10,22 @@
 
 <body>
   <h1>This is your Pizza Bot</h1>
+
+  <p id="menu"></p>
+
+
+  <form id="form">
+    <label for="pizza">Choose pizza type</label>
+    <input list="pizza" name="pizza" id="pizzas">
+    <datalist id="pizza">
+      <option value="Vegetarian">
+      <option value="Hawaiian">
+      <option value="Pepperoni">
+    </datalist>
+    <input type="number" id="numberOfPizzas">
+    <input type="submit" id="submit">
+  </form>
+
   <h3 id="message"></h3>
 
   <script src="./pizzabot.js"></script>
