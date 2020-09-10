@@ -1,38 +1,47 @@
 .topnav {
-  overflow: hidden;
-}
-
-
-.topnav a {
-  float: right;
-  color: #f2f2f2;
-  text-align: center;
+  color: #242424;
   padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+  font-size: 30px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+display: flex;
+justify-content: space-evenly;
 }
 
-.topnav a:hover {
-  background-color: #ddd;
-  color: rgb(219, 9, 125);
+/* unvisited link */
+a:link {
+    color: black;
+    text-decoration: none;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: black;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: hotpink;
+  }
+  
+  /* selected link */
+  a:active {
+    color: pink;
+  }
+
+
+.logga {
+  height: 200px;
+  width: 200px;
 }
-
-
-.topnav a.active {
-  background-color: #;
-  color: white;
-}
-
 
 body {
     background-image: url(marble-2398946_1280.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: "Montserrat", sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 20px;
-    height: 100%;
+    background-repeat: repeat;
+    background-size: auto;
     margin: 0px;
+    height: 800px;
     width: 100%;
     min-width: 300px;
   }
@@ -45,8 +54,9 @@ body {
   footer {
     padding: 20px;
     display: block;
-    background-color: #dfb93e;
+    background-color: hotpink;
     height: 10vh;
+    color:white;
   }
   
   /* */
@@ -60,27 +70,53 @@ body {
   }
   
   .pizzabot {
-    padding: 20px;
-    height: 370px;
+    height: 500px;
     width: 90%;
     max-width: 700px;
     background-image: url(wood-1700562_1280.jpg);
     color:white;
     border-radius: 20px;
     position: relative;
-    
     box-shadow: 10px 10px 5px 5px #000000;
   }
   
+  
+  
   #first,
+  .controls {
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    height: 70%;
+  }
   #second,
-  #third,
-  #fourth,
   .controls {
     width: 100%;
     max-width: 700px;
     text-align: center;
     height: 80%;
+  }
+
+  #third,
+  .controls {
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    height: 80%;
+  }
+
+  #fourth,
+  .controls {
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    height: 70%;
+  }
+
+  h3 {
+    font-size: 40px;
+    padding-bottom:10px;
+    margin:0;
   }
   
   #first {
@@ -90,13 +126,14 @@ body {
   /* Controls */
   .controls {
     height: 20%;
+  
   }
   
   .controls button {
-    background-color: #dfb93e;
-    margin: 0px 10px;
+    background-image:url(marble-2398946_1280.jpg);
+    margin: 20px 0 0 0;
     width: 100px;
-    height: 40px;
+    height: 60px;
     font-size: 20px;
     border: 1px #000000 solid;
     border-radius: 10px;
@@ -104,13 +141,13 @@ body {
   }
   
   .controls #next_btn:hover {
-    border: 2px darkgreen solid;
+    border: 2px hotpink solid;
    
     cursor: pointer;
   }
   
   .controls #back_btn:hover {
-    border: 2px green solid;
+    border: 2px hotpink solid;
     cursor: pointer;
   }
   
@@ -148,7 +185,7 @@ body {
   
   /* If checked */
   [type="radio"]:checked+figure img {
-    border-bottom: 5px  solid red;
+    border-bottom: 2px  solid hotpink;
     border-radius: 5px;
   }
 
@@ -157,31 +194,30 @@ body {
     -webkit-transform: scale(1.5); 
     transform: scale(1.5); 
   }
-  :checked+figure img:active {
-    text-decoration: underline;
-  }
+  
+
   
   /* If checked */
   [type="radio"]:checked+.numBtn {
-    background-color: darkgreen;
+    background-color: pink;
     color: white;
   }
   
   /* fourth div */
   .numBtn {
     display: inline-block;
-    background-color: #dfb93e;
+    background-color: hotpink;
     border: 1px black solid;
-    height: 50px;
-    width: 50px;
+    height: 90px;
+    width: 90px;
     margin: 5px;
-    font-size: 24px;
-    border-radius: 10px;
-    line-height: 50px;
+    font-size: 50px;
+    border-radius: 50px;
+    line-height:100px;
   }
   
   .numBtn:hover {
-    background-color: #df993e;
+    background-color: pink;
   }
   
   @media (max-width: 600px) {
@@ -213,6 +249,7 @@ body {
   
     footer {
       font-size: 14px;
+      
     }
   
   }
