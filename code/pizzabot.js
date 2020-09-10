@@ -1,55 +1,61 @@
-/* const vegetarian = document.getElementById('vegetarianPizza')
-const hawaiian = document.getElementById('hawaiianPizza')
-const pepperoni = document.getElementById('pepperoniPizza') 
-
------CODE TO CAPTURE ALL OF OUR CODE AND CONNECT IT TO HTML-----
-
-const handleSubmit = (event) => {
-  event.preventDefault();
-  ALL THE CODE 
-}*/
 
 const vegetarian = "vegetarian pizza";
 const hawaiian = "hawaiian pizza";
 const pepperoni = "pepperoni pizza";
+const margaritha = "margaritha pizza";
+const kebab = "kebab pizza"
+const fusion = "fusion pizza"
 
-const pizzaPrice = 80;
-
-//Put your Javscript code here:
-console.log(vegetarian, hawaiian, pepperoni);
-
-alert(
-  `Hey, happy to serve your pizza! In our menu we have: ${vegetarian}, ${hawaiian} and ${pepperoni}`
-);
-
-const validateOrderName = () => {
-  let isCorrect = false;
-  let orderName = "";
-  while (isCorrect === false) {
-    orderName = prompt(
-      "Enter the name of the pizza you want to order today",
-      "Enter Pizza"
-    );
-    orderName = orderName.toLowerCase();
-
-    isCorrect =
-      orderName === vegetarian ||
-      orderName === hawaiian ||
-      orderName === pepperoni;
-
-    isCorrect
-      ? alert(`You have ordered ${orderName}`)
-      : alert(`Select a pizza from the menu please`);
-  }
-  return orderName
+const welcomeMessage = (event) => {
+  event.preventDefault()
+  const username = document.getElementById("name").value;
+  showMessageBox(username);
 };
 
-const validOrderName = validateOrderName();
+const showMessageBox = (username) => {
+  document.getElementById("message").innerHTML = `Hello ${username}`;
+  showPizzaMenu()
+};
 
-const orderQuantity = prompt(
-  `How many of ${validOrderName} do you want?`,
-  `Number of pizza`
-);
+const showPizzaMenu = () => {
+  document.getElementById("pizzaMenu").classList.remove("hidden")
+  
+}
+
+const validateOrderName = (selectedPizza) => {
+  let selectedPizzaLower = selectedPizza.toLowerCase()
+    return selectedPizzaLower === vegetarian 
+    || selectedPizzaLower === hawaiian 
+    || selectedPizzaLower === pepperoni
+    || selectedPizzaLower === fusion
+    || selectedPizzaLower === margaritha
+    || selectedPizzaLower === kebab
+}
+
+
+const getPizzaPrice = (selectedPizza) => {
+  if (selectedPizza = "margaritha"){
+    return 65
+  } else if (selectedPizza = "kebab") {
+    return 85
+  } else if (selectedPizza = "fusion") {
+    return 120
+  } else {
+    return 80
+  }
+}
+
+const showQuantity = () => {
+  
+  const selectedPizza = document.getElementById("selectedPizza").value
+  let validation =  validateOrderName(selectedPizza)
+  if (validation) {
+    document.getElementById("quantity").classList.remove("hidden")
+  } else {
+    document.getElementById("errorMessage").classList.remove("hidden")
+  }
+
+}
 
 const calculateCookingTime = (orderQuantity) => {
   if (orderQuantity > 0 && orderQuantity <= 2) {
@@ -60,9 +66,20 @@ const calculateCookingTime = (orderQuantity) => {
     return 20;
   }
 };
-console.log(orderQuantity);
 
-const orderTotal = orderQuantity * pizzaPrice;
-alert(
-  `Great! I'll get started on your ${validOrderName}, It will cost you ${orderTotal} kr. The pizza(s) will take ${calculateCookingTime()} minutes.`
-);
+
+const showTotalOrder = () => {
+  document.getElementById("totalOrder").classList.remove("hidden")
+  const pizzaQuantity = document.getElementById("pizzaQuantity").value
+  const cookingTime = calculateCookingTime(pizzaQuantity)
+  const selectedPizza = document.getElementById("selectedPizza").value
+  const totalCost = getPizzaPrice(selectedPizza) * pizzaQuantity
+  document.getElementById("finalOrderMessage").innerHTML = `Great! I'll get started on your ${selectedPizza}, It will cost you ${totalCost} kr. The pizza(s) will take ${cookingTime} minutes.`
+  
+}
+
+const hide = () => {
+  document.getElementById("totalOrder").classList.add("hidden")
+  document.getElementById("quantity").classList.add("hidden")
+  document.getElementById("pizzaMenu").classList.add("hidden")
+}
