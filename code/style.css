@@ -28,7 +28,6 @@ h1 {
 }
 
 .bubble {
-  /* width: 250px; */
   max-width: 250px;
   border-radius: 0 10px 10px 10px;
   background: #c6c5b9;
