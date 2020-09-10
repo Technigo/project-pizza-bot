@@ -1,24 +1,25 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #fff;
-  color: #3333cc;
+  color: #2626d9;
   text-align: center;
   margin: 0;
 }
 
+/* Start Button */
 .button {
   width: 300px;
   height: 90px;
   padding: 16px;
   margin-bottom: 16px;
-  border: 3px solid #3333cc;
+  border: 3px solid #2626d9;
   border-radius: 70px;
   display: inline-block;
   font-size: 14px;
 }
 
 .button:hover {
-  background: #3333cc;
+  background: #2626d9;
   color: #fff;
 }
 
@@ -27,9 +28,9 @@ body {
   font-weight: 600;
 }
 
+/* Speech Bubbles */
 .chat-container {
   width: 50%;
-  /* height: 100%; */
   margin: 0 25% 0 25%;
   padding: 0;
   background: rgba(129,196,234,0.4121861832865169);
@@ -95,40 +96,54 @@ body {
   top: 0px;
 }
 
-.chatfield {
- height: 40px;
- margin: 10px 0;
+form {
+  text-align: left;
 }
 
+.quantity {
+  padding-top: 5px;
+}
 
-.button-chat {
+.orderButton {
   width: 70px;
   height: 29px;
   margin-bottom: 20px;
   margin-left: 3px;
-  border: 2px solid #3333cc;
+  border: 2px solid #2626d9;
   border-radius: 8px;
   font-size: 14px;
   text-align: center;
   transform: translate( 0, -36%);
 }
 
-/* .button-chat:focus {
-  background: #ff8000;
-  color: #fff;
-} */
-
-.button-chat:focus {
+.orderButton:focus {
   background: #0d0df2;
   color: #fff;
 }
 
- 
+/* Footer */
+footer {
+  height: 100px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #2626d9;
+  color: #fff;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  position: absolute;
+}
 
-textarea {
-  width: 75%;
-  border-radius: 3px;
-  margin-bottom: 0;
-  padding: 5px;
-  border: 2px solid #cccccc;
+footer p {
+  text-align: center;
+  font-size: 12px;
+}
+
+footer a {
+  color: #fff;
+}
+
+footer span {
+  font-size: 25px;
 }

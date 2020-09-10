@@ -36,11 +36,11 @@ const order = () => {
     let orderTotal = calculateTotalCost(orderQty, pizzaPrice);
     let pizzaCookingTime = calculateCookingTime(orderQty);
     document.getElementById("final-order").innerHTML = `Great! I will get started on your ${orderName} right away, it will cost ${orderTotal}kr. The pizza(s) will be ready in ${pizzaCookingTime} minutes.`;
+    document.getElementById("button").style.display = "none";
+    document.getElementById("menu").style.display = "none";
   } else {
     document.getElementById("menu").innerHTML =`Please select a pizza from our menu. On our menu we have ${vegetarian}, ${hawaiian}, and ${pepperoni}.`;
   }
-
-  document.getElementById("button").style.display = "none";
 }
 
 

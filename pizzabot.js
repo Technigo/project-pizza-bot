@@ -3,145 +3,81 @@ const hawaiian = "Hawaiian Pizza";
 const pepperoni = "Pepperoni Pizza";
 const pizzaPrice = 80;
 
-document.getElementById('botBubble').innerHTML = `Hey! Happy to get your order started. On our menu we have ${vegetarian}, ${hawaiian}, and ${pepperoni}.`;
+document.getElementById(
+  "botBubble"
+).innerHTML = `Hey! Happy to get your order started. On our menu we have ${vegetarian}, ${hawaiian}, and ${pepperoni}.`;
 
-document.getElementById('userBubble').innerHTML =
-'Ok!';
+document.getElementById("userBubble").innerHTML =
+  "Ok! (Click to start your order.)";
 
-document.getElementById('userBubble').style.cursor = pointer;
+document.getElementById("userBubble").style.cursor = "pointer";
 
 function buttonClicked() {
- const buttonInvisible = document.getElementById('button');
- buttonInvisible.style.display = 'none';
+  const buttonInvisible = document.getElementById("button");
+  buttonInvisible.style.display = "none";
 
- const chatBegin = document.getElementById('chatContainer');
- chatContainer.style.display = 'flex';
+  const chatBegin = document.getElementById("chatContainer");
+  chatContainer.style.display = "flex";
 
- const startConvo = document.getElementById('botBubble');
- botBubble.style.display = 'block';
+  const startConvo = document.getElementById("botBubble");
+  botBubble.style.display = "block";
 
- const userStart = document.getElementById('userBubble');
- userStart.style.display = 'block';
-};
-
-// function startOrder() {
-//  const orderName = document.getElementById('startOrder');
-//   orderName.style.display = 'block';
-//  document.getElementById('startOrder').innerHTML = `What kind of pizza would you like to order today? 
-//  <p><button class="button-chat" value="vegetarian" type="submit" onclick="orderQty()">${vegetarian}</button></p>
-//  <p><button class="button-chat" value="hawaiian" type="submit" onclick="orderQty()">${hawaiian}</button></p>
-//  <p><button class="button-chat" value="pepperoni" type="submit" onclick="orderQty()">${pepperoni}</button></p>
-//  `;
- 
-// console.log()
-// };
-
-// function orderQty () {
-// console.log
-// }
+  const userStart = document.getElementById("userBubble");
+  userStart.style.display = "block";
+}
 
 function startOrder() {
- const orderName = document.getElementById('startOrder');
-  orderName.style.display = 'block';
- document.getElementById('startOrder').innerHTML = 'Enter the name of the pizza you want to order today.';
+  const orderForm = document.getElementById("startOrder");
+  orderForm.style.display = "block";
+  document.getElementById(
+    "startOrder"
+  ).innerHTML = `<form class="form" onsubmit="validateOrder(event)">
+ 
+ <div class="pizza_selection">What kind would you like?
+ 
+ <p><input type="radio" id="vegetarian" name="pizza_selection" value="vegetarian" required />
+ <label for="vegetarian">${vegetarian}</label></p>
+ 
+ <p><input type="radio" id="hawaiian" name="pizza_selection" value="hawaiian" required /><label for="hawaiian">${hawaiian}</label></p>
+      
+ <p><input type="radio" id="pepperoni" name="pizza_selection" value="pepperoni" required /><label for="pepperoni">${pepperoni}</label></p></div>
+ 
+ <div class="quantity"><p><label for="orderQty">How many pizzas?</label></p><p><input id="orderQty" type="number" name="orderQty" placeholder="enter a number" required /></p></div>
+ 
+ <p><button class=".orderButton" type="submit" id="submit" name="submit" value="submit">Order</button></p>
+ </form>`;
+}
+
+const calculateTotalCost = (finalOrderQty, pizzaPrice) => {
+  return finalOrderQty * pizzaPrice;
 };
 
+const calculateCookingTime = (finalOrderQty) => {
+  if (finalOrderQty <= 2) {
+    return 10;
+  } else if (finalOrderQty <= 5) {
+    return 15;
+  } else {
+    return 20;
+  }
+};
 
+const processOrder = (pizzaChoice) => {
+  const finalOrderQty = document.getElementById("orderQty").value;
+    let orderTotal = calculateTotalCost(finalOrderQty, pizzaPrice);
+    let pizzaCookingTime = calculateCookingTime(finalOrderQty);
+    const orderSummary = document.getElementById("confirmation");
+    orderSummary.style.display = "block";
+    document.getElementById("confirmation").innerHTML = `Great! I will get started on your ${pizzaChoice} right away, it will cost ${orderTotal}kr. The pizza(s) will be ready in ${pizzaCookingTime} minutes.`;
+};
 
-// ();
-
-// const validateOrderName = (orderName) => {
-//   if (
-//     orderName === "vegetarian" ||
-//     orderName === "pepperoni" ||
-//     orderName === "hawaiian"
-//   ) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// };
-
-// const calculateTotalCost = (orderQty, pizzaPrice) => {
-//   return orderQty * pizzaPrice;
-// };
-
-// const calculateCookingTime = (orderQty) => {
-//   if (orderQty <= 2) {
-//     return 10;
-//   } else if (orderQty <= 5) {
-//     return 15;
-//   } else {
-//     return 20;
-//   }
-// };
-
-// if (validateOrderName(orderName)) {
-//   let orderQty = prompt(`How many of ${orderName} do you want?`);
-//   let orderTotal = calculateTotalCost(orderQty, pizzaPrice);
-//   let pizzaCookingTime = calculateCookingTime(orderQty);
-//   alert(
-//     `Great! I will get started on your ${orderName} right away, it will cost ${orderTotal}kr. The pizza(s) will be ready in ${pizzaCookingTime} minutes.`
-//   );
-// } else {
-//   alert(
-//     `Please select a pizza from our menu. On our menu we have ${vegetarian}, ${hawaiian}, and ${pepperoni}.`
-//   );
-// }
-
-/*
-## **Iteration 7 - Make it visual**
-Make the feedback to the customer be printed out on the website instead of just in the console or an alert()
-
-For example, add this message to the website by setting the `innerHTML` of an element to be: "Great, I'll get started on your Hawaiian Pizza right away, it will cost 240 kr. The pizzas will take 15 minutes."
-
-Don't forget to create some HTML elements and give them id's to use as selectors in the JavaScript.
-*/
-
-/*
----
-
-
-
-
-## What you will learn 🧠
-- Be comfortable using variables
-- Know some string methods to modify strings
-- Understand control flow and the use of conditionals statements
-- Be able to write basic functions which take arguments and return values
-- Connect the JavaScript to show visual feedback in the HTML
-
-
-## How to hand in the code 🎯
-- When you’re finished with the project, push your code to GitHub 
-- Navigate to your repo and create a Pull Request into the Technigo repo (Add a link to your deployed project and both of your names.)
-- Wait for the code review from your teachers
-
-
-## Requirements 🧪
-**General Requirements**
-- Contribute by helping others with this project on Stack Overflow.
-- If selected; demo your solution for your team.
-- Code follows Technigo’s code guidelines.
-- Publish your site on Netlify.
-
-**🔵  Blue Level (Minimum Requirements)**
-- Work together in a pair, make sure both of you understand what's happening.
-- Complete all project iterations.
-- Show the final order summary visually by updating the DOM using Javascript.
-
-Make sure you've committed and pushed a version of your project before starting with the intermediary and advanced goals.
-
-
-**🔴  Red Level (Intermediary Goals)**
-- Make an HTML form for the input of the user's name, pizza type, number of pizzas. Choose the form elements that you think fit the purpose best.
-- Show images of the pizza you ordered when you see the final order details.
-- Add a few more pizza types and/or different prices for each pizza type
-
-
-**⚫  Black Level (Advanced Goals)**
-- Create a progress bar indicating how many steps there are to finish the order.
-- Make a little countdown timer that shows up when your order is finished. Starting on 10, 15 or 20 minutes accordingly to the amount of pizzas you ordered.
-- Use an array of objects to store the information about the pizzas
-- Style and structure your HTML/CSS so the user is guided through the ordering process.
-*/
+const validateOrder = (event) => {
+  event.preventDefault(); 
+  if (document.getElementById("vegetarian").checked === true) {
+    processOrder(vegetarian);
+  } else if (document.getElementById("hawaiian").checked === true) {
+    processOrder(hawaiian);
+  } else {
+    processOrder(pepperoni);
+  }
+};
