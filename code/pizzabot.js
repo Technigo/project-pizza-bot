@@ -77,4 +77,4 @@ console.log(firstQuestion);
     console.log(isOrderTime);
     alert(`Great, I'll get started on your ${orderName} right away, it will cost ${isTotalCost} kr. The pizzas will take ${isOrderTime} minutes.`);
 }
-
+*/
