@@ -10,34 +10,34 @@
   </head>
   <body>
     <div class="bot-container">
-      <div>
+      <div class="bot-pic">
         <img src="https://i.pinimg.com/originals/0c/67/5a/0c675a8e1061478d2b7b21b330093444.gif">
       </div>
       <div class="bot-content">
         <h1 id="pizzaBotText" class="bot-text">Hey! Happy to serve you pizza.</h1>
-        <input type="button" name="start-btn" id="startBtn" class="start-btn" value="START" onclick="startOrdering()">
+        <input type="button" name="start-btn" id="startBtn" class="start-btn" value="START ORDER" onclick="startOrdering()">
       
     
     <div class="pizza-container" id="pizzaContainer">
       <div class="pizza" id="vegetarianPizza">
-        <h2>Vegetarian Pizza</h2>
         <img src="https://image.freepik.com/free-vector/cute-pizza-mascot-vector-illustration-pizza-sticker-cartoon_138676-463.jpg" alt="Vegetarian Pizza" onClick="choosePizza(vegetarian)">
+        <h2>Vegetarian Pizza</h2>
       </div>
 
       <div class="pizza" id="hawaiianPizza">
-        <h2>Hawaiian Pizza</h2>
         <img src="https://image.freepik.com/free-vector/cute-pizza-mascot-vector-illustration-pizza-sticker-cartoon_138676-463.jpg" alt="Hawaiian Pizza" onClick="choosePizza(hawaiian)">
+        <h2>Hawaiian Pizza</h2>
       </div>
 
       <div class="pizza" id="pepperoniPizza">
-        <h2>Pepperoni Pizza</h2>
         <img src="https://image.freepik.com/free-vector/cute-pizza-mascot-vector-illustration-pizza-sticker-cartoon_138676-463.jpg" alt="Pepperoni Pizza" onClick="choosePizza(pepperoni)">
+        <h2>Pepperoni Pizza</h2>
       </div>
     </div>
     
     <div class="quantity-container" id="quantityContainer">
-      <label for="quantity">Quantity</label>
-      <input type="number" id="quantity" name="quantity" class="quantity" min="1" max="20">
+      
+      <input type="number" id="quantity" name="quantity" class="quantity" min="1" max="20" placeholder="Enter amount" required>
       <input type="submit" name="order-btn" id="orderBtn" class="start-btn" value="ORDER" onclick="orderSummary()">
 
     </div>

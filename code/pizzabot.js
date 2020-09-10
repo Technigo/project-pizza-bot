@@ -18,7 +18,7 @@ const startOrdering = () => {
 const choosePizza = (pizzaName) => {
     document.getElementById("pizzaContainer").style.display = "none";
 
-    pizzaBotText.innerHTML = `How many of ${pizzaName} do you want?`;
+    pizzaBotText.innerHTML = `How many ${pizzaName}s do you want?`;
     document.getElementById("quantityContainer").style.display = "block";
     orderName = pizzaName;
 
