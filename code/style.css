@@ -11,6 +11,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   text-shadow: black 5px;
+  margin: 0;
 }
 
 .bot-wrapper {
@@ -129,9 +130,13 @@ body {
   border: 27px solid transparent;
   border-top-color: rgba(71, 55, 39, 0.7);
   border-bottom: 0;
-  border-left: 0;
   margin-left: -13.5px;
   margin-bottom: -27px;
+}
+
+#final-message {
+  padding: 5px;
+  margin: 10px;
 }
 
 .quantity-of-pizza-wrapper {
@@ -183,12 +188,46 @@ body {
 .pizza-bot-image-end {
   content: url("./images/pizzabot.png");
   width: 150px;
+  align-items: center;
 }
 
 footer {
-  position: absolute;
   font-family: "Montserrat", sans-serif;
   font-size: 0.5em;
   text-align: center;
-  padding: 5px;
+  padding: 2px;
+  color: white;
+  background: rgba(71, 55, 39, 0.7);
+  width: 100%;
+  bottom: 0;
+}
+
+/***** MEDIA QUERIES ****/
+
+/***** TABLET ****/
+@media (min-width: 768px) {
+  footer {
+    position: absolute;
+  }
+
+  .img-pepperoni {
+    width: 250px;
+  }
+
+  .img-veg {
+    width: 250px;
+  }
+
+  .img-hawaii {
+    width: 250px;
+  }
+}
+
+/***** DESKTOP ****/
+@media (min-width: 1024px) {
+  .final-message-wrapper-active {
+    width: 50%;
+    left: 25%;
+    bottom: 50%;
+  }
 }
