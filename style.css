@@ -1,7 +1,3 @@
-body {
-  background: image()
-}
-
 header {
   max-width: 100%;
   height: fit-content;
@@ -28,11 +24,13 @@ h2 {
   padding-bottom: 40px;
 }
 
+/* Flex parent */
 .form {
   display: flex;
   justify-content: center;
 }
 
+/* Flex child */
 .pizza-order-form {
   margin: 15px;
   padding: 15px;

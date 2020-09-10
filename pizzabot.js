@@ -8,26 +8,26 @@ const kebab = "kebab"
 // Iteration 4 - Finalize the order
 const calculateTotalCost = (event) => {
     event.preventDefault();
-    //get nr of pizzas
+    //Get nr of pizzas
     let orderQuantity = document.getElementById("nrOfPizzas").value;
-    //get pizza sort
+    //Get pizza sort
     let orderName = document.getElementById("pizzaSort").value;
     let pizzaPrice = pricePerPizza(orderName);
-    // calculate totalcost for pizza
+    //Calculate totalcost for pizza
     const orderTotal = orderQuantity * pizzaPrice
     //Print out message to customer
     let orderTime = calculateCookingTime(orderQuantity)
     let pizzaImg = pizzaImages(orderName)
     document.getElementById("pizzaImg").src = pizzaImg;
     let info = `Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The pizza(s) will take ${orderTime} minutes.`;
-
     //Set pizza picture to display block
-    var x = document.getElementById("pizzaImg");
+    let x = document.getElementById("pizzaImg");
     x.style.display = "block";
-
+    //Display customer order confirmation
     document.getElementById("submitInfo").innerHTML = info;
 
 };
+
 const form = document.getElementById("form");
 form.onsubmit = calculateTotalCost;
 
