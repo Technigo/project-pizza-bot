@@ -1,3 +1,37 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bot-container {
+    display: flex;
+    align-items: center;
+    width: 80%;
+}
+
+.bot-content {
+    width: 50%;
+}
+
+.bot-container img {
+    width: 100%;
+}
+
+.bot-text {
+    font-size: 50px;
+}
+
 .pizza-container {
     display: none;
+    flex-direction: row;
+
+    
+   
+}
+
+.quantity-container {
+    display: none;
+}
+
+.pizza img {
+    width: 25%
 }
