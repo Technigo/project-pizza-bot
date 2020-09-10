@@ -26,8 +26,6 @@ let addOrder = (event) => {
   const customerName = document.getElementById("form-name").value;
 
   if (validateOrderName(orderName)) {
-    console.log("XXXXXXX");
-
     toggleActiveForm();
     toggleDisablePizza();
   } else {
@@ -50,13 +48,10 @@ let addOrderQuantity = (event) => {
   const customerName = document.getElementById("form-name").value;
 
   const orderTotal = calculateTotalCost(orderQuantity, pizzaPrice);
-  console.log(orderTotal);
 
   const cookingTime = calculateCookingTime(orderQuantity);
-  console.log(cookingTime);
 
   const finalMessage = `Great ${customerName}, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The Pizza(s) will take ${cookingTime} minutes!`;
-  console.log(finalMessage);
 
   // Final message
   document.getElementById("final-message").innerHTML = finalMessage;
