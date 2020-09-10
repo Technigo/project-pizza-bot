@@ -13,9 +13,36 @@ alert(`Welcome, customer! Happy to serve your pizza. On our menu we have: ${vege
 
 const orderName = prompt(`Enter the name of the pizza you want to order today:`);
 
-const orderQuantity = prompt(`How many of ${orderName}s do you want?`);
+//Function that tests whether the user input matches the pizza name
+const validateOrderName = (orderName) => {
+    if (orderName.toLowerCase() === vegetarian.toLowerCase() ||
+    orderName.toLowerCase() === hawaiian.toLowerCase() ||
+    orderName.toLowerCase() === pepperoni.toLowerCase ()) {
+        return true;
+    }
+    else {
+        return false;
+    }
+};
 
-const orderTotal = orderQuantity * pizzaPrice;
 
-alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr.`);
+
+if (validateOrderName(orderName)) {
+    const orderQuantity = prompt(`How many of ${orderName}s do you want?`);
+    const orderTotal = orderQuantity * pizzaPrice;
+    alert(`Great, I'll get started on your ${orderName}s right away, it will cost ${orderTotal} kr.`);
+}
+else {
+    alert(`Select a pizza from the menu.`);
+}
+    
+
+
+const cookingTime = () => {
+    if 
+
+
+}
+
+
 
