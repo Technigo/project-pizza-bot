@@ -6,9 +6,60 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Project 4: Pizzabot</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="./img/pizza.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
   </head>
+     <!-- GRADIENT BACKGROUND   -->
+   
   <body>
-    <h1>This is your Pizza Bot</h1>
+ 
+    <!-- H1 NEON TITLE   -->
+    <div class="neon">
+      <h1 class="green">This is your Pizza Bot</h1>
+    </div>
+    
+    <!-- CHATBOT FORM -->
+    <section class="chatbot-form">
+      <div id="chatbot">
+        <div class="chat">
+          <h2>Hey, happy to serve your pizza!</h2>
+          <p>On our menu we have: a Vegetarian Pizza, Hawaiian Pizza and Pepperoni Pizza.<p>
+
+          <!-- ERROR MESSAGE -->
+          <div class="error-container">
+          <div id="wrongOrder" class="error"></div>
+        </div>
+          <form id="form"
+          class="form"
+          method="POST"
+      >
+          <div class="form-group">
+              <label for="orderName">Which of these pizzas would you like today?</label>
+              <input
+                  id="orderName"
+                  type="text"
+                  placeholder="Type the pizza you'd like"
+                  name="orderName"
+                  required
+               
+              />
+          </div>
+          <div class="form-group">
+              <label for="orderQuantity">How many of that pizza would you like?</label>
+              <input
+                  id="orderQuantity"
+                  type="text"
+                  name="orderQuantity"
+                  min="1"
+                  max="100"
+              />
+          </div>
+          <div class="form-group">
+              <h4>Thank you for placing an order with us!</h4>
+              <button onclick="validateOrderName">Place order</button>
+          </div>
+    </section>
+    
   </body>
-  <script src="./pizzabot.js"></script>
+  <!-- <script src="./pizzabot.js"></script> -->
 </html>

@@ -1,3 +1,6 @@
+// GRADIENT BACKGROUND
+
+
 // Iteration 1 - Setting everything up
 const vegetarian = "Vegetarian Pizza"
 const hawaiian = "Hawaiian Pizza"
