@@ -3,10 +3,12 @@ const hawaiian = "Hawaiian Pizza";
 const pepperoni = "Pepperoni Pizza";
 const pizzaPrice = 80;
 
-document.getElementById('botBubble').innerHTML = `Hey! Happy to get your pizza order started. On our menu we have ${vegetarian}, ${hawaiian}, and ${pepperoni}.`;
+document.getElementById('botBubble').innerHTML = `Hey! Happy to get your order started. On our menu we have ${vegetarian}, ${hawaiian}, and ${pepperoni}.`;
 
 document.getElementById('userBubble').innerHTML =
 'Ok!';
+
+document.getElementById('userBubble').style.cursor = pointer;
 
 function buttonClicked() {
  const buttonInvisible = document.getElementById('button');
@@ -22,19 +24,31 @@ function buttonClicked() {
  userStart.style.display = 'block';
 };
 
+// function startOrder() {
+//  const orderName = document.getElementById('startOrder');
+//   orderName.style.display = 'block';
+//  document.getElementById('startOrder').innerHTML = `What kind of pizza would you like to order today? 
+//  <p><button class="button-chat" value="vegetarian" type="submit" onclick="orderQty()">${vegetarian}</button></p>
+//  <p><button class="button-chat" value="hawaiian" type="submit" onclick="orderQty()">${hawaiian}</button></p>
+//  <p><button class="button-chat" value="pepperoni" type="submit" onclick="orderQty()">${pepperoni}</button></p>
+//  `;
+ 
+// console.log()
+// };
+
+// function orderQty () {
+// console.log
+// }
+
 function startOrder() {
  const orderName = document.getElementById('startOrder');
   orderName.style.display = 'block';
- document.getElementById('startOrder').innerHTML = `What kind of pizza would you like to order today? 
- <p><button class="button-chat" value="vegetarian">${vegetarian}</button></p>
- <p><button class="button-chat" value="hawaiian">${hawaiian}</button></p>
- <p><button class="button-chat" value="pepperoni">${pepperoni}</button></p>
-`;
-console.log ()
+ document.getElementById('startOrder').innerHTML = 'Enter the name of the pizza you want to order today.';
 };
 
 
-// ("Enter the name of the pizza you want to order today.");
+
+// ();
 
 // const validateOrderName = (orderName) => {
 //   if (

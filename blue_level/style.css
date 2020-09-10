@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(238, 231, 213);
+    color: #3333cc;
+    text-align: center;
+  }
+
+  #robotchef img {
+    display: block;
+    padding: 30px; 
+    width:25%;
+  }
+  
+  .button {
+    width: 300px;
+    height: 90px;
+    padding: 16px;
+    margin-bottom: 16px;
+    position: relative;
+    transform: translate(0%,180%);
+    border: 3px solid #3333cc;
+    border-radius: 70px;
+    display: inline-block;
+    font-size: 14px;
+  }
+   
+  .button:hover {
+    background: #3333cc;
+    color: #fff;
+  }
+  
+  .call-to-action {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
