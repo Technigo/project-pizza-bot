@@ -12,49 +12,46 @@
     <body>
 
 <!-- Our code -->
+
       <h1>Welcome to order pizza!</h1>
       <div class="welcome">
       <p id="welcomeMessage"></p>
+    </div>
       <form onsubmit="handleSubmit(event)">
-        <label for="question">Question:</label>
+        <div>
+          <p
+          id="pizzaName"
+          ></p>
+
+<!-- Ask what pizzas-->       
         <input 
           type="text" 
-          id="question" 
-          name="question" 
+          id="pizzaNameInput" 
+          name="pizza" 
+          placeholder="Type the pizza name here"
           />
-       
-          <input 
+      </div>
+
+<!-- Ask how many pizzas-->
+      <div>
+        <p
+        id="pizzaQuantity"
+        ></p>
+
+        <input 
+          type="text" 
+          id="pizzaQuantityInput" 
+          name="pizzanumber" 
+          />
+      </div>
+      <input 
           type="submit"
           id="submit" 
           name="submit" 
           value="Submit" 
           />
-      </form>
-    </div>
-
-
-    <!--   <h1>Javascript Functions & Forms</h1>
-    <form onsubmit="handleSubmit(event)">
-      <label for="age">Age:</label>
-      <input id="age" name="age" type="number" />
-      <input id="submit" name="submit" type="submit" value="Submit" />
     </form>
-  
-  
-    // Get the age value from the form input
-  const age = document.getElementById('age').value;
-
-// Input : accepts an age number value
-// Output: returns true/false
-const isAgeOdd = (age) => {
-  if (age % 2 === 0) {
-    // Even
-    return false;
-  } else {
-    // Odd
-    return true;
-  }
-};-->
+  </div>        
 
     <script src="pizzabot.js"></script>
 

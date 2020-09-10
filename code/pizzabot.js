@@ -47,21 +47,53 @@ const calculateCookingTime = () => {
 
 //  3) The bot
 
-const handleSubmit = (event) => {
+//const handleSubmit = (event) => {
     // This prevent page reload
-    event.preventDefault();
+//    event.preventDefault();
   
       // Get the age value from the form input
 
+
+//Welcome message 
 const firstMessage = document.querySelector('.welcome'); 
-const welcomeMessage = `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}.`;
+const welcomeMessage = `Hey! Happy to serve your pizza!`;
 firstMessage.innerHTML = `<div>${welcomeMessage}</div>`
 
 console.log(welcomeMessage);
 
-const orderName = prompt('Enter the name of the pizza you want to order today.');
+//Ask what pizza they would like to order 
+const askPizzas = () => {
+    const orderName = (`On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}. Choose which pizza you want.`)
+    document.getElementById("pizzaName").innerHTML = orderName;
+  }
+  askPizzas()
+
+//Ask how many pizzas they would like to order 
+const askNumber = () => {
+    const orderQuantity = (`How many Pizzas do you want?`)
+    document.getElementById("pizzaQuantity").innerHTML = orderQuantity;
+  }
+  askNumber()
+
+//Place order
+
+const handleSubmit = (event) => {
+    // This prevent page reload
+    event.preventDefault();
+  
+    // Get the pizza name from the form input
+    const orderName = document.getElementById('pizzaNameInput').value;
+
+//const askPizzas = document.querySelector('.pizzaName'); 
+//const orderName = `On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}. Choose which pizza you want.`;
+//askPizzas.innerHTML = `${orderName}`
+
+console.log(askPizzas);
+
+//const orderName = prompt('Enter the name of the pizza you want to order today.');
 const isValidOrder = validateOrderName(orderName);
-const orderQuantity = prompt(`How many of ${orderName} Pizzas do you want?`);
+//const orderQuantity = prompt(`How many of ${orderName} Pizzas do you want?`);
+
 
 if (isValidOrder === true) {
     const isTotalCost = calculateTotalCost(orderQuantity, pizzaPrice);
