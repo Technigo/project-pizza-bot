@@ -5,7 +5,7 @@ const pepperoni = "Pepperoni Pizza";
 const pizzaPrice = 80;
 
 //Greet your customer
-const greeting = `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`;
+const greeting = `Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`;
 document.getElementById("greeting-message").innerHTML = greeting;
 
 //Ask your customer which pizza
@@ -60,8 +60,10 @@ let addOrderQuantity = (event) => {
 
   // Final message
   document.getElementById("final-message").innerHTML = finalMessage;
+  toggleLastMessage();
   toggleDisableForm();
   togglePizzaImage(orderName);
+  togglePizzaBot();
 };
 
 // Button for xxxx
@@ -117,6 +119,12 @@ const toggleDisableForm = () => {
     .classList.toggle("greeting-wrapper-inactive");
 };
 
+const toggleLastMessage = () => {
+  document
+    .getElementById("wrapper-final-message")
+    .classList.toggle("final-message-wrapper-active");
+};
+
 //Function to toogle Pizza image
 const togglePizzaImage = (orderName) => {
   if (orderName === pepperoni) {
@@ -126,4 +134,10 @@ const togglePizzaImage = (orderName) => {
   } else {
     document.getElementById("pizza-image").classList.toggle("img-veg");
   }
+};
+
+const togglePizzaBot = () => {
+  document
+    .getElementById("pizzabot-end")
+    .classList.toggle("pizza-bot-image-end");
 };

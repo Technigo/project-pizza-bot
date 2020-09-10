@@ -17,7 +17,7 @@ body {
   display: flex;
   box-sizing: border-box;
   align-items: center;
-  margin: 10px 0px 10px 10px;
+  margin: 10px;
 }
 
 .h1-bot {
@@ -25,10 +25,10 @@ body {
   font-size: 2em;
   position: relative;
   background: rgba(71, 55, 39, 0.7);
-  /* background: #473727 90%;*/
   border-radius: 0.4em;
   color: white;
   text-align: center;
+  padding: 5px;
 }
 
 .h1-bot:after {
@@ -56,7 +56,7 @@ body {
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
-  margin: 10px 0px 10px 10px;
+  margin: 10px;
 }
 
 .greeting-message-container {
@@ -66,7 +66,7 @@ body {
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
-  margin: 10px 0px 10px 10px;
+  margin: 10px;
 }
 
 #greeting-message,
@@ -77,14 +77,13 @@ body {
   text-align: center;
 }
 
-#form-text,
-#button {
+#form-text {
   padding: 5px;
-  margin-bottom: 10px;
+  margin: 10px;
 }
 
 #errorMessage {
-  color: rgb(255, 0, 0);
+  color: rgb(0, 0, 0);
   font-family: "Montserrat", sans-serif;
   text-align: center;
   padding: 2px;
@@ -98,7 +97,41 @@ body {
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
-  margin: 10px 0px 10px 10px;
+  margin: 10px;
+}
+
+.final-message-wrapper {
+  display: none;
+}
+
+.final-message-wrapper-active {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  align-items: center;
+  margin: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  position: relative;
+  background: rgba(71, 55, 39, 0.7);
+  border-radius: 0.4em;
+  color: white;
+  text-align: center;
+}
+
+.final-message-wrapper-active:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 27px solid transparent;
+  border-top-color: rgba(71, 55, 39, 0.7);
+  border-bottom: 0;
+  border-left: 0;
+  margin-left: -13.5px;
+  margin-bottom: -27px;
 }
 
 .quantity-of-pizza-wrapper {
@@ -106,7 +139,7 @@ body {
 }
 
 .quantity-of-pizza-wrapper-active {
-  display: block;
+  display: flex;
 }
 
 .pizza-choice-wrapper {
@@ -117,17 +150,45 @@ body {
   display: none;
 }
 
+#button {
+  margin: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8em;
+}
+
+#button-1 {
+  margin: 15px 0px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8em;
+}
+
 .img-pepperoni {
   content: url("./images/pepperoni.jpg");
-  width: 200px;
+  width: 150px;
+  margin-bottom: 20px;
 }
 
 .img-veg {
   content: url("./images/vegetarian.jpg");
-  width: 200px;
+  width: 150px;
+  margin-bottom: 20px;
 }
 
 .img-hawaii {
   content: url("./images/hawaii.jpg");
-  width: 200px;
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.pizza-bot-image-end {
+  content: url("./images/pizzabot.png");
+  width: 150px;
+}
+
+footer {
+  position: absolute;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.5em;
+  text-align: center;
+  padding: 5px;
 }
