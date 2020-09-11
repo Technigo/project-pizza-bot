@@ -10,7 +10,7 @@ const mozzarella = 'Mozzarella Pizza';
 const showName = () => {
     const name = document.getElementById("name").value;
     document.getElementById("messageGreeting").innerHTML= `Hey ${name} &#128075;, happy to serve you pizza.`;
-    document.getElementById("messageName").innerHTML=`On our menu we have: <ul> <li>${vegetarian}</li> <li>${hawaii}</li> <li>${pepperoni}</li> <li>${kebab}</li> <li>${mozzarella}</li> </ul>`;
+    document.getElementById("messageName").innerHTML=`On our menu we have: <ul> <li>${vegetarian}: 80 kr</li> <li>${hawaii}: 80 kr</li> <li>${pepperoni}: 80 kr</li> <li>${kebab}: 80 kr</li> <li>${mozzarella}: 80 kr</li> </ul>`;
     document.getElementById("inputPizza").style.display = "inline";
     document.getElementById("inputName").style.display = "none";
 }
@@ -84,7 +84,7 @@ const calculateOrder = () => {
 
     
     document.getElementById("selectNumber").style.display = "none";
-    document.getElementById("endMessage").innerHTML = `Great, I'll get started on your order right away! The total sum of your order is ${orderTotal} and the pizzas will be delivered in ${orderTime}`;
+    document.getElementById("endMessage").innerHTML = `Great, I'll get started on your order right away! The total sum of your order is ${orderTotal} kr and the pizzas will be delivered in ${orderTime}`;
 
     // Choosing image depending on ordered pizza
     let image;
