@@ -79,6 +79,10 @@ li img {
   margin: 20px;
 }
 
+.finalPizza {
+    max-width: 80%
+}
+
 .pizzaprice {
   font: 18px;
   font-weight: bold;
