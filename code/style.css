@@ -159,6 +159,7 @@ button {
   justify-content: center;
   outline: none;
   margin-top: 50px;
+  cursor: pointer;
 }
 
 button:hover {

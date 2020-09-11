@@ -2,6 +2,7 @@
 const vegetarian = "Vegetarian Pizza"
 const hawaiian = "Hawaiian Pizza"
 const pepperoni = "Pepperoni Pizza"
+const margherita = "Margherita Pizza"
 
 const pizzaPrice = 80
 
@@ -29,10 +30,14 @@ let validateOrderName = (orderName, orderQuantity) => {
         calculateTotalCost(orderQuantity)
         calculateCookingTime(orderQuantity)
         document.getElementById("orderPlaced").innerText = `Thanks! You have ordered ${orderQuantity} of the ${orderName}, your total is ${orderTotal} kr and your order will take ${orderTime} minutes.`
+    } else if (orderName === margherita) {
+        document.getElementById("final").innerText = `Oh no! ${margherita} is sadly out of stock. Please order something else!`
+
     } else {
         document.getElementById("final").innerText = `No such pizza on the menu. Please choose one of the following pizzas: ${vegetarian}, ${hawaiian} or ${pepperoni}`
+
     }
-    // use innerText
+
 }
 
 
