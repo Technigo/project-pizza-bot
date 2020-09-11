@@ -11,6 +11,9 @@ document.getElementById(
 let orderName;
 let orderQuantity;
 
+// function to validate order. takes input from form and validates that pizza exist on the menu.
+// Returns true or false
+
 const validateOrderName = (validOrder) => {
   return (
     validOrder == vegetarian ||
@@ -18,6 +21,8 @@ const validateOrderName = (validOrder) => {
     validOrder == pepperoni
   );
 };
+
+// Function to calculate cooking time based on order quantity
 
 const calculateCookingTime = (orderQuantity) => {
   if (orderQuantity >= 1 && orderQuantity <= 3) {
@@ -29,13 +34,19 @@ const calculateCookingTime = (orderQuantity) => {
   }
 };
 
+// Function to calculate total cost based on order quantity
+
 const calculateTotalCost = (orderQuantity, pizzaPrice) => {
   return orderQuantity * pizzaPrice;
 };
 
+// Function to toggle active css class of order summary bubble (to show/hide)
+
 const toggle = () => {
   return this.classList.toggle("active-summary");
 };
+
+//Handles submit of order form. Will call each above function and generate either error message or order summary.
 
 const handleSubmit = (event) => {
   event.preventDefault();
@@ -52,9 +63,9 @@ const handleSubmit = (event) => {
     )} kr. The pizza(s) will take ${calculateCookingTime(
       orderQuantity
     )} minutes.`;
-  }
-  else {
+  } else {
     document.getElementById("orderSummary").classList = toggle;
-    document.getElementById("orderSummary").innerHTML = "Please chooose a Pizza from the menu"; 
+    document.getElementById("orderSummary").innerHTML =
+      "Please chooose a Pizza from the menu";
   }
 };

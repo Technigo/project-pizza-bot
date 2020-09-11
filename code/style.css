@@ -1,41 +1,74 @@
 body {
-    background-color:#e9cec3;
-    font-family: Helvetica,Arial,Lucida,sans-serif;
+  background-color: #e9cec3;
+  font-family: Helvetica, Arial, Lucida, sans-serif;
 }
 
+/* General styling for pizza bot content */
+
 .content {
-    width: 75%;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  width: 75%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 p {
-    color: black;
-    background: white;
-    padding: 20px;
-    width: 25%;
-    border-radius: 25px;
-    text-align: center;
-    box-shadow: 10px 5px 5px #93786F;
+  color: black;
+  background: white;
+  padding: 20px;
+  width: 25%;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 10px 5px 5px #93786f;
 }
+
+/* pizza order form styling */
 
 .input-form {
-    color: black;
-    background:#ddd;
-    padding: 20px;
-    width: 25%;
-    border-radius: 25px;
-    text-align: center; 
-    box-shadow: 10px 5px 5px #93786F;
+  color: black;
+  background: #ddd;
+  padding: 20px;
+  width: 25%;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 10px 5px 5px #93786f;
 }
 
+.input-form input {
+  padding: 10px;
+  margin: 10px 0 10px 0;
+  cursor: pointer;
+}
+
+/* submit button */
+
+#submit {
+  background-color: #dc9b81;
+  border-radius: 25px;
+  padding: 10px 20px 10px 20px;
+  outline: none;
+}
+
+#submit:hover {
+  background-color: #9f8075;
+}
+
+/* button click effect */
+
+#submit:active {
+  background-color: #9f8075;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  outline: none;
+}
+
+/* css to hide/show summary/error message when customer press order button */
 
 .hidden-summary {
-    display: none;
+  display: none;
 }
 
 .active-summary {
-    display: block;
+  display: block;
 }

@@ -1,13 +1,14 @@
 # Pizza Bot
 
-Replace this readme with your own information about your project. 
+The assignment was to create a pizza bot where you choose pizza, how many pizzas and what they will cost. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We used JavaScript to validate the order and to calculate cookingtime and price. Javascript used with css to hide and show elements.
+
+If we had more time we would have done more styling, added pictures and maybe a progress bar. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://sanna-olof-simple-pizzabot.netlify.app/
