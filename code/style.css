@@ -32,6 +32,20 @@ body {
     width: 40%;
 }
 
+.bar-container {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    display: none;
+}
+
+.bar-progress {
+    background-color: #185272;
+    width: 0%;
+    height: 15px;
+    border-radius: 10px;
+}
+
+
 .bot-text {
     font-size: 50px;
 }
@@ -45,6 +59,7 @@ body {
 .pizza-container {
     display: none;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .quantity-container {
