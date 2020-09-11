@@ -13,7 +13,7 @@ const welcomeMessage = (event) => {
 };
 
 const showMessageBox = (username) => {
-  document.getElementById("message").innerHTML = `Hello ${username}`;
+  document.getElementById("message").innerHTML = `Hey ${username}! Let's start our order! Select a pizza from our menu:`;
   showPizzaMenu()
 };
 

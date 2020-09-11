@@ -1,40 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="style.css">
-    <title>Project 4: Pizzabot</title>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="style.css">
+  <title>Project 4: Pizzabot</title>
+</head>
+
+<body>
+  <div class="grid-container">
     <header>
       <h1>Papa Poyas Pizzaplace</h1>
     </header>
+
     <main>
+
       <div class="greeting-message">
         <form onsubmit="welcomeMessage(event)">
-          <label for="name">Before we start, what's your name?</label>
+          <label for="name" class="name-input">Before we start, what's your name?</label>
           <input id="name" name="name" type="text" />
           <input type="submit" name="submit" id="submit" value="Start pizza order">
         </form>
         <div id="messageBox">
-          <p id="message"></p>
+          <p id="message" class="message-display"></p>
         </div>
       </div>
-      <div class="hidden" id="pizzaMenu">PizzaMenu
-        <p><ul>
-          <li>Vegetarian Pizza</li>
-          <li>Hawaiian Pizza</li>
-          <li>Pepperoni Pizza</li>
-          <li>Fusion Pizza</li>
-          <li>Margaritha Pizza</li>
-          <li>Kebab pizza</li>
-        </ul></p>
+
+      <div class="hidden" id="pizzaMenu">
+        <h2>PizzaMenu</h2>
+        <p>
+        <ul>
+          <li><img src="../assets/Vegetarian.png">Vegetarian Pizza<p class="pizzaprice">80 kr</p>
+          </li>
+          <li><img src="../assets/hawaiian.png">Hawaiian Pizza<p class="pizzaprice">80 kr</p>
+          </li>
+          <li><img src="../assets/Pepperoni.png">Pepperoni Pizza<p class="pizzaprice">80 kr</p>
+          </li>
+          <li><img src="../assets/fusion.png">Fusion Pizza<p class="pizzaprice">120 kr</p>
+          </li>
+          <li><img src="../assets/margarita.png">Margaritha Pizza<p class="pizzaprice">65 kr</p>
+          </li>
+          <li><img src="../assets/kebab.png">Kebab pizza<p class="pizzaprice">85 kr</p>
+          </li>
+        </ul>
+        </p>
         <label for="selectedPizza">Select your pizza</label>
         <input type="text" id="selectedPizza">
         <button onclick="showQuantity()">Select</button>
       </div>
+
       <div class="hidden" id="quantity">Quantity
         <label for="pizzaQuantity">How many pizzas do you want?</label>
         <input type="number" name="pizzaQuantity" id="pizzaQuantity" />
@@ -43,11 +59,18 @@
       </div>
       <div class="hidden" id="totalOrder">
         <p id="finalOrderMessage"></p>
+        <!-- <img class="orderImage" src="" alt="" id="orderImage" /> -->
         <button onclick="welcomeMessage(event); hide()">Refresh</button>
       </div>
     </main>
-    <footer></footer>
-  <script src="./pizzabot.js"></script>
-  </body>
+
+    <footer>
+      <p class="footer-text">This site was created by Emelie and Tara as a part of the Technigo Bootcamp </p>
+    </footer>
+
+  </div>
   
+  <script src="./pizzabot.js"></script>
+</body>
+
 </html>
