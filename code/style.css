@@ -1,4 +1,3 @@
-/*DUMMY STYLE*/
 
 * {
   box-sizing: border-box;
@@ -29,15 +28,15 @@ h1 {
   margin: 30px 20px;
   font-size: 46px;
 }
+
 h2 {
   font-family: Lato;
   font-weight: 100;
   color: #fff;
   margin: 30px 20px;
   font-size: 24px;
-  /* text-shadow: 0 0 0.1em #fff, 0 0 0.2em #fff, 0 0 0.3em #fff, 0 0 0.4em #f7f, 0 0 0.6em #f0f, 0 0 0.8em #f0f, 0 0 1em #f0f, 0 0 1.2em #f0f; */
+  text-shadow: 0 0 0.1em #fff, 0 0 0.2em #fff, 0 0 0.3em #fff, 0 0 0.4em #f7f, 0 0 0.6em #f0f, 0 0 0.8em #f0f, 0 0 1em #f0f, 0 0 1.2em #f0f;
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
-  
 }
 /*Glow effect for Webkit Browsers*/
 
@@ -90,11 +89,51 @@ form {
   width: 50%;
   padding: 10px;
 }
-.input-element {
-  margin-left: 3vw;
+.input-element,
+.input-element-slider {
+  margin-left: 20px;
   padding: 15px 2px;
+  max-width: 300px;
 }
-input {
+
+.input-element-slider {
+  box-sizing: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input-element-slider span {
+  margin-left: 10px;
+}
+
+.input-element {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-text {
+  margin-bottom: 15px;
+}
+
+/* Detta funkar inte nedan: */
+.pizza-range-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 25px; 
+  height: 25px; 
+  border-radius: 50%;
+  border: 2px solid #7AD175;
+}
+
+.pizza-range-slider {
+  width: 250px;
+}
+/* .input-element label {
+  width: 100px;
+} */
+
+.input-element input,
+.input-element select {
+  width: 200px;
   font-size: 16px;
 }
 
