@@ -1,13 +1,12 @@
 # Pizza Bot
-
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Focus for this assigment was to build a pizza bot using JavaScript functions and conditional statements.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We started with solving the iterations given in the project brief, and from there we decided which functions we would need for our pizza bot. We wanted to use a form in HTML to collect user input and use JavaScript to manipulate the DOM. 
+
+We used conditional statements to control which output is shown to the user (messages, images and so on). 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Link to the project on Netlify: https://pizza-bot-project.netlify.app/
