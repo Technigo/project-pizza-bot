@@ -31,18 +31,19 @@
     <!-- MAIN CONTENT -->
     <section class="main-content">
       <form
+        onsubmit="orderSubmit(event)"
         class="signup-form"
         action="http://httpbin.org/anything"
         method="POST"
       >
         <div class="input-container">
-          <label for="name">Name:</label><br />
+          <label for="name">User Name:</label>
           <input
             class="input-container__input input-container__input--full-width"
             type="text"
-            placeholder="Your Name"
+            placeholder="User Name"
             id="name"
-            name="name"
+            name="user-name"
             required
           />
         </div>
@@ -52,58 +53,53 @@
 
           <label for="vegetarian-pizza">
             <input
-              type="checkbox"
+              type="radio"
               id="vegetarian-pizza"
               name="pizza"
               value="vegetarian"
             />Vegetarian Pizza</label
-          ><br />
-
+          >
 
           <label for="hawaiian-pizza">
             <input
-              type="checkbox"
+              type="radio"
               id="hawaiian-pizza"
               name="pizza"
               value="hawaiian-pizza"
             />Hawaiian Pizza</label
-          ><br />
-
-        
+          >
 
           <label for="pepperoni-pizza"
             ><input
-              type="checkbox"
+              type="radio"
               id="pepperoni-pizza"
               name="pizza"
               value="pepperoni-pizza"
             />Pepperoni Pizza</label
           >
-
         </div>
 
         <label for="amountPizzaInputId"
-            ><b>How many pizzas would you like?:</b></label
-          ><output name="pizza" id="pepperoniPizzaOutputId"></output>
-          <br />
-          <input
-            type="range"
-            name="amountPizza"
-            id="amountPizzaInputId"
-            value="1"
-            min="1"
-            max="10"
-            oninput="amountPizzaOutputId.value = amountPizzaInputId.value"
-          />
+          ><b>How many pizzas would you like?:</b></label
+        ><output name="amountPizza" id="amountPizzaOutputId">1</output>
+
+        <input
+          type="range"
+          name="amountPizza"
+          id="amountPizzaInputId"
+          value="1"
+          min="1"
+          max="10"
+          oninput="amountPizzaOutputId.value = amountPizzaInputId.value"
+        />
 
         <div class="btn-submit">
           <input class="submit" type="submit" value="submit" />
         </div>
+
+        <div class="alert" id="info"></div>
       </form>
     </section>
-
-    <p id="chat"></p>
-    <p id="error"></p>
 
     <script src="./pizzabot.js"></script>
 
