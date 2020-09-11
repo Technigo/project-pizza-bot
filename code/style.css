@@ -20,6 +20,10 @@ header {
   padding: 15px;
 }
 
+header h2 {
+    font-style: italic;
+}
+
 main {
   grid-column-start: 2;
   grid-column-end: 8;
