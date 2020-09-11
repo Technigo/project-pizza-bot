@@ -50,6 +50,6 @@ Even though we found it hard it feels like now that we understand more about var
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://mystifying-lovelace-84f38f.netlify.app/
 
 
