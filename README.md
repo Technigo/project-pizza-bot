@@ -1,13 +1,23 @@
 # Pizza Bot
 
-Replace this readme with your own information about your project. 
+This week's assignment was to create a text-based bot which one can use to order pizza on one's computer - using html, javascript and css. This was a pair programming project.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
 ## The problem
+The main problem was to connect the html with javascript, and create functions.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We started with the brief and worked our way down and realised we already had made functions before iteration 6 . But then when turning to marking up the html we discovered that our step by step following of the brief was a ”linear” kind of thinking that didn’t work. We had to basically turn things upside down.
+
+Struggles
+Knowing if variables should be declared outside or inside functions, that is understanding global vs local scope.
+Connecting js to html.
+Thinking ”non-linear” but still in a certain control flow.
+
+Do differently
+Spending some more time on understanding the control flow and browser output. To get a clearer picture of the end result and functionality. More in detail, step by step - like: page loads this content, user makes choice, clicks button, makes new choice etc, and connect these steps to what needs to happen in html and js for this to work.
+
+Also trying to better put into words what the code would actually do, what kind of input is needed to do that, what should be put in functions, and what needs to be locally declared vs globally?
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://app.netlify.com/sites/elegant-minsky-dce503/overview
