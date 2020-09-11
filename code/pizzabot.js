@@ -3,16 +3,23 @@ const vegetarian = "Vegetarian Pizza"
 const hawaiian = "Hawaiian Pizza"
 const pepperoni = "Pepperoni Pizza"
 
-const pizzaList = ["Vegetarian Pizza","Hawaiian Pizza","Pepperoni Pizza"]
+// Validation
+const pizzaList = [
+  "Vegetarian Pizza",
+  "Hawaiian Pizza",
+  "Pepperoni Pizza",
+  "Vegetarian",
+  "Hawaiian",
+  "Pepperoni",
+  "vegetarian pizza",
+  "hawaiian pizza",
+  "pepperoni pizza",
+  "vegetarian",
+  "hawaiian",
+  "pepperoni", ]
 
 const pizzaPrice = 80
 
-
-// Functions
-
-// 1. `validateOrderName()` which should take the `orderName` variable as an argument and return `true` or `false` if the pizza is on the menu or not.
-// 2. `calculateTotalCost()` which takes `orderQuantity` and `pizzaPrice` as arguments and returns the total cost for the order.
-// 3. `calculateCookingTime()` which takes `orderQuantity` and returns the number of minutes it will take to finish the order.
 
 const validateOrderName = (orderName) => {
   if (pizzaList.includes(orderName)) {
@@ -21,6 +28,7 @@ const validateOrderName = (orderName) => {
     return false; 
   }
 };
+
 
 const calculateTotalCost = (orderQuantity, pizzaPrice) => {
   const totalCost = (orderQuantity * pizzaPrice);
@@ -41,29 +49,45 @@ const calculateCookingTime = (orderQuantity) => {
 
 };
 
+// startOrder is called when the user clicks the "Start order" button. 
+const startOrder = () => {
+  const botMessage = `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`
+  alert(botMessage);
 
-// ===== Here starts the actual program =======
-
-alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`)
-
-const orderName = prompt(`Enter the name of the pizza you want to order today`)
-
-// If validateOrderName är true, så ska datorn fråga hur många. Om V-O-N är false, så ska datorn säga "Sorry, vi har inte den pizzan"
-if (validateOrderName(orderName) === true) {
-  const orderQuantity = prompt(`How many of ${orderName} do you want?`);
-  const totalCost = calculateTotalCost(orderQuantity, pizzaPrice);
-  const totalTime = calculateCookingTime(orderQuantity);
-
-  // document.getElementById("confirmation-box")
-  // ^ Den där letar igenom document (document = hemsidan efter ett element med ID't "confirmation-box". 
-
-  // innerHTML är det som faktiskt fyller elementet med innehåll.
-
-  document.getElementById("confirmation-box").innerHTML = `Great, I'll get started on your ${orderName} right away, it will cost ${totalCost} Swedish Krona. It will take ${totalTime}.`;
-
-} else {
-  prompt(`Sorry, we don't have ${orderName}. We only have ${vegetarian}, ${pepperoni}, and ${hawaiian}.`)
-  // Här ska vi få in något slags funktionsanrop
+  askForPizza();
 }
 
+
+// Found info on how to make a recursive function from Van's code snippet: https://gist.github.com/puj/157701fec857e5b9cd98556a4129361d
+const askForPizza = () => {
+  
+  const botMessage = `Enter the name of the pizza you want to order today`
+  const orderName = prompt(botMessage);
+  
+  // If validateOrderName is true, then the bot should ask how many. If validateOrderName is false, the computer should say "Sorry, we don't have that pizza".
+  if (validateOrderName(orderName) === true) {
+    const orderQuantity = prompt(`How many of ${orderName} do you want?`);
+    const totalCost = calculateTotalCost(orderQuantity, pizzaPrice);
+    const totalTime = calculateCookingTime(orderQuantity);
+
+  
+    // document.getElementById("confirmation-box") searches the DOM for an element with the ID "confirmation-box".
+    // innerHTML is the function(?) that says "Hey, replace the inner HTML with whatever's after the equation mark".
+    document.getElementById("welcome-box").innerHTML = `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`;
+    document.getElementById("ourPizzaMenu").innerHTML = `Enter the name of the pizza you want to order today`;
+    document.getElementById("nameOfPizza").innerHTML = orderName;
+    document.getElementById("pizzaReply").innerHTML = `How many of ${orderName} do you want?`;
+    document.getElementById("numberOfPizzas").innerHTML = orderQuantity;
+    document.getElementById("confirmation-box").innerHTML = `Great, I'll get started on your ${orderName} right away, it will cost ${totalCost} Swedish Krona. It will take ${totalTime}.`;
+    
+  } else {
+    
+    // The "else" is triggered if a user orders something that isn't on the menu
+    alert(`Sorry, we don't have ${orderName}. We only have ${vegetarian}, ${pepperoni}, and ${hawaiian}.`)
+
+    // If the user orders a pizza that's not on the menu, call this function again, until the input is correct.
+    askForPizza();
+  }
+
+}
 

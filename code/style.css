@@ -6,13 +6,29 @@ body {
 h1 {
     font-family: sans-serif;
     font-weight: bold;
+    margin-top: 64px;
 }
 
-#confirmation-box {
-    background: #2F9BFF;
+.chat-box {
     border-radius: 8px;
     padding: 16px;
     color: white;
     font-family: sans-serif;
     font-weight: bold;
+    margin-top: 40px;
+}
+
+.blue-color {
+    background: blue;
+}
+
+.gray-color {
+    background: grey;
+}
+
+
+#messages {
+    border: 1px dashed hotpink;
+    width: 100%;
+    height: 700px;
 }
