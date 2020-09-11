@@ -9,7 +9,8 @@ const mozzarella = 'Mozzarella Pizza';
 /* Function to show username and welcome message  */
 const showName = () => {
     const name = document.getElementById("name").value;
-    document.getElementById("messageName").innerHTML=`<h3>Hey ${name} &#128075;, happy to serve you pizza.</h3> On our menu we have: <ul> <li>${vegetarian}</li> <li>${hawaii}</li> <li>${pepperoni}</li> <li>${kebab}</li> <li>${mozzarella}</li> </ul>`;
+    document.getElementById("messageGreeting").innerHTML= `Hey ${name} &#128075;, happy to serve you pizza.`;
+    document.getElementById("messageName").innerHTML=`On our menu we have: <ul> <li>${vegetarian}</li> <li>${hawaii}</li> <li>${pepperoni}</li> <li>${kebab}</li> <li>${mozzarella}</li> </ul>`;
     document.getElementById("inputPizza").style.display = "inline";
     document.getElementById("inputName").style.display = "none";
 }
@@ -81,6 +82,8 @@ const calculateOrder = () => {
         orderTime = '20 minutes.';
     }
 
+    
+    document.getElementById("selectNumber").style.display = "none";
     document.getElementById("endMessage").innerHTML = `Great, I'll get started on your order right away! The total sum of your order is ${orderTotal} and the pizzas will be delivered in ${orderTime}`;
 
     // Choosing image depending on ordered pizza
@@ -101,6 +104,8 @@ const calculateOrder = () => {
     }
     
     document.getElementById("image").innerHTML = image;
+    document.getElementById("creators").innerHTML = `Pizza bot project proudly presented by Anna Hellqvist and Emma Urman, Technigo bootcamp 2020`;
+
 }
 
 

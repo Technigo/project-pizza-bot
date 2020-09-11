@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
     <link  href="./style.css" rel="stylesheet"  type="text/css">
-    <title>Project 4: Pizzabot</title>
+    <title>Best Pizzabot Ever</title>
   </head>
   <body>
     <header>
-      <h1>&#127829; Pizza Bot &#127829;</h1>
+      <h1>&#127829; <a href="index.html">Pizza Bot</a> &#127829;</h1>
     </header>
     
     <div class="pizza-bot">
@@ -25,6 +25,9 @@
       </div> <!-- End of div inputName-->
       
       <div class="inputPizza" id="inputPizza"> <!--Message 2, div inputPizza-->
+        
+        <h3 id="messageGreeting"> </h3>
+
         <div class="center-text">
           <p id="messageName"> </p>
         </div>
@@ -121,19 +124,13 @@
       <button onclick="calculateOrder()" class="orderButton" id="orderButton">Give me my pizza!</button>
     </div> <!--- End of  selectNumber-->
     
-      <p id="endMessage"> </p>
+    <p id="endMessage"> </p>
+    
+    <div id="image" class="image"> </div>
 
-      <div id="image" class="image"> 
-      </div>
-   
+    <p id="creators"> </p>
+
     </div> <!-- End of pizza bot-->
-
     <script src="./pizzabot.js"></script>
-
-    <footer>
-      <p>
-        
-      </p>
-    </footer>
   </body>
 </html>
