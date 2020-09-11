@@ -35,11 +35,8 @@ document.getElementById('greeting').innerHTML = greeting;
 
 const greet = (event) => {
   event.preventDefault();
-  // const greeting = (`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}.`);
   const enterName = ('What is your name?');
-  // document.getElementById('greeting-container').style.display = "flex";
   document.getElementById('enterName-container').style.display = "flex";
-  // document.getElementById('greeting').innerHTML = greeting;
   document.getElementById('enterName').innerHTML = enterName;
   document.getElementById('nameForm-container').style.display = "flex";
   document.getElementById('nameForm').style.display = "flex";

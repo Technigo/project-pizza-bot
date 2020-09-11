@@ -14,7 +14,7 @@ button {
   width: 150px;
   height: 40px;
   border-radius: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-weight: bold;
   background: #62929e;
 }
@@ -55,7 +55,6 @@ button {
   border-radius: 0 10px 10px 10px;
   background: #c6c5b9;
   padding: 20px;
-  margin-bottom: 10px;
 }
 
 .bubble-answer-container {
@@ -79,7 +78,6 @@ button {
   border-radius: 10px 0 10px 10px;
   background: #62929e;
   padding: 20px;
-  margin-bottom: 10px;
 }
 
 input {
