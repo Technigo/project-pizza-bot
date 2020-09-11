@@ -88,7 +88,7 @@ const showTotalOrder = () => {
   document.getElementById("totalOrder").classList.remove("hidden")
   const pizzaQuantity = document.getElementById("pizzaQuantity").value
   const cookingTime = calculateCookingTime(pizzaQuantity)
-  const selectedPizza = document.getElementById("selectedPizza").value
+  const selectedPizza = document.getElementById("selectedPizza").value.toLowerCase()
   const totalCost = getPizzaPrice(selectedPizza) * pizzaQuantity
   showPizzaImage(selectedPizza)
   document.getElementById("finalOrderMessage").innerHTML = `I'll get started on your ${selectedPizza}, It will cost you ${totalCost} kr. The pizza(s) will take ${cookingTime} minutes.`
