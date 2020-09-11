@@ -16,4 +16,4 @@ If we had more time, we would have loved to try to make the bot a little more in
 
 
 ## View it live
-Link to Netlify:
+Link to Netlify: https://pizzabot-sabina-axel.netlify.app/
