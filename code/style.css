@@ -59,6 +59,8 @@ fieldset {
 }
 
 .submit-button {
+  display: flex;
+  justify-content: center;
   color: whitesmoke;
   background-color: #775256;
   margin-top: 20px;
@@ -78,6 +80,8 @@ fieldset {
 .emoji {
   font-size: 70px;
   text-align: center;
+  animation: shake .5s;
+  animation-iteration-count: infinite;
 }
 
 @keyframes shake {
@@ -92,11 +96,6 @@ fieldset {
   80% { transform: translate(-1px, -1px) rotate(1deg); }
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
-}
-
-.emoji {
-  animation: shake .5s;
-  animation-iteration-count: infinite;
 }
 
 footer {
@@ -133,8 +132,6 @@ footer {
     align-items: center;
     margin-top: -2px;
   }
-
-
 
   footer p {
     margin-left: 15px;

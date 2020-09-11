@@ -17,44 +17,47 @@
           <h1>Pizza Time!</h1>
           <p id="welcomeMessage"></p> 
         </div>
-        <!--form that gets user input, id:s connects with javascript and assigns value to variables.-->
+    <!--form that gets user input, id:s connects with javascript and assigns value to variables.-->
         <form id="form-action">      
           <fieldset>
             <legend>Order here</legend>
             <div class="form-action-group">
-            <div class="choosePizza"> 
-              <p id="choosePizzaText"></p>
-            </div>
+              <div class="choosePizza"> 
+                <p id="choosePizzaText"></p>
+              </div>
             
-            <label for="pizzaSort"></label>
-              <input 
-              type="text"
-              name="pizzaSort"
-              id="pizzaSort"
-              />
+              <label for="pizzaSort"></label>
+                <input 
+                type="text"
+                name="pizzaSort"
+                id="pizzaSort"
+                placeholder="e.g. Hawaiian Pizza"
+                />
 
-            <div class="choosePizzaAmount"> 
-              <p>How many pizzas do you want?</p>
+              <div class="choosePizzaAmount"> 
+                <p>How many pizzas do you want?</p>
+              </div>
+
+              <label for="pizzaAmount"></label>
+                <input 
+                type="number"
+                name="pizzaAmount"
+                id="pizzaAmount"
+                required
+                />
+              
+    <!--button to submit the form, connects with the onsubmit attribute in javascript-->
+              <button id="submit-order" class="submit-button" type="submit">Submit</button> 
             </div>
-
-            <label for="pizzaAmount"></label>
-              <input 
-              type="number"
-              name="pizzaAmount"
-              id="pizzaAmount"
-              required
-              />
-              <br>
-            <!--button to submit the form, connects with the onsubmit attribute in javascript-->
-            <button id="submit-order" class="submit-button" type="submit">Submit</button> 
-          </div>
           </fieldset>
         </form>
+
       </div>
         <p class="order-summary" id="orderSummary"></p>
         <div class="emoji">
           <p>🍕</p>
-        </div>
+      </div>
+
     </section>
     <footer>
       <p>&copy Ellen & Anna 2020</p>
