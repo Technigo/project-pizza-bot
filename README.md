@@ -1,6 +1,6 @@
 # Pizza Bot
 
-Pair-programming project, building a text-based bot for ordering pizza. 
+Pair-programming project, building a text-based bot for ordering pizza. Project made with @karinnordkvist
 
 ## The problem
 
