@@ -15,32 +15,31 @@ console.log(pizzaPrice);
 //Put your Javscript code here:
 
 
-// second iteration
+// Greeting the user
 alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}.`)
 
 
-// fifth iteration
+// Function for getting input from user and changing the input to lower cases. Plus if conditions.
 
 const orderName = prompt('Enter the name of the pizza you want to order today.');
-    if (orderName === vegetarian || orderName === hawaiian || orderName === pepperoni) { 
-        var orderQuantity = prompt("How many " + orderName + " pizzas do you want?");  
+    if (orderName.toLowerCase() === vegetarian.toLowerCase() || orderName.toLowerCase() === hawaiian.toLowerCase() || orderName.toLowerCase() === pepperoni.toLowerCase()) { 
+
+// Prompt Function to save input from user in a variable 
+        var orderQuantity = prompt(`How many ${orderName} pizzas do you want?`);  
+
+// Variable to calculate total price
+        const orderTotal = orderQuantity * pizzaPrice;
+
+// Function to calculate cooking time and its alert 
+        const cookingTime = () => { 
+            if(orderQuantity<2) return 10  
+            if(orderQuantity>=2 && orderQuantity<=5) return 15
+            else return 20
+        }
+        alert(`Great, I'll get started on your ${orderName} pizza(s) right away, it will cost ${orderTotal} kr. The pizzas will take ${cookingTime()}`)
     } else {
         alert("Select a pizza from the menu")
     }
-
-    //alert("Great, I'll get started on your " + orderName + " pizza(s) right away, it will cost " + orderTotal +" kr.");
-
-    const orderTotal = orderQuantity * pizzaPrice;
-
-    const cookingTime = () => {
-        if (orderQuantity === 1 || orderQuantity === 2) return "10 minutes"
-        else if (orderQuantity === 3 || orderQuantity === 4 || orderQuantity === 5 ) return "15 minutes"
-        else return "20 minutes"
-    }
-
-// fourth iteration
-
-alert("Great, I'll get started on your " + orderName + " pizza(s) right away, it will cost " + orderTotal +" kr. The pizzas will take " + cookingTime() + "")
 
 
 
