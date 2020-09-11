@@ -75,6 +75,32 @@ footer {
   background: #84a59d;
 }
 
+.img-vegetarian {
+    content: url("../assets/Vegetarian.png");
+    width: 300px;
+}
+.img-hawaiian {
+    content: url("../assets/hawaiian.png");
+    width: 300px;
+}
+.img-pepperoni {
+    content: url("../assets/Pepperoni.png");
+    width: 300px;
+}
+.img-fusion {
+    content: url("../assets/fusion.png");
+    width: 300px;
+}
+.img-margaritha {
+    content: url("../assets/margarita.png");
+    width: 300px;
+}
+.img-kebab {
+    content: url("../assets/kebab.png");
+    width: 300px;
+}
+
+
 .hidden {
   display: none;
 }

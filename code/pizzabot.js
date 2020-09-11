@@ -32,6 +32,22 @@ const validateOrderName = (selectedPizza) => {
     || selectedPizzaLower === kebab
 }
 
+const showPizzaImage = (selectedPizza) => {
+  if (selectedPizza = "vegetarian"){
+    document.getElementById("vegImg").classList.toggle("img-vegetarian")
+  } else if (selectedPizza = "hawaiian"){
+    document.getElementById("hawImg").classList.toggle("img-hawaiian")
+  } else if (selectedPizza = "pepperoni"){
+    document.getElementById("pepImg").classList.toggle("img-pepperoni")
+  } else if (selectedPizza = "fusion"){
+    document.getElementById("fusImg").classList.toggle("img-fusion")
+  } else if (selectedPizza = "margaritha") {
+    document.getElementById("marImg").classList.toggle("img-margaritha")
+  } else {
+    document.getElementById("kebImg").classList.toggle("img-kebab")
+  }
+  
+}
 
 const getPizzaPrice = (selectedPizza) => {
   if (selectedPizza = "margaritha"){
@@ -74,6 +90,7 @@ const showTotalOrder = () => {
   const cookingTime = calculateCookingTime(pizzaQuantity)
   const selectedPizza = document.getElementById("selectedPizza").value
   const totalCost = getPizzaPrice(selectedPizza) * pizzaQuantity
+  showPizzaImage(selectedPizza)
   document.getElementById("finalOrderMessage").innerHTML = `Great! I'll get started on your ${selectedPizza}, It will cost you ${totalCost} kr. The pizza(s) will take ${cookingTime} minutes.`
   
 }
