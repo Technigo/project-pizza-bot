@@ -25,24 +25,29 @@ const validateOrderName = (orderName) => {
     }
 };
 
-
+var orderQuantity;
+var orderTotal;
 
 if (validateOrderName(orderName)) {
-    const orderQuantity = prompt(`How many of ${orderName}s do you want?`);
-    const orderTotal = orderQuantity * pizzaPrice;
+    orderQuantity = prompt(`How many of ${orderName}s do you want?`);
+    orderTotal = orderQuantity * pizzaPrice;
     alert(`Great, I'll get started on your ${orderName}s right away, it will cost ${orderTotal} kr.`);
 }
 else {
     alert(`Select a pizza from the menu.`);
 }
-    
 
-
-const cookingTime = () => {
-    if 
-
-
+var cookingTime;
+if (orderQuantity <= 2) {
+    cookingTime = 10;
 }
+else if (orderQuantity >= 3 && orderQuantity < 6) {
+    cookingTime = 15;
+}
+else 
+cookingTime = 20;
 
 
+document.getElementById("orderSummary").innerHTML = `Thank you for your order! The ${orderName}s are being
+baked as you read this. The total cost is ${orderTotal} kr. The order will take ${cookingTime} minutes.`;
 
