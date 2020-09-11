@@ -1,145 +1,159 @@
 body {
-    background-image: url("./restaurant.jpg");
-    font-size: 1.2em;
-    color: #fff;
-    font-family: 'Roboto', Courier, monospace;
+  background-image: url("./restaurant.jpg");
+  font-size: 1.2em;
+  color: #fff;
+  font-family: "Montserrat", Courier, monospace;
 }
 
 h1 {
-    color: #fff;
-    font-size: 3em;
-    margin-top: 70px;
-    font-family: 'Staatliches';
+  color: #fff;
+  font-size: 3em;
+  margin-top: 70px;
+  font-family: "Staatliches";
 }
 
 .flex-wrapper {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .visible {
-    display: flex;
+  display: flex;
 }
 
 .invisible {
-    display: none;
+  display: none;
 }
 
-.flex-container{
-    display: flex;
-    flex-direction: column;
-    width: 40vw;
-    background:#9a7964;
-    align-items: flex-start;
-    padding: 25px;
+.flex-container {
+  /* display: flex; */
+  flex-direction: column;
+  width: 40vw;
+  background: rgba(0, 0, 0, 0.85);
+  align-items: flex-start;
+  padding: 25px;
+  color: #fff;
 }
 
-.order-form-inactive{
-    display:none;
+.order-form-inactive {
+  display: none;
 }
 
-.order-confirmation{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    width: 40vw;
-    background:#9a7964;
-    align-items: flex-start;
-    padding: 25px;
+.order-confirmation {
+  position: relative;
+  /* display: flex; */
+  flex-direction: row;
+  width: 20vw;
+  background: rgba(0, 0, 0, 0.85);
+  align-items: flex-start;
+  padding: 25px;
 }
 
-.input-wrapper{
-    margin: 10px 0px;
-    /*display:flex;*/
-    flex-direction: column;
-    min-width: 100%;
+.input-wrapper {
+  margin: 10px 0px;
+  /*display:flex;*/
+  flex-direction: column;
+  min-width: 100%;
 }
 
-.input-row-wrapper{
-    display:flex;
-    flex-direction: row;
-    justify-content: flex-start;
+.input-row-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
-#number-output{
-    margin-left: 3px;
+#number-output {
+  margin-left: 3px;
 }
 
-input {
-    min-width: 80%;
-    border-radius: 4px;
-    background: #fff;
-    height: 30px;
-    font-size: 1em;
-    font-family: 'Roboto', Courier, monospace;
+.input {
+  min-width: 80%;
+  border-radius: 4px;
+  background: #fff;
+  height: 30px;
+  font-size: 1em;
+  font-family: "Montserrat", Courier, monospace;
+  border: none;
 }
 
 select {
-    min-width: 82%;
-    border-radius: 4px;
-    background: #fff;
-    height: 30px;
-    font-size: 1em;
-    font-family: 'Roboto', Courier, monospace;
+  min-width: 82%;
+  border-radius: 4px;
+  background: #fff;
+  height: 30px;
+  font-size: 1em;
+  font-family: "Montserrat", Courier, monospace;
 }
 
 input:focus,
 select:focus {
-    outline: none;
+  outline: none;
 }
 
 .image {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 .message-container {
-    top: 0;
-    left: 0;
-    right: 0;
-    position: absolute;
-    z-index: 1;
-    max-width: 100%;
-    padding: 35px;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: 1;
+  max-width: 100%;
+  padding: 35px;
 }
 
-#message{
-    
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #fff;
-    background: rgba(0,0,0, 0.7);
+#message {
+  font-size: 1em;
+  font-weight: bold;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .hawaiian {
-    content: url("./hawaii.jpg");
+  content: url("./hawaii.jpg");
 }
 
 .vegetarian {
-    content: url("./vegetarian.jpg");
+  content: url("./vegetarian.jpg");
 }
 
 .pepperoni {
-    content: url("./pepperoni.jpg");
+  content: url("./pepperoni.jpg");
 }
 
 .capricciosa {
-    content: url("./capricciosa.jpg");
+  content: url("./capricciosa.jpg");
 }
 
 .margherita {
-    content: url("./margherita.jpg");
+  content: url("./margherita.jpg");
 }
 
 .button {
-    align-self: flex-end;
-    min-width: 30%;
-    min-height: 40px;
-    border-radius: 5px;
-    font-size: 1em;
-    font-family: 'Roboto', Courier, monospace;
+  align-self: flex-end;
+  min-width: 30%;
+  min-height: 40px;
+  border-radius: 5px;
+  font-size: 1em;
+  font-family: "Roboto", Courier, monospace;
+  background-color: #009688;
+  margin-top: 20px;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+}
+
+.button:hover {
+  background-color: #138479;
 }
 
 .button:focus {
-    outline: none;
+  outline: none;
+}
+
+.progress-bar {
+  width: 99%;
 }

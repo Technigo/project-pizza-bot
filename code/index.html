@@ -6,23 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./style.css">
     <title>Project 4: Pizzabot</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Staatliches&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Staatliches&display=swap&family=Montserrat&display=swap" rel="stylesheet">
   </head>
   <body>
     
 
     <section class="flex-wrapper">
-      <h1>This is your Pizza Bot</h1>
+      <h1>Welcome to your Pizza Bot</h1>
       
-        <form action="" id="order-form" class="flex-container">
+        <form action="" id="order-form" class="flex-container visible">
 
           <div class="input-wrapper visible" id="chatWindow1">
+            <p>Hey! Happy to serve your pizza. Please enter your name</p>
             <label for="name">Name:</label>
             <input type="text" class="input" name="name" id="name">
-            <button onclick="clickNextButton(this.parentNode.id)" type="button">>>></button>
+            <button onclick="clickNextButton(this.parentNode.id)" type="button" class="button">>>></button>
           </div>
 
           <div class="input-wrapper invisible" id="chatWindow2">
+            <p id="order"></p>
             <select name="pizza" class="input" id="pizza">
               <option value="">Choose a pizza</option>
               <option value="vegetarian">Vegetarian Pizza</option>
@@ -31,15 +33,15 @@
               <option value="capricciosa">Capricciosa Pizza</option>
               <option value="margherita">Margherita Pizza</option>
             </select>
-            <button onclick="clickNextButton(this.parentNode.id)" type="button">>>></button>
+            <button onclick="clickNextButton(this.parentNode.id)" type="button" class="button">>>></button>
           </div>
 
           <div class="input-wrapper invisible" id="chatWindow3">
-           
+            <p id="order-name"></p>
             <label for="pizza-slider">Number of pizzas:</label>
             <output for="pizza-slider" id="number-output" name="number-output">0</output>
             <input type="range" class="input" name="pizza-slider" min="0" max="25" value="0" id="pizza-slider" onchange="changeRangeOutput()">
-            <button onclick="clickNextButton(this.parentNode.id)" type="button">>>></button>
+            <button onclick="clickNextButton(this.parentNode.id)" type="button" class="button">>>></button>
           
           </div>
           <div class="input-wrapper order-summary invisible" id="chatWindow4">
@@ -51,14 +53,14 @@
 
         
           <label for="progress-bar">Order progress:</label>
-          <progress id="progress-bar" name="progress-bar" value="0" max="3"></progress>
+          <progress id="progress-bar" class="progress-bar" name="progress-bar" value="0" max="3"></progress>
 
           
         
 
 
         </form>
-        <section class="order-confirmation">
+        <section id="order-confirmation" class="order-confirmation invisible">
           
           <img src="" alt="" class="image" id="pizza-image">
           <div class="message-container">
