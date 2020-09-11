@@ -33,15 +33,15 @@ const validateOrderName = (selectedPizza) => {
 }
 
 const showPizzaImage = (selectedPizza) => {
-  if (selectedPizza = "vegetarian"){
+  if (selectedPizza = vegetarian){
     document.getElementById("vegImg").classList.toggle("img-vegetarian")
-  } else if (selectedPizza = "hawaiian"){
+  } else if (selectedPizza = hawaiian){
     document.getElementById("hawImg").classList.toggle("img-hawaiian")
-  } else if (selectedPizza = "pepperoni"){
+  } else if (selectedPizza = pepperoni){
     document.getElementById("pepImg").classList.toggle("img-pepperoni")
-  } else if (selectedPizza = "fusion"){
+  } else if (selectedPizza = fusion){
     document.getElementById("fusImg").classList.toggle("img-fusion")
-  } else if (selectedPizza = "margaritha") {
+  } else if (selectedPizza = margaritha) {
     document.getElementById("marImg").classList.toggle("img-margaritha")
   } else {
     document.getElementById("kebImg").classList.toggle("img-kebab")
