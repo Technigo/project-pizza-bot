@@ -13,7 +13,7 @@ const hawPic = document.getElementById("hawPizza");
 
 //Sentances showing in html via the getElementById()
 // Greeting to the user from the pizzabot
-document.getElementById("greeting").innerHTML = `&#129302 Hi! Welcome to Claire & Claudia's pizzeria. I'm pizza bot and I'm here to help you with your order.`;
+document.getElementById("greeting").innerHTML = `&#129302 Hi! Welcome to Claire & Claudia's pizza ordering service. I'm pizza bot and I'm here to help you with your order.`;
 
 //Showing the menu
 document.getElementById("menu").innerHTML = `On the menu we have: <li>${vegetarian}: ${pizzaPrice}kr</li> <li>${hawaiian}: ${pizzaPrice}kr</li> <li>${pepperoni}: ${pizzaPrice}kr</li>`;
@@ -66,7 +66,7 @@ pizzaImage = (orderName) => {
 
 //Function which is connected to the first form in html inside the onsubmit() attribute of the form. When the user inputs the username and the pizza they want and presses the submit button, if true (i.e. if pizza name matches what's on the menu), it runs the code and also shows the next prompt of how many pizzas they want. If that is not true then the they get the wrongPizza message asking them to order a pizza from the menu.
 const enteredPizzaName = (event) => {
-    event.preventDefault();
+    event.preventDefault();//Stops the page from submitting information to the backend.
     let orderName = document.getElementById("enterPizza").value;
     let correctPizzaName = validateOrderName(orderName);
 
@@ -74,7 +74,6 @@ const enteredPizzaName = (event) => {
         document.getElementById("orderDifferentPizza").style.display= "none";
         document.getElementById("howMany").innerHTML = `&#129302 And how many ${orderName}'s would you like to order?`;
         document.getElementById("formTwo").style.display = "flex";
-        // document.getElementById("formOne").submit();
         //The second form (where the user will input how many pizzas they want) will be show if true as we make that element in html to display flex. Before this time it's defined as display: none is css.
     }
     else {
@@ -85,14 +84,13 @@ const enteredPizzaName = (event) => {
 
 //Function that is connected to the second form in html inside the onsubmit() attribute in the form. When user inputs the amount of pizzas they want and  press the submit button, the code inside the function is run. Which is the final order message clarifying all the details of their order and an image of the pizza they've ordered.   
 const enteredPizzaAmount = (event) => {
-    event.preventDefault(); //Stops the page from refreshing when user presses submit button.
+    event.preventDefault(); //Stops the page from submitting information to the backend.
     let orderAmount = document.getElementById("enterAmount").value; //Taking the value (the amount) the user has inputted in the DOM for the amount of pizzas they want to order and put this inside a function to then use to calculate the cooking time below. 
     let correctOrderAmount = calculateCookingTime(orderAmount);
     let totalPrice = calculateTotalCost(orderAmount, pizzaPrice);
     let orderName = document.getElementById("enterPizza").value;
     let pizzaImages = pizzaImage(orderName);
     document.getElementById("formTwo").style.display = "flex";
-    // document.getElementById("formTwo").submit(); 
 
     //Defined variable and if statement which helps to change if the pizza if plural or not in the final order statement.
     let plural = "'s";
@@ -100,7 +98,7 @@ const enteredPizzaAmount = (event) => {
         plural = "";
     }
 
-    document.getElementById("finalize").innerHTML = `&#129302 Thanks for your order! I'll get started on your ${orderName}${plural} right away, it will cost ${totalPrice}kr. The Pizza${plural} will take ${correctOrderAmount} minuites to cook.`;
+    document.getElementById("finalize").innerHTML = `&#129302 Thanks for your order! I'll get started on your ${orderName}${plural} right away, it will cost ${totalPrice}kr. The Pizza${plural} will take ${correctOrderAmount} minuites to cook. Our driver will deliver your pizza within the hour!`;
 
     //Changes the display of the final order statement and the correct image of the pizza from none to flex. In css this is defined as nonw. 
     document.getElementById("finalOrder").style.display= "flex";

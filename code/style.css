@@ -1,10 +1,10 @@
 body {
     font-family: 'Quicksand', sans-serif;
-    background: rgb(248, 213, 148);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: justify;
+    background-image: url("./pizza-pattern.png");
 }
 
 main {
@@ -13,6 +13,7 @@ main {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background: rgb(248, 213, 148);
 }
 
 section {
