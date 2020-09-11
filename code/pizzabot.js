@@ -43,7 +43,7 @@ const showPizzaImage = (selectedPizza) => {
     document.getElementById("pizzaImg").classList.toggle("img-fusion")
   } else if (selectedPizza === margaritha) {
     document.getElementById("pizzaImg").classList.toggle("img-margaritha")
-  } else {
+  } else{
     document.getElementById("pizzaImg").classList.toggle("img-kebab")
   }
   
