@@ -49,14 +49,17 @@
         </p>
         <label for="selectedPizza">Select your pizza</label>
         <input type="text" id="selectedPizza">
+        <p id="errorMessage" class="hidden">This pizza is not on the menu, please select something else.</p>
         <button onclick="showQuantity()">Select</button>
       </div>
 
-      <div class="hidden quantity" id="quantity"><h3>Great choice!</h3>
+      <div class="hidden quantity" id="quantity">
+        <h3>Great choice!</h3>
         <label for="pizzaQuantity">How many pizzas do you want?</label>
         <input type="number" name="pizzaQuantity" id="pizzaQuantity" />
-        <p id="errorMessage" class="hidden">This pizza is not on the menu, please select something else.</p>
+        
         <button onclick="showTotalOrder()">CLICK</button>
+
       </div>
       <div class="hidden" id="totalOrder">
         <h3>Yummy!</h3>
@@ -71,7 +74,7 @@
     </footer>
 
   </div>
-  
+
   <script src="./pizzabot.js"></script>
 </body>
 
