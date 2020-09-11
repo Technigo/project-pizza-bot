@@ -13,57 +13,61 @@
 <body>
     <div class="header-image">
         <div class="text-container">
-            <h1>Pizza Bolero</h1>
+            <h1>Pizzeria Bolero</h1>
             <p>Online ordering</p>
         </div>
     </div>
     <main>
 
         <section class="left-side">
-            <h1>This is your Pizza Bot</h1>
 
-            Hey! Happy to serve your pizza. On our menu we have Vegetarian Pizza, Hawaiian Pizza" and Pepperoni Pizza.
-
-            <form onsubmit="recieveData(event)">
+            <div class="welcome-box">
+                <h1>Welcome to Pizzeria Bolero</h1>
+                <p>Each pizza costs 80 kr.</p>
+                Order your pizza from the form below.
+            </div>
+            <form onsubmit="recieveData">
                 <p>Which pizza would you like to order?</p>
 
                 <label>
+                    
+                    <input type="radio" name="pizza" id="vegetarianPizza" value="Vegetarian Pizza">
                     Vegetarian Pizza
-                    <input type="radio" name="pizza" id="vegetarianPizza" value="Vegetarian Pizza" >
-
                 </label>
                 <label>
-                    Hawaiian Pizza
+                    
                     <input type="radio" name="pizza" id="hawaiianPizza" value="Hawaiian Pizza">
+                    Hawaiian Pizza
                 </label>
                 <label>
-                    Pepperoni Pizza
+                  
                     <input type="radio" name="pizza" id="pepperoniPizza" value="Pepperoni Pizza">
+                    Pepperoni Pizza
                 </label>
                 <label>
-                    Chicken pizza
-                    <input type="radio" name="pizza" id="chickenPizza" value="Chicken Pizza">
-                </label>
-
+                     <input type="radio" name="pizza" id="chickenPizza" value="Chicken Pizza">
+                     Chicken pizza
+                    </label>
 
                 <label>
                     <p>How many pizzas would you like?</p>
                     <input type="number" id="quantity" name="quantity" min="1" max="10" />
                 </label>
 
-                <button onclick="receiveData()">Order</button>
+                <button onclick="receiveData(event)">Order</button>
 
             </form>
         </section>
 
         <section class="right-side">
             <div class="message-container">
+                <h1>Here's your order:</h1>
                 <p id="message" class="message"> </p>
 
-                <img id="hawaiianImg" src="./img/hawaiian.jpg" alt="hawaiian pizza">
-                <img id="pepperoniImg" src="./img/pepperoni.png" alt="pepperoni pizza">
-                <img id="vegetarianImg" src="./img/vegetarisk.jfif" alt="vegetarian pizza">
-                <img id="chickenImg" src="./img/chicken.jpg" alt="chicken pizza">
+                <img id="hawaiianImg" class="pizzaImg" src="./img/hawaiian.jpg" alt="hawaiian pizza">
+                <img id="pepperoniImg" class="pizzaImg" src="./img/pepperoni.png" alt="pepperoni pizza">
+                <img id="vegetarianImg" class="pizzaImg" src="./img/vegetarisk.jfif" alt="vegetarian pizza">
+                <img id="chickenImg" class="pizzaImg" src="./img/chicken.jpg" alt="chicken pizza">
             </div>
         </section>
     </main>

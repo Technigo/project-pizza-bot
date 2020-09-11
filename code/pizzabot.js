@@ -5,36 +5,20 @@ const receiveData = (event) => {
     const orderQuantity = document.getElementById("quantity").value;
     const totalCost = calculateTotalCost(orderQuantity);
     const cookingTime = calculateCookingTime(orderQuantity);
-    document.getElementById("message").innerHTML = (`Great, I'll get started on your ${typeOfPizza} right away, it will cost ${totalCost} kr. The pizzas will take ${cookingTime} minutes.`);
+    document.getElementById("message").innerHTML = (`You've ordered ${orderQuantity} ${typeOfPizza}. It will cost ${totalCost} kr and take ${cookingTime} minutes. Enjoy your meal!`);
     showImage(typeOfPizza);
 }
 
 let orderName;
 const validateOrderName = () => {
 
-    let pizzaChoice = document.getElementsByName('pizza');
+    let pizzaChoices = document.getElementsByName('pizza');
 
-    for (let i = 0; i < pizzaChoice.length; i++) {
-        if (pizzaChoice[i].checked) {
-            return pizzaChoice[i].value;
+    for (let i = 0; i < pizzaChoices.length; i++) {
+        if (pizzaChoices[i].checked) {
+            return pizzaChoices[i].value;
         }
     }
-
-    // const vegetarian = document.getElementById("vegetarianPizza");
-    // const hawaiian = document.getElementById("hawaiianPizza");
-    // const pepperoni = document.getElementById("pepperoniPizza");
-    // const chicken = document.getElementById("chickenPizza");
-
-    // if (vegetarian.checked) {
-    //     return vegetarian.value;
-    // } else if (hawaiian.checked) {
-    //     return hawaiian.value;
-    // } else if (pepperoni.checked) {
-    //     return pepperoni.value;
-    // } else {
-    //     return chicken.value;
-    // }
-
 }
 
 ///Calculate total cost of the order.
@@ -58,6 +42,12 @@ const calculateCookingTime = (orderQuantity) => {
 }
 
 const showImage = (typeOfPizza) => {
+
+    document.getElementById("vegetarianImg").style.display = "none";
+    document.getElementById("hawaiianImg").style.display = "none";
+    document.getElementById("pepperoniImg").style.display = "none";
+    document.getElementById("chickenImg").style.display = "none";
+
     if (typeOfPizza === "Vegetarian Pizza") {
         document.getElementById("vegetarianImg").style.display = "block";
     } else if (typeOfPizza === "Hawaiian Pizza") {
