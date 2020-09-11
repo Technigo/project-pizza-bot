@@ -30,7 +30,8 @@ main {
 
 .greeting-message {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
   align-content: center;
   background: #f6bd60;
   padding: 5vh;
@@ -49,57 +50,65 @@ main {
 }
 
 ul {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-  }
-  
-  li {
-    list-style-type: none;
-    padding: 10px;
-  }
-  
-  li img {
-      width: 70px;
-      padding: 10px;
-  }
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
 
-  .pizzaprice {
-    font: 18px;
-    font-weight: bold;
-  }
+li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  padding: 10px;
+}
+
+li img {
+  width: 30vh;
+  padding: 10px;
+}
+
+.quantity {
+  margin: 20px;
+}
+
+.pizzaprice {
+  font: 18px;
+  font-weight: bold;
+}
 
 footer {
   grid-column-end: span 8;
   text-align: center;
   background: #84a59d;
+  font-weight: 600;
+  color: #fefae0;
 }
 
 .img-vegetarian {
-    content: url("../assets/Vegetarian.png");
-    width: 300px;
+  content: url("../assets/Vegetarian.png");
+  width: 300px;
 }
 .img-hawaiian {
-    content: url("../assets/hawaiian.png");
-    width: 300px;
+  content: url("../assets/hawaiian.png");
+  width: 300px;
 }
 .img-pepperoni {
-    content: url("../assets/Pepperoni.png");
-    width: 300px;
+  content: url("../assets/Pepperoni.png");
+  width: 300px;
 }
 .img-fusion {
-    content: url("../assets/fusion.png");
-    width: 300px;
+  content: url("../assets/fusion.png");
+  width: 300px;
 }
 .img-margaritha {
-    content: url("../assets/margarita.png");
-    width: 300px;
+  content: url("../assets/margarita.png");
+  width: 300px;
 }
 .img-kebab {
-    content: url("../assets/kebab.png");
-    width: 300px;
+  content: url("../assets/kebab.png");
+  width: 300px;
 }
-
 
 .hidden {
   display: none;

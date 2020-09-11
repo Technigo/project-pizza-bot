@@ -19,6 +19,7 @@
 
       <div class="greeting-message">
         <form onsubmit="welcomeMessage(event)">
+          <h3>Welcome to Papa Poyas pizzabot!</h3>
           <label for="name" class="name-input">Before we start, what's your name?</label>
           <input id="name" name="name" type="text" />
           <input type="submit" name="submit" id="submit" value="Start pizza order">
@@ -51,13 +52,14 @@
         <button onclick="showQuantity()">Select</button>
       </div>
 
-      <div class="hidden" id="quantity">Quantity
+      <div class="hidden quantity" id="quantity"><h3>Great choice!</h3>
         <label for="pizzaQuantity">How many pizzas do you want?</label>
         <input type="number" name="pizzaQuantity" id="pizzaQuantity" />
         <p id="errorMessage" class="hidden">This pizza is not on the menu, please select something else.</p>
         <button onclick="showTotalOrder()">CLICK</button>
       </div>
       <div class="hidden" id="totalOrder">
+        <h3>Yummy!</h3>
         <p id="finalOrderMessage"></p>
         <img id="pizzaImg">
         <button onclick="welcomeMessage(event); hide()">Refresh</button>
