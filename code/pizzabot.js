@@ -6,6 +6,9 @@ const pepperoni = "Pepperoni"
 
 const pizzaPrice = 80
 
+const orderName = document.getElementById('pizzaNameInput').value;
+const orderQuantity = document.getElementById('pizzaQuantityInput').value;
+
 //Functions
 
 const validateOrderName = (orderName) => {
@@ -29,7 +32,7 @@ const calculateTotalCost = (orderQuantity, pizzaPrice) => {
     return orderTotal;
 }
 
-const calculateCookingTime = () => {
+const calculateCookingTime = (orderQuantity) => {
     let orderTime = 0; 
     if (orderQuantity <= 2) {
         orderTime = 10;
@@ -49,7 +52,6 @@ const calculateCookingTime = () => {
 const firstMessage = document.querySelector('.welcome'); 
 const welcomeMessage = `Hey! Happy to serve your pizza!`;
 firstMessage.innerHTML = `<div>${welcomeMessage}</div>`
-
 console.log(welcomeMessage);
 
 //Ask what pizza they would like to order 
@@ -66,15 +68,11 @@ const askNumber = () => {
   }
   askNumber()
 
-//Place order
-    const handleSubmit = (event) => {
-    // This prevent page reload
-    event.preventDefault();
   
     // Get the pizza name from the form input
-    const orderName = document.getElementById('pizzaNameInput').value;
-    const orderQuantity = document.getElementById('pizzaQuantityInput').value;
+    
 
+  const isValidOrder = validateOrderName(orderName);
 //const askPizzas = document.querySelector('.pizzaName'); 
 //const orderName = `On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}. Choose which pizza you want.`;
 //askPizzas.innerHTML = `${orderName}`
@@ -82,14 +80,15 @@ const askNumber = () => {
 console.log(askPizzas);
 
 //const orderName = prompt('Enter the name of the pizza you want to order today.');
-const isValidOrder = validateOrderName(orderName);
-//const orderQuantity = prompt(`How many of ${orderName} Pizzas do you want?`);
-
-
-if (isValidOrder === true) {
-    const isTotalCost = calculateTotalCost(orderQuantity, pizzaPrice);
-    console.log(isTotalCost);
-    const isOrderTime = calculateCookingTime(orderQuantity);
-    console.log(isOrderTime);
-    alert(`Great, I'll get started on your ${orderName} right away, it will cost ${isTotalCost} kr. The pizzas will take ${isOrderTime} minutes.`);
-}}
+   time = '20 min'
+      }
+    }
+}
+    }
+      //let final = `You have ordered ${numberPizza} ${orderInput} and it will cost ${totalprice} SEK 
+      //and it will take ${time}!`
+      //document.getElementById("orderComplete").innerHTML = final
+        //} else {
+      //alert(`We don't serve that. We have ${A}, ${B}, ${C}, which one would you like?`)
+      //return false
+     //

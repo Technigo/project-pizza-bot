@@ -17,7 +17,7 @@
       <div class="welcome">
       <p id="welcomeMessage"></p>
     </div>
-      <form onsubmit="handleSubmit(event)">
+      <form onsubmit="handleOrdervent">
         <div>
           <p
           id="pizzaName"
@@ -42,6 +42,8 @@
         type="number" 
         id="pizzaQuantityInput" 
         name="pizzanumber" 
+        min="1" 
+        max="100"
         />
     </div>
 
@@ -49,12 +51,13 @@
         type="submit"
         id="submit" 
         name="submit" 
-        value="Submit" 
+        value="Submit"
         />
   </form>
 </div>        
 
-<div class="order">
+<div class="order"></div>
+
     <script src="pizzabot.js"></script>
 
   </body>
