@@ -24,21 +24,29 @@
 
   <main>
     
+<div class="form-container">
+    <form name="pizzaForm" onsubmit="handleSubmit(event)">
 
-    <form name="pizzaForm">
+      <div>
+        <h2 class="pizza-order">Pizza order</h2>
+      </div>
       <div class="order">
-        <input id="userName" type="text" placeholder="Your name">
+        <input class="input" id="userName" type="text" placeholder="Type your name!" required>
         </label>
       </div>
+
+      <div>
+        <h2>Select a pizza:</h2>
+      </div>
     
-    <div class="order">
-      <label>Choose pizza type:
-        <input class="custom-radio" id="vegetarianPizza" type="radio" name="pizza" value="Vegetarian Pizza">Vegetarian Pizza
+    <div class="order-radio">
+      <label class="radio-radio">
+        <input class="custom-radio" id="vegetarianPizza" type="radio" name="pizza" value="Vegetarian Pizza" required>Vegetarian Pizza
       </label>
-      <label>
+      <label class="radio-radio">
         <input class="custom-radio" id="hawaiianPizza" type="radio" name="pizza" value="Hawaiian Pizza"> Hawaiian Pizza
       </label>
-      <label>
+      <label class="radio-radio">
         <input class="custom-radio" id="pepperoniPizza" type="radio" name="pizza" value="Pepperoni Pizza"> Pepperoni Pizza
       </label>
     </div>
@@ -47,25 +55,25 @@
 
     <div class="order">
       <label>
-        <input id="numberOfPizzas" type="number" placeholder="Number of pizza(s)">
+        <input id="numberOfPizzas" type="number" placeholder="Select a number of pizza(s)" required>
       </label>
     </div>
 
 
 
-    <div class="order">
-      <input class="btn" type="button" value="Check Order" onclick="handleSubmit(event)">
+    <div class="order-btn">
+      <input class="btn" type="submit" value="Check Order">
     </div>
 
     <p id="orderSummery" class="message"></p>  
 
     </form>
-
+  </div>
 
     <div class="image-pizza">
-      <img src="vegetarian.jpg" alt="vegetarian-pizza">
-      <img src="hawaiian.jpg" alt="hawaiian-pizza">
-      <img src="pepperoni.jpg" alt="pepperoni-pizza">
+      <img src="vegetarian.jpg" id="veg" alt="vegetarian-pizza">
+      <img src="hawaiian.jpg" id="haw" alt="hawaiian-pizza">
+      <img src="pepperoni.jpg" id="pep" alt="pepperoni-pizza">
     </div>
 
 

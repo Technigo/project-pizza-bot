@@ -9,6 +9,14 @@ h1 {
   margin: 0;
 }
 
+h2 {
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/****** HEADER ******/
+
 header {
   position: relative;
   color: #000;
@@ -36,6 +44,8 @@ video {
   object-fit: cover;
 }
 
+/****** MAIN ******/
+
 main {
   display:flex;
   flex-direction: column;
@@ -45,34 +55,65 @@ main {
   margin: 50px 0;
 }
 
+/* form */
+
 form {
 display: flex;
 flex-direction: column;
 background-color: #ff0025;
-width: 60%;
 margin: 20px 0;
-
+align-items: center;
+width: 100%;
+height: 680px;
 }
+
+.form-container {
+  width: 60%;
+ }
 
 .order {
   margin: 15px;
 }
 
-.input {
+.order input {
   height: 50px;
+  width: 300px;
+  border-radius: 25px;
+  border: #fff;
+  padding-left: 30px;
+  font-size: 18px;
+  color: #000;
 }
+
+.pizza-order {
+  border-bottom: 2px solid #fff;
+}
+
+input:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transition: 0.3s;
+}
+
+input::placeholder {
+  color: #000;
+}
+
+/* input::placeholder {
+} */
+
+/* button */
 
 .btn {
   display: inline-block;
   text-align: center;
   margin: auto;
   border: 2px solid #fff;
-  width: 150px;
-  margin-top: 5px;
+  width: 170px;
+  margin-top: 20px;
   padding: 5px 0;
   border-radius: 25px;
   background: rgba(255, 255, 255, 0);
-  font-size: 20px;
+  font-size: 22px;
   color: #fff;
   transition: 0.3s;
 }
@@ -83,8 +124,60 @@ margin: 20px 0;
   transition: 0.3s;
 }
 
+/* radio */
+
+.order-radio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 22px;
+  margin: 30px;
+  height: 50px;
+}
+
+.custom-radio {
+  height: 25px;
+  width: 25px;
+  margin: 0 10px;
+  
+}
+
+.radio-radio {
+  display: flex;
+  text-align: center;
+  margin: 10px;
+}
+
+/* message */
+
+.message {
+  font-size: 18px;
+  margin: 30px 100px;
+}
+
+/* pizza images */
+
+.image-pizza {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
 img {
   object-fit: cover;
   height: 300px;
   width: 60%;
+}
+
+#veg {
+  display: none;
+}
+
+#haw {
+  display: none;
+}
+
+#pep {
+  display: none;
 }

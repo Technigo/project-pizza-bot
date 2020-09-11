@@ -5,6 +5,11 @@ const hawaiian = "Hawaiian Pizza"
 const pepperoni = "Pepperoni Pizza"
 const pizzaPrice = 80;
 
+const pizzaVegImg = document.getElementById("veg");
+const pizzaHawImg = document.getElementById("haw");
+const pizzaPepImg = document.getElementById("pep");
+
+
 /*** Function 1 - Order Name 
     const validateOrderName = (order) => {
         if (order === vegetarian || order === hawaiian || order === pepperoni) {
@@ -31,7 +36,6 @@ const calculateCookingTime = (time) => {
   }
 }
 
-
 // *** Function - Submit form
 
 const handleSubmit = (event) => {
@@ -42,7 +46,6 @@ const handleSubmit = (event) => {
 
   const pizzaType = document.forms.pizzaForm.elements.pizza.value;
   const orderQuantity = document.forms.pizzaForm.numberOfPizzas.value;
-
   
     const orderTotal = calculateTotalCost(orderQuantity, pizzaPrice);
     const cookingTime = calculateCookingTime(orderQuantity);
@@ -55,12 +58,17 @@ const handleSubmit = (event) => {
     ).innerHTML = `Hello ${userName}! I'll get started on your ${orderQuantity} ${
       pizzaType + plural
     } right away. It will cost ${orderTotal} kr and will take ${cookingTime} minutes.`;
-  
-};
+    
+    if (pizzaType === "Vegetarian Pizza") {
+      pizzaVegImg.setAttribute ("style", "display:block;");
+    } else if (pizzaType === "Hawaiian Pizza") {
+      pizzaHawImg.setAttribute ("style", "display:block;")
+    } else if (pizzaType === "Pepperoni Pizza") {
+      pizzaPepImg.setAttribute ("style", "display:block;")
+    }
+}; 
 
-
-
-/*
+/*  
 alert(
     `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`
   );
@@ -82,9 +90,6 @@ if (validateOrderName(orderName) === true) {
 //  alert('Select a pizza from the menu');
 }
 
-
-/// How to create a progress bar: https://www.w3schools.com/howto/howto_js_progressbar.asp
-/// Design progress bar: https://medium.com/@CanvasFlip/best-practices-in-designing-awesome-progress-bars-e051bef10c28 & https://codemyui.com/place-order-progress-bar-animation-steps/ & https://uimovement.com/tag/progress-bar/?page=2
 
 /// How to create a countdown timer: https://www.w3schools.com/howto/howto_js_countdown.asp
 
