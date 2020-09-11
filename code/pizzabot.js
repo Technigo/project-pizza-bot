@@ -73,7 +73,8 @@ const calculateOrder = () => {
     let orderTime;
 
     if (orderQuantity === 0) {
-        orderTime = '0 minutes.';  
+        orderTime = '0 minutes.'; 
+        document.getElementById("endMessage").style.display = "none"
     } else if (orderQuantity <= 2) { 
         orderTime = '10 minutes.'; 
     } else if (orderQuantity <= 5) {
