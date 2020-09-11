@@ -11,20 +11,21 @@
   <body>
     <main>
       <section>
-        <div class="cards">
-          <h1>Welcome to Claire & Claudia's Pizza Palace! &#127829;</h1>
+        <div class="welcome">
+          <h1>Claire & Claudia's pizzeria &#127829</h1>
         </div>
 
         <!-- Greeting welcoming the customer -->
         <div class="cards">
           <h3 id="greeting"></h3>
+          <h3 id="menu" class="menu"><li></li></h3>
         </div>
 
-        <!-- Form section where user will input username, name of pizza and amount of pizza -->
+        <!-- First form section where user will input username & name of pizza -->
         <div class="cards">
-          <form action="http://httpbin.org/anything" autocomplete="off" onsubmit="enteredPizzaName(event)" method="POST" class="form-1">
+          <h3> &#129302 Before we get started with your order please enter your username:</h3> 
+          <form action="http://httpbin.org/anything" autocomplete="off" onsubmit="enteredPizzaName(event)" onclick="enteredPizzaName()" method="POST" id="formOne" class="form-1">
             <!-- Enter username -->
-            <h3>Before we get started with your order please enter your username:</h3> 
             <label for="userName">
               <input type="text" id="userName" name="userName" placeholder="Username" required></select>
             </label>
@@ -36,8 +37,11 @@
             </label>
               <input type="submit" mane="submit" value="Submit" class="submit-button">
           </form>
+        </div>
 
-          <form action="http://httpbin.org/anything" autocomplete="off" onsubmit="enteredPizzaAmount(event)" method="POST" class="form-2" id="formTwo">
+        
+          <!-- Second form where the user will input and submit how many pizzas they want to order -->
+          <form action="http://httpbin.org/anything" autocomplete="off" onsubmit="enteredPizzaAmount(event)" onclick="enteredPizzaAmount()" method="POST" class="form-2" id="formTwo">
             <!-- Enter how many pizzas -->
             <h3 id="howMany"></h3>
             <label for="enterAmount">
@@ -45,16 +49,16 @@
             </label>
               <input type="submit" mane="submit" value="Submit" class="submit-button">
           </form>
-        </div>
+        
 
         <!-- Final order message -->
         <div class="finalize-order" id="finalOrder">
           <h3 id="finalize"></h3>
           
           <div id="showPizzaPicture">
-             <img alt="Image of a vegetarian pizza" width="300px" id="vegPizza" class="image-of-pizza">
-            <img alt="Image of a pepperoni pizza" width="300px" id="pepPizza" class="image-of-pizza">
-            <img alt="Image of a hawaiian pizza" width="300px" id="hawPizza" class="image-of-pizza">
+            <img src="./vegetarian-pizza.jpg" alt="Image of a vegetarian pizza" width="300px" id="vegPizza" class="image-of-pizza">
+            <img src="./pepperoni-pizza.jpg" alt="Image of a pepperoni pizza" width="300px" id="pepPizza" class="image-of-pizza">
+            <img  src="./hawaiian-pizza.png" alt="Image of a hawaiian pizza" width="300px" id="hawPizza" class="image-of-pizza">
           </div>
         </div>
 
