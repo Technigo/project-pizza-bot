@@ -6,29 +6,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Project 4: Pizzabot</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Special+Elite&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <h1>This is your Pizza Bot</h1>
 
-  <p id="menu"></p>
+  <header>
+    <img src="pizza.jpg">
+    <h1>Pizza Napolitana</h1>
+  </header>
+
+  <div id="orderMenu">
+    <p id="menu"></p>
 
 
-  <form id="form">
-    <label for="pizza">Choose pizza type</label>
-    <input list="pizza" name="pizza" id="pizzas">
-    <datalist id="pizza">
-      <option value="Vegetarian">
-      <option value="Hawaiian">
-      <option value="Pepperoni">
-    </datalist>
-    <input type="number" id="numberOfPizzas">
-    <input type="submit" id="submit">
-  </form>
+    <form id="form">
+      <label class="formItemLabel" for="pizza">Choose pizza type:</label>
+      <input class="formItemInput" list="pizza" name="pizza" id="pizzas">
+      <datalist id="pizza">
+        <option value="Vegetarian">
+        <option value="Hawaiian">
+        <option value="Pepperoni">
+      </datalist>
+      <label class="formItemLabel" for="number">How many pizzas do you want?</label>
+      <input class="formItemInput" type="number" id="numberOfPizzas">
+      <input class="formItem" type="button" id="submit" value="Submit">
+    </form>
 
-  <h3 id="message"></h3>
+    <h3 id="message"></h3>
+
+  </div>
+
+  <footer></footer>
 
   <script src="./pizzabot.js"></script>
+
 </body>
 
 </html>
