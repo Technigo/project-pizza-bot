@@ -1,0 +1,42 @@
+
+
+body {
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*justify-content: center;*/
+
+}
+
+.pizzacontainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.pizzacontainer img {
+    width: 225px;
+}
+
+.pizzabotform {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.pizzabotform label {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.pizzabotform input {
+    margin-bottom: 5px;
+}

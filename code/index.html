@@ -4,18 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Project 4: Pizzabot</title>
+    <link rel="stylesheet" href="./style.css">
+    <title>👩‍🍳 Mamma Mia Pizza</title>
   </head>
   <body>
-    <h1>This is your Pizza Bot</h1>
-    <div><p id="welcome">Welcome to Pizzabot!</p></div>
-    <!--<form onsubmit="handleSubmit(event)">
+    <header>
+      <h1>Mamma Mia Pizza</h1>
+    </header>
+    <section class="main">
+    <div><p id="welcome"></p></div>
+    <form class="pizzabotform" onsubmit="handleSubmit(event)">
       <label for="pizzaName">Enter the name of the pizza you want to order today.</label>
       <input id="pizzaName" name="pizzaName" type="text">
-      <input id="submitPizza" name="submitPizza" type="submit">
-    </form>!-->
+      <!--<input id="submitPizza" name="submitPizza" type="submit">-->
+      <label for="pizzaQuantity">How many pizzas do you want?</label>
+      <input id="pizzaQuantity" name="pizzaQuantity" type="number" min="0" max="20">
+    </form>
     <button onclick="handleSubmit(event)">Order Now</button>
     <div><p id="orderConfirmation"></p></div>
+    <div class="pizzacontainer">
+      <img src="Images/hawaiianpizza.jpg">
+      <img src="Images/pepperonipizza.jpg">
+      <img src="Images/vegetarianpizza.jpg">
+    </div>
+  </section>
     <script src="pizzabot.js"></script>
   </body>
 </html>
