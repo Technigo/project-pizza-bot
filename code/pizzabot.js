@@ -33,18 +33,18 @@ const validateOrderName = (selectedPizza) => {
 }
 
 const showPizzaImage = (selectedPizza) => {
-  if (selectedPizza = vegetarian){
-    document.getElementById("vegImg").classList.toggle("img-vegetarian")
-  } else if (selectedPizza = hawaiian){
-    document.getElementById("hawImg").classList.toggle("img-hawaiian")
-  } else if (selectedPizza = pepperoni){
-    document.getElementById("pepImg").classList.toggle("img-pepperoni")
-  } else if (selectedPizza = fusion){
-    document.getElementById("fusImg").classList.toggle("img-fusion")
-  } else if (selectedPizza = margaritha) {
-    document.getElementById("marImg").classList.toggle("img-margaritha")
+  if (selectedPizza === vegetarian){
+    document.getElementById("pizzaImg").classList.toggle("img-vegetarian")
+  } else if (selectedPizza === hawaiian){
+    document.getElementById("pizzaImg").classList.toggle("img-hawaiian")
+  } else if (selectedPizza === pepperoni){
+    document.getElementById("pizzaImg").classList.toggle("img-pepperoni")
+  } else if (selectedPizza === fusion){
+    document.getElementById("pizzaImg").classList.toggle("img-fusion")
+  } else if (selectedPizza === margaritha) {
+    document.getElementById("pizzaImg").classList.toggle("img-margaritha")
   } else {
-    document.getElementById("kebImg").classList.toggle("img-kebab")
+    document.getElementById("pizzaImg").classList.toggle("img-kebab")
   }
   
 }
