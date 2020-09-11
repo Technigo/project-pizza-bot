@@ -32,23 +32,6 @@ const validateOrderName = (selectedPizza) => {
     || selectedPizzaLower === kebab
 }
 
-const showPizzaImage = (selectedPizza) => {
-  if (selectedPizza === vegetarian){
-    document.getElementById("pizzaImg").classList.toggle("img-vegetarian")
-  } else if (selectedPizza === hawaiian){
-    document.getElementById("pizzaImg").classList.toggle("img-hawaiian")
-  } else if (selectedPizza === pepperoni){
-    document.getElementById("pizzaImg").classList.toggle("img-pepperoni")
-  } else if (selectedPizza === fusion){
-    document.getElementById("pizzaImg").classList.toggle("img-fusion")
-  } else if (selectedPizza === margaritha) {
-    document.getElementById("pizzaImg").classList.toggle("img-margaritha")
-  } else{
-    document.getElementById("pizzaImg").classList.toggle("img-kebab")
-  }
-  
-}
-
 const getPizzaPrice = (selectedPizza) => {
   if (selectedPizza = "margaritha"){
     return 65
@@ -83,6 +66,22 @@ const calculateCookingTime = (orderQuantity) => {
   }
 };
 
+const showPizzaImage = (selectedPizza) => {
+  if (selectedPizza === vegetarian){
+    document.getElementById("pizzaImg").classList.toggle("img-vegetarian")
+  } else if (selectedPizza === hawaiian){
+    document.getElementById("pizzaImg").classList.toggle("img-hawaiian")
+  } else if (selectedPizza === pepperoni){
+    document.getElementById("pizzaImg").classList.toggle("img-pepperoni")
+  } else if (selectedPizza === fusion){
+    document.getElementById("pizzaImg").classList.toggle("img-fusion")
+  } else if (selectedPizza === margaritha) {
+    document.getElementById("pizzaImg").classList.toggle("img-margaritha")
+  } else{
+    document.getElementById("pizzaImg").classList.toggle("img-kebab")
+  }
+  
+}
 
 const showTotalOrder = () => {
   document.getElementById("totalOrder").classList.remove("hidden")
@@ -91,7 +90,7 @@ const showTotalOrder = () => {
   const selectedPizza = document.getElementById("selectedPizza").value.toLowerCase()
   const totalCost = getPizzaPrice(selectedPizza) * pizzaQuantity
   showPizzaImage(selectedPizza)
-  document.getElementById("finalOrderMessage").innerHTML = `I'll get started on your ${selectedPizza}, It will cost you ${totalCost} kr. The pizza(s) will take ${cookingTime} minutes.`
+  document.getElementById("finalOrderMessage").innerHTML = `I'll get started on your ${selectedPizza}(s), It will cost you ${totalCost} kr. The pizza(s) will take ${cookingTime} minutes.`
   
 }
 
