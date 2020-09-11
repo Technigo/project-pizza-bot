@@ -1,86 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans);
 
-body{
-  background: darken(#04B486, 30%);
-  font-family: 'Noto Sans', 'Helvetica';
+/*** Hero styling ***/
+
+body{ 
+  background-image: url("./pizza.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.customAlert{
-	
-  display: none;
-  position: fixed;
-  max-width: 25%;
-  min-width: 250px !important;
-  min-height: 20%;
-  height: 200px;
-  left: 50%;
-  top: 50%;
-  padding: 10px;
-  box-sizing: border-box;
-  margin-left: -12.5%;
-  margin-top: -5.2%;
-  background: #088A68;
-  
-  @media all and (max-width: 1300px){
-    .message{
-      font-size: 14px !important;
-    }
-    input[type='button']{
-      height: 15% !important;
-    }
-  }
-  
-  .message{
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+  opacity: 0.8;
+  width: 50%;
+  margin: auto;
+  height: 500px;
+  font-family: 'Playfair Display', serif;
+  margin: 50px;
+  padding: 20px;
+  Font-Family: 'Cabin', Sans-Serif;
+  Font-Size: 15px;
+
+}
+
+.welcome{
+  margin-top: 0px;
+  Font-Family: 'Cabin', Sans-Serif;
+  Font-Size: 15px;
+}
+
+.questions{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  Font-Family: 'Cabin', Sans-Serif;
+  Font-Size: 15px;
+}
+
+.questions input {
+    width: 250px;
     padding: 5px;
-    color: white;
-    font-size: 14px;
-    line-height: 20px;
-    text-align: justify;
-  }
-    
-  input[type='button']{
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    width: 50%;
-    height: 36px;
-    margin-top: -45px;
-    margin-left: -25%;
-    outline: 0;
-    border: 0;
-    background: #04B486;
-    color: white;
-    &:hover{
-      transition: 0.3s;
-      cursor: pointer;
-    	background: lighten(#04B486, 5%);  
-    }
-  } 
+    display: flex;
+    Font-Family: 'Cabin', Sans-Serif;
+    Font-Size: 15px;
 }
-      
-.rab{
-  width: 200px;
-  height: 30px;
-  outline: 0;
-  border: 0;
-  color: white;
-  background: darken(#04B486, 5%);
+
+.submit-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
-      
-@keyframes fadeOut{
-	from{
-  	opacity: 1;
-  } 
-  to{
-    opacity: 0;
-  }
+
+.form-submit {
+  width: 150px;
+  padding: 15px;
+  font-size: 15px;
+  cursor: pointer;
+  border: 1px solid 0.5;
 }
-    
-@keyframes fadeIn{
-	from{
-  	opacity: 0;
-  } 
-  to{
-    opacity: 1;
-  }
+
+.order{
+  padding: 20px;
+  text-align: center;
 }
