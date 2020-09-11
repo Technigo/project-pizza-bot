@@ -10,6 +10,7 @@ const pizzaHawImg = document.getElementById("haw");
 const pizzaPepImg = document.getElementById("pep");
 
 
+// !! HIDING THIS PART SINCE IT ONLY WAS PART OF ITERATION 1-7. !!
 /*** Function 1 - Order Name 
     const validateOrderName = (order) => {
         if (order === vegetarian || order === hawaiian || order === pepperoni) {
@@ -68,7 +69,7 @@ const handleSubmit = (event) => {
     }
 }; 
 
-/*  
+/* !!  HIDING THIS PART SINCE IT ONLY WAS PART OF ITERATION 1-7 !!
 alert(
     `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`
   );
@@ -78,6 +79,7 @@ const orderName = prompt(
   );
 */
 
+/* !! HIDING THIS PART SINCE IT ONLY WAS PART OF ITERATION 1-7 !!
 if (validateOrderName(orderName) === true) {
   const orderQuantity = +prompt(`How many of ${orderName} do you want?`);
   ///
@@ -85,11 +87,9 @@ if (validateOrderName(orderName) === true) {
   const cookingTime = calculateCookingTime(orderQuantity);
 
   document.getElementById("orderSummery").innerHTML = `Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The pizza(s) will take ${cookingTime} minutes.`;
-  ///
+
 //} else {
 //  alert('Select a pizza from the menu');
 }
-
-
-/// How to create a countdown timer: https://www.w3schools.com/howto/howto_js_countdown.asp
+*/
 
