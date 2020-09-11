@@ -127,7 +127,7 @@ select {
     width: 42px;
   }
 
-  .bubble-container {
+  .bubble-start, .bubble-container {
     padding-right: 100px;
   }
 
