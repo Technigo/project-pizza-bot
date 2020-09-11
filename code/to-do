@@ -1,50 +1,28 @@
 BACKLOG:
 
-/ Styla upp startsidan med font, bgcolor, centrerad div osv. 
+/ Style site: font, bg color, centered main div etc. 
 
-/ Skapa välkomstmeddelandet i en box 
+/ Create a box with a welcome-message
 
-/ Skapa en form med 3 knappar: "Vegetarian", "Hawaiian" och "Pepperoni" 
+/ Create a form with 'buttons' for each of the different pizza choices 
 
-/ Skapa svarsruta från Pizzerian 
+/ Create a box with an answer from the pizzeria
 
-/ Skapa fråga: "How many of ___ do you want" + Count-ruta
+/ Create a box with a question: "How many of ___ do you want" + Count-box
 
-/ Skapa svarsruta från Pizzerian
+/ Create the second answer-box from the pizzeria 
 
-/ Skapa confirmation-ruta med pris, cookingtime
+/ Create a confirmation-box with total price and cookingtime
 
-/ Gör pratbubblor av boxarna
+/ Create a portrait with "pictures" beside the chatboxes
 
-/ Skapa confirmation-box längst ner under chatten (Karin)
+/ Create a confirmation-box in the bottom of the site, below the chat 
 
-/ Skapa en progress-bar baserat på hur många frågor som besvarats (Karin)
+/ Create a progress-bar based on the proceeding of the order 
 
-/ Skapa count-down timer (Gabriella)
+/ Create a count-down timer
 
-# Kontrollera footern. 
+/ Check so the footer is fitted to the rest of the content 
    
-# Skapa en dyrare pizza - använda Array of Objects
+/ Create a pizza that is more expensive
 
-const pizzas = [
-    {
-        type: "pepperoni",
-        pizzaPrice = 80
-    },
-    {
-        type: "Vegetarian",
-        pizzaPrice = 80
-    },
-    {
-        type: "hawaiian",
-        pizzaPrice = 80
-    },
-    {
-        type: "kebab",
-        pizzaPrice = 80
-    },
-    {
-        type: "kebab plus size",
-        pizzaPrice = 100
-    }
-]

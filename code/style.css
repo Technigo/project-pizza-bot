@@ -22,6 +22,16 @@ body {
     text-shadow: 1px 1px #004D16;
 }
 
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    margin: 0 auto 30px auto;
+    padding: 0;
+    text-align: center;
+}
+
 p {
     margin: 0;
     padding: 0;
@@ -37,11 +47,6 @@ header {
     transition: margin 0.5s linear;
 }
 
-header h1 {
-    text-shadow: 2px 2px #01DC3E;
-    font-size: 40px;
-}
-
 header img {
     width: 5vw;
     text-align: center;
@@ -54,6 +59,10 @@ main {
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 100px;
+}
+
+.marginTop {
+    margin-top: 150px;
 }
 
 /*  PROGRESS-BAR  */ 
@@ -183,7 +192,7 @@ button { /* Button to confirm quantity */
     margin: 5px;
 }
 
-button:hover, input:hover {
+button:hover, input:hover { /*When hovering button*/
     background: #00C337;
 }
 
@@ -192,26 +201,20 @@ button:hover, input:hover {
     width: auto;
     border: 1px solid #fff;
     margin-top: 40px;
-    padding: 10px;
+    padding: 20px;
     align-self: center;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#time {
+.time {
     font-size: 50px;
     align-self: center;
 }
 
-.timecounter {
-    letter-spacing: 2px;
-    font-size: 13px;
-}
-
 /*  ORDER SUMMARY  */ 
 .orderSummaryBox {
-    height: 400px;
     width: 100%;
     border: 2px solid #01DC3E;
     border-radius: 10px;
@@ -220,12 +223,6 @@ button:hover, input:hover {
     transition: visibility 0s, opacity 0.5s linear;
     display: flex;
     flex-direction: column;
-}
-
-h2 {
-    margin: 0 auto 30px auto;
-    padding: 0;
-    text-align: center;
 }
 
 .order-summary, .order-summary-content {

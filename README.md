@@ -12,7 +12,7 @@ When we got the JavaScript to work and also look good in a visual way we started
 
 In the end we made the website responsive for a smaller media screen as well. 
 
-If we had more time we should have used arrays to create different prices for different pizzas. 
+If we had more time we should have used arrays instead to create different prices for different pizzas. 
 
 ## Learning objectives
 
@@ -36,4 +36,4 @@ If we had more time we should have used arrays to create different prices for di
 
 ## View it live
 
-Link to see the site live: 
+Link to see the site live: https://pizzeria-sliceandsnack-bot.netlify.app/ 
