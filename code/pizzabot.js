@@ -45,14 +45,14 @@ const calculateCookingTime = (orderQuantity) => {
     }
 };
 
-//Function for asking what kind of pizza they would like to order 
+//Function for asking what kind of pizza user would like to order 
 const askPizzas = () => {
     const orderName = `On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}. Choose which pizza you want.`
     document.getElementById("pizzaName").innerHTML = orderName;
 };
 
  
-// Function to ask how many pizzas they would like to order 
+// Function to ask how many pizzas user would like to order 
 const askNumber = () => {
     const orderQuantity = `How many Pizzas do you want?`;
     document.getElementById("pizzaQuantity").innerHTML = orderQuantity;
@@ -71,7 +71,7 @@ const getOrderQuantity = () => {
 // The chatbot / form
 
 // Welcome message 
-const firstMessage = document.querySelector('.welcome'); 
+const firstMessage = document.querySelector('.welcome-message-container'); 
 const welcomeMessage = `Hey! Happy to serve your pizza!`;
 firstMessage.innerHTML = `<div>${welcomeMessage}</div>`
 console.log(welcomeMessage);
