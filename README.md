@@ -14,6 +14,7 @@ You'll do this project as a pair programming project.
 
 
 ## Approach
+In our first pair programming session, my partner and I walked through the iterations together. Then we started in on the work of really making the JavaScript visible and converting the alerts to chat bubbles to display in the HTML. Overall it was super helpful to have a partner to work with this week since the assignment felt extra challening. I appreciated having a partner to work through all these puzzles of how to get our little pizza bot to do what we wanted.
 
 
 ## See it live
