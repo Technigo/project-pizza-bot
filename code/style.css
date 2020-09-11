@@ -89,6 +89,7 @@ main {
 footer {
   position: relative;
   margin-top: 76px;
+  font-family: "Cabin", sans-serif;
 }
 
 .footer-info-container {
