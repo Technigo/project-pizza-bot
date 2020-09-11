@@ -28,11 +28,13 @@ let validateOrderName = (orderName, orderQuantity) => {
     if (orderName === vegetarian || orderName === hawaiian || orderName === pepperoni) {
         calculateTotalCost(orderQuantity)
         calculateCookingTime(orderQuantity)
-        document.getElementById("final").innerHTML = `Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr and take ${orderTime} minutes.`
+        document.getElementById("orderPlaced").innerText = `Thanks! You have ordered ${orderQuantity} of the ${orderName}, your total is ${orderTotal} kr and your order will take ${orderTime} minutes.`
     } else {
-        document.getElementById("final").innerHTML = `No such pizza on the menu. Please choose one of the following pizzas: ${vegetarian}, ${hawaiian} or ${pepperoni}`
+        document.getElementById("final").innerText = `No such pizza on the menu. Please choose one of the following pizzas: ${vegetarian}, ${hawaiian} or ${pepperoni}`
     }
+    // use innerText
 }
+
 
 
 

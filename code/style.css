@@ -20,6 +20,14 @@ body {
   -moz-animation: AnimationName 30s ease infinite;
   animation: AnimationName 30s ease infinite;
 }
+#orderPlaced {
+  font-size: 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  margin-top: 50px;
+}
 
 @-webkit-keyframes AnimationName {
   0% {
@@ -85,20 +93,19 @@ body {
 }
 section.chatbot-form {
   background-image: url(./img/pizzawall.jpg);
-  opacity: 0.6;
+
   background-repeat: no-repeat;
   -moz-background-size: cover;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   max-width: 100%;
-  width: 500px;
-  height: 700px;
+  width: 1000px;
+  height: 100%;
   color: #fff;
   border-radius: 5px;
-  box-shadow: 0 0 5px #7bffce, 0 0 10px #7bffce, 0 0 20px #7bffce,
-    0 0 40px #7bffce, 0 0 80px #7bffce, 0 0 90px #7bffce, 0 0 100px #7bffce,
-    0 0 150px #7bffce;
+  box-shadow: 0 0 5px white, 0 0 10px white, 0 0 20px white, 0 0 40px white,
+    0 0 80px white, 0 0 90px white, 0 0 100px white, 0 0 150px white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -106,10 +113,10 @@ section.chatbot-form {
   margin: 15px;
   margin-top: 20px;
 }
-.chatbot-form h2 {
+.chatbot-form .h2-chat {
   font-family: "Vollkorn", serif;
   text-transform: uppercase;
-  font-size: 30px;
+  font-size: 25px;
   letter-spacing: 2px;
   font-weight: 700;
   text-align: center;
@@ -121,6 +128,12 @@ section.chatbot-form {
   text-align: center;
   justify-content: center;
   color: black;
+  text-shadow: 0 0 1px #7bffce, 0 0 3px #7bffce, 0 0 5px #7bffce,
+    0 0 7px #7bffce, 0 0 9px #7bffce, 0 0 11px #7bffce, 0 0 13px #7bffce,
+    0 0 15px #7bffce;
+}
+.chatbot-form .h3-order {
+  font-size: 25px;
 }
 .form-group {
   font-size: 18px;
@@ -132,7 +145,7 @@ section.chatbot-form {
   font-weight: 700;
 }
 button {
-  color: #292524;
+  color: black;
   font-family: "Londrina Outline", cursive;
   text-transform: uppercase;
   text-decoration: none;
@@ -140,11 +153,50 @@ button {
   font-weight: 900;
   background-color: rgb(112, 214, 221);
   border: 1px solid rgb(250, 249, 247);
+  border-radius: 6px;
   width: 100%;
   text-align: center;
   justify-content: center;
   outline: none;
+  margin-top: 50px;
 }
+
 button:hover {
   background-color: rgb(250, 249, 247);
+}
+input {
+  padding: 5px 2px 5px;
+  border: 2px solid aquamarine;
+  border-radius: 10px;
+  background-color: white;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 300px) and (max-width: 768px) {
+  .neon {
+    font-family: "Londrina Outline", cursive;
+    text-align: center;
+    justify-items: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: 4px;
+  }
+
+  .green {
+    text-shadow: 0 0 1px #7bffce, 0 0 3px #7bffce, 0 0 5px #7bffce,
+      0 0 7px #7bffce, 0 0 9px #7bffce, 0 0 11px #7bffce, 0 0 13px #7bffce,
+      0 0 15px #7bffce;
+  }
+  button {
+    margin-top: 0;
+  }
+  .chatbot-form p {
+    font-size: 16px;
+  }
+  .chatbot-form .h3-order {
+    font-size: 15px;
+  }
 }

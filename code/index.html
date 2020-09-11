@@ -9,9 +9,10 @@
     <link rel="icon" type="image/png" href="./img/pizza.png" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
   </head>
-     <!-- GRADIENT BACKGROUND   -->
+        <!-- GRADIENT BACKGROUND   -->
    
-  <body>
+  <body id="orderPlaced">
+  
  
     <!-- H1 NEON TITLE   -->
     <div class="neon">
@@ -23,11 +24,11 @@
     <section class="chatbot-form">
       <div id="chatbot">
         <div class="chat">
-          <h2>Hey, happy to serve your pizza!</h2>
+          <h2 class="h2-chat">Hey, happy to serve your pizza!</h2>
           <p>On our menu we have: a Vegetarian Pizza, Hawaiian Pizza and Pepperoni Pizza.<p>
             
           <div class="form-group">
-              <label for="orderName">Which of these pizzas would you like today?</label>
+              <label for="orderName"><h3 class="h3-order">Which of these pizzas would you like today?</h3></label>
               <input
                   id="orderName"
                   type="text"
@@ -38,7 +39,7 @@
               />
           </div>
           <div class="form-group">
-              <label for="orderQuantity">How many of that pizza would you like?</label>
+              <label for="orderQuantity"><h3 class="h3-order">How many of that pizza would you like?</h3></label>
               <input
                   id="orderQuantity"
                   type="number"
@@ -49,9 +50,8 @@
               />
           </div>
           <div class="form-group">
-              <h4>Thank you for placing an order with us!</h4>
               <div class="chatbot-btn">
-              <button onclick="validateOrderName(document.getElementById('orderName').value, document.getElementById('orderQuantity').value)">Place order</button>
+                <button onclick="validateOrderName(orderName.value, orderQuantity.value)">Place order</button>
               </div>
               <div class="form-group">
               <p id="final"><p>
