@@ -80,6 +80,9 @@ body {
     box-shadow: 10px 10px 5px 5px #000000;
   }
   
+  section.three_pizzas {
+    margin-top: 30px;
+  }
   
   
   #first,
@@ -115,7 +118,7 @@ body {
 
   h3 {
     font-size: 40px;
-    padding-bottom:10px;
+    padding-top:30px;
     margin:0;
   }
   
@@ -131,18 +134,19 @@ body {
   
   .controls button {
     background-image:url(marble-2398946_1280.jpg);
-    margin: 20px 0 0 0;
+    margin: 0px 0 0 0;
     width: 100px;
     height: 60px;
     font-size: 20px;
     border: 1px #000000 solid;
     border-radius: 10px;
     text-decoration: none;
+
+
   }
   
   .controls #next_btn:hover {
     border: 2px hotpink solid;
-   
     cursor: pointer;
   }
   
@@ -208,13 +212,20 @@ body {
     display: inline-block;
     background-color: hotpink;
     border: 1px black solid;
-    height: 90px;
-    width: 90px;
-    margin: 5px;
-    font-size: 50px;
+    height: 70px;
+    width: 70px;
+    margin: 7px;
+    font-size: 30px;
     border-radius: 50px;
-    line-height:100px;
+    line-height:70px;
+
   }
+
+  }
+  
+
+  
+  
   
   .numBtn:hover {
     background-color: pink;
