@@ -1,13 +1,22 @@
 # Pizza Bot
 
-Replace this readme with your own information about your project. 
+Sandra and I got the task to create a pizza bot
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We took on the blue requirements in one looong session which was a fun experience
+
+We added simple styling to the page
+
+We removed prompts and added a form
+
+We cleaned up the js code and separated some functions
+
+We added red requirements
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://elated-kepler-420a4b.netlify.app/
+
+https://github.com/monkeybusiness101/project-pizza-bot
