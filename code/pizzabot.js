@@ -1,7 +1,12 @@
 const vegetarian = "Vegetarian Pizza"
 const hawaiian = "Hawaiian Pizza"
 const pepperoni = "Pepperoni Pizza"
+const kebeb = "Kebab Pizza"
+
+// const pizzaPrice2 = 100
 const pizzaPrice = 80
+
+
 //Put your Javscript code here:
 console.log(vegetarian);
 console.log(hawaiian);
@@ -10,18 +15,32 @@ console.log(pepperoni);
 //Three functions in total needed - iteration 7
 /*Check valid pizza name*/
 const validateOrderName = (orderName) =>{
-    if (orderName === vegetarian || orderName === hawaiian || orderName === pepperoni)
+    if (orderName === vegetarian || orderName === hawaiian || orderName === pepperoni || orderName === kebab)
     {
         return true;
     }
     else return false;
 }
-//console.log(validateOrderName);
+console.log(validateOrderName);
 /*calculate order total price*/
 const calculateTotalCost = (orderQuantity, pizzaPrice) =>{
-    const orderTotal = orderQuantity * pizzaPrice;
-    return orderTotal;
+   const orderTotal = orderQuantity * pizzaPrice;
+   return orderTotal;
 }
+
+
+/*calculate order total price TESTING:*/
+// const calculateTotalCost = (orderQuantity) =>{
+//   if (orderName === kebab) {
+//     return orderQuantity * pizzaPrice2
+//   } else {
+//     return orderQuantity * pizzaPrice
+//   }
+  //const orderTotal = orderQuantity * pizzaPrice;
+  
+  //return orderTotal;
+//}
+
 //console.log(calculateTotalCost);
 /*calculate cooking time depending on orderQuantity*/
 const calculateCookingTime = (orderQuantity) =>{
@@ -75,7 +94,9 @@ const createPizzaOrder = () => {
     if (customerName.length > 0) {
         const cookingTime = calculateCookingTime(orderQuantity);
         //console.log(cookingTime);
+        
         const orderTotal = calculateTotalCost(orderQuantity, pizzaPrice);
+        
         //console.log(orderTotal);
         const orderConfirmation = (`Hey, ${customerName}, I'll get started on your ${orderName} right away.
         It will cost ${orderTotal} kr. The pizza(s) will take ${cookingTime} minutes.`)
