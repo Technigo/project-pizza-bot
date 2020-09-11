@@ -21,19 +21,21 @@ header {
 }
 
 header h2 {
-    font-style: italic;
-    font-weight: 400px;
+  font-style: italic;
+  font-weight: 400px;
 }
 
 main {
-  grid-column-start: 2;
-  grid-column-end: 8;
+  grid-column: span 8;
+  min-height: 60vh;
   padding: 15px;
   text-align: center;
   background: #f7ede2;
 }
 
 .greeting-message {
+  grid-column-start: 2;
+  grid-column-end: 6;
   display: flex;
   flex-direction: column;
   justify-content: center;
