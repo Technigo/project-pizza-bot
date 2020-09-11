@@ -1,4 +1,4 @@
-const recieveData = (event) => {
+const receiveData = (event) => {
     event.preventDefault();
 
     const typeOfPizza = validateOrderName();
@@ -12,26 +12,29 @@ const recieveData = (event) => {
 let orderName;
 const validateOrderName = () => {
 
-    // const pizzaChoice = document.getElementsByName('pizza');
+    let pizzaChoice = document.getElementsByName('pizza');
 
-    // for (const i = 0; i < pizzaChoice.length; i++) {
-    //     if (pizzaChoice[i].checked) {
-    //         // alert(pizzaChoice[i].value);
-    //         return pizzaChoice[i].value;
-    //     }
+    for (let i = 0; i < pizzaChoice.length; i++) {
+        if (pizzaChoice[i].checked) {
+            return pizzaChoice[i].value;
+        }
+    }
+
+    // const vegetarian = document.getElementById("vegetarianPizza");
+    // const hawaiian = document.getElementById("hawaiianPizza");
+    // const pepperoni = document.getElementById("pepperoniPizza");
+    // const chicken = document.getElementById("chickenPizza");
+
+    // if (vegetarian.checked) {
+    //     return vegetarian.value;
+    // } else if (hawaiian.checked) {
+    //     return hawaiian.value;
+    // } else if (pepperoni.checked) {
+    //     return pepperoni.value;
+    // } else {
+    //     return chicken.value;
     // }
 
-    const vegetarian = document.getElementById("vegetarianPizza");
-    const hawaiian = document.getElementById("hawaiianPizza");
-    const pepperoni = document.getElementById("pepperoniPizza");
-
-    if (vegetarian.checked) {
-        return vegetarian.value;
-    } else if (hawaiian.checked) {
-        return hawaiian.value;
-    } else {
-        return pepperoni.value;
-    }
 }
 
 ///Calculate total cost of the order.
@@ -59,7 +62,9 @@ const showImage = (typeOfPizza) => {
         document.getElementById("vegetarianImg").style.display = "block";
     } else if (typeOfPizza === "Hawaiian Pizza") {
         document.getElementById("hawaiianImg").style.display = "block";
-    } else {
+    } else if (typeOfPizza === "Pepperoni Pizza") {
         document.getElementById("pepperoniImg").style.display = "block";
+    } else {
+        document.getElementById("chickenImg").style.display = "block";
     }
 }
