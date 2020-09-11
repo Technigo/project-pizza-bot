@@ -52,7 +52,6 @@ const calculateCookingTime = (pizzaAmount) => {
 
 //Function that assigns an image to the type of pizza ordered
 pizzaImage = (orderName) => { 
-    console.log(orderName);
     if (orderName.toLowerCase() === vegetarian.toLowerCase()) {
         return vegPic;
     } else if (orderName.toLowerCase() === pepperoni.toLowerCase()) {
@@ -98,7 +97,7 @@ const enteredPizzaAmount = (event) => {
         plural = "";
     }
 
-    document.getElementById("finalize").innerHTML = `&#129302 Thanks for your order! I'll get started on your ${orderName}${plural} right away, it will cost ${totalPrice}kr. The Pizza${plural} will take ${correctOrderAmount} minuites to cook. Our driver will deliver your pizza within the hour!`;
+    document.getElementById("finalize").innerHTML = `&#129302 Thanks for your order! I'll get started on your ${orderName}${plural} right away, it will cost ${totalPrice}kr. The Pizza${plural} will take ${correctOrderAmount} minuites to cook. Our driver will deliver your pizza within the  hour!`;
 
     //Changes the display of the final order statement and the correct image of the pizza from none to flex. In css this is defined as nonw. 
     document.getElementById("finalOrder").style.display= "flex";
