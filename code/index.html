@@ -48,37 +48,11 @@
           />
         </div>
 
-        <div class="input-container input-container--checkbox">
+        <div class="input-container input-container--radio">
           <h3><b>What do you want to order:</b></h3>
 
-          <label for="vegetarian-pizza">
-            <input
-              type="radio"
-              id="vegetarian-pizza"
-              name="pizza"
-              value="vegetarian"
-            />Vegetarian Pizza</label
-          >
-
-          <label for="hawaiian-pizza">
-            <input
-              type="radio"
-              id="hawaiian-pizza"
-              name="pizza"
-              value="hawaiian-pizza"
-            />Hawaiian Pizza</label
-          >
-
-          <label for="pepperoni-pizza"
-            ><input
-              type="radio"
-              id="pepperoni-pizza"
-              name="pizza"
-              value="pepperoni-pizza"
-            />Pepperoni Pizza</label
-          >
-        </div>
-
+          <div id="menu-list"></div>
+  
         <label for="amountPizzaInputId"
           ><b>How many pizzas would you like?:</b></label
         ><output name="amountPizza" id="amountPizzaOutputId">1</output>
@@ -97,7 +71,8 @@
           <input class="submit" type="submit" value="submit" />
         </div>
 
-        <div class="alert" id="info"></div>
+        <div class="alert" id="info">
+        </div>
       </form>
     </section>
 
