@@ -51,19 +51,43 @@ body {
     display: none;
 }
 
+@keyframes bounce {
+	0%, 40%, 80%, 100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	20% {
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	60% {
+		-webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+  }
+
+}
 
 .pizza img {
     width: 100%;
     border-radius: 10px; 
     cursor: pointer;
+
 }
 
+.pizza img:hover {
+    animation: bounce 1s;
 
+
+}
 .pizza {
     width: 30%;
     box-sizing: border-box;
     padding: 15px;
 }
+
+
 
 .pizza h2 {
     font-weight: 400;
@@ -93,4 +117,28 @@ body {
     font-weight: 700;
     letter-spacing: 1.5px;
     cursor: pointer;
+}
+
+.start-btn:hover {
+    background-color: #e1f4f0;
+    color:  #185272;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    color: #185272;
+    
+}
+
+a {
+    color: #185272;
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight: 700;
 }
