@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Londrina+Outline");
 @import url("https://fonts.googleapis.com/css2?family=Vollkorn:wght@600&display=swap");
-/* Code for gradient background was borrowed from one of our classmates! */
+/* Code for gradient background was borrowed from one of our classmates, Jonna! */
 html {
   margin: 0;
 }
@@ -12,21 +12,21 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* GRADIENT BACKGROUND */
-  background: linear-gradient(270deg, #aef0df, #d9b7d6, #fbd880);
-  background-size: 400% 400%;
-
-  -webkit-animation: AnimationName 30s ease infinite;
-  -moz-animation: AnimationName 30s ease infinite;
-  animation: AnimationName 30s ease infinite;
+  background-image: url(./img/bluepizza.jpg);
+  background-position: center;
 }
 #orderPlaced {
   font-size: 20px;
+  color: black;
   text-align: center;
   align-items: center;
   justify-content: center;
   height: 80%;
   margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
 }
 
 @-webkit-keyframes AnimationName {
@@ -92,15 +92,16 @@ body {
   justify-content: space-evenly;
 }
 section.chatbot-form {
-  background-image: url(./img/pizzawall.jpg);
+  /* GRADIENT BACKGROUND FOR THE FORM!*/
+  background: linear-gradient(270deg, #aef0df, #d9b7d6, #fbd880);
+  background-size: 400% 400%;
 
-  background-repeat: no-repeat;
-  -moz-background-size: cover;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+  opacity: 0.95;
   max-width: 100%;
-  width: 1000px;
+  width: 500px;
   height: 100%;
   color: #fff;
   border-radius: 5px;
@@ -122,6 +123,7 @@ section.chatbot-form {
   text-align: center;
   justify-content: center;
   color: black;
+  padding: 25px;
 }
 .chatbot-form p {
   font-family: "Vollkorn", serif;
