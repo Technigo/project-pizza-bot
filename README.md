@@ -1,13 +1,13 @@
 # Pizza Bot
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This project is about making a pizzabot, where you can order pizza.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
-
+We chose to make a form, where the user can choose which pizza they want and how many. When pressing an order button a message is displayed where the order is confimed. 
+ We chose to mainly focus on the javascript part instead of putting a lot of time styling with css.
+ 
+ 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://pizzeriabolero.netlify.app/
