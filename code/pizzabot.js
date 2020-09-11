@@ -40,7 +40,7 @@ const greet = (event) => {
   document.getElementById('greeting').innerHTML = greeting;
   document.getElementById('enterName').innerHTML = enterName;
   document.getElementById('nameForm-container').style.display = "flex";
-  document.getElementById('nameForm').style.display = "block";
+  document.getElementById('nameForm').style.display = "flex";
 }
 
 const submitName = (event) => {
@@ -50,7 +50,7 @@ const submitName = (event) => {
   document.getElementById('pizzaName-container').style.display = "flex";
   document.getElementById('pizzaName').innerHTML = orderName;
   document.getElementById('pizzaForm-container').style.display = "flex";
-  document.getElementById('pizzaForm').style.display = "block";
+  document.getElementById('pizzaForm').style.display = "flex";
 }
 
 const submitPizza = (event) => {
@@ -60,7 +60,7 @@ const submitPizza = (event) => {
   document.getElementById('pizzaQuantity-container').style.display = "flex";
   document.getElementById('pizzaQuantity').innerHTML = pizzaQuantity;
   document.getElementById('quantityForm-container').style.display = "flex";
-  document.getElementById('quantityForm').style.display = "block";
+  document.getElementById('quantityForm').style.display = "flex";
 }
 
 const submitQuantity = (event) => {

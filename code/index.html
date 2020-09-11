@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./style.css">
-    <title>🍕 Project 4: Pizzabot</title>
+    <title>🍕 KarSan's Pizzabot</title>
     <script src="https://kit.fontawesome.com/8f9b6a8db2.js" crossorigin="anonymous"></script>
     <link href='https://fonts.googleapis.com/css?family=Athiti' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Indie Flower' rel='stylesheet'>
   </head>
   <body>
-    <h1>This is your Pizza Bot</h1>
+    <h1>Welcome to KarSan's Pizzeria!</h1>
     
 
     <section class="bot">
@@ -30,7 +30,7 @@
       <div class="bubble-answer-container" id="nameForm-container">
         <form class="bubble-answer" id="nameForm" onsubmit="submitName(event)">
           <input id="name" name="name" type="text" placeholder="Enter your name" required>
-          <input id="nameSubmit" name="nameSubmit" type="submit" value="Submit">
+          <input id="nameSubmit" class="submit" name="nameSubmit" type="submit" value="Submit">
         </form>
         <img src="./assets/user-solid.svg" alt="Customer" class="user-img">
       </div>
@@ -47,7 +47,7 @@
             <option value="Vegetarian Pizza" id="vegetarian">Vegetarian Pizza</option>
             <option value="Hawaiian Pizza" id="hawaiian">Hawaiian Pizza</option>
             <option value="Pepperoni Pizza" id="pepperoni">Pepperoni Pizza</option>
-          <input id="pizzaSubmit" name="submit" type="submit" value="Submit">
+          <input id="pizzaSubmit" class="submit" name="submit" type="submit" value="Submit">
         </form>    
         <img src="./assets/user-solid.svg" alt="Customer" class="user-img">
       </div>
@@ -60,7 +60,7 @@
       <div class="bubble-answer-container" id="quantityForm-container">
         <form class="bubble-answer" id="quantityForm" onsubmit="submitQuantity(event)">
           <input id="orderQuantity" name="orderQuantity" type="number" placeholder="Enter quantity" required>
-          <input id="quantitySubmit" name="quantitySubmit" type="submit" value="Submit">
+          <input id="quantitySubmit" class="submit" name="quantitySubmit" type="submit" value="Submit">
         </form>    
         <img src="./assets/user-solid.svg" alt="Customer" class="user-img">
       </div>
