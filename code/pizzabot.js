@@ -1,18 +1,16 @@
 const vegetarian = "Vegetarian Pizza"
 const hawaiian = "Hawaiian Pizza"
 const pepperoni = "Pepperoni Pizza"
-const kebeb = "Kebab Pizza"
+const kebeb = "Kebab Pizza" //We added an extra pizza with the aim to specify a different price, but we didn't have time to finih it and make the new price work.
 
-// const pizzaPrice2 = 100
 const pizzaPrice = 80
 
+//console.log(vegetarian);
+//console.log(hawaiian);
+//console.log(pepperoni);
 
-//Put your Javscript code here:
-console.log(vegetarian);
-console.log(hawaiian);
-console.log(pepperoni);
-/*Functions*/
-//Three functions in total needed - iteration 7
+/*Functions below */
+
 /*Check valid pizza name*/
 const validateOrderName = (orderName) =>{
     if (orderName === vegetarian || orderName === hawaiian || orderName === pepperoni || orderName === kebab)
@@ -21,28 +19,16 @@ const validateOrderName = (orderName) =>{
     }
     else return false;
 }
-console.log(validateOrderName);
-/*calculate order total price*/
+//console.log(validateOrderName);
+
+/*Calculate order total price*/
 const calculateTotalCost = (orderQuantity, pizzaPrice) =>{
    const orderTotal = orderQuantity * pizzaPrice;
    return orderTotal;
 }
-
-
-/*calculate order total price TESTING:*/
-// const calculateTotalCost = (orderQuantity) =>{
-//   if (orderName === kebab) {
-//     return orderQuantity * pizzaPrice2
-//   } else {
-//     return orderQuantity * pizzaPrice
-//   }
-  //const orderTotal = orderQuantity * pizzaPrice;
-  
-  //return orderTotal;
-//}
-
 //console.log(calculateTotalCost);
-/*calculate cooking time depending on orderQuantity*/
+
+/*Calculate cooking time depending on orderQuantity*/
 const calculateCookingTime = (orderQuantity) =>{
     let cookingTime;
     if (orderQuantity >= 1 && orderQuantity <=2) {
@@ -57,10 +43,9 @@ const calculateCookingTime = (orderQuantity) =>{
     return cookingTime;
 }
 //console.log(calculateCookingTime);
+
 /*Function to specify pizza image depending on pizza selection*/
-//FUNKAR MEN BEHÖVER VI LET pizzaImage????
 const pizzaImageFunction = (orderName) => {
-    //let pizzaImage;
     if(orderName === vegetarian) {
         return "./vegetarian.png";
     } else if (orderName === hawaiian) {
@@ -69,21 +54,8 @@ const pizzaImageFunction = (orderName) => {
         return "./pepperoni.png";
     }
 };
-/*
-const pizzaImageFunction = (orderName) => {
-    let pizzaImage;
-    if (orderName === vegetarian) {
-       "./vegetarian.jpg";
-    } else if (orderName === hawaiian) {
-        "./hawaiian.jpg";
-    } else {
-        "./pepperoni.jpg";
-    }
-return pizzaImage;
-    //console.log(pizzaImageFunction);
-}*/
-/* PMG STARTS*/
-//GET INPUTS FROM THE FORM validate everything is filled in correctly
+
+//Excecuted when button is clicked (INPUTS FROM FORM, validate everything is filled in correctly)
 const createPizzaOrder = () => {
     const customerName = document.getElementById('firstName').value;
     let orderName = document.getElementById('pizzaSelection').value;
@@ -91,12 +63,11 @@ const createPizzaOrder = () => {
     //console.log(customerName);
     //console.log(orderName);
     //console.log(orderQuantity);
+    
     if (customerName.length > 0) {
         const cookingTime = calculateCookingTime(orderQuantity);
         //console.log(cookingTime);
-        
         const orderTotal = calculateTotalCost(orderQuantity, pizzaPrice);
-        
         //console.log(orderTotal);
         const orderConfirmation = (`Hey, ${customerName}, I'll get started on your ${orderName} right away.
         It will cost ${orderTotal} kr. The pizza(s) will take ${cookingTime} minutes.`)
@@ -108,16 +79,20 @@ const createPizzaOrder = () => {
         alert('Please specify all information in the form');
     }
 };
-//PIZZA SLIDER - har inget med övriga funktioner att göra (inget med pizza order att göra)
+
+//Function PIZZA SLIDER VALUE
 const changeRangeValue = () => {
     const rangeValue = document.getElementById("pizzaRangeSlider").value;
     document.getElementById("output-pizzaRange").innerHTML = rangeValue;
 }
-/* BLUE LEVEL - dont need these because......
+
+
+/* BLUE LEVEL - We saved this to show that we did the blue level.
+
 //alert(`Hello! Happy to serve you pizza. On our menu we have ${vegetarian}, ${pepperoni}, ${hawaiian}`);
 const orderName = prompt("Enter the name of the pizza you want to order");
 console.log(orderName);
-//Do we have to validate again? Since the selection is in a selectlist in the form?
+
 if (validateOrderName(orderName)===true) {
     const orderQuantity = prompt(`How many of ${orderName} do you want?`);
     const orderTotal = calculateTotalCost(orderQuantity, pizzaPrice);

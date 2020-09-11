@@ -14,13 +14,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: rgb(240, 224, 224);
+  color: #f0e0e0;
 }
 h1 {
   font-family: Lato;
   font-weight: 100;
   font-size: 48px;
-  /* text-shadow: 0 0 0.1em #fff, 0 0 0.2em #fff, 0 0 0.3em #fff, 0 0 0.4em #f7f, 0 0 0.6em #f0f, 0 0 0.8em #f0f, 0 0 1em #f0f, 0 0 1.2em #f0f; */
   -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
   -moz-animation: neon1 1.5s ease-in-out infinite alternate;
   animation: neon1 1.5s ease-in-out infinite alternate;
@@ -39,7 +38,6 @@ h2 {
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
 }
 /*Glow effect for Webkit Browsers*/
-
 @-webkit-keyframes neon1 {
   from {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
@@ -49,7 +47,6 @@ h2 {
   }
 }
 /*Glow effect for for mozilla*/
-
 @-moz-keyframes neon1 {
   from {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
@@ -59,7 +56,6 @@ h2 {
   }
 } 
 /*Glow Effect*/
-
 @keyframes neon1 {
   from {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
@@ -69,9 +65,7 @@ h2 {
   }
 }
 
-
 p {
-  /*margin: 0 3vw 3vh;*/
   font-size: 18px;
 }
 
@@ -81,14 +75,15 @@ p {
   justify-content: center;
   width: 90vw;
   background-color: rgba(68, 67, 67, 0.7)
-  /* background-color: rgba(225,204,222,0.7) */
 }
+
 form {
   display: flex;
   flex-direction: column;
   width: 50%;
   padding: 10px;
 }
+
 .input-element,
 .input-element-slider {
   margin-left: 20px;
@@ -115,21 +110,9 @@ form {
   margin-bottom: 15px;
 }
 
-/* Detta funkar inte nedan: */
-.pizza-range-slider::-webkit-slider-thumb {
-  appearance: none;
-  width: 25px; 
-  height: 25px; 
-  border-radius: 50%;
-  border: 2px solid #7AD175;
-}
-
 .pizza-range-slider {
   width: 250px;
 }
-/* .input-element label {
-  width: 100px;
-} */
 
 .input-element input,
 .input-element select {
@@ -146,18 +129,17 @@ button {
   color: grey;    
   cursor: pointer;
   transition: 0.3s ease-in-out;
-  /* transition: scale 0.3s ease-in; */
 }
+
 button:hover {
   transform: scale(1.1);
 }
+
 .orderConfirmation {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  /* position: relative; */
-  /* transition: all 0.9s ease-in; fungerar denna? */
   width: 50%;
   padding: 10px;
 }
@@ -165,17 +147,13 @@ button:hover {
 img {
   width: 250px;
   height: 250px;
-  /* position: absolute; */
-  /* top: 33%; */
-  /* left: 0; */
   object-fit: cover;
   object-position: top center;
   margin: 20px 20px 30px 20px;
   border-radius: 50%;
-  /* border: 2px solid rgb(225, 165, 225); */
   box-shadow: 0 0 5px #fff, 0 0 15px 6px #fff, 0 0 25px 3px #fff, 0 0 23px 0px #FF1177, 0 0 25px #FF1177, 0 0 27px 0px #FF1177, 0 0 30px #FF1177, 0 0 35px #FF1177;
-  /* box-shadow: 0 0 0.1em #fff, 0 0 0.2em #fff, 0 0 0.3em #fff, 0 0 0.4em #f7f, 0 0 0.6em #f0f, 0 0 0.8em #f0f, 0 0 1em #f0f, 0 0 1.2em #f0f; */
 }
+
 .orderConfirmation p {
   height: 20%;
   margin: 30px 20px 0 20px;
