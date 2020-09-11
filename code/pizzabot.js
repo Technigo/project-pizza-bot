@@ -84,7 +84,7 @@ const calculateOrder = () => {
 
     
     document.getElementById("selectNumber").style.display = "none";
-    document.getElementById("endMessage").innerHTML = `Great, I'll get started on your order right away! The total sum of your order is ${orderTotal} kr and the pizzas will be delivered in ${orderTime}`;
+    document.getElementById("endMessage").innerHTML = `<h3> Great, I'll get started on your order right away!</h3> The total sum of your order is ${orderTotal} kr and the pizzas will be delivered in ${orderTime}`;
 
     // Choosing image depending on ordered pizza
     let image;
