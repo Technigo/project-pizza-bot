@@ -28,13 +28,11 @@ const calculateCookingTime = (orderQuantity) => {
   return cookingTime;
 };
 
-/*New functions for form-input*/
+/* Place order */
 const placeOrder = () => {
-  console.log("placeOrder function");
   const name = capitalizeFirstLetter(document.getElementById("name").value);
   const orderName = document.getElementById("pizza").value;
   const orderQuantity = document.getElementById("pizza-slider").value;
-  console.log(name, orderName, orderQuantity);
   const orderTotal = calculateTotalCost(orderQuantity, pizzaPrice);
   let cookingTime = calculateCookingTime(orderQuantity);
   const messageText = `Great ${name}, I'll get started on your ${orderName} 
@@ -46,13 +44,13 @@ const placeOrder = () => {
   return false;
 };
 
-/*changeRangeOutput*/
+/* Change range output */
 const changeRangeOutput = () => {
   let rangeValue = document.getElementById("pizza-slider").value;
   document.getElementById("number-output").innerHTML = rangeValue;
 };
 
-/*toggle pizza image */
+/* Toggle pizza image */
 const togglePizzaImage = (orderName) => {
   switch (orderName) {
     case vegetarian:
@@ -82,10 +80,8 @@ const toggleDisableForm = () => {
 
 const clickNextButton = (windowId) => {
   if (validateInput(windowId)) {
-    console.log(windowId + " the window id");
     let windowElement = document.getElementById(windowId);
     let nextWindow = windowElement.nextElementSibling.id;
-    console.log(nextWindow + " next window id");
     toggleWindow(windowId, nextWindow);
   } else {
     alert("Please fill in a value");
@@ -100,40 +96,35 @@ const toggleWindow = (windowId, nextWindow) => {
 };
 
 const validateInput = (windowId) => {
-  console.log("validateInput");
   let isValid;
   if (windowId === "chatWindow1") {
     let inputToCheck = document.getElementById("name").value;
-    console.log(inputToCheck + "inputToCheckvalue");
     if (inputToCheck === "") {
       isValid = false;
-      console.log(isValid);
     } else {
       setGreetingName(inputToCheck);
       setProgressBarValue();
-      console.log();
+      setProgressBarLabel();
       isValid = true;
     }
   } else if (windowId === "chatWindow2") {
     let inputToCheck = document.getElementById("pizza").value;
-    console.log(inputToCheck + " inputToCheckvalue");
     if (inputToCheck === "") {
       isValid = false;
-      console.log(isValid);
     } else {
       setOrderName(inputToCheck);
       setProgressBarValue();
+      setProgressBarLabel();
       isValid = true;
     }
   } else if (windowId === "chatWindow3") {
     let inputToCheck = document.getElementById("pizza-slider").value;
-    console.log(inputToCheck + "inputToCheckvalue");
     if (inputToCheck === "0") {
       isValid = false;
-      console.log(isValid);
     } else {
       setOrderSummary();
       setProgressBarValue();
+      setProgressBarLabel();
       isValid = true;
     }
   } else {
@@ -146,22 +137,32 @@ const setProgressBarValue = () => {
   document.getElementById("progress-bar").value += 1;
 };
 
+const setProgressBarLabel = () => {
+  const progressBarValue = document.getElementById("progress-bar").value;
+  console.log(progressBarValue);
+  //const progressBarLabel = `${progressBarValue} out of 3 answered`;
+  document.getElementById(
+    "progress-bar-label"
+  ).innerHTML = `${progressBarValue} out of 3 answered`;
+  //console.log(progressBarLabel);
+};
+
 const setGreetingName = (inputToCheck) => {
   const inputName = capitalizeFirstLetter(inputToCheck);
-  const greetingText = `Great ${inputName}! On our menu we have ${vegetarian}, ${hawaiian}, ${pepperoni}, ${capricciosa} and ${margherita} pizza. Choose the pizza you want to order.`;
-  document.getElementById("order").innerHTML = greetingText;
+  document.getElementById("order").innerHTML = `Great ${inputName}! On our menu
+   we have ${vegetarian}, ${hawaiian}, ${pepperoni}, ${capricciosa} and 
+   ${margherita} pizza. Choose the pizza you want to order.`;
 };
 
 const setOrderName = (inputToCheck) => {
   const inputOrderName = capitalizeFirstLetter(inputToCheck);
-  const orderNameText = `${inputOrderName} pizza, great choice! How many do you want to order?`;
-  document.getElementById("order-name").innerHTML = orderNameText;
+  document.getElementById("order-name").innerHTML = `${inputOrderName} pizza, 
+    great choice! How many do you want to order?`;
 };
 
 const capitalizeFirstLetter = (inputToCheck) => {
   const inputToCapitalize =
     inputToCheck[0].toUpperCase() + inputToCheck.slice(1);
-  console.log(inputToCapitalize);
   return inputToCapitalize;
 };
 
@@ -169,10 +170,8 @@ const setOrderSummary = () => {
   const name = capitalizeFirstLetter(document.getElementById("name").value);
   const orderName = document.getElementById("pizza").value;
   const orderQuantity = document.getElementById("pizza-slider").value;
-  console.log(name, orderName, orderQuantity);
-  const orderSummary = `${name}, you want to order ${orderQuantity} ${orderName}
-   pizza(s). What a feast!`;
-  document.getElementById("summary").innerHTML = orderSummary;
+  document.getElementById("summary").innerHTML = `${name}, you want to order
+   ${orderQuantity} ${orderName} pizza(s). What a feast!`;
 };
 
 /* OLD FUNCTIONS */

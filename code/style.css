@@ -10,6 +10,7 @@ h1 {
   font-size: 3em;
   margin-top: 70px;
   font-family: "Staatliches";
+  text-shadow: 2px 2px #1744f1;
 }
 
 .flex-wrapper {
@@ -63,6 +64,11 @@ h1 {
 
 .number-output {
   margin-left: 3px;
+  font-size: 0.8em;
+}
+
+label {
+  font-size: 0.8em;
 }
 
 .input {
@@ -73,20 +79,82 @@ h1 {
   font-size: 1em;
   font-family: "Montserrat", Courier, monospace;
   border: none;
-}
-
-select {
-  min-width: 82%;
-  border-radius: 4px;
-  background: #fff;
-  height: 30px;
-  font-size: 1em;
-  font-family: "Montserrat", Courier, monospace;
-}
-
-input:focus,
-select:focus {
   outline: none;
+  margin: 10px 0;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+.input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+}
+
+.input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 10px;
+}
+
+.input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 32px;
+  width: 32px;
+  background: url("./pizza.png");
+  margin-top: -11px;
+  cursor: pointer;
+}
+
+.input[type="range"]::-moz-range-thumb {
+  height: 32px;
+  width: 32px;
+  background: url("./pizza.png");
+  margin-top: -11px;
+  cursor: pointer;
+}
+
+.progress-bar {
+  width: 100%%;
+}
+
+.progress-bar[value] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 15px;
+  margin-top: 10px;
+}
+
+.progress-bar[value]::-webkit-progress-bar {
+  border-radius: 2px;
+  background: #fff;
+  height: 10px;
+}
+
+.progress-bar[value]::-moz-progress-bar {
+  border-radius: 2px;
+  background: #fff;
+  height: 10px;
+}
+
+.progress-bar[value]::-webkit-progress-value {
+  background: #009688;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.progress-bar-label {
+  font-size: 0.6em;
 }
 
 .image {
@@ -150,8 +218,4 @@ select:focus {
 
 .button:focus {
   outline: none;
-}
-
-.progress-bar {
-  width: 99%;
 }
