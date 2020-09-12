@@ -4,31 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" type="text/css" href="./style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <title>Project 4: Pizzabot</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="./images/favicon.png" alt="favicon" />
+    <title>Pizza Corner</title>
   </head>
+
   <body>
     <header class="header">
-      <h1 class="header-text">Pizza Corner</h1>
-      <h2 class="sub-header-text">Delicious Pizza 24/7</h2>
+      <div class="wrapper">
+        <h1 class="header-text">Pizza Corner</h1>
+        <h2 class="sub-header-text">Delicious Pizza 24/7</h2>
+      </div>
       <picture>
         <source srcset="./images/header-img-small.jpg" media="(max-width:600px)" />
         <source srcset="./images/header-img-med.jpg" media="(max-width:900px)" />
-        <img src="./images/header-img-large.jpg" alt="Image of pizza - Photo by Brett Jordan from Pexels"  />  
+        <img src="./images/header-img-large.jpg" alt="Image of pizza - Photo by Brett Jordan from Pexels" />
       </picture>
+      <button
+        id="orderBtn"
+        class="order-btn"
+        type="submit"
+        onclick="askForPizza(event)"
+      >
+        Order Pizza</button>
     </header>
 
     <div class="pizza-order">
-      <p>Click on button to order pizza</p>
-      <button id="orderBtn" class="order-btn" onclick="askForPizza()">Order Pizza</button>
-      <p>Your order will show up below once completed</p>
+      <p>Your order will show below once completed</p>
       <p id="printOrder" class="print-order"></p>
-
+      <div class="pizza-image">
+        <img id="pizzaImage" src="./pizza-oven.jpg" alt="Image of a pizza oven" />
+      </div>
     </div>
 
-
+    <footer class="footer">
+      <p>Project 4 - Pizzabot by Andrea Osmar and Jamie Cook</p>
+    </footer>
+    <script src="./pizzabot.js"></script>
   </body>
-
-<script src="./pizzabot.js"></script>
 </html>
