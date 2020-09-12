@@ -28,7 +28,6 @@ h1 {
 }
 
 .flex-container {
-  /* display: flex; */
   flex-direction: column;
   width: 40vw;
   background: rgba(0, 0, 0, 0.85);
@@ -43,7 +42,6 @@ h1 {
 
 .order-confirmation {
   position: relative;
-  /* display: flex; */
   flex-direction: row;
   width: 20vw;
   background: rgba(0, 0, 0, 0.85);
@@ -53,7 +51,6 @@ h1 {
 
 .input-wrapper {
   margin: 10px 0px;
-  /*display:flex;*/
   flex-direction: column;
   min-width: 100%;
 }
@@ -63,7 +60,8 @@ h1 {
   flex-direction: row;
   justify-content: flex-start;
 }
-#number-output {
+
+.number-output {
   margin-left: 3px;
 }
 
@@ -105,7 +103,7 @@ select:focus {
   padding: 35px;
 }
 
-#message {
+.message {
   font-size: 1em;
   font-weight: bold;
   color: #fff;
