@@ -18,6 +18,7 @@ const calculateCookingTime = (orderQuantity) => {
   let cookingTime;
   if (orderQuantity >= 1 && orderQuantity <= 2) {
     cookingTime = 10;
+    console.log(typeof cookingTime);
   } else if (orderQuantity >= 3 && orderQuantity <= 5) {
     cookingTime = 15;
   } else if (orderQuantity >= 6) {
@@ -35,10 +36,12 @@ const placeOrder = () => {
   const orderQuantity = document.getElementById("pizza-slider").value;
   const orderTotal = calculateTotalCost(orderQuantity, pizzaPrice);
   let cookingTime = calculateCookingTime(orderQuantity);
+  console.log(typeof cookingTime + " cookingTime");
   const messageText = `Great ${name}, I'll get started on your ${orderName} 
     right away. It will cost ${orderTotal} kr. The pizza(s) will take 
     ${cookingTime} minutes.`;
   document.getElementById("message").innerHTML = messageText;
+  updateCountdown(cookingTime);
   toggleDisableForm();
   togglePizzaImage(orderName);
   return false;
@@ -169,6 +172,28 @@ const setOrderSummary = () => {
   const orderQuantity = document.getElementById("pizza-slider").value;
   document.getElementById("summary").innerHTML = `${name}, you want to order
    ${orderQuantity} ${orderName} pizza(s). What a feast!`;
+};
+
+const updateCountdown = (cookingTime) => {
+  let counter = cookingTime * 60;
+
+  const interval = setInterval(() => {
+    const countdownEl = document.getElementById("countdown");
+
+    const minutes = Math.floor(counter / 60);
+    let seconds = counter % 60;
+    console.log(minutes, seconds);
+    seconds = seconds < 10 ? `0${seconds}` : seconds;
+    countdownEl.innerHTML = `${minutes}: ${seconds}`;
+
+    console.log(counter);
+    counter--;
+
+    counter < 0 ? clearInterval(interval) : counter;
+    if (counter <= 0) {
+      document.getElementById("countdown").innerHTML = "Pizza time!";
+    }
+  }, 10);
 };
 
 /* OLD FUNCTIONS */

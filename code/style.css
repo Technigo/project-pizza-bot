@@ -161,6 +161,10 @@ label {
 }
 
 .message-container {
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   top: 0;
   left: 0;
   right: 0;
@@ -175,6 +179,17 @@ label {
   font-weight: bold;
   color: #fff;
   background: rgba(0, 0, 0, 0.7);
+}
+
+.countdown {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+  margin: 0;
+  padding: 15px;
 }
 
 .hawaiian {
