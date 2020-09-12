@@ -4,41 +4,39 @@ const pepperoni = "Pepperoni Pizza";
 
 const pizzaPrice = 80;
 
-//Greet your customer
+// Greet your customer
 const greeting = `Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`;
 document.getElementById("greeting-message").innerHTML = greeting;
 
-//Ask your customer which pizza
+// Ask your customer which pizza
 const decidePizza = "Enter the name of the pizza you want to order today!";
 document.getElementById("name-of-pizza").innerHTML = decidePizza;
 
-//How many Pizza's
+// How many Pizza's
 const orderQuantityMsg = `How many do you want?`;
 document.getElementById("quantity-of-pizza").innerHTML = orderQuantityMsg;
 
 // Function for pizza choice/order
-let addOrder = (event) => {
+let addOrderPizza = (event) => {
   event.preventDefault();
   const orderName = document.getElementById("form-text").value;
-
-  const orderQuantity = document.getElementById("form-number").value;
-
-  const customerName = document.getElementById("form-name").value;
 
   if (validateOrderName(orderName)) {
     toggleActiveForm();
     toggleDisablePizza();
   } else {
-    const errorMessage = "Please, select a pizza from the our menu";
+    const errorMessage = "Please, select a pizza from our menu";
     document.getElementById("errorMessage").innerHTML = errorMessage;
     return;
   }
 };
 
 // Button for pizza choice
-document.getElementById("button").addEventListener("click", addOrder);
+document
+  .getElementById("button-pizza-choice")
+  .addEventListener("click", addOrderPizza);
 
-// Function for second part
+// Function for quantity of pizza(s)
 let addOrderQuantity = (event) => {
   event.preventDefault();
   const orderName = document.getElementById("form-text").value;
@@ -61,10 +59,12 @@ let addOrderQuantity = (event) => {
   togglePizzaBot();
 };
 
-// Button for xxxx
-document.getElementById("button-1").addEventListener("click", addOrderQuantity);
+// Button for quantity of pizza(s)
+document
+  .getElementById("button-quantity")
+  .addEventListener("click", addOrderQuantity);
 
-//Add function to validate pizza order
+// Add function to validate pizza order
 const validateOrderName = (orderName) => {
   if (
     orderName === vegetarian ||
@@ -93,7 +93,7 @@ const calculateCookingTime = (orderQuantity) => {
   }
 };
 
-// Function to hide first part of the form
+// Function to display quantity of pizza (form)
 const toggleActiveForm = () => {
   document
     .getElementById("active-form")
@@ -107,20 +107,21 @@ const toggleDisablePizza = () => {
     .classList.toggle("pizza-choice-wrapper");
 };
 
-// Function to hide form
+// Function to hide the whole form, both pizza and quantity choice
 const toggleDisableForm = () => {
   document
     .getElementById("hide-form")
     .classList.toggle("greeting-wrapper-inactive");
 };
 
+// Function to display final message
 const toggleLastMessage = () => {
   document
     .getElementById("wrapper-final-message")
     .classList.toggle("final-message-wrapper-active");
 };
 
-//Function to toogle Pizza image
+// Function to toggle Pizza image
 const togglePizzaImage = (orderName) => {
   if (orderName === pepperoni) {
     document.getElementById("pizza-image").classList.toggle("img-pepperoni");
@@ -131,6 +132,7 @@ const togglePizzaImage = (orderName) => {
   }
 };
 
+// Function to display pizza-bot-end
 const togglePizzaBot = () => {
   document
     .getElementById("pizzabot-end")

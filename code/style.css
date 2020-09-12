@@ -159,13 +159,13 @@ body {
   display: none;
 }
 
-#button {
+#button-pizza-choice {
   margin: 10px;
   font-family: "Montserrat", sans-serif;
   font-size: 0.8em;
 }
 
-#button-1 {
+#button-quantity {
   margin: 15px 0px;
   font-family: "Montserrat", sans-serif;
   font-size: 0.8em;
