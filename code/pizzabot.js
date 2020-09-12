@@ -50,6 +50,7 @@ const submitName = (event) => {
   document.getElementById('pizzaName').innerHTML = orderName;
   document.getElementById('pizzaForm-container').style.display = "flex";
   document.getElementById('pizzaForm').style.display = "flex";
+  document.getElementById('pizzaForm').scrollIntoView(true);
 }
 
 const submitPizza = (event) => {
@@ -60,6 +61,7 @@ const submitPizza = (event) => {
   document.getElementById('pizzaQuantity').innerHTML = pizzaQuantity;
   document.getElementById('quantityForm-container').style.display = "flex";
   document.getElementById('quantityForm').style.display = "flex";
+  document.getElementById('quantityForm').scrollIntoView(true);
 }
 
 const submitQuantity = (event) => {
@@ -70,4 +72,5 @@ const submitQuantity = (event) => {
   const confirmation = (`Great ${name}! I'll get started on your ${orderName}(s) right away, it will cost ${calculationTotalCost(orderQuantity, pizzaPrice)} kr. The pizza(s) will take ${calculateCookingTime(orderQuantity)} minutes.`);
   document.getElementById('confirmation-container').style.display = "flex";
   document.getElementById('confirmation').innerHTML = confirmation;
+  document.getElementById('confirmation').scrollIntoView(true);
 }
