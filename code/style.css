@@ -24,7 +24,6 @@ body {
   color: #fff;
   font-size: 60px;
   z-index: 1;
-  /* opacity: 0.5;*/
   position: relative;
 }
 
@@ -32,9 +31,6 @@ body {
   color: #fff;
   font-size: 35px;
   z-index: 1;
-
-  /*opacity: 0.9;
-    /*background-color: gray;*/
 }
 
 .header picture {
@@ -48,7 +44,6 @@ body {
 }
 
 .pizza-order {
-  /*border: 1px dotted black;*/
   background-color: #fff;
   display: flex;
   flex-direction: column;
