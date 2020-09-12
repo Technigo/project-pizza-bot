@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Project 4: Pizzabot</title>
-  </head>
-  <body>
-    <h1>This is your Pizza Bot</h1>
-    <script> src="pizzabot.js"</script>
-  </body>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS pizzabot</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Liza's Pizza Place</h1>
+
+        <h2>On our menu we have Vegetarian Pizza, Hawaiian Pizza,
+            Pepperoni Pizza. </h2>
+
+        <h2 id="botSays"></h2>
+
+        <div id="container">
+            <input type="text" id="answer" value="" placeholder="enter pizza name">
+            <input type="button" id="submitButton" value=">" onclick="submitAnswer()">
+        </div>
+    </div>
+
+    <script src="pizzabot.js"></script>
+</body>
+
 </html>
