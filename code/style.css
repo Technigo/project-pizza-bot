@@ -12,6 +12,9 @@ body {
   background-repeat: no-repeat;
   text-shadow: black 5px;
   margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .bot-wrapper {
@@ -19,6 +22,7 @@ body {
   box-sizing: border-box;
   align-items: center;
   margin: 10px;
+  align-self: flex-start;
 }
 
 .h1-bot {
@@ -204,10 +208,10 @@ footer {
 
 /***** MEDIA QUERIES ****/
 
-/***** TABLET ****/
+/***** TABLET and DESKTOP ****/
 @media (min-width: 768px) {
-  footer {
-    position: absolute;
+  .final-message-wrapper-active {
+    width: 50%;
   }
 
   .img-pepperoni {
@@ -221,13 +225,8 @@ footer {
   .img-hawaii {
     width: 250px;
   }
-}
 
-/***** DESKTOP ****/
-@media (min-width: 1024px) {
-  .final-message-wrapper-active {
-    width: 50%;
-    left: 25%;
-    bottom: 50%;
+  footer {
+    position: absolute;
   }
 }
