@@ -72,8 +72,8 @@ const togglePizzaImage = (orderName) => {
 };
 
 const toggleDisableForm = () => {
-  document.getElementById("order-form").classList.toggle("visible");
-  document.getElementById("order-form").classList.toggle("invisible");
+  document.getElementById("flex-container").classList.toggle("visible");
+  document.getElementById("flex-container").classList.toggle("invisible");
   document.getElementById("order-confirmation").classList.toggle("invisible");
   document.getElementById("order-confirmation").classList.toggle("visible");
 };
@@ -139,12 +139,9 @@ const setProgressBarValue = () => {
 
 const setProgressBarLabel = () => {
   const progressBarValue = document.getElementById("progress-bar").value;
-  console.log(progressBarValue);
-  //const progressBarLabel = `${progressBarValue} out of 3 answered`;
   document.getElementById(
     "progress-bar-label"
   ).innerHTML = `${progressBarValue} out of 3 answered`;
-  //console.log(progressBarLabel);
 };
 
 const setGreetingName = (inputToCheck) => {

@@ -12,13 +12,13 @@
     <section class="flex-wrapper">
       <h1>Welcome to your Pizza Bot</h1>
       <!-- Form -->
+      <section class="flex-container visible" id="flex-container">
       <form 
         action="" 
         id="order-form" 
-        name="order-form" 
-        class="flex-container visible">
+        name="order-form">
 
-        <!-- Chat window 1 -->
+        <!-- Chat window 1 class="flex-container visible"-->
         <div 
           class="input-wrapper visible" 
           id="chatWindow1">
@@ -144,6 +144,9 @@
             </button>
           </div>
         </div>
+
+        <!-- Progress bar -->
+        <div class="input-wrapper visible">
           <label 
             class="progress-bar-label"
             for="progress-bar"
@@ -157,8 +160,9 @@
             value="0" 
             max="3">
           </progress>
+        </div>
       </form>
-
+      </section>
       <!-- Order confirmation -->
       <section 
         id="order-confirmation" 
