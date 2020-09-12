@@ -1,13 +1,13 @@
 # Pizza Bot
-
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The assignment: through pair-programming create a text-based bot to order pizza online. We had to finish 7 iterations. 
 
 ## The problem
+We approached the problem through the iterations and started building the JavaScript template straight away. The biggest hurdle was the last iteration, related to making it visual by updating the DOM in JS. In the end we struggled with identifying why 1 of 3 elements only were displayed. Having identified them being defined in the if-statement, it took some more time to get them defined and usable in the general scope. 
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Technologies used: Whereby video, Slack chat, Imagecolorpicker, VS Code, GitHub.
+
+If we had more time we would create speech bubbles for the text to be displayed in, “animate” them as a conversation through JavaScript and adjust the colors to reflect the user and/or the bot.
+
 
 ## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://pizz-a-licious.netlify.app/
