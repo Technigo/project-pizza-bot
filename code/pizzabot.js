@@ -6,7 +6,7 @@ const pizzaPrice = 80;
 
 //Put your Javscript code here:
 
-//test works
+//test
 //console.log(`Test if connection HTML-JS works: ${vegetarian}, ${hawaiian} and ${pepperoni}`);
 
 alert(`Welcome, customer! Happy to serve your pizza. On our menu we have: ${vegetarian}, ${hawaiian} and ${pepperoni}`);
@@ -48,6 +48,6 @@ else
 cookingTime = 20;
 
 
-document.getElementById("orderSummary").innerHTML = `Thank you for your order! The ${orderName}s are being
-baked as you read this. The total cost is ${orderTotal} kr. The order will take ${cookingTime} minutes.`;
+document.getElementById("orderSummary").innerHTML = `<h2>Thank you for your order!</h2> The ${orderName}s are being
+prepared as you read this. The total cost is ${orderTotal} kr. The order will take ${cookingTime} minutes.`;
 
