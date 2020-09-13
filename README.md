@@ -1,13 +1,13 @@
 # Pizza Bot
 
-Replace this readme with your own information about your project. 
+This is a website in which you can order pizzas. It is built with HTML, CSS and Javascript. The website is responsive to fit different devices.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+When doing iteration 6 (which was about turning our code at the moment into functions), we found ourselves a bit lost for a period of time. It was a bit tricky to figure out how to get past it. We solved it through taking a long break and doing a lot of research during the break. 
+
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://pizzabotten.netlify.app/
