@@ -1,13 +1,10 @@
 # Pizza Bot
-
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The assignment was to build a pizza bot using javascript. 
 
 ## The problem
+We started by following the iterations. We used "prompt" and "alert" to build the initial bot. We then used .innerHTML to print the message in the browser. At last we created a form and used javascript to create a submit button that submits the order.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+If we had more time we would have started with the black level requriments. 
 
 ## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://zealous-euclid-364080.netlify.app
