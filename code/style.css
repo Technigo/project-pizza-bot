@@ -111,6 +111,7 @@ h2{
 input {
   align-items: center;
   border: none;
+  cursor: pointer;
   border-radius: 25px;
   padding: 20px;
   background-color: pa;
@@ -120,6 +121,7 @@ button {
   border: none;
   text-transform: uppercase;
   background-color:pink;
+  cursor: pointer;
   margin-top: 20px;
   padding: 20px;
   border-radius: 25px;
