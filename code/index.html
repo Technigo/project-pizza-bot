@@ -10,7 +10,7 @@
   </head>
   <body>
     <section class="flex-wrapper">
-      <h1>Welcome to your Pizza Bot</h1>
+      <h1>Welcome to the Pizza Bot</h1>
       <!-- Form -->
       <section class="flex-container visible" id="flex-container">
       <form 
@@ -26,7 +26,8 @@
             Hey! Happy to serve your pizza. Please enter your name
           </p>
           <label 
-            for="name">
+            for="name"
+            class="label">
             Name:
           </label>
           <input 
@@ -98,7 +99,8 @@
           <div
             class="slide-container">
             <label 
-              for="pizza-slider">
+              for="pizza-slider"
+              class="label">
               Number of pizzas:
             </label>
             <output 
@@ -148,7 +150,7 @@
         <!-- Progress bar -->
         <div class="input-wrapper visible">
           <label 
-            class="progress-bar-label"
+            class="label progress-bar-label"
             for="progress-bar"
             id="progress-bar-label">
             0 out of 3 answered
@@ -163,6 +165,7 @@
         </div>
       </form>
       </section>
+
       <!-- Order confirmation -->
       <section 
         id="order-confirmation" 

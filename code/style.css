@@ -13,11 +13,23 @@ h1 {
   text-shadow: 2px 2px #1744f1;
 }
 
+/*** WRAPPER ***/
+
 .flex-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+/*** CONTAINER ***/
+
+.flex-container {
+  flex-direction: column;
+  width: 60vw;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 25px;
+  color: #fff;
 }
 
 .visible {
@@ -28,26 +40,22 @@ h1 {
   display: none;
 }
 
-.flex-container {
-  flex-direction: column;
-  width: 60vw;
-  background: rgba(0, 0, 0, 0.85);
-  padding: 25px;
-  color: #fff;
-}
+/*** FORM ***/
 
 .order-form-inactive {
   display: none;
 }
 
-.order-confirmation {
-  position: relative;
-  flex-direction: row;
-  width: 50vw;
-  background: rgba(0, 0, 0, 0.85);
-  align-items: flex-start;
-  padding: 25px;
+.label {
+  font-size: 0.8em;
 }
+
+.number-output {
+  margin-left: 3px;
+  font-size: 0.8em;
+}
+
+/*** FORM INPUT ***/
 
 .input-wrapper {
   margin: 10px 0px;
@@ -59,15 +67,6 @@ h1 {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-}
-
-.number-output {
-  margin-left: 3px;
-  font-size: 0.8em;
-}
-
-label {
-  font-size: 0.8em;
 }
 
 .input {
@@ -85,6 +84,8 @@ label {
 .input:focus {
   outline: none;
 }
+
+/*** FORM INPUT RANGE ***/
 
 .input[type="range"] {
   -webkit-appearance: none;
@@ -122,8 +123,10 @@ label {
   cursor: pointer;
 }
 
+/*** PROGRESS BAR ***/
+
 .progress-bar {
-  width: 100%%;
+  width: 100%;
 }
 
 .progress-bar[value] {
@@ -156,8 +159,21 @@ label {
   font-size: 0.6em;
 }
 
+/*** IMAGE ***/
+
 .image {
   max-width: 100%;
+}
+
+/*** ORDER CONFIRMATION ***/
+
+.order-confirmation {
+  position: relative;
+  flex-direction: row;
+  width: 50vw;
+  background: rgba(0, 0, 0, 0.85);
+  align-items: flex-start;
+  padding: 25px;
 }
 
 .message-container {
@@ -181,16 +197,7 @@ label {
   background: rgba(0, 0, 0, 0.7);
 }
 
-.countdown {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2em;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.7);
-  margin: 0;
-  padding: 15px;
-}
+/*** ORDER CONFIRMATION IMAGES ***/
 
 .hawaiian {
   content: url("./hawaii.jpg");
@@ -211,6 +218,21 @@ label {
 .margherita {
   content: url("./margherita.jpg");
 }
+
+/*** COUNTDOWN TIMER ***/
+
+.countdown {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+  margin: 0;
+  padding: 15px;
+}
+
+/*** BUTTON ***/
 
 .button {
   align-self: flex-end;
