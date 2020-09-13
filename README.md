@@ -5,3 +5,4 @@ In this week’s project we coded Pizzabot that is going to ask the costumer wha
 Of the 7 iterations in the project we got stuck on the sixth iteration we were supposed to create functions that would store the name of the pizza, calculate the total cost and the cooking time. Creating the functions went well but we had some issues calling the functions but we managed to solved it after a bit. 
 
 # View it live 
+https://inspiring-mirzakhani-a53504.netlify.app/
