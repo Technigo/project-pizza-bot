@@ -1,12 +1,10 @@
 # Pizza Bot
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Third project of the Technigo Boot camp. The assignment was to make a pizza bot where a user can type in an order and get a response.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We started by doing the blue level and we made sure out functions worked before moving on to the red level and styling out site. When we started on the red level we had the black level in mind. We didn't plan much, we focused on one input type at the time and added functionalities and styles as we went along. We used CSS, HTML and JavaScript and focused mainly on the JavaScript. If we had more time we would have liked to display the input windows as a chat flow.
 
 ## View it live
 
