@@ -6,6 +6,7 @@ body {
     width: 100%;
     height: 100%;
     margin: 0px;
+
 }
 
 .bot-container {
@@ -156,4 +157,49 @@ a {
 
 a:hover {
     font-weight: 700;
+}
+
+@media only screen and (max-width: 768px) {
+    .bot-container {
+        width: 80%;
+        flex-direction: column;
+        top: 25%;
+        height: 40%;
+}
+    .bot-pic {
+        width: 100%;
+    }
+
+    .bot-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .bot-text {
+        font-size: 30px;
+    }
+
+    .pizza-container {
+        flex-direction: column;
+    }
+
+    .pizza {
+        width: 100%;
+    }
+
+    .quantity {
+        margin: 15px;
+    }
+
+    .bot-text h2 {
+        font-size: 20px;
+    }
+    
+    footer {
+        display: none;
+    }
+     
 }
