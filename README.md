@@ -1,6 +1,6 @@
 # Pizza Bot
 
-The pair-programming brief was to create a pizza bot using Javascript.
+The pair-programming brief was to create a pizza bot using Javascript. My pair-programming-partner was https://github.com/moablomkvist?tab=overview&from=2020-08-01&to=2020-08-31
 
 ## The problem
 
