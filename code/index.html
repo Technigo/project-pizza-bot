@@ -24,16 +24,24 @@
     <form id="form">
       <label class="formItemLabel" for="pizzas">Choose pizza type:</label>
       <select id="pizzas">
-        <option value="Vegetarian">Vegetarian</option>
-        <option value="Hawaiian">Hawaiian</option>
-        <option value="Pepperoni">Pepperoni</option>
+        <option value="Vegetarian Pizza">Vegetarian</option>
+        <option value="Hawaiian Pizza">Hawaiian</option>
+        <option value="Pepperoni Pizza">Pepperoni</option>
+        <option value="Margherita Pizza">Margherita</option>
       </select>
       <label class="formItemLabel" for="number">How many pizzas do you want?</label>
-      <input class="formItemInput" type="number" id="numberOfPizzas">
+      <input class="formItemInput" type="number" id="numberOfPizzas" min="0">
       <input class="formItem" type="button" id="submit" value="Submit">
     </form>
 
     <h3 id="message"></h3>
+
+    <div class="pizza-images">
+      <img src="vegetarian.jpg" id="veg" alt="Vegetarian Pizza">
+      <img src="hawaiian.jpg" id="haw" alt="Hawaiian Pizza">
+      <img src="pepperoni.jpg" id="pep" alt="Pepperoni Pizza">
+      <img src="margarita.jpg" id="mar" alt="Margherita Pizza">
+    </div>
 
   </div>
 
