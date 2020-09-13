@@ -1,13 +1,7 @@
 # Pizza Bot
+In this week’s project we coded Pizzabot that is going to ask the costumer what kind of pizza you want and how many of said pizza you want. It will then tell you the cost and how long you will have to wait. 
 
-Replace this readme with your own information about your project. 
+# The problem
+Of the 7 iterations in the project we got stuck on the sixth iteration we were supposed to create functions that would store the name of the pizza, calculate the total cost and the cooking time. Creating the functions went well but we had some issues calling the functions but we managed to solved it after a bit. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
-## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
-
-## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+# View it live 
