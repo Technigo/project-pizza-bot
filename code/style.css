@@ -55,7 +55,6 @@ body {
   width: 150px;
 }
 
-/* maybe this does not need to flexbox? */
 .greeting-wrapper {
   display: flex;
   flex-direction: column;
@@ -103,6 +102,12 @@ body {
   align-items: center;
   box-sizing: border-box;
   margin: 10px;
+}
+
+.p-pick-up {
+  padding: 5px;
+  margin: 10px;
+  font-family: “Montserrat”, sans-serif;
 }
 
 .final-message-wrapper {
