@@ -22,13 +22,12 @@
 
 
     <form id="form">
-      <label class="formItemLabel" for="pizza">Choose pizza type:</label>
-      <input class="formItemInput" list="pizza" name="pizza" id="pizzas">
-      <datalist id="pizza">
-        <option value="Vegetarian">
-        <option value="Hawaiian">
-        <option value="Pepperoni">
-      </datalist>
+      <label class="formItemLabel" for="pizzas">Choose pizza type:</label>
+      <select id="pizzas">
+        <option value="Vegetarian">Vegetarian</option>
+        <option value="Hawaiian">Hawaiian</option>
+        <option value="Pepperoni">Pepperoni</option>
+      </select>
       <label class="formItemLabel" for="number">How many pizzas do you want?</label>
       <input class="formItemInput" type="number" id="numberOfPizzas">
       <input class="formItem" type="button" id="submit" value="Submit">

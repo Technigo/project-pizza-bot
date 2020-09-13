@@ -75,7 +75,6 @@ header h1{
   cursor: pointer;
 }
 
-
 #orderMenu #submit.active{
   text-decoration: none;
   border: none;
@@ -90,7 +89,6 @@ header h1{
   font-family: 'Special Elite', cursive;
   font-size: 1rem;
 }
-
 
 .formItemLabel{
   padding: 5px;
@@ -107,4 +105,9 @@ footer {
   height: 80px;
   background-color: #500500;
 
+}
+
+#pizzas {
+  margin: 10px;
+  padding: 10px;
 }
