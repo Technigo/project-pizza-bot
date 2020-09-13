@@ -1,13 +1,10 @@
 # Pizza Bot
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The pair-programming brief was to create a pizza bot using Javascript.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+If we hade more time we had made it look more like a bot. We had problems with the connection during our pair-programming session in Visual Studio Code, so we had to work one by one from time to time – and share the code with each other through Git Gist instead. Therefor it is hard to follow the process by looking at the push-updates.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
