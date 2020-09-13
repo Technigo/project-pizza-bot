@@ -1,19 +1,66 @@
+///HTML////
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Pizza face</title>
     <link rel="stylesheet" type="text/css" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Oxygen:wght@300&display=swap" rel="stylesheet">
+    <title>Pizza face</title>
   </head>
-
   <body>
-    <h1>This is your Pizza face</h1>
-    <header></header>
-    <section></section>
-    <footer></footer>
+    <h1>Simply the best pizzas in town!</h1>
+  <section>
+    <div class=menu>
+      <h2 id="greeting"></h2>
+    </div>
+    <section class="order-container">
+        <div class="speech">
+            <div class="form-container">
+              <label for="firstName"><h3 class="h3-order1">Please type your name so we know who to cook for.</h3></label>
+              <input
+                  id="userName"
+                  type="text"
+                  title="Fill in your name"
+                  name="userName"
+                  required
+              />
+          <div class="form-container">
+              <label for="orderName"><h3 class="h3-order2">Choose one pizza from the menu</h3></label>
+              <input
+                  id="orderName"
+                  type="text"
+                  name="orderName"
+                  title="Fill in what kind of pizza you want to order"
+                  required
+              />
+          </div>
+          <div class="form-container">
+              <label for="orderQuantity"><h3 class="h3-order3">How many would you like?</h3></label>
+              <input
+                  id="orderQuantity"
+                  type="number"
+                  title="Fill in how many"
+                  name="orderQuantity"
+                  min="1"
+                  max="100"
+                  required
+              />
+          </div>
+          <div class="form-container">
+              <div class="chatbot-btn">
+                <button onclick="validateOrderName(orderName.value, orderQuantity.value)">Start baking</button>
+              </div>
+              <div class="form-container">
+              <p id="final"><p>
+              </div>
+          </div>
+        </form>
+    </section>  
+    <footer>
+      <p>© Moa Blomkvist & Caroline Birgersson </p>
+    </footer>
     <script src="./pizzabot.js"></script>
   </body>
 </html>
-

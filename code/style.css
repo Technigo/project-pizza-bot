@@ -1,0 +1,167 @@
+////CSS////
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body, html {
+  display: flex;
+  flex-direction: column;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-self: center;
+  background-attachment: fixed;
+  align-items: center;
+  font-family: 'Oxygen', sans-serif;
+  color: black;
+  margin: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 59), rgba(0, 0, 0, 0.3)), url("https://images.unsplash.com/photo-1542587222-f9172e5eba29?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80");
+}
+
+h1 {
+  align-content: center;
+  color: lightgreen;
+  font-size: 85px;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  background-color: lightgreen;
+  position: relative;
+  width: 50%;
+  border-radius: .4em;
+  padding: 5%;
+}
+
+.menu:after{
+  content: '';
+  position: absolute;
+  border: 36px solid transparent;
+  border-left-color:lightgreen;
+  right: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-right: 0;
+  border-bottom: 0;
+  margin-top: -18px;
+  margin-right: -36px;
+}
+
+h2{
+  text-align: center;
+}
+
+.h3-order1, .h3-order3 {
+  display: flex;
+  position: relative;
+  background:lightgreen;
+  width: 50%;
+  border-radius: .4em;
+  padding: 5%;
+  background-color: white;
+}
+
+.h3-order2 {
+  display: flex;
+  position: relative;
+  background:lightgreen;
+  width: 50%;
+  border-radius: .4em;
+  padding: 5%;
+}
+
+.h3-order1:after, .h3-order3:after{
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 36px solid transparent;
+  border-left-color:white;
+  border-right: 0;
+  border-bottom: 0;
+  margin-top: -18px;
+  margin-right: -36px;
+}
+
+.h3-order2:after{
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 36px solid transparent;
+  border-left-color: lightgreen;
+  border-right: 0;
+  border-bottom: 0;
+  margin-top: -18px;
+  margin-right: -36px;
+}
+
+input {
+  align-items: center;
+  border: none;
+  border-radius: 25px;
+  padding: 20px;
+  background-color: pa;
+}
+
+button {
+  border: none;
+  text-transform: uppercase;
+  background-color:pink;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 25px;
+  font-size: 14px;
+}
+
+#userName {
+  background-color: white;
+}
+
+#orderName {
+  background-color: lightgreen;
+}
+
+#final{
+  display: flex;
+  justify-items: center;
+  position: relative;
+  background:pink;
+  width: 50%;
+  border-radius: .4em;
+  padding: 5%;
+}
+
+#final:after{
+  content: '';
+  position: absolute;
+  border: 36px solid transparent;
+  border-left-color: pink;
+  border-right: 0;
+  border-bottom: 0;
+  margin-top: -18px;
+  margin-right: -36px;
+  right: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+}
+
+footer{
+  border: lightgreen;
+  color: white;
+  padding-top: 150px;
+  height: 200px;
+}

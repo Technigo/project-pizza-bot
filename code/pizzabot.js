@@ -1,3 +1,4 @@
+////JAVASCRIPT////
 const vegetarian = "Vegetarian Pizza"
 const hawaiian = "Hawaiian Pizza"
 const pepperoni = "Pepperoni Pizza"
@@ -17,39 +18,31 @@ const x = "vegetarian";
 const y = "hawaiian";
 const z = "pepperoni";
 
-alert(`Hey! Happy to serve your pizza. On our menu we have ${x}, ${y} and ${z}.`);
 
-//Ask the customer:
-const orderName = prompt(
-  "Enter the name of the pizza you want to order today.");
+document.getElementById("greeting").innerHTML = (`Hey! Happy to serve you pizza! On the menu we have ${x}, ${y} and ${z}.`);
 
-//ValidateOrder //CookingTime //calculateOrder //Finalize the order
-const validateOrderName = (order) => {
-  if (order === x || order === y || order === z) {
-    return true;
-    } else {
-      alert("Please, check the menu")
-      return false;
-    }
-  };
 
-const calculateTotalCost = (quantity, price) => {
-   return quantity * price;
-  }
-
-const calculateCookingTime = (time) => {
-    if (time <= 2) {
-      return 10;
-    } else if (time >= 3 && time <=5) {
-      return 15;
-    } else {
-      return 20;
-    }
-  }
-
-if (validateOrderName(orderName) === true) {
-const orderQuantity = +prompt(`How many of ${orderName} do you want?`);
-const orderTotal = calculateTotalCost(orderQuantity, pizzaPrice);
-const cookingTime = calculateCookingTime(orderQuantity);
-alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The pizza(s) will take ${cookingTime} minutes.`);
+const calculateTotalCost = (orderQuantity) => {
+  orderTotal = (orderQuantity * pizzaPrice)
 }
+
+const calculateCookingTime = (orderQuantity) => {
+  if (orderQuantity > 0 && orderQuantity <= 2) {
+      cookingTime = 10
+  } else if (orderQuantity >= 3 && orderQuantity <= 5) {
+      cookingTime = 15
+  } else if (orderQuantity >= 6) {
+      cookingTime = 20
+  }
+}
+
+let validateOrderName = (orderName, orderQuantity) => {
+  event.preventDefault();
+  if (orderName === x || orderName === y || orderName === z) {
+      calculateTotalCost(orderQuantity)
+      calculateCookingTime(orderQuantity)
+      document.getElementById("final").innerText = (`Thanks ${userName.value}! You just ordered ${orderQuantity} ${orderName}. The total cost is ${orderTotal} kr and the order will take ${cookingTime} minutes.`);
+  } else {
+      document.getElementById("final").innerText = (`Sorry, that pizza isn't on the menu. Please choose between ${x}, ${y} or ${z}.`);
+  }
+  };
