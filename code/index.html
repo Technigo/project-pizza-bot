@@ -18,33 +18,33 @@
         <p class="menu two">All our Pizzas have a cost of 80kr !!!</p>
         <p class="place-order">Place your order here:</p>
 
-      <form id="form-action">
+        <form id="form-action">
 
-        <label>
-          Full Name:<br>
-          <input id="userName" type="text" name="name" required />
-        </label>
+          <label>
+            Full Name:<br>
+            <input id="userName" type="text" name="name" required />
+          </label>
 
-        <label>
-          <br>Which Pizza would you like to order?<br>
-          <input id="pizza-type" type="text" name="pizza-type" required 
-          placeholder="Vegetarian | Hawaiian | Pepperoni" />
-        </label>
+          <label>
+            <br>Which Pizza would you like to order?<br>
+            <input id="pizza-type" type="text" name="pizza-type" required 
+            placeholder="Vegetarian | Hawaiian | Pepperoni" />
+          </label>
 
-        <label>
-          <br>How many Pizzas would you like?<br>
-          <input id="pizza-number" type="number" name="pizza-number" min="1" max="10" required  />
-        </label> 
+          <label>
+            <br>How many Pizzas would you like?<br>
+            <input id="pizza-number" type="number" name="pizza-number" min="1" max="10" required  />
+          </label> 
 
-        <button id="submit-button" type="submit">ORDER</button>
-      </form>
+          <button id="submit-button" type="submit">ORDER</button>
+        </form>
+      </section>
+
+      <section class="confirmation"><!-- Hidden until submit button is pressed-->
+        <img id="pizza-photo" src="./friends-pizza.jpg" />
+        <p id="confirm"></p> 
+      </section>
     </section>
-
-    <section class="confirmation"><!-- Hidden until submit button is pressed-->
-      <img id="pizza-photo" src="./friends-pizza.jpg" />
-      <p id="confirm"></p> 
-    </section>
-  </section>
 
     <script type="text/javascript" src="./pizzabot.js"></script>
   </body>
