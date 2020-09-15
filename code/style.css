@@ -12,9 +12,9 @@ h1 {
 }
 
 #chat {
-font-size: 57px;
-color: beige;
-margin-left: 30px;
+    font-size: 57px;
+    color: beige;
+    margin-left: 30px;
 }
 
 .button {
@@ -28,13 +28,13 @@ button:hover {
 }
 
 button {
-     width: 200px;
-     height: 100px;
-     background-color:black;
-     color:beige;
-     font-size: 25px;
-     border-radius: 5px;
-     border-color: beige;   
+    width: 200px;
+    height: 100px;
+    background-color:black;
+    color:beige;
+    font-size: 25px;
+    border-radius: 5px;
+    border-color: beige;   
 }
 
 
