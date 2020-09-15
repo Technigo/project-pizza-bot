@@ -12,7 +12,7 @@ body {
     align-items: center;
   }
 
-  #robotchef img {
+  .robotchef img {
     padding: 26px; 
     width:50%;
   }
