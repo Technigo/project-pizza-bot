@@ -11,19 +11,19 @@
   gap: 5px;
 }
 
-header {
+.header {
   grid-column: span 8;
   text-align: center;
   background-color: #84a59d;
   color: #fefae0;
-  font-size: 3vh;
+  font-size: 1.5em;
   padding: 15px;
 }
 
-header h2 {
+.header h2 {
   font-style: italic;
   font-weight: 400px;
-  font-size: 2vh;
+  font-size: 1em;
 }
 
 main {
@@ -46,7 +46,7 @@ main {
 }
 
 .name {
-  margin: 10px, 0px;
+  margin: 10px 0;
 }
 
 .name-input {
