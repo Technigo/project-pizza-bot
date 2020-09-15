@@ -5,25 +5,24 @@ const margaritha = "margaritha pizza";
 const kebab = "kebab pizza";
 const fusion = "fusion pizza";
 
-const welcomeMessage = (event) => {
+const welcomeMessage = event => {
   event.preventDefault();
   const username = document.getElementById("name").value;
   showMessageBox(username);
 };
 
-const showMessageBox = (username) => {
-  document.getElementById(
-    "message"
-  ).innerHTML = `Hey ${username}! Let's start our order! Select a pizza from our menu:`;
+const showMessageBox = username => {
+  document.getElementById("message").innerHTML = 
+  `Hey ${username}! Let's start our order! Select a pizza from our menu:`;
   showPizzaMenu();
 };
 
 const showPizzaMenu = () => {
-  document.getElementById("pizzaMenu").classList.remove("hidden");
+  document.getElementById("pizza-menu").classList.remove("hidden");
 };
 
-const validateOrderName = (selectedPizza) => {
-  let selectedPizzaLower = selectedPizza.toLowerCase();
+const validateOrderName = selectedPizza => {
+  const selectedPizzaLower = selectedPizza.toLowerCase();
   return (
     selectedPizzaLower === vegetarian ||
     selectedPizzaLower === hawaiian ||
@@ -34,12 +33,12 @@ const validateOrderName = (selectedPizza) => {
   );
 };
 
-const getPizzaPrice = (selectedPizza) => {
-  if ((selectedPizza = "margaritha")) {
+const getPizzaPrice = selectedPizza => {
+  if (selectedPizza === margaritha) {
     return 65;
-  } else if ((selectedPizza = "kebab")) {
+  } else if ((selectedPizza === kebab)) {
     return 85;
-  } else if ((selectedPizza = "fusion")) {
+  } else if ((selectedPizza === fusion)) {
     return 120;
   } else {
     return 80;
@@ -47,14 +46,21 @@ const getPizzaPrice = (selectedPizza) => {
 };
 
 const showQuantity = () => {
-  const selectedPizza = document.getElementById("selectedPizza").value; //add .toLowerCase?
-  let validation = validateOrderName(selectedPizza);
+  const selectedPizza = document.getElementById("selected-pizza").value; //add .toLowerCase?
+  const validation = validateOrderName(selectedPizza);
   if (validation) {
     document.getElementById("quantity").classList.remove("hidden");
   } else {
-    document.getElementById("errorMessage").classList.remove("hidden");
+    document.getElementById("error-message").classList.remove("hidden");
   }
 };
+
+const validateQuantity = () => {
+  const pizzaQuantity = document.getElementById("pizza-quantity").value;
+  pizzaQuantity <= 0 
+    ? document.getElementById("error-quantity").classList.remove("hidden")
+    : showTotalOrder(pizzaQuantity)
+}
 
 const calculateCookingTime = (orderQuantity) => {
   if (orderQuantity > 0 && orderQuantity <= 2) {
@@ -68,36 +74,38 @@ const calculateCookingTime = (orderQuantity) => {
 
 const showPizzaImage = (selectedPizza) => {
   if (selectedPizza === vegetarian) {
-    document.getElementById("pizzaImg").classList.toggle("img-vegetarian");
+    document.getElementById("pizza-img").classList.toggle("img-vegetarian");
   } else if (selectedPizza === hawaiian) {
-    document.getElementById("pizzaImg").classList.toggle("img-hawaiian");
+    document.getElementById("pizza-img").classList.toggle("img-hawaiian");
   } else if (selectedPizza === pepperoni) {
-    document.getElementById("pizzaImg").classList.toggle("img-pepperoni");
+    document.getElementById("pizza-img").classList.toggle("img-pepperoni");
   } else if (selectedPizza === fusion) {
-    document.getElementById("pizzaImg").classList.toggle("img-fusion");
+    document.getElementById("pizza-img").classList.toggle("img-fusion");
   } else if (selectedPizza === margaritha) {
-    document.getElementById("pizzaImg").classList.toggle("img-margaritha");
+    document.getElementById("pizza-img").classList.toggle("img-margaritha");
   } else {
-    document.getElementById("pizzaImg").classList.toggle("img-kebab");
+    document.getElementById("pizza-img").classList.toggle("img-kebab");
   }
 };
 
-const showTotalOrder = () => {
-  document.getElementById("totalOrder").classList.remove("hidden");
-  const pizzaQuantity = document.getElementById("pizzaQuantity").value;
+const showTotalOrder = (pizzaQuantity) => {
+  document.getElementById("total-order").classList.remove("hidden");
+  document.getElementById("error-quantity").classList.add("hidden");
   const cookingTime = calculateCookingTime(pizzaQuantity);
-  const selectedPizza = document
-    .getElementById("selectedPizza")
-    .value.toLowerCase();
-  const totalCost = getPizzaPrice(selectedPizza) * pizzaQuantity;
+  const selectedPizza = document.getElementById("selected-pizza").value.toLowerCase();
+  const pizzaPrice = getPizzaPrice(selectedPizza);
+  const totalCost = pizzaPrice * pizzaQuantity;
   showPizzaImage(selectedPizza);
   document.getElementById(
-    "finalOrderMessage"
+    "final-order-message"
   ).innerHTML = `I'll get started on your ${selectedPizza}(s), It will cost you ${totalCost} kr. The pizza(s) will take ${cookingTime} minutes.`;
 };
 
-const hide = () => {
-  document.getElementById("totalOrder").classList.add("hidden");
+const refresh = () => {
+  document.getElementById("total-order").classList.add("hidden");
+  document.getElementById("message").innerHTML = "";
+  document.getElementById("pizza-menu").classList.add("hidden");
   document.getElementById("quantity").classList.add("hidden");
-  document.getElementById("pizzaMenu").classList.add("hidden");
-};
+}
+
+

@@ -58,7 +58,7 @@ main {
 }
 
 input {
-    margin: 10px;
+  margin: 10px;
 }
 
 ul {
@@ -85,7 +85,7 @@ li img {
 }
 
 .finalPizza {
-    max-width: 80%
+  max-width: 80%;
 }
 
 .pizzaprice {

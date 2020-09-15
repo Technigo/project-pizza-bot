@@ -27,50 +27,57 @@
           <h3>Welcome to the EmTa's pizzabot!</h3>
           <label for="name" class="name-input">Before we start, what's your name?</label>
           <input id="name" name="name" type="text" />
-          <input type="submit" name="submit" id="submit" value="Start pizza order">
+          <input type="submit" name="submit" id="submit" value="Start pizza order" />
         </form>
-        <div id="messageBox">
+        <div id="message-box">
           <p id="message" class="message-display"></p>
         </div>
       </div>
 
-      <div class="hidden" id="pizzaMenu">
+      <div class="hidden" id="pizza-menu">
         <h2>PizzaMenu</h2>
         <p>
-        <ul>
-          <li><img src="./assets/Vegetarian.png" />Vegetarian Pizza<p class="pizzaprice">80 kr</p>
-          </li>
-          <li><img src="./assets/hawaiian.png" />Hawaiian Pizza<p class="pizzaprice">80 kr</p>
-          </li>
-          <li><img src="./assets/Pepperoni.png" />Pepperoni Pizza<p class="pizzaprice">80 kr</p>
-          </li>
-          <li><img src="./assets/fusion.png" />Fusion Pizza<p class="pizzaprice">120 kr</p>
-          </li>
-          <li><img src="./assets/margarita.png" />Margaritha Pizza<p class="pizzaprice">65 kr</p>
-          </li>
-          <li><img src="./assets/kebab.png" />Kebab pizza<p class="pizzaprice">85 kr</p>
-          </li>
-        </ul>
+          <ul>
+            <li>
+              <img src="./assets/Vegetarian.png" />Vegetarian Pizza<p class="pizzaprice">80 kr</p>
+            </li>
+            <li>
+              <img src="./assets/hawaiian.png" />Hawaiian Pizza<p class="pizzaprice">80 kr</p>
+            </li>
+            <li>
+              <img src="./assets/Pepperoni.png" />Pepperoni Pizza<p class="pizzaprice">80 kr</p>
+            </li>
+            <li>
+              <img src="./assets/fusion.png" />Fusion Pizza<p class="pizzaprice">120 kr</p>
+            </li>
+            <li>
+              <img src="./assets/margarita.png" />Margaritha Pizza<p class="pizzaprice">65 kr</p>
+            </li>
+            <li>
+              <img src="./assets/kebab.png" />Kebab pizza<p class="pizzaprice">85 kr</p>
+            </li>
+          </ul>
         </p>
-        <label for="selectedPizza">Select your pizza</label>
-        <input type="text" id="selectedPizza">
-        <p id="errorMessage" class="hidden">This pizza is not on the menu, please select something else.</p>
+        <label for="selected-pizza">Select your pizza</label>
+        <input type="text" id="selected-pizza">
+        <p id="error-message" class="hidden">This pizza is not on the menu, please select something else.</p>
         <button onclick="showQuantity()">Select</button>
       </div>
 
       <div class="hidden quantity" id="quantity">
         <h3>Great choice!</h3>
-        <label for="pizzaQuantity">How many pizzas do you want?</label>
-        <input type="number" name="pizzaQuantity" id="pizzaQuantity" />
+        <label for="pizza-quantity">How many pizzas do you want?</label>
+        <input type="number" name="pizza-quantity" id="pizza-quantity" />
+        <p id="error-quantity" class="hidden">Not hungry? Please enter a valid number of pizzas..</p>
 
-        <button onclick="showTotalOrder()">CLICK</button>
+        <button onclick="validateQuantity()">CLICK</button>
 
       </div>
-      <div class="hidden" id="totalOrder">
+      <div class="hidden" id="total-order">
         <h3>Yummy!</h3>
-        <p id="finalOrderMessage"></p>
-        <img id="pizzaImg" class="finalPizza">
-        <button onclick="welcomeMessage(event); hide()">Refresh</button>
+        <p id="final-order-message"></p>
+        <img id="pizza-img" class="final-pizza">
+        <button onclick="refresh()">Refresh</button>
       </div>
     </main>
 
