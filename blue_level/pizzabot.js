@@ -19,12 +19,21 @@ const calculateTotalCost = (orderQty, pizzaPrice) => orderQty * pizzaPrice;
 const calculateCookingTime = orderQty => {
   if (orderQty >= 1 && orderQty <= 2) {
     return 10;
-  } else if (orderQty <= 5) {
+  } else if (orderQty >= 3 && orderQty <= 5) {
     return 15;
-  } else if (orderQty >=6 && orderQty <= 50) {
+  } else if (orderQty >=6) {
     return 20;
-  } {
+  } {	
     alert('Please enter a number between 1-50.')
+    orderName();
+  }
+};
+
+const validateQty = finalOrderQty => { 
+  if (finalOrderQty < 1) {
+    return false;
+  } else { 
+    return true;
   }
 };
 
