@@ -60,25 +60,25 @@ h3 {
     margin: 20px 0px 10px 0;
 }
 
-.form-1 {
+.input-user-name {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.form-1 input {
+.input-user-name input {
     text-align: center;
     padding: 15px;
     border: none;
     font-size: 18px;
 }
 
-.form-2 {
+.quantity-form {
     display: none;
 }
 
-.form-2 {
+.quantity-form {
     border: 5px solid white;
     padding: 10px;
     border-radius: 5px;
@@ -89,7 +89,7 @@ h3 {
     justify-content: center;
 }
 
-.form-2 input {
+.quantity-form input {
     text-align: center;
     padding: 15px;
     border: none;

@@ -24,7 +24,7 @@
         <!-- First form section where user will input username & name of pizza -->
         <div class="cards">
           <h3> &#129302 Before we get started with your order please enter your username:</h3> 
-          <form action="#" autocomplete="off" onsubmit="enteredPizzaName(event)" method="POST" id="formOne" class="form-1">
+          <form autocomplete="off" onsubmit="enteredPizzaName(event)" id="inputUserName" class="input-user-name">
             <!-- Enter username -->
             <label for="userName">
               <input type="text" id="userName" name="userName" placeholder="Username" required>
@@ -41,11 +41,11 @@
 
         <div>      
           <!-- Second form where the user will input and submit how many pizzas they want to order -->
-          <form action="http://httpbin.org/anything" autocomplete="off" onsubmit="enteredPizzaAmount(event)" onclick="enteredPizzaAmount()" method="POST" class="form-2" id="formTwo">
+          <form autocomplete="off" onsubmit="enteredPizzaAmount(event)" onclick="enteredPizzaAmount()" class="quantity-form" id="quantityForm">
             <!-- Enter how many pizzas -->
-            <h3 id="howMany"></h3>
-            <label for="enterAmount">
-              <input type="text" id="enterAmount" name="enterAmount" placeholder="How many?" required></select>
+            <h3 id="quantityHeader"></h3>
+            <label for="quantity">
+              <input type="number" min="1" max="20" id="quantity" name="quantity" required></select>
             </label>
               <input type="submit" name="submit" value="Submit" class="submit-button">
           </form>

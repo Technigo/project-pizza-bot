@@ -3,11 +3,11 @@ const vegetarian = "Vegetarian Pizza"
 const hawaiian = "Hawaiian Pizza"
 const pepperoni = "Pepperoni Pizza"
 
-const pizzaPrice = 80;
+let pizzaPrice = 80;
 
-const vegPic = document.getElementById("vegPizza");
-const pepPic = document.getElementById("pepPizza");
-const hawPic = document.getElementById("hawPizza");
+let vegPic = document.getElementById("vegPizza");
+let pepPic = document.getElementById("pepPizza");
+let hawPic = document.getElementById("hawPizza");
 
 //--------------------------------------------------------------------------//
 
@@ -35,7 +35,7 @@ const validateOrderName = (chosenPizza) => {
 
 //Function calculating the cost of the pizza based on the pizzaAmount and pizzaPrice. Returnsg the amount when function is called further down
 const calculateTotalCost = (orderQuantity, pizzaPrice) => {
-    const orderTotal = (orderQuantity * pizzaPrice);
+    let orderTotal = (orderQuantity * pizzaPrice);
     return orderTotal;     
 };
 
@@ -71,8 +71,8 @@ const enteredPizzaName = (event) => {
 
     if (correctPizzaName === true) {
         document.getElementById("orderDifferentPizza").style.display= "none";
-        document.getElementById("howMany").innerHTML = `&#129302 And how many ${orderName}'s would you like to order?`;
-        document.getElementById("formTwo").style.display = "flex";
+        document.getElementById("quantityHeader").innerHTML = `&#129302 And how many ${orderName}'s would you like to order?`;
+        document.getElementById("quantityForm").style.display = "flex";
         //The second form (where the user will input how many pizzas they want) will be show if true as we make that element in html to display flex. Before this time it's defined as display: none is css.
     }
     else {
@@ -84,12 +84,12 @@ const enteredPizzaName = (event) => {
 //Function that is connected to the second form in html inside the onsubmit() attribute in the form. When user inputs the amount of pizzas they want and  press the submit button, the code inside the function is run. Which is the final order message clarifying all the details of their order and an image of the pizza they've ordered.   
 const enteredPizzaAmount = (event) => {
     event.preventDefault(); //Stops the page from submitting information to the backend.
-    let orderAmount = document.getElementById("enterAmount").value; //Taking the value (the amount) the user has inputted in the DOM for the amount of pizzas they want to order and put this inside a function to then use to calculate the cooking time below. 
+    let orderAmount = document.getElementById("quantity").value; //Taking the value (the amount) the user has inputted in the DOM for the amount of pizzas they want to order and put this inside a function to then use to calculate the cooking time below. 
     let correctOrderAmount = calculateCookingTime(orderAmount);
     let totalPrice = calculateTotalCost(orderAmount, pizzaPrice);
     let orderName = document.getElementById("enterPizza").value;
     let pizzaImages = pizzaImage(orderName);
-    document.getElementById("formTwo").style.display = "flex";
+    document.getElementById("quantityForm").style.display = "flex";
 
     //Defined variable and if statement which helps to change if the pizza if plural or not in the final order statement.
     let plural = "'s";
@@ -106,35 +106,3 @@ const enteredPizzaAmount = (event) => {
 
 //Changed the javascript code so it doesn't only prompt or print the information to the DOM. Now it prints certain questions based on user input. 
 //Functions being called when user inputs information and clicks submit. Before javascript was being run based on prompts which automatically waited for user input. But now javascript is being run on demand when an event happens(call back) and for this to work you need to seperate the parts of the programs into functions. And this is why the code has been moved around (refactored).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
