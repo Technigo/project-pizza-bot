@@ -1,13 +1,15 @@
 # Pizza Bot
 
-Replace this readme with your own information about your project. 
+We were supposed to work in teams and build a pizza bot. The pizza bot should have three pizzas on the menu that cost 80 SEK each. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+We (Therése & Lillemor) did the blue level.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We worked well together and it went fine until Iteration 6, where we got a bit stuck on the functions. We used Google and CodeSandbox trying to solve the problems we had, also we asked a question on Stack Overflow. Since JavaScript is new, I felt it was a challenge to understand first of all the first lines we put in the code, but then also having to change them as we moved along with the Iterations. We did all the requirements for the blue level, and we began trying with the red one. However, we decided in the end to only go for the blue one this time and be happy with that.
+
+We had a flow between Iteration 1-5 so we forgot to push it to GitHub on each level. We will remember to push more often on coming projects.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://lillemor-tessan-pizzabot.netlify.app
