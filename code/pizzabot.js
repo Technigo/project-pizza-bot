@@ -22,7 +22,7 @@ const calculateCookingTime = (orderQuantity) => {
 }
 
 let validateOrderName = (orderName, orderQuantity) => {
-    event.preventDefault();
+    Event.preventDefault();
     if (orderName === vegetarian || orderName === hawaiian || orderName === pepperoni) {
         calculateTotalCost(orderQuantity)
         calculateCookingTime(orderQuantity)
