@@ -27,7 +27,7 @@ h1 {
 }
 
 h2 {
-    margin: 0 auto 30px auto;
+    margin: 0 auto 30px;
     padding: 0;
     text-align: center;
 }
@@ -39,7 +39,7 @@ p {
 
 /* ---------------------- HEADER ----------------------*/ 
 header {
-    margin: 60px 20px 30px 20px;
+    margin: 60px 20px 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,7 +66,7 @@ main {
 }
 
 /*  PROGRESS-BAR  */ 
-.progress-bar-container-outer {
+.progress-bar__container-outer {
     position: fixed;
     left: 0;
     top: 0;
@@ -77,18 +77,18 @@ main {
     transition: visibility 0s, opacity 0.5s linear;
 }
 
-.progress-bar-container-inner {
+.progress-bar__container-inner {
     width: 70vw;
     margin: auto;
     padding: 20px;
     font-size: 12px;
 }
 
-.progress-bar-container-inner p {
+.progress-bar__container-inner p {
     margin: 5px 0;
 }
 
-.progress-bar-container-inner-content {
+.progress-bar__container-inner__content {
     display: flex;
     justify-content: space-between;
 }
@@ -126,7 +126,7 @@ main {
 }
 
 .user-inner {
-    padding: 15px 20px 15px 20px;
+    padding: 15px 20px;
     border-radius: 10px;
     color: #fff;
     border: 2px solid #999;
@@ -139,7 +139,7 @@ main {
     height: 80px;
     border: 2px solid #01DC3E;
     border-radius: 50%;
-    background-image: url(./images/pizza-slice2.png);
+    background-image: url("./images/pizza-slice2.png");
     background-size: 30px;
     background-position: center;
     background-repeat: no-repeat;
@@ -150,7 +150,7 @@ main {
     height: 80px;
     border: 2px solid #999;
     border-radius: 50%;
-    background-image: url(./images/user.png);
+    background-image: url("./images/user.png");
     background-size: 30px;
     background-position: center;
     background-repeat: no-repeat;
@@ -197,7 +197,7 @@ button:hover, input:hover { /*When hovering button*/
 }
 
 /* COUNTDOWN TIMER */
-.timerBox {
+.timer-box {
     width: auto;
     border: 1px solid #fff;
     margin-top: 40px;
@@ -214,7 +214,7 @@ button:hover, input:hover { /*When hovering button*/
 }
 
 /*  ORDER SUMMARY  */ 
-.orderSummaryBox {
+.order-summary-box {
     width: 100%;
     border: 2px solid #01DC3E;
     border-radius: 10px;

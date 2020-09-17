@@ -12,17 +12,17 @@
   
     <!-- ----------------------------- HEADER ----------------------------- -->
     <header>
-      <img src="./images/pizza-slice2.png" alt="Picture of a pizzaslice, company logo">
+      <img src="./images/pizza-slice2.png" alt="Picture of a pizzaslice, company logo"/>
       <h1>PIZZERIA SLICE & SNACK!</h1>
     </header>
 
-   <!-- ----------------------------- MAIN ----------------------------- -->
+    <!-- ----------------------------- MAIN ----------------------------- -->
     <main>
 
       <!-- ---------- PROGRESS BAR ---------- -->
-      <div id="progressBar" class="progress-bar-container-outer invisible">
-        <div class="progress-bar-container-inner">
-          <div class="progress-bar-container-inner-content">
+      <div id="progressBar" class="progress-bar__container-outer invisible">
+        <div class="progress-bar__container-inner">
+          <div class="progress-bar__container-inner__content">
             <p>Your current order:</p>
             <div>
               <p>
@@ -64,26 +64,26 @@
                 type="button"
                 value="Pepperoni Pizza"
                 onclick="orderPizza('Pepperoni Pizza')"
-                />  
-                <input 
+              />  
+              <input 
                 id="vegetarian"
                 type="button"
                 value="Vegetarian Pizza"
                 onclick="orderPizza('Vegetarian Pizza')"
-                />
-                <input 
+              />
+              <input 
                 id="kebab"
                 type="button"
                 value="Kebab Pizza"
                 onclick="orderPizza('Kebab Pizza')"
-                />
-                <input 
+              />
+              <input 
                 id="hawaiian"
                 type="button"
                 value="Hawaii Pizza"
                 onclick="orderPizza('Hawaiian Pizza')"
-                />
-              </form>
+              />
+            </form>
           </div>
         </div>
         <div class="chat-portrait-user"></div>
@@ -102,15 +102,14 @@
           <div class="chat-form">
             <form>
               <input 
-              type="number" 
-              id="quantityUser" 
-              name="quantity" 
-              value="1"
-              min="1" 
-              max="10">
-             <button 
-              onclick="quantityFunction(event)"
-              >Order!</button>
+                type="number" 
+                id="quantityUser" 
+                name="quantity" 
+                value="1"
+                min="1" 
+                max="10" 
+              />
+             <button onclick="quantityFunction(event)">Order!</button>
             </form>
             </div>
         </div>
@@ -124,13 +123,13 @@
       </div>
       
       <!-- ---------- TIMER ---------- -->
-      <div id="timerBox" class="timerBox invisible">
+      <div id="timerBox" class="timer-box invisible">
         <p>Pizza(s) ready in:</p>
         <p id="time" class="time"></p>
       </div>
 
       <!-- ---------- ORDER SUMMARY ---------- -->
-      <section id="orderSummaryBox" class="orderSummaryBox invisible">
+      <section id="orderSummaryBox" class="order-summary-box invisible">
         <h2>Order summary</h2>
         <div class="order-summary">
           <p class="count">Amount </p>
@@ -149,7 +148,9 @@
         </div>
 
         <div class="receipt">
-          <a href="#"><button>Email me a receipt</button></a>
+          <a href="#">
+            <button>Email me a receipt</button>
+          </a>
         </div>
         
       </section>

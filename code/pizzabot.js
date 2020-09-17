@@ -21,10 +21,10 @@ let displayOrderQuantityBox = () => {
     orderQuantityBox.classList.add("visible");
     selectQuantityBox.classList.remove("invisible");
     selectQuantityBox.classList.add("visible");
-    }
+    };
 
 // Main order-function to select pizza sort + invokes function above
-let orderPizza = (name) => {
+const orderPizza = name => {
     orderName = name;
     document.getElementById("howMany").innerHTML = `OK, how many ${orderName}(s) do you want?`;
     
@@ -41,15 +41,15 @@ let orderPizza = (name) => {
     document.getElementById("topBarPizza").innerHTML = `${orderName}`;
     document.getElementById("progressOne").style.background = "#01DC3E";
 
-    displayOrderQuantityBox()
+    displayOrderQuantityBox();
 }
 
 // Counting-function to select amount of pizzas
-let quantityFunction = (event) => {
+const quantityFunction = event => {
     event.preventDefault();
 
     // Get quantity from user input-counter 
-    let orderQuantity = document.getElementById("quantityUser").value;
+    const orderQuantity = document.getElementById("quantityUser").value;
 
     // The box which confirms Pizza-sort + price + cooking-time
     const confirmationBox = document.getElementById("confirmationBox");
@@ -60,16 +60,15 @@ let quantityFunction = (event) => {
         
         // Conditional statement given other price for kebab pizza
         let otherPrice = () => {
-            if (orderName === kebab)
-            {
+            if (orderName === kebab) {
                 pizzaPrice = 100;
             } 
             else {
                 pizzaPrice = 80;
             }
-        }
+        };
         
-        otherPrice() 
+        otherPrice() ;
 
         orderTotal = orderQuantity * pizzaPrice;
     }
@@ -85,10 +84,10 @@ let quantityFunction = (event) => {
         } else {
             cookingTime = 20;
         }
-    }
+    };
     
-    calculateTotalCost()
-    calculateCookingTime()
+    calculateTotalCost();
+    calculateCookingTime();
 
     // Confirmation message
     document.getElementById("topBarCount").innerHTML = `${orderQuantity} x`; 
@@ -128,10 +127,10 @@ let quantityFunction = (event) => {
     
         countdownEl.innerHTML = `${minutes}:${seconds}`;
         time--;
-    }
+    };
 
-    setInterval(updateCountdown, 1000)
-    updateCountdown()
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
 }
 
 
