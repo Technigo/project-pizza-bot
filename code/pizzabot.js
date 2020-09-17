@@ -35,9 +35,7 @@ const calculateCookingTime = (orderQuantity) => {
 
 // Function to calculate total cost based on order quantity
 
-const calculateTotalCost = (orderQuantity, pizzaPrice) => {
-  return orderQuantity * pizzaPrice;
-};
+const calculateTotalCost = (orderQuantity, pizzaPrice) => orderQuantity * pizzaPrice;
 
 // Function to toggle active css class of order summary bubble (to show/hide)
 
