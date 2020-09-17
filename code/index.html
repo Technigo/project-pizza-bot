@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Project 4: Pizzabot</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -18,11 +18,17 @@
     <!-- Form for pizza order input -->
 
     <form class="input-form" onsubmit="handleSubmit(event)">
-      <label for="orderName">Which Pizza would you like?</label><br>
-      <input id="orderName" name="orderName" type="text" /><br>
-      <label for="orderQuantity">How many would you like?</label><br>
-      <input id="orderQuantity" name="orderQuantity" type="number" /><br>
-      <input id="submit" name="submit" type="submit" value="ORDER" />
+      <div>
+        <label for="orderName">Which Pizza would you like?</label>
+        <input id="orderName" name="orderName" type="text" />
+      </div>
+      <div>
+        <label for="orderQuantity">How many would you like?</label>
+        <input id="orderQuantity" name="orderQuantity" type="number" min="1"/>
+      </div>
+      <div>
+        <input id="submit" name="submit" type="submit" value="ORDER" />
+      </div>
     </form>
 
     <!-- text bubble showing order summary or incorrect pizza order -->

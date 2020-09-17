@@ -29,9 +29,8 @@ const calculateCookingTime = (orderQuantity) => {
     return 10;
   } else if (orderQuantity < 6) {
     return 15;
-  } else {
-    return 20;
   }
+  return 20;
 };
 
 // Function to calculate total cost based on order quantity
@@ -42,16 +41,14 @@ const calculateTotalCost = (orderQuantity, pizzaPrice) => {
 
 // Function to toggle active css class of order summary bubble (to show/hide)
 
-const toggle = () => {
-  return this.classList.toggle("active-summary");
-};
+const toggle = () => classList.toggle("active-summary");
 
 //Handles submit of order form. Will call each above function and generate either error message or order summary.
 
 const handleSubmit = (event) => {
   event.preventDefault();
-  let orderName = document.getElementById("orderName").value;
-  let orderQuantity = document.getElementById("orderQuantity").value;
+  const orderName = document.getElementById("orderName").value;
+  const orderQuantity = document.getElementById("orderQuantity").value;
 
   if (validateOrderName(orderName)) {
     document.getElementById("orderSummary").classList = toggle;
