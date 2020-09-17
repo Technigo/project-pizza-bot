@@ -3,29 +3,29 @@
   padding: 14px 16px;
   font-size: 30px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-display: flex;
-justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 /* unvisited link */
 a:link {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
   }
   
   /* visited link */
-  a:visited {
-    color: black;
+a:visited {
+  color: black;
   }
   
   /* mouse over link */
-  a:hover {
-    color: hotpink;
+a:hover {
+  color: hotpink;
   }
   
   /* selected link */
-  a:active {
-    color: pink;
+a:active {
+  color: pink
   }
 
 
@@ -35,232 +35,181 @@ a:link {
 }
 
 body {
-    background-image: url(marble-2398946_1280.jpg);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 20px;
-    background-repeat: repeat;
-    background-size: auto;
-    margin: 0px;
-    height: 800px;
-    width: 100%;
-    min-width: 300px;
-  }
+  background-image: url("marble-2398946_1280.jpg");
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 20px;
+  background-repeat: repeat;
+  background-size: auto;
+  margin: 0;
+  height: 800px;
+  width: 100%;
+  min-width: 300px;
+}
+  
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+}
+  
+.pizzabot {
+  height: 500px;
+  width: 90%;
+  max-width: 700px;
+  text-align: center;
+  background-image: url(wood-1700562_1280.jpg);
+  color:white;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 10px 10px 5px 5px #000000;
+}
+  
+section.three_pizzas {
+margin-top: 30px;
+}
+  
+h3 {
+  font-size: 40px;
+  padding-top:30px;
+  margin:0;
+}
+  
+/* Controls */
+.controls {
+  display: flex;
+  justify-content: center;
+
+}
+  
+.controls button {
+  background-image:url(marble-2398946_1280.jpg);
+  width: 100px;
+  height: 60px;
+  font-size: 20px;
+  margin: 100px 0 0 20px;
+  border: 1px #000000 solid;
+  border-radius: 10px;
+  text-decoration: none;
+}
+  
+.controls #next_btn:hover {
+  border: 2px hotpink solid;
+  cursor: pointer;
+}
+  
+.controls #back_btn:hover {
+  border: 2px hotpink solid;
+  cursor: pointer;
+}
+  
+/* second div */
+  
+figure {
+  margin: 10px;
+  display: inline-block;
+}
+  
+#second .three_pizzas {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+  
+figure img {
+  height: 150px;
+  width: 150px;
+}
+  
+.pizzas_number {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+  
+input {
+  display: none;
+}
+  
+label {
+  cursor: pointer;
+}
+  
+/* If checked */
+[type="radio"]:checked+figure img {
+  border-bottom: 2px  solid hotpink;
+  border-radius: 5px;
+}
+
+:checked+figure img:hover {
+  -ms-transform: scale(1.5); 
+  -webkit-transform: scale(1.5); 
+  transform: scale(1.5); 
+}
   
 
-  p {
-    text-align: center;
-  }
+/* If checked */
+[type="radio"]:checked+.numBtn {
+  background-color: pink;
+  color: white;
+}
   
-  footer {
-    padding: 20px;
-    display: block;
-    background-color: hotpink;
-    height: 10vh;
-    color:white;
-  }
-  
-  /* */
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    margin: 0px;
-  }
-  
-  .pizzabot {
-    height: 500px;
-    width: 90%;
-    max-width: 700px;
-    background-image: url(wood-1700562_1280.jpg);
-    color:white;
-    border-radius: 20px;
-    position: relative;
-    box-shadow: 10px 10px 5px 5px #000000;
-  }
-  
-  section.three_pizzas {
-    margin-top: 30px;
-  }
-  
-  
-  #first,
-  .controls {
-    width: 100%;
-    max-width: 700px;
-    text-align: center;
-    height: 70%;
-  }
-  #second,
-  .controls {
-    width: 100%;
-    max-width: 700px;
-    text-align: center;
-    height: 80%;
-  }
+/* fourth div */
+.numBtn {
+  display: inline-block;
+  background-color: hotpink;
+  border: 1px black solid;
+  height: 70px;
+  width: 70px;
+  margin: 7px;
+  font-size: 30px;
+  border-radius: 50px;
+  line-height:70px;
+}
 
-  #third,
-  .controls {
-    width: 100%;
-    max-width: 700px;
-    text-align: center;
-    height: 80%;
-  }
+.numBtn:hover {
+  background-color: pink;
+}
 
-  #fourth,
-  .controls {
-    width: 100%;
-    max-width: 700px;
-    text-align: center;
-    height: 70%;
-  }
+footer {
+  padding: 20px;
+  display: block;
+  background-color: hotpink;
+  height: 10vh;
+  color:white;
+  text-align: center;
+}
+  
+@media (max-width: 600px) {
+body {
+  font-size: 18px;
+}
+  
+.pizzabot {
+  height: 330px;
+}
+  
+h1 {
+  font-size: 23px;
+}
+  
+h3 {
+  font-size: 20px;
+}
+  
+figure img {
+  height: 90px;
+  width: 90px;
+}
+  
+#fourth img {
+  height: 120px;
+}
+  
+footer {
+  font-size: 14px;   
+}
 
-  h3 {
-    font-size: 40px;
-    padding-top:30px;
-    margin:0;
-  }
-  
-  #first {
-    line-height: 35px;
-  }
-  
-  /* Controls */
-  .controls {
-    height: 20%;
-  
-  }
-  
-  .controls button {
-    background-image:url(marble-2398946_1280.jpg);
-    margin: 0px 0 0 0;
-    width: 100px;
-    height: 60px;
-    font-size: 20px;
-    border: 1px #000000 solid;
-    border-radius: 10px;
-    text-decoration: none;
-
-
-  }
-  
-  .controls #next_btn:hover {
-    border: 2px hotpink solid;
-    cursor: pointer;
-  }
-  
-  .controls #back_btn:hover {
-    border: 2px hotpink solid;
-    cursor: pointer;
-  }
-  
-  /* second div */
-  
-  figure {
-    margin: 10px;
-    display: inline-block;
-  }
-  
-  #second .three_pizzas {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  
-  figure img {
-    height: 150px;
-    width: 150px;
-  }
-  
-  .pizzas_number {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  input {
-    display: none;
-  }
-  
-  label {
-    cursor: pointer;
-  }
-  
-  /* If checked */
-  [type="radio"]:checked+figure img {
-    border-bottom: 2px  solid hotpink;
-    border-radius: 5px;
-  }
-
-  :checked+figure img:hover {
-    -ms-transform: scale(1.5); 
-    -webkit-transform: scale(1.5); 
-    transform: scale(1.5); 
-  }
-  
-
-  
-  /* If checked */
-  [type="radio"]:checked+.numBtn {
-    background-color: pink;
-    color: white;
-  }
-  
-  /* fourth div */
-  .numBtn {
-    display: inline-block;
-    background-color: hotpink;
-    border: 1px black solid;
-    height: 70px;
-    width: 70px;
-    margin: 7px;
-    font-size: 30px;
-    border-radius: 50px;
-    line-height:70px;
-
-  }
-
-  }
-  
-
-  
-  
-  
-  .numBtn:hover {
-    background-color: pink;
-  }
-  
-  @media (max-width: 600px) {
-  
-    body {
-      font-size: 18px;
-    }
-  
-    .pizzabot {
-      height: 330px;
-    }
-  
-    h1 {
-      font-size: 23px;
-    }
-  
-    h3 {
-      font-size: 20px;
-    }
-  
-    figure img {
-      height: 90px;
-      width: 90px;
-    }
-  
-    #fourth img {
-      height: 120px;
-    }
-  
-    footer {
-      font-size: 14px;
-      
-    }
-  
-  }
+}

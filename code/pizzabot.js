@@ -1,3 +1,9 @@
+// constants
+const vegetarian = "Vegetarian Pizza"
+const hawaiian = "Hawaiian Pizza"
+const pepperoni = "Pepperoni Pizza"
+const pizzaPrice = 80
+
 // functions
 const gotoNext = () => {
 
@@ -37,18 +43,20 @@ const gotoPrevious = () => {
   }
 }
 
-const getOrderName = () => {
-  let orderName = document.querySelector('input[name="pizzaChoice"]:checked').value
+
+
+const getOrderName = (event) => {
+  const orderName = event.target.value
   document.getElementById("pizzaChoice").innerHTML = orderName
   document.getElementById("next_btn").disabled = false
 }
 
 const getConfirmation = () => {
-  let orderName = document.querySelector('input[name="pizzaChoice"]:checked').value
-  let orderQuantity = document.querySelector('input[name="numberOrdered"]:checked').value
+  const orderName = event.target.value
+  const orderQuantity = document.querySelector('input[name="numberOrdered"]:checked').value
   document.getElementById("next_btn").disabled = false
-  let totalPrice = orderQuantity * pizzaPrice
-  let cookingTime = getCookingTime(orderQuantity)
+  const totalPrice = orderQuantity * pizzaPrice
+  const cookingTime = getCookingTime(orderQuantity)
   fourth.innerHTML = `<h3>Great, I'll get started on your ${orderName}  
                       right away,  it will cost  ${totalPrice} kr and will 
                       take ${cookingTime} minutes</h3>
@@ -65,19 +73,15 @@ const getCookingTime = (orderQuantity) => {
   }
 }
 
-// constants
-const vegetarian = "Vegetarian Pizza"
-const hawaiian = "Hawaiian Pizza"
-const pepperoni = "Pepperoni Pizza"
-const pizzaPrice = 80
 
-let next_btn = document.getElementById("next_btn")
-let back_btn = document.getElementById("back_btn")
+
+const next_btn = document.getElementById("next_btn")
+const back_btn = document.getElementById("back_btn")
 
 // Radio inputs
-let radio_vegetarian = document.getElementById("vegetarian")
-let radio_hawaiian = document.getElementById("hawaiian")
-let radio_pepperoni = document.getElementById("pepperoni")
+const radio_vegetarian = document.getElementById("vegetarian")
+const radio_hawaiian = document.getElementById("hawaiian")
+const radio_pepperoni = document.getElementById("pepperoni")
 
 
 // Connecting functions to buttons
