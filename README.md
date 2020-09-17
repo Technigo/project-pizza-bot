@@ -1,3 +1,5 @@
+# Katarina Torninger & Annika Melin
+
 # Pizza Bot
 
 For this project, Katarina Torninger and Annika Melin created a pizza 🍕 bot, which first and foremost asks for user's name, then for your choice of pizza out of the 4 choices listed, the quantity and as a result, it prints out a message of approval or an error message - depending on your choice.
@@ -17,4 +19,4 @@ We have even managed to reach some of the advanced goals.
 
 ## View it live
 
-Katarina's and Annika's live project:
+Katarina's and Annika's live project:https://sleepy-boyd-2f37b8.netlify.app/
