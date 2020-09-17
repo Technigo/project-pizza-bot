@@ -13,21 +13,21 @@
     </header>
     <section class="main">
     <div><p id="welcome"></p></div>
-    <form class="pizzabotform" onsubmit="handleSubmit(event)">
+    <form class="pizzabotform">
       <label for="pizzaName">Enter the name of the pizza you want to order today.</label>
       <input id="pizzaName" name="pizzaName" type="text">
       <!--<input id="submitPizza" name="submitPizza" type="submit">-->
       <label for="pizzaQuantity">How many pizzas do you want?</label>
-      <input id="pizzaQuantity" name="pizzaQuantity" type="number" min="0" max="20">
+      <input id="pizzaQuantity" name="pizzaQuantity" type="number" min="0" max="20" oninput="validity.valid||(value='');">
     </form>
     <button onclick="handleSubmit(event)">Order Now</button>
     <div><p id="orderConfirmation"></p></div>
     <div class="pizzacontainer">
-      <img src="Images/hawaiianpizza.jpg">
-      <img src="Images/pepperonipizza.jpg">
-      <img src="Images/vegetarianpizza.jpg">
+      <img src="./images/hawaiianpizza.jpg" alt="a hawaiian pizza">
+      <img src="./images/pepperonipizza.jpg" alt="a pepperoni pizza">
+      <img src="./images/vegetarianpizza.jpg" alt="a vegetarian pizza">
     </div>
   </section>
-    <script src="pizzabot.js"></script>
+    <script src="./pizzabot.js"></script>
   </body>
 </html>
