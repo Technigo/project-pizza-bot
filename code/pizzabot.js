@@ -57,7 +57,6 @@ if (validateOrderName() === true) {
 }
 
 
-
 //function to calculate the cost
 const calculateTotalCost = () => {
   const total = amountOfPizzas * pizzaPrice;
