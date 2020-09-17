@@ -30,12 +30,11 @@
         <div id="second">
           <h3>Choose your favorite pizza</h3>
           <section class="three-pizzas">
-            <label for="vegetarian">
+            <label>
               <input
                 type="radio"
                 id="vegetarian"
                 name="pizzaChoice"
-                
                 value="Vegetarian Pizza"
               />
               <figure>
@@ -86,7 +85,7 @@
           <h3>How many of <span id="pizzaChoice"></span> would you like?</h3>
           <section class="pizzas_number">
             <label for="btn1">
-              <input type="radio" id="btn1" name="numberOrdered" value="1" ./>
+              <input type="number" min="1" max="10" id="btn1" name="numberOrdered" ./>
               <div class="numBtn">1</div>
             </label>
             <label for="btn2">

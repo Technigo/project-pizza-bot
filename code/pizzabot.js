@@ -1,3 +1,4 @@
+let orderName;
 // constants
 const vegetarian = "Vegetarian Pizza"
 const hawaiian = "Hawaiian Pizza"
@@ -52,10 +53,10 @@ const getOrderName = (event) => {
 }
 
 const getConfirmation = () => {
-  const orderName = event.target.value
-  const orderQuantity = document.querySelector('input[name="numberOrdered"]:checked').value
+  orderName = document.querySelector('input[name="pizzaChoice"]:checked').value
   document.getElementById("next_btn").disabled = false
-  const totalPrice = orderQuantity * pizzaPrice
+  const totalPrice = orderQuan
+  tity * pizzaPrice
   const cookingTime = getCookingTime(orderQuantity)
   fourth.innerHTML = `<h3>Great, I'll get started on your ${orderName}  
                       right away,  it will cost  ${totalPrice} kr and will 
@@ -93,15 +94,7 @@ radio_hawaiian.addEventListener("click", getOrderName)
 radio_pepperoni.addEventListener("click", getOrderName)
 
 document.getElementById("btn1").addEventListener("click", getConfirmation)
-document.getElementById("btn2").addEventListener("click", getConfirmation)
-document.getElementById("btn3").addEventListener("click", getConfirmation)
-document.getElementById("btn4").addEventListener("click", getConfirmation)
-document.getElementById("btn5").addEventListener("click", getConfirmation)
-document.getElementById("btn6").addEventListener("click", getConfirmation)
-document.getElementById("btn7").addEventListener("click", getConfirmation)
-document.getElementById("btn8").addEventListener("click", getConfirmation)
-document.getElementById("btn9").addEventListener("click", getConfirmation)
-document.getElementById("btn10").addEventListener("click", getConfirmation)
+
 
 
 // Starts when loading page
