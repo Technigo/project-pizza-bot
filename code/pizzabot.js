@@ -7,8 +7,8 @@ const margherita = "Margherita Pizza"
 const pizzaPrice = 80
 
 
-const calculateTotalCost = (orderQuantity) => {
-    orderTotal = (orderQuantity * pizzaPrice)
+const calculateTotalCost = orderQuantity => {
+    orderTotal = orderQuantity * pizzaPrice
 }
 
 const calculateCookingTime = (orderQuantity) => {
@@ -22,8 +22,8 @@ const calculateCookingTime = (orderQuantity) => {
 }
 
 let validateOrderName = (orderName, orderQuantity) => {
-    Event.preventDefault();
-    if (orderName === vegetarian || orderName === hawaiian || orderName === pepperoni) {
+    // Here we tried to include lowercase order name however, the form still doesn't accept it
+    if (orderName === vegetarian || orderName.toLowerCase() === vegetarian.toLocaleLowerCase || orderName === hawaiian || orderName.toLowerCase() === hawaiian.toLocaleLowerCase || orderName === pepperoni || orderName.toLowerCase() === pepperoni.toLocaleLowerCase) {
         calculateTotalCost(orderQuantity)
         calculateCookingTime(orderQuantity)
         document.getElementById("orderPlaced").innerText = `Thanks ${firstName.value}! You have ordered ${orderQuantity} of the ${orderName}, your total is ${orderTotal} kr and your order will take ${orderTime} minutes.`

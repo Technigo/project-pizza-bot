@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Project 4: Pizzabot</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link rel="icon" type="image/png" href="./img/pizza.png" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
   </head>
  
-<body id="orderPlaced">
+  <body id="orderPlaced">
+    <!-- When we change the id to class both here and in css, suddenly the orderPlaced property stops working. -->
 
     <!-- H1 NEON TITLE   -->
     <div class="neon">
@@ -23,7 +24,8 @@
         <div class="chat">
           <h2 class="h2-chat">Hey, happy to serve your pizza!</h2>
           <p>On our menu we have: Vegetarian Pizza, Hawaiian Pizza, Pepperoni Pizza and Margherita Pizza.<p>
-            
+        </div>
+      </div>
             <div class="form-group">
               <label for="firstName"><h3 class="h3-order">To start, enter your name</h3></label>
               <input
@@ -34,6 +36,7 @@
                   required
                
               />
+            </div>
           <div class="form-group">
               <label for="orderName"><h3 class="h3-order">Which of these pizzas would you like today?</h3></label>
               <input
