@@ -43,13 +43,9 @@ const calculateCookingTime = (orderQuantity) => {
 
 const showImage = (typeOfPizza) => {
 
-    //     document.querySelectorAll('.pizza-img').forEach(item => {
-    //             item.style.display = "none"
-    //         })
-    // document.getElementById("vegetarianImg").style.display = "none";
-    // document.getElementById("hawaiianImg").style.display = "none";
-    // document.getElementById("pepperoniImg").style.display = "none";
-    // document.getElementById("chickenImg").style.display = "none";
+    document.querySelectorAll('.pizza-img').forEach(item => {
+        item.style.display = "none"
+    })
 
     if (typeOfPizza === "Vegetarian Pizza") {
         document.getElementById("vegetarianImg").style.display = "block";
