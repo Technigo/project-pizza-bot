@@ -25,19 +25,23 @@ const validateOrderName = (orderName) => {
     }
 };
 
-var orderQuantity;
-var orderTotal;
+let orderQuantity;
+// var orderTotal;
+const calculateOrderTotal = (n1, n2) => {
+    result = n1 * n2;
+    return result
+};
 
 if (validateOrderName(orderName)) {
     orderQuantity = prompt(`How many of ${orderName}s do you want?`);
-    orderTotal = orderQuantity * pizzaPrice;
-    alert(`Great, I'll get started on your ${orderName}s right away, it will cost ${orderTotal} kr.`);
+    alert(`Great, I'll get started on your ${orderName}s right away, it will cost ${calculateOrderTotal(orderQuantity, pizzaPrice)} kr.`);
 }
 else {
     alert(`Select a pizza from the menu.`);
+    // return orderName;
 }
 
-var cookingTime;
+let cookingTime;
 if (orderQuantity <= 2) {
     cookingTime = 10;
 }
