@@ -42,7 +42,7 @@ body {
 
 /* -------Main part----------------- */
 
-main {
+.wrapper {
     margin: 50px 50px 100px 50px;
     display: flex;
     flex-direction: column;
@@ -67,7 +67,7 @@ main {
 
 /* -----------form--------------- */
 
-form {
+.order-form {
     font-family: 'Grandstander', cursive;
     background: #d8c3a4;
     padding: 20px;
@@ -75,21 +75,21 @@ form {
     margin-top: 50px;
 }
 
-label {
+.label {
     display: block;
 }
 
-form p {
+.order-form p {
     font-size: 20px;
     font-weight: bold;
     font-family: 'Lato', sans-serif;
 }
 
-input[type="radio"] {
+.pizza-name {
     margin-left: 10px;
 }
 
-button {
+.submit-button {
     margin-top: 20px;
     margin-left: 50px;
     padding: 5px;
@@ -97,7 +97,7 @@ button {
     border-radius: 5px;
 }
 
-#quantity {
+.nr-Pizzas {
     margin-left: 50px;
 }
 
@@ -114,10 +114,14 @@ button {
     width: 300px;
 }
 
+.pizza-img {
+    display: none;
+}
+
 
 /* -------footer--------- */
 
-footer {
+.footer {
     height: 50px;
     width: 100%;
     margin-top: 10px;
@@ -137,7 +141,7 @@ footer {
 /* ------------media queries------------ */
 
 @media (min-width: 650px) {
-    main {
+    .wrapper {
         flex-direction: row;
         justify-content: space-around;
     }
@@ -161,7 +165,7 @@ footer {
     .text-container {
         top: 30%;
     }
-    footer {
+    .footer {
         font-size: 15px;
     }
     .message-container img {

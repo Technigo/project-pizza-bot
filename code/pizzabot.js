@@ -7,9 +7,9 @@ const receiveData = (event) => {
     const cookingTime = calculateCookingTime(orderQuantity);
     document.getElementById("message").innerHTML = (`You've ordered ${orderQuantity} ${typeOfPizza}. It will cost ${totalCost} kr and take ${cookingTime} minutes. Enjoy your meal!`);
     showImage(typeOfPizza);
+    console.log(`You've ordered ${orderQuantity} ${typeOfPizza}. It will cost ${totalCost} kr and take ${cookingTime} minutes. Enjoy your meal!`);
 }
 
-let orderName;
 const validateOrderName = () => {
 
     let pizzaChoices = document.getElementsByName('pizza');
@@ -43,10 +43,13 @@ const calculateCookingTime = (orderQuantity) => {
 
 const showImage = (typeOfPizza) => {
 
-    document.getElementById("vegetarianImg").style.display = "none";
-    document.getElementById("hawaiianImg").style.display = "none";
-    document.getElementById("pepperoniImg").style.display = "none";
-    document.getElementById("chickenImg").style.display = "none";
+    //     document.querySelectorAll('.pizza-img').forEach(item => {
+    //             item.style.display = "none"
+    //         })
+    // document.getElementById("vegetarianImg").style.display = "none";
+    // document.getElementById("hawaiianImg").style.display = "none";
+    // document.getElementById("pepperoniImg").style.display = "none";
+    // document.getElementById("chickenImg").style.display = "none";
 
     if (typeOfPizza === "Vegetarian Pizza") {
         document.getElementById("vegetarianImg").style.display = "block";

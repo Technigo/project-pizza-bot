@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css2?family=Grandstander&family=Lato&family=Merriweather:ital,wght@0,400;1,900&display=swap" rel="stylesheet">
     <title>Pizzabot</title>
 </head>
@@ -17,44 +17,40 @@
             <p>Online ordering</p>
         </div>
     </div>
-    <main>
+    <main class="wrapper">
 
         <section class="left-side">
-
             <div class="welcome-box">
                 <h1>Welcome to Pizzeria Bolero</h1>
                 <p>Each pizza costs 80 kr.</p>
                 Order your pizza from the form below.
             </div>
-            <form onsubmit="recieveData">
+            <form class="orderform" onsubmit="receiveData(event)">
+
                 <p>Which pizza would you like to order?</p>
 
-                <label>
-                    
-                    <input type="radio" name="pizza" id="vegetarianPizza" value="Vegetarian Pizza">
+                <label class="label">
+                    <input type="radio" class="pizza-name" name="pizza" id="vegetarianPizza" value="Vegetarian Pizza">
                     Vegetarian Pizza
                 </label>
-                <label>
-                    
-                    <input type="radio" name="pizza" id="hawaiianPizza" value="Hawaiian Pizza">
+                <label class="label">
+                    <input type="radio" class="pizza-name" name="pizza"  id="hawaiianPizza" value="Hawaiian Pizza">
                     Hawaiian Pizza
                 </label>
-                <label>
-                  
-                    <input type="radio" name="pizza" id="pepperoniPizza" value="Pepperoni Pizza">
+                <label class="label">
+                    <input type="radio" class="pizza-name" name="pizza" id="pepperoniPizza" value="Pepperoni Pizza">
                     Pepperoni Pizza
                 </label>
-                <label>
-                     <input type="radio" name="pizza" id="chickenPizza" value="Chicken Pizza">
-                     Chicken pizza
-                    </label>
-
-                <label>
+                <label class="label">
+                    <input type="radio" class="pizza-name" name="pizza" id="chickenPizza" value="Chicken Pizza">
+                    Chicken pizza
+                </label>
+                <label class="label">
                     <p>How many pizzas would you like?</p>
-                    <input type="number" id="quantity" name="quantity" min="1" max="10" />
+                    <input type="number" class="nr-Pizzas" id="quantity" name="quantity" min="1" max="10" />
                 </label>
 
-                <button onclick="receiveData(event)">Order</button>
+                <button type="submit" class="submit-button">Order</button>
 
             </form>
         </section>
@@ -64,16 +60,16 @@
                 <h1>Here's your order:</h1>
                 <p id="message" class="message"> </p>
 
-                <img id="hawaiianImg" class="pizzaImg" src="./img/hawaiian.jpg" alt="hawaiian pizza">
-                <img id="pepperoniImg" class="pizzaImg" src="./img/pepperoni.png" alt="pepperoni pizza">
-                <img id="vegetarianImg" class="pizzaImg" src="./img/vegetarisk.jfif" alt="vegetarian pizza">
-                <img id="chickenImg" class="pizzaImg" src="./img/chicken.jpg" alt="chicken pizza">
+                <img id="hawaiianImg" class="pizza-img" src="./img/hawaiian.jpg" alt="hawaiian pizza" />
+                <img id="pepperoniImg" class="pizza-img" src="./img/pepperoni.png" alt="pepperoni pizza" />
+                <img id="vegetarianImg" class="pizza-img" src="./img/vegetarisk.jfif" alt="vegetarian pizza" />
+                <img id="chickenImg" class="pizza-img" src="./img/chicken.jpg" alt="chicken pizza" />
             </div>
         </section>
     </main>
 
-    <footer>Created by Petra Almgren & Sara Stjernberg @Technigo September 2021</footer>
-    <script src="pizzabot.js"></script>
+    <footer class="footer">Created by Petra Almgren & Sara Stjernberg @Technigo September 2021</footer>
+    <script src="./pizzabot.js"></script>
 </body>
 
 </html>
