@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Nanum Gothic', sans-serif;
-  background: url(./pizza-dough.jpg) no-repeat center center fixed;
+  background: url("./pizza-dough.jpg") no-repeat center center fixed;
   background-size: cover;
   object-fit: cover;
   display: flex;
