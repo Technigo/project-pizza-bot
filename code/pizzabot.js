@@ -43,8 +43,7 @@ const calculateCookingTime = (orderQuantity) => {
 
 //function calculating and returning total cost
 const calculateTotalCost = (orderQuantity, pizzaPrice) => {
-    const totalCost = orderQuantity * pizzaPrice;
-    return totalCost;
+    return orderQuantity * pizzaPrice;
 };
 
 let isPizzaOnMenu = false;
