@@ -2,29 +2,35 @@ const vegetarian = "Vegetarian Pizza";
 const hawaiian = "Hawaiian Pizza";
 const pepperoni = "Pepperoni Pizza";
 
-const pizzaPrice = 80;
+let pizzaPrice = 80;
 
 //Put your Javscript code here:
 
-//test
-//console.log(`Test if connection HTML-JS works: ${vegetarian}, ${hawaiian} and ${pepperoni}`);
-
+//greeting
 alert(`Welcome, customer! Happy to serve your pizza. On our menu we have: ${vegetarian}, ${hawaiian} and ${pepperoni}`);
 
-// const orderName = prompt(`Enter the name of the pizza you want to order today:`);
-const orderName = (pizza) => {
-    pizza = prompt(`Enter the name of the pizza you want to order today:`);
-    return pizza;
+
+//user input saved in the variable orderName
+//write prompt in a function and then return orderName as a variable
+// let orderName = prompt(`Enter the name of the pizza you want to order today:`);
+const orderName = () => {
+    //name of a pizza is saved in a pizzaName variable
+    const pizzaName = prompt(`Enter the name of the pizza you want to order today:`);
+    //the function returns the value of the variable
+    return pizzaName;
 };
-orderName();
+//value of the function is assigned to a new variable
+let pizzaOrdered = orderName();
 
 
-//Function that tests whether the user input matches the pizza name
-//pass orderName() function as a parameter?
-const validateOrderName = (orderName()) => {
-    if (orderName().toLowerCase() === vegetarian.toLowerCase() ||
-    orderName().toLowerCase() === hawaiian.toLowerCase() ||
-    orderName().toLowerCase() === pepperoni.toLowerCase ()) {
+//below: pizzaOrdered instead of orderName
+
+
+//function testing whether the user input matches the pizza name
+const validateOrderName = (pizzaOrdered) => {
+    if (pizzaOrdered.toLowerCase() === vegetarian.toLowerCase() ||
+    pizzaOrdered.toLowerCase() === hawaiian.toLowerCase() ||
+    pizzaOrdered.toLowerCase() === pepperoni.toLowerCase()) {
         return true;
     }
     else {
@@ -32,33 +38,39 @@ const validateOrderName = (orderName()) => {
     }
 };
 
+//validation of orderName stored in a variable
+let isPizzaOnMenu = validateOrderName(pizzaOrdered);
 let orderQuantity;
-// var orderTotal;
-const calculateOrderTotal = (n1, n2) => {
-    result = n1 * n2;
-    return result
+
+
+//function calculating and returning total cost
+const calculateTotalCost = (orderQuantity, pizzaPrice) => {
+    totalCost = orderQuantity * pizzaPrice;
+    return totalCost;
 };
 
-if (validateOrderName(orderName())) {
-    orderQuantity = prompt(`How many of ${orderName()}s do you want?`);
-    alert(`Great, I'll get started on your ${orderName()}s right away, it will cost ${calculateOrderTotal(orderQuantity, pizzaPrice)} kr.`);
-}
+//FIX: prevent the user to go forward if the pizza name is not valid
+//https://stackoverflow.com/c/technigo/questions/1447/1475#1475
+if (isPizzaOnMenu) {
+    orderQuantity = prompt(`How many of ${pizzaOrdered}s do you want?`);
+    alert(`Great, I'll get started on your ${pizzaOrdered}s right away, it will cost ${calculateTotalCost(orderQuantity, pizzaPrice)} kr.`);
+} 
 else {
     alert(`Select a pizza from the menu.`);
-    // return orderName;
 }
 
-let cookingTime;
-if (orderQuantity <= 2) {
-    cookingTime = 10;
-}
-else if (orderQuantity >= 3 && orderQuantity < 6) {
-    cookingTime = 15;
-}
-else 
-cookingTime = 20;
+//function that calculates the cooking time
+const calculateCookingTime = () => {
+    if (orderQuantity <= 2) {
+      return 10;
+    } else if (orderQuantity >= 6) {
+      return 20;
+    } else {
+      return 15;
+    }
+};
 
-
-document.getElementById("orderSummary").innerHTML = `<h2>Thank you for your order!</h2> The ${orderName()}s are being
-prepared as you read this. The total cost is ${orderTotal} kr. The order will take ${cookingTime} minutes.`;
+//final message displayed in DOM
+document.getElementById("orderSummary").innerHTML = `<h2>Thank you for your order!</h2> The ${pizzaOrdered}s are being
+prepared as you read this. The total cost is ${calculateTotalCost(orderQuantity, pizzaPrice)} kr. The order will take ${calculateCookingTime()} minutes.`;
 
