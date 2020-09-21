@@ -36,8 +36,8 @@ h2 {
   padding: 15px;
   background: black;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  width: 300px;
-  height: auto;
+  width: auto;
+  height: 350px;
   text-align: center;
   color: white;
   font-family: sans-serif;
@@ -45,6 +45,10 @@ h2 {
   margin-bottom: 10px;
   margin-top: 20px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
 }
 
 .form-submit-button {
