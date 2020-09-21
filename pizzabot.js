@@ -33,22 +33,17 @@ form.onsubmit = calculateTotalCost;
 
 //Sets the pizza image 
 const pizzaImages = (orderName) => {
-    let img;
-    if (orderName == `${vegetarian}`) {
-        img = "./Vegetariana.jpg"
-        return img;
-    } else if (orderName == `${hawaiian}`) {
-        img = "./Hawaiian.jpg"
-        return img;
-    } else if (orderName == `${pepperoni}`) {
-        img = "./Pepperoni.jpg"
-        return img;
-    } else if (orderName == `${calzone}`) {
-        img = "./Calzone.jpg"
-        return img;
-    } else if (orderName == `${kebab}`) {
-        img = "./Kebab.jpg"
-        return img;
+
+    if (orderName == vegetarian) {
+        return "./Vegetariana.jpg";
+    } else if (orderName == hawaiian) {
+        return "./Hawaiian.jpg";
+    } else if (orderName == pepperoni) {
+        return "./Pepperoni.jpg";
+    } else if (orderName == calzone) {
+        return "./Calzone.jpg";
+    } else if (orderName == kebab) {
+        return "./Kebab.jpg";
     }
 
 }
