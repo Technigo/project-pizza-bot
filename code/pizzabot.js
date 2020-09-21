@@ -40,9 +40,9 @@ const finalizeOrder = (order) => {
 };
 
 const findPizzaImage = (order) => {
-  if (order === vegetarian) {
+  if (order.toLowerCase() === vegetarian.toLowerCase()) {
     return "./images/vegetarian-pizza.jpg";
-  } else if (order === pepperoni) {
+  } else if (order.toLowerCase() === pepperoni.toLowerCase()) {
     return "./images/pepperoni-pizza.jpg";
   } else {
     return "./images/hawaiian-pizza.jpg";
@@ -50,7 +50,7 @@ const findPizzaImage = (order) => {
 };
 
 const validateOrderName = (order) => {
-  if (order === vegetarian || order === pepperoni || order === hawaiian) {
+  if (order.toLowerCase() === vegetarian.toLowerCase() || order.toLowerCase() === pepperoni.toLowerCase() || order === hawaiian.toLowerCase()) {
     orderQuantity = prompt(`How many ${orderName}'s would you like?`);
     orderQuantity = parseInt(orderQuantity, 10);
     calculateTotalCost(orderQuantity, pizzaPrice);
