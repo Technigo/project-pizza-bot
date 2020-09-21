@@ -8,4 +8,4 @@ We started by doing the blue level and we made sure out functions worked before 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://karro-sara-pizzabot.netlify.app/

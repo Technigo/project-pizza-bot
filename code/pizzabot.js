@@ -1,8 +1,8 @@
-const vegetarian = "vegetarian";
-const hawaiian = "hawaiian";
-const pepperoni = "pepperoni";
-const capricciosa = "capricciosa";
-const margherita = "margherita";
+const vegetarian = 'vegetarian';
+const hawaiian = 'hawaiian';
+const pepperoni = 'pepperoni';
+const capricciosa = 'capricciosa';
+const margherita = 'margherita';
 const pizzaPrice = 80;
 
 /* FUNCTIONS */
@@ -18,7 +18,6 @@ const calculateCookingTime = (orderQuantity) => {
   let cookingTime;
   if (orderQuantity >= 1 && orderQuantity <= 2) {
     cookingTime = 10;
-    console.log(typeof cookingTime);
   } else if (orderQuantity >= 3 && orderQuantity <= 5) {
     cookingTime = 15;
   } else if (orderQuantity >= 6) {
@@ -31,55 +30,53 @@ const calculateCookingTime = (orderQuantity) => {
 
 /* Place order. This function is called when the user presses the "Place Order Button." */
 const placeOrder = () => {
-  const name = capitalizeFirstLetter(document.getElementById("name").value);
-  const orderName = document.getElementById("pizza").value;
-  const orderQuantity = document.getElementById("pizza-slider").value;
+  const name = capitalizeFirstLetter(document.getElementById('name').value);
+  const orderName = document.getElementById('pizza').value;
+  const orderQuantity = document.getElementById('pizza-slider').value;
   const orderTotal = calculateTotalCost(orderQuantity, pizzaPrice);
   let cookingTime = calculateCookingTime(orderQuantity);
-  console.log(typeof cookingTime + " cookingTime");
   const messageText = `Great ${name}, I'll get started on your ${orderName} 
     right away. It will cost ${orderTotal} kr. The pizza(s) will take 
     ${cookingTime} minutes.`;
-  document.getElementById("message").innerHTML = messageText;
+  document.getElementById('message').innerHTML = messageText;
   updateCountdown(cookingTime);
   toggleDisableForm();
   togglePizzaImage(orderName);
-  return false;
 };
 
 /* Change range output so the user can see the current value of the range slider */
 const changeRangeOutput = () => {
-  let rangeValue = document.getElementById("pizza-slider").value;
-  document.getElementById("number-output").innerHTML = rangeValue;
+  let rangeValue = document.getElementById('pizza-slider').value;
+  document.getElementById('number-output').innerHTML = rangeValue;
 };
 
 /* Toggle pizza image, when order is placed. */
 const togglePizzaImage = (orderName) => {
   switch (orderName) {
     case vegetarian:
-      document.getElementById("pizza-image").classList.toggle(vegetarian);
+      document.getElementById('pizza-image').classList.toggle(vegetarian);
       break;
     case hawaiian:
-      document.getElementById("pizza-image").classList.toggle(hawaiian);
+      document.getElementById('pizza-image').classList.toggle(hawaiian);
       break;
     case pepperoni:
-      document.getElementById("pizza-image").classList.toggle(pepperoni);
+      document.getElementById('pizza-image').classList.toggle(pepperoni);
       break;
     case capricciosa:
-      document.getElementById("pizza-image").classList.toggle(capricciosa);
+      document.getElementById('pizza-image').classList.toggle(capricciosa);
       break;
     case margherita:
-      document.getElementById("pizza-image").classList.toggle(margherita);
+      document.getElementById('pizza-image').classList.toggle(margherita);
       break;
   }
 };
 
 /* Hides the order form window and shows the order confirmation window */
 const toggleDisableForm = () => {
-  document.getElementById("flex-container").classList.toggle("visible");
-  document.getElementById("flex-container").classList.toggle("invisible");
-  document.getElementById("order-confirmation").classList.toggle("invisible");
-  document.getElementById("order-confirmation").classList.toggle("visible");
+  document.getElementById('flex-container').classList.toggle('visible');
+  document.getElementById('flex-container').classList.toggle('invisible');
+  document.getElementById('order-confirmation').classList.toggle('invisible');
+  document.getElementById('order-confirmation').classList.toggle('visible');
 };
 
 /* This function is called when the user presses the "Continue" button. 
@@ -92,16 +89,16 @@ const clickNextButton = (windowId) => {
     let nextWindow = windowElement.nextElementSibling.id;
     toggleWindow(windowId, nextWindow);
   } else {
-    alert("Please fill in a value");
+    alert('Please fill in a value');
   }
 };
 
 /*Hides the current window and displays the next window*/
 const toggleWindow = (windowId, nextWindow) => {
-  document.getElementById(windowId).classList.toggle("visible");
-  document.getElementById(windowId).classList.toggle("invisible");
-  document.getElementById(nextWindow).classList.toggle("visible");
-  document.getElementById(nextWindow).classList.toggle("invisible");
+  document.getElementById(windowId).classList.toggle('visible');
+  document.getElementById(windowId).classList.toggle('invisible');
+  document.getElementById(nextWindow).classList.toggle('visible');
+  document.getElementById(nextWindow).classList.toggle('invisible');
 };
 
 /*  Checks which window that is passed into the function, and depending on the window-ID, validates the input-field in that window.
@@ -112,9 +109,9 @@ const toggleWindow = (windowId, nextWindow) => {
 */
 const validateInput = (windowId) => {
   let isValid;
-  if (windowId === "chatWindow1") {
-    let inputToCheck = document.getElementById("name").value;
-    if (inputToCheck === "") {
+  if (windowId === 'chatWindow1') {
+    let inputToCheck = document.getElementById('name').value;
+    if (inputToCheck === '') {
       isValid = false;
     } else {
       setGreetingName(inputToCheck);
@@ -122,9 +119,9 @@ const validateInput = (windowId) => {
       setProgressBarLabel();
       isValid = true;
     }
-  } else if (windowId === "chatWindow2") {
-    let inputToCheck = document.getElementById("pizza").value;
-    if (inputToCheck === "") {
+  } else if (windowId === 'chatWindow2') {
+    let inputToCheck = document.getElementById('pizza').value;
+    if (inputToCheck === '') {
       isValid = false;
     } else {
       setOrderName(inputToCheck);
@@ -132,9 +129,9 @@ const validateInput = (windowId) => {
       setProgressBarLabel();
       isValid = true;
     }
-  } else if (windowId === "chatWindow3") {
-    let inputToCheck = document.getElementById("pizza-slider").value;
-    if (inputToCheck === "0") {
+  } else if (windowId === 'chatWindow3') {
+    let inputToCheck = document.getElementById('pizza-slider').value;
+    if (inputToCheck === '0') {
       isValid = false;
     } else {
       setOrderSummary();
@@ -150,14 +147,14 @@ const validateInput = (windowId) => {
 
 /* Increases the progressbar-value by one */
 const setProgressBarValue = () => {
-  document.getElementById("progress-bar").value += 1;
+  document.getElementById('progress-bar').value += 1;
 };
 
 /* Displays the value of the progressbar in a label */
 const setProgressBarLabel = () => {
-  const progressBarValue = document.getElementById("progress-bar").value;
+  const progressBarValue = document.getElementById('progress-bar').value;
   document.getElementById(
-    "progress-bar-label"
+    'progress-bar-label'
   ).innerHTML = `${progressBarValue} out of 3 answered`;
 };
 
@@ -171,7 +168,7 @@ const capitalizeFirstLetter = (inputToCheck) => {
 /* Receives the value of the input field and displays it in a message */
 const setGreetingName = (inputToCheck) => {
   const inputName = capitalizeFirstLetter(inputToCheck);
-  document.getElementById("order").innerHTML = `Great ${inputName}! On our menu
+  document.getElementById('order').innerHTML = `Great ${inputName}! On our menu
    we have ${vegetarian}, ${hawaiian}, ${pepperoni}, ${capricciosa} and 
    ${margherita} pizza. Choose the pizza you want to order.`;
 };
@@ -179,16 +176,16 @@ const setGreetingName = (inputToCheck) => {
 /* Receives the value of the select field and displays it in a message */
 const setOrderName = (inputToCheck) => {
   const inputOrderName = capitalizeFirstLetter(inputToCheck);
-  document.getElementById("order-name").innerHTML = `${inputOrderName} pizza, 
+  document.getElementById('order-name').innerHTML = `${inputOrderName} pizza, 
     great choice! How many do you want to order?`;
 };
 
 /* Is called by the last window to summarize all the input fields and put them in a message */
 const setOrderSummary = () => {
-  const name = capitalizeFirstLetter(document.getElementById("name").value);
-  const orderName = document.getElementById("pizza").value;
-  const orderQuantity = document.getElementById("pizza-slider").value;
-  document.getElementById("summary").innerHTML = `${name}, you want to order
+  const name = capitalizeFirstLetter(document.getElementById('name').value);
+  const orderName = document.getElementById('pizza').value;
+  const orderQuantity = document.getElementById('pizza-slider').value;
+  document.getElementById('summary').innerHTML = `${name}, you want to order
    ${orderQuantity} ${orderName} pizza(s). What a feast!`;
 };
 
@@ -196,7 +193,7 @@ const setOrderSummary = () => {
 const updateCountdown = (cookingTime) => {
   let counter = cookingTime * 60;
   const interval = setInterval(() => {
-    const countdown = document.getElementById("countdown");
+    const countdown = document.getElementById('countdown');
     const minutes = Math.floor(counter / 60);
     let seconds = counter % 60;
     seconds = seconds < 10 ? `0${seconds}` : seconds;
@@ -204,7 +201,7 @@ const updateCountdown = (cookingTime) => {
     counter--;
     counter < 0 ? clearInterval(interval) : counter;
     if (counter <= 0) {
-      document.getElementById("countdown").innerHTML = "Pizza time!";
+      document.getElementById('countdown').innerHTML = 'Pizza time!';
     }
   }, 1000);
 };
@@ -217,7 +214,6 @@ Gets all the relevant fields from the order form and validates them.
 This was used in the red level. 
 */
 /*const validateInput = () =>{
-    console.log("validateInput");
     const inputValues = document.getElementById("order-form").elements; 
     let numberOfValidInput =0;
     for(i=0;i<inputValues.length;i++)
@@ -225,9 +221,6 @@ This was used in the red level.
       if(inputValues[i].value != "" && inputValues[i].value != "0" && inputValues[i].type != "output")
       {
         numberOfValidInput++;
-        console.log("value of element:" + inputValues[i].value);
-        console.log(inputValues[i].type + " type of element");
-        console.log("numberOfValidInput= "+numberOfValidInput);
       }
       else console.log("no value in array");
     }
