@@ -6,11 +6,11 @@ const calzone = "calzone"
 const kebab = "kebab"
 
 // Iteration 4 - Finalize the order
-const calculateTotalCost = (event) => {
+const handleOnSubmit = (event) => {
     event.preventDefault()
     //Get nr of pizzas
     let orderQuantity = document.getElementById("nrOfPizzas").value
-    
+
     //Get pizza sort
     let orderName = document.getElementById("pizzaSort").value
     let pizzaPrice = pricePerPizza(orderName)
@@ -34,7 +34,7 @@ const calculateTotalCost = (event) => {
 }
 
 const form = document.getElementById("form")
-form.onsubmit = calculateTotalCost
+form.onsubmit = handleOnSubmit
 
 //Sets the pizza image 
 const pizzaImages = (orderName) => {
