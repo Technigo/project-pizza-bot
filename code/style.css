@@ -20,6 +20,7 @@ body {
   z-index: 1;
   padding: 0 20px;
 }
+
 .header-text {
   color: #fff;
   font-size: 60px;
@@ -53,15 +54,6 @@ body {
   margin: 15px auto;
   border-radius: 6px;
   padding: 10px;
-  box-shadow: ;
-}
-
-.orderPizza {
-  display: flex;
-  color: green;
-  font-weight: 100;
-  font-size: 20px;
-  z-index: 1;
 }
 
 .print-order {
@@ -69,21 +61,11 @@ body {
   color: black;
   font-size: 20px;
   margin: 20px;
-}
-
-.print-order {
   font-weight: bold;
 }
 
 .pizza-image img {
-    width: 90%;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  width: 90%;
 }
 
 .order-btn {
