@@ -49,14 +49,11 @@ const pizzaImages = (orderName) => {
 }
 //Sets the pizza price
 const pricePerPizza = (orderName) => {
-    let pizzaPrices = 0
-    if ((orderName == `${vegetarian}`) || (orderName == `${hawaiian}`) || (orderName == `${pepperoni}`)) {
-        pizzaPrices = 80
-        return pizzaPrices
+    if ((orderName == vegetarian) || (orderName == hawaiian) || (orderName == pepperoni)) {
+        return 80
 
     } else {
-        pizzaPrices = 100
-        return pizzaPrices
+        return 100
     }
 
 }
