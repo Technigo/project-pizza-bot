@@ -10,20 +10,25 @@ const calculateTotalCost = (event) => {
     event.preventDefault()
     //Get nr of pizzas
     let orderQuantity = document.getElementById("nrOfPizzas").value
+    
     //Get pizza sort
     let orderName = document.getElementById("pizzaSort").value
     let pizzaPrice = pricePerPizza(orderName)
+
     //Calculate totalcost for pizza
     const orderTotal = orderQuantity * pizzaPrice
+
     //Print out message to customer
     let orderTime = calculateCookingTime(orderQuantity)
     let pizzaImg = pizzaImages(orderName)
     document.getElementById("pizzaImg").src = pizzaImg
-    let info = `Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The pizza(s) will take ${orderTime} minutes.`
+    
     //Set pizza picture to display block
     let x = document.getElementById("pizzaImg")
     x.style.display = "block"
+
     //Display customer order confirmation
+    let info = `Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr. The pizza(s) will take ${orderTime} minutes.`
     document.getElementById("submitInfo").innerHTML = info
 
 }
