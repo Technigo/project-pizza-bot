@@ -1,77 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./style.css">
-    <title>🍕 KarSan's Pizzeria</title>
-    <script src="https://kit.fontawesome.com/8f9b6a8db2.js" crossorigin="anonymous"></script>
-    <link href='https://fonts.googleapis.com/css?family=Athiti' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Indie Flower' rel='stylesheet'>
-  </head>
-  <body>
-    <h1>Welcome to KarSan's Pizzeria!</h1>
-    
 
-    <section class="bot">
-      <div class="bubble-start" id="greeting-container">
-        <img src="./assets/robot-solid.svg" alt="PizzaBot" class="bot-img">
-        <div class="bubble" id="greeting"></div>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="./style.css">
+  <title>🍕 KarSan's Pizzeria</title>
+  <script src="https://kit.fontawesome.com/8f9b6a8db2.js" crossorigin="anonymous"></script>
+  <link href='https://fonts.googleapis.com/css?family=Athiti' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Indie Flower' rel='stylesheet'>
+</head>
 
-      <button onclick="greet(event)">Start order</button>
+<body>
+  <h1>Welcome to KarSan's Pizzeria!</h1>
 
-      <div class="bubble-container" id="enterName-container">
-        <img src="./assets/robot-solid.svg" alt="PizzaBot" class="bot-img">
-        <div class="bubble" id="enterName"></div>
-      </div>
 
-      <div class="bubble-answer-container" id="nameForm-container">
-        <form class="bubble-answer" id="nameForm" onsubmit="submitName(event)">
-          <input id="name" name="name" type="text" placeholder="Enter your name" required>
-          <input id="nameSubmit" class="submit" name="nameSubmit" type="submit" value="Submit">
-        </form>
-        <img src="./assets/user-solid.svg" alt="Customer" class="user-img">
-      </div>
+  <section class="bot">
+    <div class="bubble-start" id="greeting-container">
+      <img src="./assets/robot-solid.svg" alt="PizzaBot" class="bot-img">
+      <div class="bubble" id="greeting"></div>
+    </div>
 
-      <div class="bubble-container" id="pizzaName-container">
-        <img src="./assets/robot-solid.svg" alt="PizzaBot" class="bot-img">
-        <div class="bubble" id="pizzaName"></div>
-      </div>
+    <button onclick="greet(event)">Start order</button>
 
-      <div class="bubble-answer-container" id="pizzaForm-container">
-        <form class="bubble-answer" id="pizzaForm" onsubmit="submitPizza(event)">
-          <select id="orderName" name="orderName" required>
-            <option value="" disabled selected>Select a pizza</option>
-            <option value="Vegetarian Pizza" id="vegetarian">Vegetarian Pizza</option>
-            <option value="Hawaiian Pizza" id="hawaiian">Hawaiian Pizza</option>
-            <option value="Pepperoni Pizza" id="pepperoni">Pepperoni Pizza</option>
-          <input id="pizzaSubmit" class="submit" name="submit" type="submit" value="Submit">
-        </form>    
-        <img src="./assets/user-solid.svg" alt="Customer" class="user-img">
-      </div>
+    <div class="bubble-container" id="enterName-container">
+      <img src="./assets/robot-solid.svg" alt="PizzaBot" class="bot-img">
+      <div class="bubble" id="enterName"></div>
+    </div>
 
-      <div class="bubble-container" id="pizzaQuantity-container">
-        <img src="./assets/robot-solid.svg" alt="PizzaBot" class="bot-img">
-        <div class="bubble" id="pizzaQuantity"></div>
-      </div>
+    <div class="bubble-answer-container" id="nameForm-container">
+      <form class="bubble-answer" id="nameForm" onsubmit="submitName(event)">
+        <input id="name" name="name" type="text" placeholder="Enter your name" required>
+        <input id="nameSubmit" class="submit" type="submit" value="Submit">
+      </form>
+      <img src="./assets/user-solid.svg" alt="Customer" class="user-img">
+    </div>
 
-      <div class="bubble-answer-container" id="quantityForm-container">
-        <form class="bubble-answer" id="quantityForm" onsubmit="submitQuantity(event)">
-          <input id="orderQuantity" name="orderQuantity" type="number" placeholder="Enter quantity" required>
-          <input id="quantitySubmit" class="submit" name="quantitySubmit" type="submit" value="Submit">
-        </form>    
-        <img src="./assets/user-solid.svg" alt="Customer" class="user-img">
-      </div>
+    <div class="bubble-container" id="pizzaName-container">
+      <img src="./assets/robot-solid.svg" alt="PizzaBot" class="bot-img">
+      <div class="bubble" id="pizzaName"></div>
+    </div>
 
-      <div class="bubble-container" id="confirmation-container">
-        <img src="./assets/robot-solid.svg" alt="PizzaBot" class="bot-img">
-        <div class="bubble" id="confirmation"></div>
-      </div>
+    <div class="bubble-answer-container" id="pizzaForm-container">
+      <form class="bubble-answer" id="pizzaForm" onsubmit="submitPizza(event)">
+        <select id="orderName" name="orderName" required>
+          <option value="" disabled selected>Select a pizza</option>
+          <option value="Vegetarian Pizza" id="vegetarian">Vegetarian Pizza</option>
+          <option value="Hawaiian Pizza" id="hawaiian">Hawaiian Pizza</option>
+          <option value="Pepperoni Pizza" id="pepperoni">Pepperoni Pizza</option>
+          <input id="pizzaSubmit" class="submit" type="submit" value="Submit">
+      </form>
+      <img src="./assets/user-solid.svg" alt="Customer" class="user-img">
+    </div>
 
-    </section>    
+    <div class="bubble-container" id="pizzaQuantity-container">
+      <img src="./assets/robot-solid.svg" alt="PizzaBot" class="bot-img">
+      <div class="bubble" id="pizzaQuantity"></div>
+    </div>
 
-    <script src="./pizzabot.js"></script>
-  </body>
+    <div class="bubble-answer-container" id="quantityForm-container">
+      <form class="bubble-answer" id="quantityForm" onsubmit="submitQuantity(event)">
+        <input id="orderQuantity" name="orderQuantity" type="number" placeholder="Enter quantity" min="1" max="20"
+          required>
+        <input id="quantitySubmit" class="submit" type="submit" value="Submit">
+      </form>
+      <img src="./assets/user-solid.svg" alt="Customer" class="user-img">
+    </div>
+
+    <div class="bubble-container" id="confirmation-container">
+      <img src="./assets/robot-solid.svg" alt="PizzaBot" class="bot-img">
+      <div class="bubble" id="confirmation"></div>
+    </div>
+
+  </section>
+
+  <script src="./pizzabot.js"></script>
+</body>
+
 </html>

@@ -78,6 +78,7 @@ button {
   border-radius: 10px 0 10px 10px;
   background: #62929e;
   padding: 20px;
+  display: none;
 }
 
 input {
@@ -96,18 +97,6 @@ select {
 .submit {
   width: 70px;
   margin-bottom: 0;
-}
-
-#nameForm {
-  display: none;
-}
-
-#pizzaForm {
-  display: none;
-}
-
-#quantityForm {
-  display: none;
 }
 
 /* MEDIA QUERIES */
