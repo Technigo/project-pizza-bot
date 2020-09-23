@@ -1,29 +1,26 @@
 * {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-	background-color: #f0db4f;
+    background-color: #f0db4f;
 }
 
 .container {
     display: block;
     padding-top: 100px;
-
 }
-
 
 h1, p {
-	font-family: sans-serif;
-	text-align: center;
-	color: #323330;
-	font-size:  100px;
+    font-family: sans-serif;
+    text-align: center;
+    color: #323330;
+    font-size: 100px;
 }
 
-
 p {
-	font-size: 30px;
+    font-size: 30px;
 }
 
 #output, #container {
@@ -31,6 +28,7 @@ p {
     justify-content: center;
     margin-top: 100px;
 }
+
 h2, h3 {
     text-align: center;
 }
@@ -50,4 +48,3 @@ input {
     display: inline-block;
     font-size: 30px;
 }
-  
