@@ -16,7 +16,8 @@
       <form 
         action="" 
         id="order-form" 
-        name="order-form">
+        name="order-form"
+        >
 
         <!-- Chat window 1 class="flex-container visible"-->
         <div 
@@ -36,9 +37,9 @@
             name="name" 
             id="name">
           <button 
-            onsubmit="clickNextButton(this.parentNode.id)" 
-            type="submit" 
-            class="button">
+            type="button" 
+            class="button"
+            onclick="clickNextButton(this.parentNode.id)">
             Continue
           </button>
         </div>
@@ -82,8 +83,8 @@
           </select>
           </div>
           <button 
-            onsubmit="clickNextButton(this.parentNode.id)" 
-            type="submit" 
+            onclick="clickNextButton(this.parentNode.id)" 
+            type="button" 
             class="button">
             Continue
           </button>
@@ -121,8 +122,8 @@
               onchange="changeRangeOutput()">  
           </div>
           <button 
-            onsubmit="clickNextButton(this.parentNode.id)" 
-            type="submit" 
+            onclick="clickNextButton(this.parentNode.id)" 
+            type="button" 
             class="button">
             Continue
           </button>
@@ -141,7 +142,7 @@
             <button 
               type="button" 
               class="submit" 
-              onsubmit="placeOrder()">
+              onclick="placeOrder()">
               Place order
             </button>
           </div>
