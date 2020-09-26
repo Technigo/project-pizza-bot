@@ -32,7 +32,7 @@ header h1{
   font-size: 5rem;
 }
 
-#orderMenu {
+.orderMenu {
   background-color: F3F0DD;
   font-family: 'Special Elite', cursive;
   color: #500500;
@@ -44,27 +44,27 @@ header h1{
   margin: 20px; 
 }
 
-#orderMenu #form{
+.orderMenu .form{
   display: flex;
   flex-direction: column;
   padding: 15px;
   flex-wrap: wrap;
 }
 
-#orderMenu p{
+.orderMenu p{
   font-size: 1.5rem;
 }
 
-#orderMenu label {
+.orderMenu label {
   font-size: 1.25srem;
 }
 
-#orderMenu h3{
+.orderMenu h3{
   font-size: 1.5rem;
   font-weight: bold;
 }
 
-#orderMenu #submit{
+.orderMenu .formItem{
   background-color: #500500;
   color: #F3F0DD;
   border-radius: 25px;
@@ -75,17 +75,17 @@ header h1{
   cursor: pointer;
 }
 
-#orderMenu #submit.active{
+.orderMenu .formItem.active{
   text-decoration: none;
   border: none;
 }
 
-#orderMenu #numberOfPizzas {
+.orderMenu .formItemInput {
   font-family: 'Special Elite', cursive;
   font-size: 1rem;
 }
 
-#orderMenu #pizzas {
+.orderMenu .pizzas {
   font-family: 'Special Elite', cursive;
   font-size: 1rem;
 }
@@ -114,19 +114,7 @@ img {
   width: 50%;
 }
 
-#veg {
-  display: none;
-}
-
-#haw {
-  display: none;
-}
-
-#pep {
-  display: none;
-}
-
-#mar {
+.pizza-img {
   display: none;
 }
 
@@ -134,11 +122,9 @@ footer {
   width: 100%;
   height: 80px;
   background-color: #500500;
-
 }
 
-#pizzas {
+.pizzas {
   margin: 10px;
   padding: 10px;
 }
-

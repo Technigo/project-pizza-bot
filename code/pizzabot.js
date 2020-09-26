@@ -10,28 +10,17 @@ const pizzaHawImg = document.getElementById("haw")
 const pizzaPepImg = document.getElementById("pep")
 const pizzaMarImg = document.getElementById("mar")
 
-
-console.log(vegetarian, hawaiian, pepperoni, pizzaPrice)
-
 document.getElementById("menu").innerHTML = `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian}, ${pepperoni}, and ${margherita}.`
 
+const calculateTotalCost = orderQuantity => orderQuantity * pizzaPrice
 
-const calculateTotalCost = (orderQuantity) => {
-  return orderQuantity * pizzaPrice
-}
-
-const calculateCookingTime = (orderQuantity) => {
-  let cookingTime
-
+const calculateCookingTime = orderQuantity => {
   if (orderQuantity <= 2) {
-    cookingTime = "10 minutes"
+    return "10 minutes"
   } else if (orderQuantity >= 3 && orderQuantity <= 5) {
-    cookingTime = "15 minutes"
-  } else {
-    cookingTime = "20 minutes"
+    return "15 minutes"
   }
-
-  return cookingTime
+  return "20 minutes"
 }
 
 const handleClick = () => {
@@ -55,11 +44,3 @@ const handleClick = () => {
 }
 
 document.getElementById("submit").addEventListener("click", handleClick)
-
-
-
-
-
-
-
-
