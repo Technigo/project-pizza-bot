@@ -1,9 +1,9 @@
 // 1. Definition of variables 
 
-const vegetarian = "Vegetarian"
-const hawaiian = "Hawaiian"
-const pepperoni = "Pepperoni"
-const pizzaPrice = 80
+const vegetarian = "Vegetarian";
+const hawaiian = "Hawaiian";
+const pepperoni = "Pepperoni";
+const pizzaPrice = 80;
 
 
 // 2. Functions
@@ -19,7 +19,7 @@ const validateOrderName = (orderName) => {
     } else {
         alert('Select a pizza from the menu!');
         return false;
-    }
+    };
 };
 
 // Function for calculating total cost
@@ -47,7 +47,7 @@ const calculateCookingTime = (orderQuantity) => {
 
 //Function for asking what kind of pizza user would like to order 
 const askPizzas = () => {
-    const orderName = `On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}. Choose which pizza you want.`
+    const orderName = `On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}. Choose which pizza you want.`;
     document.getElementById("pizzaName").innerHTML = orderName;
 };
 
@@ -73,8 +73,7 @@ const getOrderQuantity = () => {
 // Welcome message 
 const firstMessage = document.querySelector('.welcome-message-container'); 
 const welcomeMessage = `Hey! Happy to serve your pizza!`;
-firstMessage.innerHTML = `<div>${welcomeMessage}</div>`
-console.log(welcomeMessage);
+firstMessage.innerHTML = `<div>${welcomeMessage}</div>`;
 
 // Form questions
 askPizzas();
@@ -95,4 +94,3 @@ const handleOrder = (event) => {
     return false;
   }
 };
-
