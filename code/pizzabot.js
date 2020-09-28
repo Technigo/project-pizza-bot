@@ -1,7 +1,7 @@
 //Variables defining data
-const vegetarian = "Vegetarian Pizza"
-const hawaiian = "Hawaiian Pizza"
-const pepperoni = "Pepperoni Pizza"
+const vegetarian = "Vegetarian Pizza";
+const hawaiian = "Hawaiian Pizza";
+const pepperoni = "Pepperoni Pizza";
 
 let pizzaPrice = 80;
 
