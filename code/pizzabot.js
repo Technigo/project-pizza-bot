@@ -74,7 +74,7 @@ const enteredPizzaName = (event) => {
         document.getElementById("quantityHeader").innerHTML = `&#129302 And how many ${orderName}'s would you like to order?`;
         document.getElementById("quantityForm").style.display = "flex";
         //The second form (where the user will input how many pizzas they want) will be show if true as we make that element in html to display flex. Before this time it's defined as display: none is css.
-    }
+    } 
     else {
         document.getElementById("wrongPizza").innerHTML = "&#129302 Sorry that pizza isn't on the menu. Please order a pizza from the menu";
         document.getElementById("orderDifferentPizza").style.display= "flex";
