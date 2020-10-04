@@ -141,8 +141,14 @@ footer p {
 
 footer a {
   color: #fff;
+  text-decoration: none;
 }
 
 footer span {
   font-size: 20px;
+}
+
+footer img {
+  height: 19px;
+  padding: 0;
 }
