@@ -2,9 +2,7 @@
 
 The goal for this project was to create a pizzabot using javascript. We needed to gather data from the user in order to process the users order. This included username, pizza type and amount of pizzas. All of this information needed to be made visible in the DOM.
 
-## How we built the pizzabot, the problem's we came across, what we learnt & if we had more time
-
-How we built it:
+## How we built it:
 1. We started by reading through the project and then doing the iteration 1, 2 3 and 4 which we found the easiest. 
 
 2. Then we started to add the conditional statements. The first one where you are meant to create an if else statement; if the user inputs a pizza that is on the menu then that will be true and if not then it'll be false. The second if, else if and else statements felt understandable. 
@@ -15,7 +13,7 @@ How we built it:
 
 5. For the end result we managed to get the form functions and onsubmit attribute of the form to trigger the next function and the same for the next function. This meant that when the user inputted information and submitted with the submit button it made the next form section appear. 
 
-What we learnt:
+## What we learnt:
 1. learnt about the event.preventDefault(); which stops the page from re-loading/submitting the information when you submit the form. 
 
 2. How to put an image from the html in to variable using document.getElementById("vegPizza").
@@ -34,7 +32,7 @@ What we learnt:
 
 9. How to use the onsubmit form attribute to call a function when the user clicks on the submit button. 
 
-If we had more time: 
+## If we had more time: 
 1. It  would be nice to make the first greeting sentance from the pizzabot to load with the page, but then you would need to interact with that statement in order to show the first form section where it asks for you to input your username and input the username you want to order.
 
 2. Also it would be nice to add some animations so you could simulate the pizza bot acting more like a robot that is asking questions with the user can interact with.
