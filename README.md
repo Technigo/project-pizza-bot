@@ -1,4 +1,4 @@
-# Pizza Bot
+# 🍕🍕🍕 Pizza Bot
 This week's assignment was to create a text-based bot which one can use to order pizza on one's computer - using html, javascript and css. This was a pair programming project.
 
 
