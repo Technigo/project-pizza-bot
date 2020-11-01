@@ -1,5 +1,7 @@
 ////CSS////
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -7,7 +9,8 @@ html {
   box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   display: flex;
   flex-direction: column;
   background-position: center;
@@ -16,10 +19,11 @@ body, html {
   align-self: center;
   background-attachment: fixed;
   align-items: center;
-  font-family: 'Oxygen', sans-serif;
+  font-family: "Oxygen", sans-serif;
   color: black;
   margin: 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 59), rgba(0, 0, 0, 0.3)), url("https://images.unsplash.com/photo-1542587222-f9172e5eba29?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80");
+  background-image: linear-gradient(rgba(0, 0, 0, 59), rgba(0, 0, 0, 0.3)),
+    url("https://images.unsplash.com/photo-1542587222-f9172e5eba29?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80");
 }
 
 h1 {
@@ -36,15 +40,15 @@ h1 {
   background-color: lightgreen;
   position: relative;
   width: 50%;
-  border-radius: .4em;
+  border-radius: 0.4em;
   padding: 5%;
 }
 
-.menu:after{
-  content: '';
+.menu:after {
+  content: "";
   position: absolute;
   border: 36px solid transparent;
-  border-left-color:lightgreen;
+  border-left-color: lightgreen;
   right: 0;
   top: 50%;
   width: 0;
@@ -55,16 +59,17 @@ h1 {
   margin-right: -36px;
 }
 
-h2{
+h2 {
   text-align: center;
 }
 
-.h3-order1, .h3-order3 {
+.h3-order1,
+.h3-order3 {
   display: flex;
   position: relative;
-  background:lightgreen;
+  background: lightgreen;
   width: 50%;
-  border-radius: .4em;
+  border-radius: 0.4em;
   padding: 5%;
   background-color: white;
 }
@@ -72,29 +77,30 @@ h2{
 .h3-order2 {
   display: flex;
   position: relative;
-  background:lightgreen;
+  background: lightgreen;
   width: 50%;
-  border-radius: .4em;
+  border-radius: 0.4em;
   padding: 5%;
 }
 
-.h3-order1:after, .h3-order3:after{
-  content: '';
+.h3-order1:after,
+.h3-order3:after {
+  content: "";
   position: absolute;
   right: 0;
   top: 50%;
   width: 0;
   height: 0;
   border: 36px solid transparent;
-  border-left-color:white;
+  border-left-color: white;
   border-right: 0;
   border-bottom: 0;
   margin-top: -18px;
   margin-right: -36px;
 }
 
-.h3-order2:after{
-  content: '';
+.h3-order2:after {
+  content: "";
   position: absolute;
   right: 0;
   top: 50%;
@@ -136,18 +142,18 @@ button {
   background-color: lightgreen;
 }
 
-#final{
+#final {
   display: flex;
   justify-items: center;
   position: relative;
   background: lightgreen;
   width: 50%;
-  border-radius: .4em;
+  border-radius: 0.4em;
   padding: 5%;
 }
 
-#final:after{
-  content: '';
+#final:after {
+  content: "";
   position: absolute;
   border: 36px solid transparent;
   border-left-color: lightgreen;
@@ -161,7 +167,7 @@ button {
   height: 0;
 }
 
-footer{
+footer {
   border: lightgreen;
   color: white;
   padding-top: 150px;
