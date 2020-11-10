@@ -8,22 +8,22 @@ const pizzaPrice = 80
 /*Functions below */
 
 /*Check valid pizza name*/
-const validateOrderName = orderName =>{
+const validateOrderName = orderName => {
     if (orderName === vegetarian || orderName === hawaiian || orderName === pepperoni || orderName === kebab)
     {
       return true;
     }
     return false;
-}
+};
 
 /*Calculate order total price*/
-const calculateTotalCost = (orderQuantity, pizzaPrice) =>{
+const calculateTotalCost = (orderQuantity, pizzaPrice) => {
    const orderTotal = orderQuantity * pizzaPrice;
    return orderTotal;
-}
+};
 
 /*Calculate cooking time depending on orderQuantity*/
-const calculateCookingTime = (orderQuantity) =>{
+const calculateCookingTime = (orderQuantity) => {
     let cookingTime;
     if (orderQuantity >= 1 && orderQuantity <=2) {
         cookingTime = 10;
@@ -35,7 +35,7 @@ const calculateCookingTime = (orderQuantity) =>{
         cookingTime = 0;
     }
     return cookingTime;
-}
+};
 
 /*Function to specify pizza image depending on pizza selection*/
 const pizzaImageFunction = (orderName) => {
@@ -70,25 +70,4 @@ const createPizzaOrder = () => {
 const changeRangeValue = () => {
     const rangeValue = document.getElementById("pizzaRangeSlider").value;
     document.getElementById("output-pizzaRange").innerHTML = rangeValue;
-}
-
-
-/* BLUE LEVEL - We saved this to show that we did the blue level.
-
-//alert(`Hello! Happy to serve you pizza. On our menu we have ${vegetarian}, ${pepperoni}, ${hawaiian}`);
-const orderName = prompt("Enter the name of the pizza you want to order");
-
-if (validateOrderName(orderName)===true) {
-    const orderQuantity = prompt(`How many of ${orderName} do you want?`);
-    const orderTotal = calculateTotalCost(orderQuantity, pizzaPrice);
-    let cookingTime = calculateCookingTime(orderQuantity);
-    //TO GET MESSAGE IN ALERT:
-    //const messageText = alert(`Great, I'll get started on your ${orderName} right away. It will cost ${orderTotal} kr. The pizza(s) will take ${cookingTime} minutes.`)
-    //TO GET MESSAGE SHOWN IN OUR HTML FILE
-    const messageText = (`Great, I'll get started on your ${orderName} right away. It will cost ${orderTotal} kr. The pizza(s) will take ${cookingTime} minutes.`)
-    document.getElementById("message").innerHTML = messageText;
-}
- else {
-    alert("Select a pizza from the menu");
-}
-*/
+};
