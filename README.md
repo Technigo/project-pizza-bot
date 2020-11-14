@@ -1,6 +1,10 @@
 # 🍕🍕🍕 Pizza Bot
 This week's assignment was to create a text-based bot which one can use to order pizza on one's computer - using html, javascript and css. This was a pair programming project.
 
+## View it live
+
+https://app.netlify.com/sites/elegant-minsky-dce503/overview
+
 
 ## The problem
 The main problem was to connect the HTML with JavaScript, and create functions.
@@ -23,8 +27,3 @@ Also trying to better put into words what the code would actually do, what kind 
 Redoing the form in a less static and to a more chat-like function, where the questions get loaded after each answer input. 
 
 Doing some more research on events.
-
-
-## View it live
-
-https://app.netlify.com/sites/elegant-minsky-dce503/overview
