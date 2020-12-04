@@ -3,7 +3,7 @@ This week's assignment was to create a text-based bot which one can use to order
 
 ## View it live
 
-https://app.netlify.com/sites/elegant-minsky-dce503/overview
+https://elegant-minsky-dce503.netlify.app/
 
 
 ## The problem
